@@ -160,7 +160,6 @@ function ServiceCard({
 }) {
   const Icon = service.icon;
   const delay = 0.08 + index * 0.09;
-  const isComingSoon = index === 2;
 
   return (
     <motion.article
@@ -177,11 +176,6 @@ function ServiceCard({
         "hover:bg-[#111111]"
       )}
     >
-      {isComingSoon && (
-        <div className="absolute inset-0 bg-[#0E0E0E]/90 backdrop-blur-sm flex items-center justify-center z-50 pointer-events-none">
-          <span className="font-serif text-[2rem] font-light text-[#C9A84C] tracking-[0.05em]">Próximamente</span>
-        </div>
-      )}
       <motion.span
         variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
         initial="initial"
