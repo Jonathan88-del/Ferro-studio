@@ -1,0 +1,218 @@
+import { motion } from "framer-motion";
+import { ArrowRight, Check } from "lucide-react";
+import { Link } from "wouter";
+import { cn } from "@/lib/utils";
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 26 },
+  show:   { opacity: 1, y: 0, transition: { duration: 0.78, ease: EASE, delay } },
+});
+
+/* ── Monthly maintenance plans ── */
+interface Plan {
+  id: string;
+  name: string;
+  price: string;
+  tagline: string;
+  items: string[];
+  cta: string;
+  featured: boolean;
+}
+
+const PLANS: Plan[] = [
+  {
+    id: "presencia",
+    name: "Plan Presencia",
+    price: "$20.000 – $25.000 ARS/mes",
+    tagline: "Hosting administrado, SSL y soporte técnico. Ideal para mantener su presencia digital segura y siempre disponible.",
+    items: [
+      "Hosting administrado por Ferro Studio",
+      "Certificado SSL renovado automáticamente",
+      "Backups semanales del sitio completo",
+      "Monitoreo de disponibilidad 24/7",
+      "Actualizaciones de seguridad del servidor",
+      "Soporte por WhatsApp (24–48 hs hábiles)",
+      "Reporte mensual de estado del sitio",
+    ],
+    cta: "Solicitar presupuesto",
+    featured: false,
+  },
+  {
+    id: "activo",
+    name: "Plan Activo",
+    price: "$45.000 – $55.000 ARS/mes",
+    tagline: "Todo lo del Plan Presencia, más cambios mensuales, analíticas y optimización. Para empresas que necesitan un sitio siempre actualizado.",
+    items: [
+      "Todo lo incluido en Plan Presencia",
+      "Hasta 3 cambios mensuales al sitio",
+      "Reporte mensual de Google Analytics",
+      "Optimización de velocidad trimestral",
+      "Prioridad de respuesta (24 hs hábiles)",
+      "1 publicación mensual de artículo/novedad",
+      "Revisión mensual de formularios y WhatsApp",
+    ],
+    cta: "Solicitar presupuesto",
+    featured: true,
+  },
+  {
+    id: "total",
+    name: "Plan Total",
+    price: "$80.000 – $95.000 ARS/mes",
+    tagline: "La solución más completa. SEO mensual, Google Business Profile, soporte prioritario e informe mensual detallado.",
+    items: [
+      "Todo lo incluido en Plan Activo",
+      "Hasta 6 cambios mensuales al sitio",
+      "SEO básico mensual (palabras clave, metadatos)",
+      "Configuración y seguimiento de Google Business",
+      "Soporte prioritario (respuesta en 4–8 hs hábiles)",
+      "Informe mensual completo (tráfico, posicionamiento)",
+      "1 reunión mensual por videollamada (30 min)",
+    ],
+    cta: "Hablar con nosotros",
+    featured: false,
+  },
+];
+
+export default function PricingSection() {
+  return (
+    <div>
+      <section
+        className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44 overflow-hidden"
+        aria-labelledby="pricing-heading"
+      >
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{ backgroundImage: "radial-gradient(circle, rgba(245,242,236,0.03) 1px, transparent 1px)", backgroundSize: "36px 36px" }}
+        />
+
+        <div className="container-ferro relative z-10">
+          <div className="max-w-2xl mb-20 md:mb-28">
+            <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
+              <div className="flex items-center gap-3 mb-8">
+                <span className="w-5 h-px bg-[#C9A84C]/70" />
+                <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">Mantenimiento mensual</span>
+              </div>
+              <h2 id="pricing-heading" className="font-serif font-light text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
+                Su socio digital permanente.
+              </h2>
+            </motion.div>
+            <motion.p variants={fadeUp(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
+              El mantenimiento mensual es el corazón del modelo de Ferro Studio. Garantiza que su sitio funcione siempre, esté actualizado y tenga soporte técnico disponible. Requiere haber contratado un proyecto web previamente.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#F5F2EC]/[0.06] md:items-stretch">
+            {PLANS.map((plan, i) => (
+              <PlanCard key={plan.id} plan={plan} index={i} />
+            ))}
+          </div>
+
+          <motion.p
+            variants={fadeUp(0.45)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-40px" }}
+            className="mt-12 text-center text-[#F5F2EC]/22 font-sans font-light tracking-wide text-[20px]"
+          >
+            Pago mensual por adelantado · Transferencia bancaria o Mercado Pago · Sin contratos de largo plazo
+          </motion.p>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+function PlanCard({ plan, index }: { plan: Plan; index: number }) {
+  const delay = 0.08 + index * 0.1;
+
+  return (
+    <motion.article
+      variants={fadeUp(delay)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-40px" }}
+      whileHover="hover"
+      className={cn(
+        "group relative flex flex-col",
+        "px-12 py-14 md:px-14 md:py-16",
+        "transition-colors duration-500",
+        plan.featured ? "bg-[#F5F2EC]" : "bg-[#0E0E0E] hover:bg-[#0f0f0f]"
+      )}
+    >
+      {plan.featured && (
+        <span className="absolute inset-x-0 top-0 h-[1.5px] bg-[#C9A84C]" aria-hidden="true" />
+      )}
+      {!plan.featured && (
+        <motion.span
+          variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
+          initial="initial"
+          transition={{ duration: 0.35, ease: EASE }}
+          className="absolute inset-x-0 top-0 h-px bg-[#C9A84C]/45 origin-left"
+          aria-hidden="true"
+        />
+      )}
+
+      {plan.featured && (
+        <div className="flex items-center gap-2 mb-8">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C]" aria-hidden="true" />
+          <span className="text-[0.65rem] tracking-[0.24em] uppercase font-sans text-[#C9A84C]">Más contratado</span>
+        </div>
+      )}
+
+      <div className={cn("mb-4", !plan.featured && "mt-[34px]")}>
+        <h3 className={cn("font-serif text-[1.75rem] font-light leading-tight tracking-[-0.01em]", plan.featured ? "text-[#0E0E0E]" : "text-[#F5F2EC]")}>
+          {plan.name}
+        </h3>
+      </div>
+
+      <p className={cn("font-serif text-[1.25rem] font-light mb-6", plan.featured ? "text-[#0E0E0E]/70" : "text-[#C9A84C]/70")}>
+        {plan.price}
+      </p>
+
+      <p className={cn("text-[0.95rem] font-sans font-light leading-[1.8] mb-9", plan.featured ? "text-[#0E0E0E]/50" : "text-[#F5F2EC]/38")}>
+        {plan.tagline}
+      </p>
+
+      <div className={cn("h-px mb-9", plan.featured ? "bg-[#0E0E0E]/10" : "bg-[#F5F2EC]/[0.08]")} aria-hidden="true" />
+
+      <ul className="flex flex-col gap-5 flex-1 mb-12">
+        {plan.items.map((item) => (
+          <li key={item} className="flex items-start gap-3.5">
+            <Check
+              size={13}
+              strokeWidth={2}
+              className={cn("shrink-0 mt-[4px]", plan.featured ? "text-[#C9A84C]" : "text-[#C9A84C]/60")}
+              aria-hidden="true"
+            />
+            <span className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+              {item}
+            </span>
+          </li>
+        ))}
+      </ul>
+
+      <Link href="/contacto" className="no-underline mt-auto">
+        <motion.span
+          whileHover={{ y: -1 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ duration: 0.18, ease: EASE }}
+          className={cn(
+            "flex items-center justify-center gap-2.5 w-full",
+            "text-[0.72rem] tracking-[0.2em] uppercase font-sans",
+            "py-[16px] px-8",
+            "transition-all duration-300",
+            plan.featured
+              ? "bg-[#0E0E0E] text-[#F5F2EC] hover:bg-[#C9A84C] hover:text-[#0E0E0E] hover:shadow-[0_8px_28px_rgba(201,168,76,0.18)]"
+              : "border border-[#F5F2EC]/18 text-[#F5F2EC]/55 hover:border-[#C9A84C]/50 hover:text-[#C9A84C]"
+          )}
+        >
+          {plan.cta}
+          <ArrowRight size={13} strokeWidth={1.8} />
+        </motion.span>
+      </Link>
+    </motion.article>
+  );
+}

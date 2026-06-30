@@ -1,0 +1,253 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─────────────────────────────────────────────
+   FERRO STUDIO — Design System
+   Primary:  #0E0E0E  → hsl(0 0% 5.5%)
+   Secondary:#F5F2EC  → hsl(40 33% 94%)
+   Accent:   #C9A84C  → hsl(44 53% 54%)
+───────────────────────────────────────────── */
+
+@theme inline {
+  --color-background:      hsl(var(--background));
+  --color-foreground:      hsl(var(--foreground));
+  --color-border:          hsl(var(--border));
+  --color-input:           hsl(var(--input));
+  --color-ring:            hsl(var(--ring));
+
+  --color-card:            hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-primary:            hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary:            hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted:            hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent:            hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive:            hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --font-serif: var(--font-cormorant);
+  --font-sans:  var(--font-dm-sans);
+  --font-mono:  ui-monospace, monospace;
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+
+  /* Ferro color tokens exposed as CSS utilities */
+  --color-ferro-dark:   #0E0E0E;
+  --color-ferro-cream:  #F5F2EC;
+  --color-ferro-gold:   #C9A84C;
+  --color-ferro-gold-light: #D9BC72;
+  --color-ferro-gold-dark:  #A8873A;
+}
+
+:root {
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+  --font-dm-sans:   "DM Sans", system-ui, sans-serif;
+
+  --radius: 2px;
+
+  /* Dark-first palette — Ferro Studio is dark by default */
+  --background:      0 0% 5.5%;        /* #0E0E0E */
+  --foreground:      40 33% 94%;       /* #F5F2EC */
+
+  --card:            0 0% 8%;
+  --card-foreground: 40 33% 94%;
+
+  --border:          0 0% 14%;
+  --input:           0 0% 14%;
+  --ring:            44 53% 54%;
+
+  --primary:            40 33% 94%;    /* cream — primary action bg */
+  --primary-foreground: 0 0% 5.5%;
+
+  --secondary:            0 0% 10%;
+  --secondary-foreground: 40 33% 94%;
+
+  --muted:            0 0% 12%;
+  --muted-foreground: 0 0% 55%;
+
+  --accent:            44 53% 54%;     /* #C9A84C */
+  --accent-foreground: 0 0% 5.5%;
+
+  --destructive:            0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* Ferro typographic scale */
+  --tracking-wide:  0.08em;
+  --tracking-wider: 0.14em;
+  --tracking-widest: 0.22em;
+
+  /* Subtle surface overlays */
+  --surface-01: rgba(245, 242, 236, 0.03);
+  --surface-02: rgba(245, 242, 236, 0.06);
+  --surface-03: rgba(245, 242, 236, 0.10);
+
+  /* Gold glow — used on hover states */
+  --gold-glow: 0 0 24px rgba(201, 168, 76, 0.18);
+}
+
+/* ─── Base ─── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-dm-sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  /* Headings default to Cormorant */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: rgba(201, 168, 76, 0.2);
+    color: #F5F2EC;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--accent));
+  }
+}
+
+/* ─── Ferro Utilities ─── */
+@layer utilities {
+
+  /* Typography */
+  .font-serif   { font-family: var(--font-cormorant); }
+  .font-display { font-family: var(--font-cormorant); font-weight: 300; }
+
+  /* Letter spacing */
+  .tracking-ferro-wide    { letter-spacing: var(--tracking-wide); }
+  .tracking-ferro-wider   { letter-spacing: var(--tracking-wider); }
+  .tracking-ferro-widest  { letter-spacing: var(--tracking-widest); }
+
+  /* Gold text */
+  .text-gold       { color: #C9A84C; }
+  .text-gold-light { color: #D9BC72; }
+  .text-cream      { color: #F5F2EC; }
+  .text-dark       { color: #0E0E0E; }
+
+  /* Backgrounds */
+  .bg-ferro-dark  { background-color: #0E0E0E; }
+  .bg-ferro-cream { background-color: #F5F2EC; }
+  .bg-ferro-gold  { background-color: #C9A84C; }
+
+  /* Borders */
+  .border-gold   { border-color: #C9A84C; }
+  .border-cream  { border-color: rgba(245, 242, 236, 0.15); }
+
+  /* Surfaces */
+  .surface-01 { background-color: var(--surface-01); }
+  .surface-02 { background-color: var(--surface-02); }
+  .surface-03 { background-color: var(--surface-03); }
+
+  /* Divider line — ultra thin */
+  .ferro-divider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(245,242,236,0.15) 20%, rgba(245,242,236,0.15) 80%, transparent);
+  }
+
+  /* Gold divider */
+  .ferro-divider-gold {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5) 20%, rgba(201,168,76,0.5) 80%, transparent);
+  }
+
+  /* Label caps — small uppercase labels */
+  .label-caps {
+    font-family: var(--font-dm-sans);
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: hsl(var(--muted-foreground));
+  }
+
+  /* Gold accent line above headings */
+  .accent-line::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background-color: #C9A84C;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Focus visible */
+  .ferro-focus:focus-visible {
+    outline: 1px solid #C9A84C;
+    outline-offset: 2px;
+  }
+
+  /* Page padding */
+  .px-ferro { padding-left: max(1.5rem, env(safe-area-inset-left)); padding-right: max(1.5rem, env(safe-area-inset-right)); }
+
+  /* Container */
+  .container-ferro {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-ferro {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container-ferro {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+}
