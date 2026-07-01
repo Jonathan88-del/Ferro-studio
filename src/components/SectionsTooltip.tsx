@@ -21,7 +21,7 @@ export default function SectionsTooltip() {
       <button
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
-        className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] hover:text-[#C9A84C] transition-colors text-left cursor-help underline underline-offset-2 decoration-[#C9A84C]/40 hover:decoration-[#C9A84C]"
+        className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] hover:text-[#C9A84C] transition-colors text-left cursor-help"
       >
         Hasta 6 secciones
       </button>
@@ -29,57 +29,94 @@ export default function SectionsTooltip() {
       {/* Tooltip */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: -8 }}
+          initial={{ opacity: 0, scale: 0.95, y: -12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: -8 }}
-          transition={{ duration: 0.25, ease: "easeOut" }}
+          exit={{ opacity: 0, scale: 0.95, y: -12 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 z-50 w-72 bg-[#0E0E0E] border border-[#C9A84C]/30 p-4 pointer-events-auto"
+          className="absolute bottom-full left-0 mb-4 z-50 w-96 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto"
         >
-          {/* Arrow */}
-          <div className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-[#C9A84C]/30" />
-
           {/* Header */}
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-3 h-px bg-[#C9A84C]/70" />
-            <span className="text-[0.7rem] tracking-[0.2em] uppercase font-sans text-[#C9A84C]/80">
-              Secciones
-            </span>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: EASE, delay: 0.05 }}
+            className="mb-6"
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <span className="w-6 h-px bg-[#C9A84C]/70" />
+              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[14px]">
+                Hasta 6 secciones
+              </span>
+            </div>
+            <p className="text-[#F5F2EC]/45 font-sans font-light text-[0.95rem] leading-relaxed">
+              Tu sitio puede incluir hasta 6 secciones personalizadas para comunicar todo lo que tu negocio necesita.
+            </p>
+          </motion.div>
+
+          {/* Dots indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.35, ease: EASE, delay: 0.1 }}
+            className="flex gap-2 mb-6"
+          >
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className="w-2 h-2 rounded-full bg-[#C9A84C]/40"
+              />
+            ))}
+          </motion.div>
 
           {/* Sections Grid */}
-          <div className="grid grid-cols-2 gap-3 mb-4">
+          <div className="grid grid-cols-2 gap-4 mb-6">
             {SECTIONS.map((section, index) => {
               const Icon = section.icon;
               return (
                 <motion.div
                   key={section.id}
-                  initial={{ opacity: 0, y: 8 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    duration: 0.3,
+                    duration: 0.4,
                     ease: EASE,
-                    delay: index * 0.05,
+                    delay: 0.15 + index * 0.06,
                   }}
-                  className="flex items-center gap-2 p-2 rounded-sm bg-[#0E0E0E]/40 border border-[#F5F2EC]/[0.06] hover:border-[#C9A84C]/30 transition-all"
+                  className="relative border border-[#F5F2EC]/[0.08] bg-[#0E0E0E]/40 p-4 hover:border-[#C9A84C]/30 transition-all group"
                 >
-                  <Icon size={14} className="text-[#C9A84C]/70 shrink-0" strokeWidth={1.5} />
-                  <span className="text-[0.8rem] text-[#F5F2EC]/60 font-sans font-light leading-tight">
-                    {section.name}
-                  </span>
+                  {/* Number indicator */}
+                  <div className="absolute -top-3 -left-3 w-7 h-7 bg-[#C9A84C] text-[#0E0E0E] rounded-full flex items-center justify-center font-serif text-[12px] font-light">
+                    {section.id}
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex items-start gap-3 ml-2">
+                    <Icon size={16} className="text-[#C9A84C]/70 shrink-0 mt-0.5" strokeWidth={1.5} />
+                    <div>
+                      <h4 className="font-serif text-[0.95rem] font-light text-[#F5F2EC] group-hover:text-[#C9A84C] transition-colors">
+                        {section.name}
+                      </h4>
+                    </div>
+                  </div>
                 </motion.div>
               );
             })}
           </div>
 
-          {/* Footer text */}
-          <div className="flex items-start gap-2 pt-3 border-t border-[#F5F2EC]/[0.06]">
-            <span className="text-[#C9A84C] mt-0.5 shrink-0 text-[10px]">✦</span>
-            <p className="text-[0.75rem] text-[#F5F2EC]/40 font-sans font-light leading-relaxed">
-              Personalizable según tus objetivos
+          {/* Footer message */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: EASE, delay: 0.6 }}
+            className="flex items-start gap-3 p-4 border border-[#F5F2EC]/[0.06] bg-[#0E0E0E]/40"
+          >
+            <span className="text-[#C9A84C] shrink-0 text-[12px]">✦</span>
+            <p className="text-[#F5F2EC]/35 font-sans font-light text-[0.9rem] leading-relaxed">
+              Totalmente personalizable y adaptado a tus objetivos.
             </p>
-          </div>
+          </motion.div>
         </motion.div>
       )}
     </div>
