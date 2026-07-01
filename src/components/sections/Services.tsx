@@ -1,9 +1,6 @@
-import { useState } from "react";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { MousePointerClick, Building2, LayoutGrid, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
-import SectionsModal from "../SectionsModal";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -90,11 +87,7 @@ const SERVICES = [
 ] as const;
 
 export default function Services() {
-  const [sectionsModalOpen, setSectionsModalOpen] = useState(false);
-
   return (
-    <>
-    <SectionsModal isOpen={sectionsModalOpen} onClose={() => setSectionsModalOpen(false)} />
     <section
       className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44"
       aria-labelledby="services-heading"
@@ -140,7 +133,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#F5F2EC]/[0.06]">
           {SERVICES.map((service, i) => (
-            <ServiceCard key={service.id} service={service} index={i} onSectionsClick={() => setSectionsModalOpen(true)} />
+            <ServiceCard key={service.id} service={service} index={i} />
           ))}
         </div>
 
@@ -155,18 +148,15 @@ export default function Services() {
         </motion.p>
       </div>
     </section>
-    </>
   );
 }
 
 function ServiceCard({
   service,
   index,
-  onSectionsClick,
 }: {
   service: (typeof SERVICES)[number];
   index: number;
-  onSectionsClick?: () => void;
 }) {
   const Icon = service.icon;
   const delay = 0.08 + index * 0.09;
@@ -233,16 +223,7 @@ function ServiceCard({
         {service.includes.map((item) => (
           <li key={item} className="flex items-start gap-3">
             <span className="text-[#C9A84C]/60 text-[0.75rem] font-sans mt-[3px] shrink-0">✓</span>
-            {item === "Hasta 6 secciones" ? (
-              <button
-                onClick={onSectionsClick}
-                className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] hover:text-[#C9A84C] transition-colors text-left cursor-pointer"
-              >
-                {item}
-              </button>
-            ) : (
-              <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
-            )}
+            <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
           </li>
         ))}
       </ul>
