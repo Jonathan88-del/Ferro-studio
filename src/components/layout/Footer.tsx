@@ -24,8 +24,8 @@ const SERVICE_LINKS = [
 const CONTACT_ITEMS = [
   {
     icon: Mail,
-    label: "hola@ferro.studio",
-    href: "mailto:hola@ferro.studio",
+    label: "ferro.studio.estudiodigital@gmail.com",
+    href: "mailto:ferro.studio.estudiodigital@gmail.com",
   },
   {
     icon: MessageCircle,

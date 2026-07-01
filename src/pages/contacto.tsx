@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight, Mail } from "lucide-react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-const MAIL_TO = "contacto@ferrostudio.com.ar";
+const MAIL_TO = "ferro.studio.estudiodigital@gmail.com";
 const WA_LINK = "https://wa.me/541167863196?text=Hola%2C%20me%20interesa%20conocer%20los%20planes%20de%20Ferro%20Studio.";
 
 const fadeUp = (delay = 0) => ({
