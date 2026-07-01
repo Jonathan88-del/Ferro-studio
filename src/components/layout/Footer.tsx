@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Mail, MessageCircle, Linkedin, Instagram, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -31,16 +31,6 @@ const CONTACT_ITEMS = [
     icon: MessageCircle,
     label: "WhatsApp",
     href: "https://wa.me/5491100000000?text=Hola%2C%20me%20interesa%20conocer%20los%20servicios%20de%20Ferro%20Studio.",
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://linkedin.com/company/ferrostudio",
-  },
-  {
-    icon: Instagram,
-    label: "@ferrostudio",
-    href: "https://instagram.com/ferrostudio",
   },
   {
     icon: MapPin,
