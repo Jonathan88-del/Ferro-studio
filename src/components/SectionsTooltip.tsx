@@ -29,13 +29,13 @@ export default function SectionsTooltip() {
       {/* Tooltip */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: -12 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: -12 }}
+          initial={{ opacity: 0, scale: 0.95, x: -12 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          exit={{ opacity: 0, scale: 0.95, x: -12 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className="absolute bottom-full left-0 mb-4 z-50 w-96 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto"
+          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-80 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto"
         >
           {/* Header */}
           <motion.div
