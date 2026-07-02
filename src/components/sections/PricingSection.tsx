@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
+import SSLTooltip from "../SSLTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -187,9 +188,15 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
               className={cn("shrink-0 mt-[4px]", plan.featured ? "text-[#C9A84C]" : "text-[#C9A84C]/60")}
               aria-hidden="true"
             />
-            <span className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
-              {item}
-            </span>
+            {item === "Certificado SSL renovado automáticamente" ? (
+              <div className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+                <SSLTooltip />
+              </div>
+            ) : (
+              <span className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+                {item}
+              </span>
+            )}
           </li>
         ))}
       </ul>
