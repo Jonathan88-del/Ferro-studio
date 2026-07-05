@@ -16,30 +16,32 @@ export default function SEOTooltip() {
 
   return (
     <div className="relative inline-block">
-      <button
+      <motion.button
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
+        whileHover={{ color: "#C9A84C" }}
+        transition={{ duration: 0.2 }}
         className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] hover:text-[#C9A84C] transition-colors text-left cursor-help"
       >
         SEO básico y diseño responsive
-      </button>
+      </motion.button>
 
       {/* Tooltip */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, x: -12 }}
-          animate={{ opacity: 1, scale: 1, x: 0 }}
-          exit={{ opacity: 0, scale: 0.95, x: -12 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          initial={{ opacity: 0, scale: 0.92, x: -20, y: 0 }}
+          animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+          exit={{ opacity: 0, scale: 0.92, x: -20, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-80 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto"
+          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-80 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
         >
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, ease: EASE, delay: 0.05 }}
+            transition={{ duration: 0.45, ease: EASE, delay: 0.1 }}
             className="mb-6"
           >
             <div className="flex items-center gap-3 mb-3">
@@ -55,9 +57,9 @@ export default function SEOTooltip() {
 
           {/* Dots indicator */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.35, ease: EASE, delay: 0.1 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.4, ease: EASE, delay: 0.2 }}
             className="flex gap-2 mb-6"
           >
             {[0, 1, 2].map((i) => (
@@ -75,12 +77,12 @@ export default function SEOTooltip() {
               return (
                 <motion.div
                   key={info.title}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 16, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{
-                    duration: 0.4,
+                    duration: 0.45,
                     ease: EASE,
-                    delay: 0.15 + index * 0.06,
+                    delay: 0.25 + index * 0.08,
                   }}
                   className="relative border border-[#F5F2EC]/[0.08] bg-[#0E0E0E]/40 p-4 hover:border-[#C9A84C]/30 transition-all group"
                 >
@@ -103,9 +105,9 @@ export default function SEOTooltip() {
 
           {/* Footer message */}
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: EASE, delay: 0.5 }}
+            transition={{ duration: 0.45, ease: EASE, delay: 0.6 }}
             className="flex items-start gap-3 p-4 border border-[#F5F2EC]/[0.06] bg-[#0E0E0E]/40"
           >
             <span className="text-[#C9A84C] shrink-0 text-[12px]">✦</span>
