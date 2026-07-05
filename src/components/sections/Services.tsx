@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { MousePointerClick, Building2, LayoutGrid, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
 import SectionsTooltip from "../SectionsTooltip";
-import SEOTooltip from "../SEOTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -227,8 +226,6 @@ function ServiceCard({
             <span className="text-[#C9A84C]/60 text-[0.75rem] font-sans mt-[3px] shrink-0">✓</span>
             {item === "Hasta 6 secciones" ? (
               <SectionsTooltip />
-            ) : item === "SEO básico y diseño responsive" ? (
-              <SEOTooltip />
             ) : (
               <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
             )}
