@@ -3,7 +3,6 @@ import { MousePointerClick, Building2, LayoutGrid, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
 import SectionsTooltip from "../SectionsTooltip";
 import SEOTooltip from "../SEOTooltip";
-import SectionsTooltip from "../SectionsTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
