@@ -3,16 +3,16 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 
 const SEO_FEATURES = [
-  "Títulos (title) optimizados en cada página",
-  "Meta descripciones",
-  "URLs limpias (por ejemplo, /servicios en lugar de /page?id=123)",
-  "Encabezados bien organizados (H1, H2, H3)",
-  "Sitemap XML generado automáticamente",
-  "Archivo robots.txt",
-  "Diseño responsive (adaptado a celulares)",
-  "Buen rendimiento de carga",
-  "Certificado SSL (HTTPS)",
-  "Imágenes optimizadas con texto alternativo (alt)",
+  "Títulos claros en cada página (lo que Google ve)",
+  "Descripciones en buscadores",
+  "URLs cortas y limpias",
+  "Estructura ordenada del contenido",
+  "Mapa del sitio (para Google)",
+  "Indicaciones para robots de búsqueda",
+  "Funciona perfecto en celular",
+  "Carga súper rápido",
+  "Candadito de seguridad en el navegador 🔒",
+  "Imágenes optimizadas y accesibles",
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -60,7 +60,7 @@ export default function SEOTooltip() {
               SEO Básico
             </h3>
             <p className="text-[#F5F2EC]/40 font-sans font-light text-[0.9rem] leading-relaxed">
-              Todo lo necesario para que Google encuentre y posicione tu sitio correctamente.
+              Preparamos tu sitio para que Google lo encuentre y entienda fácilmente.
             </p>
           </motion.div>
 
@@ -104,7 +104,7 @@ export default function SEOTooltip() {
           >
             <p className="text-[0.85rem] text-[#F5F2EC]/35 font-sans font-light leading-relaxed flex items-start gap-2">
               <span className="text-[#C9A84C] shrink-0 mt-0.5">✦</span>
-              <span>Incluido en todos nuestros proyectos. Perfecto para comenzar tu presencia online.</span>
+              <span>Todo esto viene incluido en tu sitio desde el primer día.</span>
             </p>
           </motion.div>
         </motion.div>
