@@ -1,12 +1,18 @@
 import { motion } from "framer-motion";
-import { Search, Smartphone, Zap, TrendingUp } from "lucide-react";
+import { Check } from "lucide-react";
 import { useState } from "react";
 
-const SEO_INFO = [
-  { icon: Search, title: "Posicionamiento", description: "Mejor ranking en Google" },
-  { icon: Smartphone, title: "Responsive", description: "Perfecto en móvil y desktop" },
-  { icon: Zap, title: "Velocidad", description: "Carga rápida en cualquier dispositivo" },
-  { icon: TrendingUp, title: "Tráfico", description: "Más visitantes orgánicos" },
+const SEO_FEATURES = [
+  "Títulos (title) optimizados en cada página",
+  "Meta descripciones",
+  "URLs limpias (por ejemplo, /servicios en lugar de /page?id=123)",
+  "Encabezados bien organizados (H1, H2, H3)",
+  "Sitemap XML generado automáticamente",
+  "Archivo robots.txt",
+  "Diseño responsive (adaptado a celulares)",
+  "Buen rendimiento de carga",
+  "Certificado SSL (HTTPS)",
+  "Imágenes optimizadas con texto alternativo (alt)",
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -35,84 +41,70 @@ export default function SEOTooltip() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-80 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-96 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)] max-h-[600px] overflow-y-auto"
         >
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: EASE, delay: 0.1 }}
-            className="mb-6"
+            className="mb-6 sticky top-0 bg-[#0E0E0E] pb-4"
           >
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-2">
               <span className="w-6 h-px bg-[#C9A84C]/70" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[14px]">
-                SEO básico
+              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[13px]">
+                Qué incluye
               </span>
             </div>
-            <p className="text-[#F5F2EC]/45 font-sans font-light text-[0.95rem] leading-relaxed">
-              Optimizamos tu sitio para buscadores y todos los dispositivos desde el inicio.
+            <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+              SEO Básico
+            </h3>
+            <p className="text-[#F5F2EC]/40 font-sans font-light text-[0.9rem] leading-relaxed">
+              Todo lo necesario para que Google encuentre y posicione tu sitio correctamente.
             </p>
           </motion.div>
 
-          {/* Dots indicator */}
+          {/* Features List */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.4, ease: EASE, delay: 0.2 }}
-            className="flex gap-2 mb-6"
+            className="space-y-3"
           >
-            {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                className="w-2 h-2 rounded-full bg-[#C9A84C]/40"
-              />
+            {SEO_FEATURES.map((feature, index) => (
+              <motion.div
+                key={feature}
+                initial={{ opacity: 0, x: -12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.35,
+                  ease: EASE,
+                  delay: 0.25 + index * 0.04,
+                }}
+                className="flex items-start gap-3 group"
+              >
+                <Check
+                  size={14}
+                  strokeWidth={2.5}
+                  className="shrink-0 mt-1 text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors"
+                />
+                <span className="text-[0.85rem] text-[#F5F2EC]/45 font-sans font-light leading-relaxed group-hover:text-[#F5F2EC]/65 transition-colors">
+                  {feature}
+                </span>
+              </motion.div>
             ))}
           </motion.div>
 
-          {/* Benefits Grid */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
-            {SEO_INFO.map((info, index) => {
-              const Icon = info.icon;
-              return (
-                <motion.div
-                  key={info.title}
-                  initial={{ opacity: 0, y: 16, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  transition={{
-                    duration: 0.45,
-                    ease: EASE,
-                    delay: 0.25 + index * 0.08,
-                  }}
-                  className="relative border border-[#F5F2EC]/[0.08] bg-[#0E0E0E]/40 p-4 hover:border-[#C9A84C]/30 transition-all group"
-                >
-                  {/* Icon */}
-                  <div className="flex items-center gap-2 mb-2">
-                    <Icon size={16} className="text-[#C9A84C]/70 shrink-0" strokeWidth={1.5} />
-                  </div>
-
-                  {/* Content */}
-                  <h4 className="font-serif text-[0.9rem] font-light text-[#F5F2EC] group-hover:text-[#C9A84C] transition-colors mb-1">
-                    {info.title}
-                  </h4>
-                  <p className="text-[0.8rem] text-[#F5F2EC]/35 font-sans font-light leading-tight">
-                    {info.description}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Footer message */}
+          {/* Footer */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, ease: EASE, delay: 0.6 }}
-            className="flex items-start gap-3 p-4 border border-[#F5F2EC]/[0.06] bg-[#0E0E0E]/40"
+            transition={{ duration: 0.45, ease: EASE, delay: 0.65 }}
+            className="mt-6 pt-6 border-t border-[#F5F2EC]/[0.06]"
           >
-            <span className="text-[#C9A84C] shrink-0 text-[12px]">✦</span>
-            <p className="text-[#F5F2EC]/35 font-sans font-light text-[0.9rem] leading-relaxed">
-              Incluido desde el diseño, no es un agregado posterior.
+            <p className="text-[0.85rem] text-[#F5F2EC]/35 font-sans font-light leading-relaxed flex items-start gap-2">
+              <span className="text-[#C9A84C] shrink-0 mt-0.5">✦</span>
+              <span>Incluido en todos nuestros proyectos. Perfecto para comenzar tu presencia online.</span>
             </p>
           </motion.div>
         </motion.div>
