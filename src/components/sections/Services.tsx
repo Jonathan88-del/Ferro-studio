@@ -25,7 +25,7 @@ const SERVICES = [
       "Hasta 6 secciones",
       "Redacción de textos incluida",
       "Formulario + WhatsApp flotante",
-      "SEO básico y diseño responsive",
+      "SEO básico",
       "Adaptada a Android, tablet, notebook y más",
       "30 días de soporte post-entrega",
     ],
