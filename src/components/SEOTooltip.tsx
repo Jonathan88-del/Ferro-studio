@@ -3,16 +3,18 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 
 const SEO_FEATURES = [
-  "Títulos claros en cada página (lo que Google ve)",
-  "Descripciones en buscadores",
-  "URLs cortas y limpias",
-  "Estructura ordenada del contenido",
-  "Mapa del sitio (para Google)",
-  "Indicaciones para robots de búsqueda",
-  "Funciona perfecto en celular",
-  "Carga súper rápido",
-  "Candadito de seguridad en el navegador 🔒",
-  "Imágenes optimizadas y accesibles",
+  { simple: "Títulos claros en cada página", technical: "Title optimizados" },
+  { simple: "Descripciones en buscadores", technical: "Meta descripciones" },
+  { simple: "URLs cortas y limpias", technical: "URLs amigables" },
+  { simple: "Estructura ordenada del contenido", technical: "Encabezados H1-H3" },
+  { simple: "Mapa del sitio para Google", technical: "Sitemap XML" },
+  { simple: "Indicaciones para robots de búsqueda", technical: "robots.txt" },
+  { simple: "Candadito de seguridad en el navegador 🔒", technical: "HTTPS (SSL)" },
+  { simple: "Funciona perfecto en celular", technical: "Diseño responsive" },
+  { simple: "Carga súper rápido", technical: "Optimización de rendimiento" },
+  { simple: "Imágenes claras y accesibles", technical: "Atributo alt en imágenes" },
+  { simple: "Conectado con Google", technical: "Google Search Console" },
+  { simple: "Palabras clave en tu contenido", technical: "Estructura de palabras clave" },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -69,11 +71,11 @@ export default function SEOTooltip() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, ease: EASE, delay: 0.2 }}
-            className="space-y-3"
+            className="space-y-4"
           >
             {SEO_FEATURES.map((feature, index) => (
               <motion.div
-                key={feature}
+                key={feature.simple}
                 initial={{ opacity: 0, x: -12 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{
@@ -86,11 +88,16 @@ export default function SEOTooltip() {
                 <Check
                   size={14}
                   strokeWidth={2.5}
-                  className="shrink-0 mt-1 text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors"
+                  className="shrink-0 mt-1.5 text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors"
                 />
-                <span className="text-[0.85rem] text-[#F5F2EC]/45 font-sans font-light leading-relaxed group-hover:text-[#F5F2EC]/65 transition-colors">
-                  {feature}
-                </span>
+                <div className="flex flex-col gap-1 flex-1">
+                  <span className="text-[0.9rem] text-[#F5F2EC]/55 font-sans font-light leading-relaxed group-hover:text-[#F5F2EC]/75 transition-colors">
+                    {feature.simple}
+                  </span>
+                  <span className="text-[0.8rem] text-[#F5F2EC]/30 font-sans italic">
+                    ({feature.technical})
+                  </span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
