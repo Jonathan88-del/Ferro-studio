@@ -3,18 +3,17 @@ import { Check } from "lucide-react";
 import { useState } from "react";
 
 const SEO_FEATURES = [
-  { simple: "Títulos claros en cada página", technical: "Title optimizados" },
-  { simple: "Descripciones en buscadores", technical: "Meta descripciones" },
-  { simple: "URLs cortas y limpias", technical: "URLs amigables" },
-  { simple: "Estructura ordenada del contenido", technical: "Encabezados H1-H3" },
-  { simple: "Mapa del sitio para Google", technical: "Sitemap XML" },
-  { simple: "Indicaciones para robots de búsqueda", technical: "robots.txt" },
-  { simple: "Candadito de seguridad en el navegador 🔒", technical: "HTTPS (SSL)" },
-  { simple: "Funciona perfecto en celular", technical: "Diseño responsive" },
-  { simple: "Carga súper rápido", technical: "Optimización de rendimiento" },
-  { simple: "Imágenes claras y accesibles", technical: "Atributo alt en imágenes" },
-  { simple: "Conectado con Google", technical: "Google Search Console" },
-  { simple: "Palabras clave en tu contenido", technical: "Estructura de palabras clave" },
+  { simple: "Títulos claros en cada página", technical: "Title optimizados", benefit: "Google entiende de qué trata tu página" },
+  { simple: "Descripciones en buscadores", technical: "Meta descripciones", benefit: "Los clientes ven resumen en Google antes de entrar" },
+  { simple: "URLs cortas y limpias", technical: "URLs amigables", benefit: "Fáciles de recordar y compartir" },
+  { simple: "Estructura ordenada del contenido", technical: "Encabezados H1-H3", benefit: "Google lee mejor, los clientes ven mejor" },
+  { simple: "Mapa del sitio para Google", technical: "Sitemap XML", benefit: "Google encuentra todas tus páginas rápido" },
+  { simple: "Indicaciones para robots de búsqueda", technical: "robots.txt", benefit: "Le dices exactamente qué páginas revisar" },
+  { simple: "Candadito de seguridad en el navegador 🔒", technical: "HTTPS (SSL)", benefit: "Los clientes ven que es seguro (aumenta confianza)" },
+  { simple: "Carga súper rápido", technical: "Optimización de rendimiento", benefit: "Menos clientes se van, Google lo premia" },
+  { simple: "Imágenes claras y accesibles", technical: "Atributo alt en imágenes", benefit: "Google entiende tus fotos, accesibles para todos" },
+  { simple: "Conectado con Google", technical: "Google Search Console", benefit: "Ves exactamente cómo Google ve tu sitio" },
+  { simple: "Palabras clave en tu contenido", technical: "Estructura de palabras clave", benefit: "Apareces cuando clientes buscan lo que ofreces" },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -83,20 +82,25 @@ export default function SEOTooltip() {
                   ease: EASE,
                   delay: 0.25 + index * 0.04,
                 }}
-                className="flex items-start gap-3 group"
+                className="flex items-start gap-3 group pb-3 border-b border-[#F5F2EC]/[0.04] last:border-b-0 last:pb-0"
               >
                 <Check
                   size={14}
                   strokeWidth={2.5}
                   className="shrink-0 mt-1.5 text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors"
                 />
-                <div className="flex flex-col gap-1 flex-1">
-                  <span className="text-[0.9rem] text-[#F5F2EC]/55 font-sans font-light leading-relaxed group-hover:text-[#F5F2EC]/75 transition-colors">
-                    {feature.simple}
-                  </span>
-                  <span className="text-[0.8rem] text-[#F5F2EC]/30 font-sans italic">
-                    ({feature.technical})
-                  </span>
+                <div className="flex flex-col gap-2 flex-1">
+                  <div>
+                    <span className="text-[0.9rem] text-[#F5F2EC]/60 font-sans font-light leading-relaxed group-hover:text-[#F5F2EC]/80 transition-colors">
+                      {feature.simple}
+                    </span>
+                    <span className="text-[0.75rem] text-[#F5F2EC]/25 font-sans ml-1">
+                      {feature.technical}
+                    </span>
+                  </div>
+                  <p className="text-[0.8rem] text-[#C9A84C]/50 font-sans font-light leading-relaxed">
+                    ➜ {feature.benefit}
+                  </p>
                 </div>
               </motion.div>
             ))}
