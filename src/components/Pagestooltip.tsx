@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import { useState } from "react";
-
-const PAGES_FEATURES = [
-  { feature: "Página de inicio", description: "Tu cara principal, donde todos llegan primero" },
-  { feature: "Página de servicios/productos", description: "Mostra qué ofreces en detalle" },
-  { feature: "Página sobre nosotros", description: "Cuéntale a tus clientes quiénes son" },
-  { feature: "Página de contacto", description: "Forma fácil para que te contacten" },
-  { feature: "Página adicional a tu medida", description: "Blog, FAQ, portafolio o lo que necesites" },
-];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -36,75 +28,112 @@ export default function PagestooltipTooltip() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-96 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)] max-h-[600px] overflow-y-auto"
+          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-[440px] bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
         >
           {/* Header */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: EASE, delay: 0.1 }}
-            className="mb-6 sticky top-0 bg-[#0E0E0E] pb-4"
+            className="mb-6"
           >
-            <div className="flex items-center gap-3 mb-2">
-              <span className="w-6 h-px bg-[#C9A84C]/70" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[13px]">
-                Qué incluye
-              </span>
-            </div>
-            <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+            <h3 className="font-serif text-[1.15rem] font-light text-[#F5F2EC] mb-1">
               5 Páginas Independientes
             </h3>
-            <p className="text-[#F5F2EC]/40 font-sans font-light text-[0.9rem] leading-relaxed">
-              Un sitio web completo con múltiples secciones para contar tu historia.
+            <p className="text-[#F5F2EC]/40 font-sans font-light text-[0.85rem] leading-relaxed">
+              Cada página tiene su propia URL y aparece en Google
             </p>
           </motion.div>
 
-          {/* Features List */}
+          {/* Visual Demo */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4, ease: EASE, delay: 0.2 }}
-            className="space-y-4"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, ease: EASE, delay: 0.2 }}
+            className="space-y-4 mb-6"
           >
-            {PAGES_FEATURES.map((item, index) => (
-              <motion.div
-                key={item.feature}
-                initial={{ opacity: 0, x: -12 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{
-                  duration: 0.35,
-                  ease: EASE,
-                  delay: 0.25 + index * 0.04,
-                }}
-                className="flex items-start gap-3 group pb-3 border-b border-[#F5F2EC]/[0.04] last:border-b-0 last:pb-0"
-              >
-                <Check
-                  size={14}
-                  strokeWidth={2.5}
-                  className="shrink-0 mt-1.5 text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors"
-                />
-                <div className="flex flex-col gap-2 flex-1">
-                  <span className="text-[0.9rem] text-[#F5F2EC]/60 font-sans font-light leading-relaxed group-hover:text-[#F5F2EC]/80 transition-colors">
-                    {item.feature}
-                  </span>
-                  <p className="text-[0.8rem] text-[#C9A84C]/50 font-sans font-light leading-relaxed">
-                    ➜ {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+            {/* Search Bar */}
+            <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3 flex items-center gap-2">
+              <Search size={16} className="text-[#F5F2EC]/30" />
+              <span className="text-[0.85rem] text-[#F5F2EC]/50 font-sans font-light">
+                Servicios de Ferro Studio
+              </span>
+            </div>
+
+            {/* Arrow Down */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, ease: EASE, delay: 0.35 }}
+              className="flex justify-center"
+            >
+              <ArrowRight
+                size={18}
+                className="text-[#C9A84C]/60 rotate-90"
+              />
+            </motion.div>
+
+            {/* Google Result */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: EASE, delay: 0.4 }}
+              className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4 space-y-2"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-[0.75rem] font-sans font-light text-[#C9A84C]">
+                  🔍
+                </span>
+                <span className="text-[0.9rem] font-sans font-light text-[#C9A84C] hover:text-[#C9A84C] cursor-pointer">
+                  Servicios | Ferro Studio
+                </span>
+              </div>
+              <p className="text-[0.8rem] text-[#F5F2EC]/35 font-sans font-light">
+                ferrostudio.com/servicios
+              </p>
+            </motion.div>
+
+            {/* Arrow Down */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4, ease: EASE, delay: 0.5 }}
+              className="flex justify-center"
+            >
+              <ArrowRight
+                size={18}
+                className="text-[#C9A84C]/60 rotate-90"
+              />
+            </motion.div>
+
+            {/* Page Preview */}
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, ease: EASE, delay: 0.55 }}
+              className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-4 space-y-3"
+            >
+              <div className="bg-[#0E0E0E] rounded px-3 py-2 border border-[#F5F2EC]/[0.08]">
+                <p className="text-[0.75rem] text-[#F5F2EC]/30 font-sans font-light mb-1">
+                  Página: Servicios
+                </p>
+                <p className="text-[0.85rem] text-[#F5F2EC]/70 font-sans font-light">
+                  Conoce nuestros servicios
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
 
-          {/* Footer */}
+          {/* Explanation */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: EASE, delay: 0.65 }}
-            className="mt-6 pt-6 border-t border-[#F5F2EC]/[0.06]"
+            className="bg-[#1A1A1A]/50 border border-[#C9A84C]/20 rounded-lg p-4"
           >
-            <p className="text-[0.85rem] text-[#F5F2EC]/35 font-sans font-light leading-relaxed flex items-start gap-2">
-              <span className="text-[#C9A84C] shrink-0 mt-0.5">✦</span>
-              <span>Todas las páginas están optimizadas para móvil y cuentan con soporte técnico.</span>
+            <p className="text-[0.8rem] text-[#F5F2EC]/60 font-sans font-light leading-relaxed flex items-start gap-2">
+              <span className="text-[#C9A84C] shrink-0 mt-0.5 text-[1rem]">→</span>
+              <span>Los clientes pueden acceder directamente a la información que buscan, sin pasar primero por la página de inicio.</span>
             </p>
           </motion.div>
         </motion.div>
