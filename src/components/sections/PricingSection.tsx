@@ -34,7 +34,6 @@ const PLANS: Plan[] = [
       "Certificado SSL renovado automáticamente",
       "Backups semanales del sitio completo",
       "Monitoreo de disponibilidad 24/7",
-      "Actualizaciones de seguridad del servidor",
       "Soporte por WhatsApp (24–48 hs hábiles)",
       "Reporte mensual de estado del sitio",
     ],
