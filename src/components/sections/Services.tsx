@@ -48,7 +48,6 @@ const SERVICES = [
       "Hasta 5 páginas independientes",
       "Google Analytics",
       "Search Console",
-      "Sección FAQ + Google Maps",
       "2 rondas de revisión incluidas",
       "60 días de soporte post-entrega",
     ],
