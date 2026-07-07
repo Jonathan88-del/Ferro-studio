@@ -3,6 +3,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import SSLTooltip from "../SSLTooltip";
+import HostingTooltip from "../HostingTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -191,6 +192,10 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
             {item === "Certificado SSL renovado automáticamente" ? (
               <div className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
                 <SSLTooltip />
+              </div>
+            ) : item === "Hosting administrado por Ferro Studio" ? (
+              <div className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+                <HostingTooltip />
               </div>
             ) : (
               <span className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
