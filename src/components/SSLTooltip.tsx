@@ -21,7 +21,7 @@ export default function SSLTooltip() {
         onMouseLeave={() => setIsOpen(false)}
         className="text-[0.95rem] font-sans font-light leading-[1.65] hover:text-[#C9A84C] transition-colors text-left cursor-help"
       >
-        Certificado SSL renovado automáticamente
+        Gestión y renovación automática del SSL
       </button>
 
       {/* Tooltip */}
