@@ -3,6 +3,7 @@ import { MousePointerClick, Building2, LayoutGrid, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
 import SectionsTooltip from "../SectionsTooltip";
 import SEOTooltip from "../SEOTooltip";
+import PagestooltipTooltip from "../Pagestooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -229,6 +230,8 @@ function ServiceCard({
               <SectionsTooltip />
             ) : item === "SEO básico" ? (
               <SEOTooltip />
+            ) : item === "Hasta 5 páginas independientes" ? (
+              <PagestooltipTooltip />
             ) : (
               <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
             )}
