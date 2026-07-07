@@ -5,6 +5,7 @@ import SectionsTooltip from "../SectionsTooltip";
 import SEOTooltip from "../SEOTooltip";
 import PagestooltipTooltip from "../Pagestooltip";
 import AnalyticsTooltip from "../AnalyticsTooltip";
+import SearchConsoleTooltip from "../SearchConsoleTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -45,7 +46,8 @@ const SERVICES = [
     includes: [
       "Todo lo de Landing Page",
       "Hasta 5 páginas independientes",
-      "Google Analytics + Search Console",
+      "Google Analytics",
+      "Search Console",
       "Sección FAQ + Google Maps",
       "2 rondas de revisión incluidas",
       "60 días de soporte post-entrega",
@@ -233,8 +235,10 @@ function ServiceCard({
               <SEOTooltip />
             ) : item === "Hasta 5 páginas independientes" ? (
               <PagestooltipTooltip />
-            ) : item === "Google Analytics + Search Console" ? (
+            ) : item === "Google Analytics" ? (
               <AnalyticsTooltip />
+            ) : item === "Search Console" ? (
+              <SearchConsoleTooltip />
             ) : (
               <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
             )}
