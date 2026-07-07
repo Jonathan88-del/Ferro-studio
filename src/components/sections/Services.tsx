@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import SectionsTooltip from "../SectionsTooltip";
 import SEOTooltip from "../SEOTooltip";
 import PagestooltipTooltip from "../Pagestooltip";
+import AnalyticsTooltip from "../AnalyticsTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -232,6 +233,8 @@ function ServiceCard({
               <SEOTooltip />
             ) : item === "Hasta 5 páginas independientes" ? (
               <PagestooltipTooltip />
+            ) : item === "Google Analytics + Search Console" ? (
+              <AnalyticsTooltip />
             ) : (
               <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
             )}
