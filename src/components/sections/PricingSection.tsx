@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import SSLTooltip from "../SSLTooltip";
 import HostingTooltip from "../HostingTooltip";
 import WhatsappSupportTooltip from "../WhatsappSupportTooltip";
+import MonthlyChangesTooltip from "../MonthlyChangesTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -199,6 +200,10 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
             ) : item === "Soporte por WhatsApp (24–48 hs hábiles)" ? (
               <div className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
                 <WhatsappSupportTooltip />
+              </div>
+            ) : item === "Hasta 3 cambios mensuales al sitio" ? (
+              <div className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+                <MonthlyChangesTooltip />
               </div>
             ) : (
               <span className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
