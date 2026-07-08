@@ -36,7 +36,6 @@ const PLANS: Plan[] = [
       "Backups semanales del sitio completo",
       "Monitoreo de disponibilidad 24/7",
       "Soporte por WhatsApp (24–48 hs hábiles)",
-      "Reporte mensual de estado del sitio",
     ],
     cta: "Solicitar presupuesto",
     featured: false,
