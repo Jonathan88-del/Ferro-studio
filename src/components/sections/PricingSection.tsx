@@ -49,7 +49,6 @@ const PLANS: Plan[] = [
     items: [
       "Todo lo incluido en Plan Presencia",
       "Hasta 3 cambios mensuales al sitio",
-      "Optimización de velocidad trimestral",
       "Prioridad de respuesta (24 hs hábiles)",
       "1 publicación mensual de artículo/novedad",
       "Revisión mensual de formularios y WhatsApp",
