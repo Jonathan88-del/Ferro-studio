@@ -19,7 +19,7 @@ const STEPS = [
     title: "Propuesta personalizada",
     icon: FileText,
     description:
-      "Enviamos una propuesta detallada dentro de las 24–48 horas: diagnóstico, solución recomendada, alcance exacto, plazo y precio. Siempre en PDF y por email ó whatsapp. No se solicita pago en esta etapa.",
+      "Dentro de 24–48 horas recibís una propuesta detallada en PDF con diagnóstico, solución recomendada, alcance exacto, plazo y precio. La enviamos por email o whatsapp. Sin compromiso ni pago en esta etapa.",
     note: "24–48 hs · Sin anticipo",
   },
   {
