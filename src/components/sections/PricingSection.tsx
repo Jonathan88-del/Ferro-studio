@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import SSLTooltip from "../SSLTooltip";
 import HostingTooltip from "../HostingTooltip";
+import WhatsappSupportTooltip from "../WhatsappSupportTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -195,6 +196,10 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
             ) : item === "Hosting administrado por Ferro Studio" ? (
               <div className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
                 <HostingTooltip />
+              </div>
+            ) : item === "Soporte por WhatsApp (24–48 hs hábiles)" ? (
+              <div className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+                <WhatsappSupportTooltip />
               </div>
             ) : (
               <span className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
