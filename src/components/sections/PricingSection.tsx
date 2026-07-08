@@ -51,7 +51,6 @@ const PLANS: Plan[] = [
       "Hasta 3 cambios mensuales al sitio",
       "Prioridad de respuesta (24 hs hábiles)",
       "1 publicación mensual de artículo/novedad",
-      "Revisión mensual de formularios y WhatsApp",
     ],
     cta: "Solicitar presupuesto",
     featured: true,
