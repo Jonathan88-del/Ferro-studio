@@ -1,7 +1,26 @@
 import { motion } from "framer-motion";
+import { Wrench, Check, X } from "lucide-react";
 import { useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
+
+const INCLUDES = [
+  "Cambiar textos.",
+  "Reemplazar fotografías.",
+  "Actualizar horarios.",
+  "Cambiar precios.",
+  "Agregar o modificar integrantes del equipo.",
+  "Actualizar datos de contacto.",
+  "Ajustar pequeños elementos del diseño.",
+  "Modificar botones, enlaces o íconos.",
+];
+
+const NOT_INCLUDES = [
+  "Nuevas páginas.",
+  "Rediseño completo.",
+  "Desarrollo de funcionalidades nuevas.",
+  "Integraciones complejas.",
+];
 
 export default function MonthlyChangesTooltip() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,83 +44,78 @@ export default function MonthlyChangesTooltip() {
           transition={{ duration: 0.3, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-96 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto"
+          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-96 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] rounded-lg p-6 pointer-events-auto"
         >
+          {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, ease: EASE, delay: 0.05 }}
-            className="text-[#F5F2EC]/45 font-sans font-light text-[0.95rem] leading-relaxed space-y-4"
+            className="mb-6"
           >
-            <p>
+            <div className="flex items-center gap-3 mb-3">
+              <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/15 flex items-center justify-center">
+                <Wrench size={20} className="text-[#C9A84C]/70" strokeWidth={1.5} />
+              </div>
+              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[14px]">
+                Cambios Mensuales
+              </span>
+            </div>
+            <p className="text-[#F5F2EC]/45 font-sans font-light text-[0.95rem] leading-relaxed">
               Realizamos hasta tres modificaciones menores solicitadas por el cliente cada mes para mantener la información del sitio siempre actualizada, sin necesidad de contratar trabajos adicionales.
             </p>
+          </motion.div>
 
-            <div>
-              <p className="text-[#F5F2EC]/60 font-medium mb-2">Ejemplos de modificaciones:</p>
-              <ul className="space-y-1.5 text-[0.9rem]">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Cambiar textos.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Reemplazar fotografías.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Actualizar horarios.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Cambiar precios.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Agregar o modificar integrantes del equipo.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Actualizar datos de contacto.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Ajustar pequeños elementos del diseño.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Modificar botones, enlaces o íconos.</span>
-                </li>
-              </ul>
+          {/* Incluye section */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: EASE, delay: 0.1 }}
+            className="mb-6"
+          >
+            <h4 className="text-[0.85rem] tracking-[0.2em] uppercase font-sans text-[#C9A84C]/80 mb-3">Ejemplos de modificaciones</h4>
+            <div className="space-y-2">
+              {INCLUDES.map((item) => (
+                <div key={item} className="flex items-start gap-2.5">
+                  <Check size={14} className="text-[#C9A84C]/70 shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <span className="text-[0.85rem] text-[#F5F2EC]/50 font-sans font-light leading-tight">
+                    {item}
+                  </span>
+                </div>
+              ))}
             </div>
+          </motion.div>
 
-            <div>
-              <p className="text-[#F5F2EC]/60 font-medium mb-2">No incluye:</p>
-              <ul className="space-y-1.5 text-[0.9rem]">
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Nuevas páginas.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Rediseño completo.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Desarrollo de funcionalidades nuevas.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C9A84C] mt-1">•</span>
-                  <span>Integraciones complejas.</span>
-                </li>
-              </ul>
+          {/* No incluye section */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: EASE, delay: 0.15 }}
+            className="mb-6"
+          >
+            <h4 className="text-[0.85rem] tracking-[0.2em] uppercase font-sans text-[#C9A84C]/80 mb-3">No incluye</h4>
+            <div className="space-y-2">
+              {NOT_INCLUDES.map((item) => (
+                <div key={item} className="flex items-start gap-2.5">
+                  <X size={14} className="text-[#F5F2EC]/25 shrink-0 mt-0.5" strokeWidth={2.5} />
+                  <span className="text-[0.85rem] text-[#F5F2EC]/35 font-sans font-light leading-tight">
+                    {item}
+                  </span>
+                </div>
+              ))}
             </div>
+          </motion.div>
 
-            <div className="border-t border-[#F5F2EC]/[0.08] pt-3 mt-3">
-              <p className="text-[0.85rem] text-[#F5F2EC]/35 italic">
-                Cada modificación corresponde a una solicitud relacionada. Por ejemplo, actualizar la información completa de un empleado (foto, nombre, cargo y teléfono) cuenta como una sola modificación.
-              </p>
-            </div>
+          {/* Footer note */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35, ease: EASE, delay: 0.2 }}
+            className="border-t border-[#F5F2EC]/[0.08] pt-4"
+          >
+            <p className="text-[0.8rem] text-[#F5F2EC]/35 font-sans font-light italic leading-relaxed">
+              Cada modificación corresponde a una solicitud relacionada. Por ejemplo, actualizar la información completa de un empleado (foto, nombre, cargo y teléfono) cuenta como una sola modificación.
+            </p>
           </motion.div>
         </motion.div>
       )}
