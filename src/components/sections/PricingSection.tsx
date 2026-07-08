@@ -63,10 +63,7 @@ const PLANS: Plan[] = [
     items: [
       "Todo lo incluido en Plan Activo",
       "Hasta 6 cambios mensuales al sitio",
-      "SEO básico mensual (palabras clave, metadatos)",
-      "Configuración y seguimiento de Google Business",
       "Soporte prioritario (respuesta en 4–8 hs hábiles)",
-      "Informe mensual completo (tráfico, posicionamiento)",
       "1 reunión mensual por videollamada (30 min)",
     ],
     cta: "Hablar con nosotros",
