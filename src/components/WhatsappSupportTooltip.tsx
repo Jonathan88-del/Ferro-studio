@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Check, X } from "lucide-react";
+import { MessageCircle, Check, X, HelpCircle } from "lucide-react";
 import { useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -20,15 +20,31 @@ const NOT_INCLUDES = [
 
 export default function WhatsappSupportTooltip() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLocked, setIsLocked] = useState(false);
+
+  const handleClick = () => {
+    setIsLocked(!isLocked);
+    setIsOpen(!isLocked);
+  };
+
+  const handleClickOutside = () => {
+    if (!isLocked) {
+      setIsOpen(false);
+    }
+  };
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" onMouseLeave={handleClickOutside}>
       <button
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
-        className="text-[0.95rem] font-sans font-light leading-[1.65] hover:text-[#C9A84C] transition-colors text-left cursor-help"
+        onMouseEnter={() => !isLocked && setIsOpen(true)}
+        onMouseLeave={() => !isLocked && setIsOpen(false)}
+        onClick={handleClick}
+        className={`inline-flex items-center gap-2 text-[0.95rem] font-sans font-light leading-[1.65] transition-colors text-left cursor-help ${
+          isLocked ? "text-[#C9A84C] underline" : "hover:text-[#C9A84C]"
+        }`}
       >
         Soporte por WhatsApp (24–48 hs hábiles)
+        <HelpCircle size={14} strokeWidth={2} className="shrink-0" />
       </button>
 
       {/* Tooltip */}
@@ -39,7 +55,7 @@ export default function WhatsappSupportTooltip() {
           exit={{ opacity: 0, scale: 0.95, x: -12 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
+          onMouseLeave={() => !isLocked && setIsOpen(false)}
           className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-96 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] rounded-lg p-6 pointer-events-auto"
         >
           {/* Header */}
