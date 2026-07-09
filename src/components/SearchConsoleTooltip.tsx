@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { HelpCircle } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -17,10 +17,16 @@ const SEARCH_CONSOLE_FEATURES = [
 export default function SearchConsoleTooltip() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
+  const ref = React.useRef<HTMLDivElement>(null);
 
   const handleClick = () => {
     setIsLocked(!isLocked);
     setIsOpen(!isLocked);
+    if (!isLocked) {
+      setTimeout(() => {
+        ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
+    }
   };
 
   const handleClickOutside = () => {
@@ -30,7 +36,7 @@ export default function SearchConsoleTooltip() {
   };
 
   return (
-    <div className="relative inline-block" onMouseLeave={handleClickOutside}>
+    <div ref={ref} className="relative inline-block" onMouseLeave={handleClickOutside}>
       <motion.button
         onMouseEnter={() => !isLocked && setIsOpen(true)}
         onMouseLeave={() => !isLocked && setIsOpen(false)}
