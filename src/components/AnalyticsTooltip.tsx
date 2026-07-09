@@ -24,14 +24,7 @@ export default function AnalyticsTooltip() {
     setIsOpen(!isLocked);
     if (!isLocked) {
       setTimeout(() => {
-        const element = ref.current;
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          const scrollAmount = rect.right - window.innerWidth + 20;
-          if (scrollAmount > 0) {
-            window.scrollBy({ left: scrollAmount, behavior: "smooth" });
-          }
-        }
+        ref.current?.scrollIntoView({ behavior: "smooth", inline: "end", block: "nearest" });
       }, 100);
     }
   };
