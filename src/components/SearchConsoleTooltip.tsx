@@ -24,7 +24,14 @@ export default function SearchConsoleTooltip() {
     setIsOpen(!isLocked);
     if (!isLocked) {
       setTimeout(() => {
-        ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+        const element = ref.current;
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const scrollAmount = rect.right - window.innerWidth + 20;
+          if (scrollAmount > 0) {
+            window.scrollBy({ left: scrollAmount, behavior: "smooth" });
+          }
+        }
       }, 100);
     }
   };
