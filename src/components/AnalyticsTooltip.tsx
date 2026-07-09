@@ -54,7 +54,7 @@ export default function AnalyticsTooltip() {
           transition={{ duration: 0.4, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => !isLocked && setIsOpen(false)}
-          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-[520px] bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] rounded-lg p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)] max-h-[600px] overflow-y-auto"
+          className="absolute right-full top-1/2 -translate-y-1/2 mr-4 z-50 w-[520px] bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] rounded-lg p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)] max-h-[600px] overflow-y-auto"
         >
           {/* Header */}
           <motion.div
