@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { HelpCircle } from "lucide-react";
 import { useState } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -15,17 +16,33 @@ const ANALYTICS_FEATURES = [
 
 export default function AnalyticsTooltip() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLocked, setIsLocked] = useState(false);
+
+  const handleClick = () => {
+    setIsLocked(!isLocked);
+    setIsOpen(!isLocked);
+  };
+
+  const handleClickOutside = () => {
+    if (!isLocked) {
+      setIsOpen(false);
+    }
+  };
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" onMouseLeave={handleClickOutside}>
       <motion.button
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
-        whileHover={{ color: "#C9A84C" }}
+        onMouseEnter={() => !isLocked && setIsOpen(true)}
+        onMouseLeave={() => !isLocked && setIsOpen(false)}
+        onClick={handleClick}
+        whileHover={{ color: isLocked ? "#C9A84C" : "#C9A84C" }}
         transition={{ duration: 0.2 }}
-        className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] hover:text-[#C9A84C] transition-colors text-left cursor-help"
+        className={`inline-flex items-center gap-2 text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] transition-colors text-left cursor-help ${
+          isLocked ? "text-[#C9A84C] underline" : "hover:text-[#C9A84C]"
+        }`}
       >
         Google Analytics
+        <HelpCircle size={14} strokeWidth={2} className="shrink-0" />
       </motion.button>
 
       {/* Tooltip */}
@@ -36,8 +53,8 @@ export default function AnalyticsTooltip() {
           exit={{ opacity: 0, scale: 0.92, x: -20, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-[520px] bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)] max-h-[600px] overflow-y-auto"
+          onMouseLeave={() => !isLocked && setIsOpen(false)}
+          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-[520px] bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] rounded-lg p-6 pointer-events-auto shadow-[0_20px_40px_rgba(0,0,0,0.4)] max-h-[600px] overflow-y-auto"
         >
           {/* Header */}
           <motion.div

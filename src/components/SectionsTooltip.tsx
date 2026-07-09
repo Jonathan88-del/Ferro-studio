@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Home, Users, Briefcase, MessageSquare, Images, Mail } from "lucide-react";
+import { Home, Users, Briefcase, MessageSquare, Images, Mail, HelpCircle } from "lucide-react";
 import { useState } from "react";
 
 const SECTIONS = [
@@ -15,15 +15,31 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function SectionsTooltip() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLocked, setIsLocked] = useState(false);
+
+  const handleClick = () => {
+    setIsLocked(!isLocked);
+    setIsOpen(!isLocked);
+  };
+
+  const handleClickOutside = () => {
+    if (!isLocked) {
+      setIsOpen(false);
+    }
+  };
 
   return (
-    <div className="relative inline-block">
+    <div className="relative inline-block" onMouseLeave={handleClickOutside}>
       <button
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
-        className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] hover:text-[#C9A84C] transition-colors text-left cursor-help"
+        onMouseEnter={() => !isLocked && setIsOpen(true)}
+        onMouseLeave={() => !isLocked && setIsOpen(false)}
+        onClick={handleClick}
+        className={`inline-flex items-center gap-2 text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6] transition-colors text-left cursor-help ${
+          isLocked ? "text-[#C9A84C] underline" : "hover:text-[#C9A84C]"
+        }`}
       >
         Hasta 6 secciones
+        <HelpCircle size={14} strokeWidth={2} className="shrink-0" />
       </button>
 
       {/* Tooltip */}
@@ -34,8 +50,8 @@ export default function SectionsTooltip() {
           exit={{ opacity: 0, scale: 0.95, x: -12 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-80 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] p-6 pointer-events-auto"
+          onMouseLeave={() => !isLocked && setIsOpen(false)}
+          className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-80 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] rounded-lg p-6 pointer-events-auto"
         >
           {/* Header */}
           <motion.div
