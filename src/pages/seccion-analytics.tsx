@@ -162,116 +162,55 @@ export default function SeccionAnalytics() {
             className="mb-20"
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Decisiones que puedes tomar con estos datos
+              Lo que ves y qué haces con eso
             </h2>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🎯</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Optimizar tu contenido
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Si tu página de "Servicios" recibe 10x más tráfico que "Sobre Nosotros", sabes dónde enfocar tus esfuerzos. Podés ampliar servicios, mejorar descripciones, agregar casos de éxito.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">📊</span> Visitas totales
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
+                  Cuánta gente entra. Si crece cada mes = funciona.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Sabes si va bien o mal
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">📱</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Entender tu audiencia
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  ¿El 70% de tu tráfico viene de celular? Debes asegurar que tu sitio sea perfecto en móvil. ¿El 80% viene de Instagram? Invierte en contenido visual. Los datos te guían.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">🔗</span> De dónde vienen
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
+                  ¿De Google? ¿Instagram? ¿Direct? Inviertes en lo que funciona.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Dinero bien gastado
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">💼</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Invertir en marketing inteligentemente
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Si Google te trae clientes de 35 años, profesionales, ¿por qué gastar en TikTok? Los datos te muestran dónde invertir para máximo retorno.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">⏱️</span> Tiempo en sitio
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
+                  Si pasan 5 seg = no les interesa. Si pasan 2 min = interesados.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Engagement real
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🔄</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Mejorar continuamente
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Pruebas A/B, cambios en diseño, ajustes en call-to-action: con Analytics puedes medir si funcionan. Es el ciclo de mejora constante.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">✉️</span> Conversiones
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
+                  Cuántos pidieron presupuesto, llamaron, compraron. Lo que importa.
                 </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
-          >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Cuáles son las métricas clave a observar
-            </h2>
-
-            <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12">
-              <div className="space-y-8">
-                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
-                    Sessions (Sesiones)
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                    Cuántas personas visitaron tu sitio. Si crece mes a mes, tu estrategia funciona. Si cae, es hora de hacer cambios.
-                  </p>
-                </div>
-
-                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
-                    User Engagement (Compromiso)
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                    Cuánto tiempo pasan en tu sitio y cuántas páginas visitan. Un usuario que ve 5 páginas está más interesado que uno que ve 1.
-                  </p>
-                </div>
-
-                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
-                    Bounce Rate (Tasa de rebote)
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                    Qué porcentaje entra y se va sin interactuar. Un bounce rate alto significa que tu página de inicio no está convenciendo. Bajo es bueno.
-                  </p>
-                </div>
-
-                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
-                    Traffic Sources (Fuentes)
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                    De dónde vienen tus clientes: Google, redes sociales, directo. Así sabes en qué canal invertir más.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
-                    Conversions (Conversiones)
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                    Cuántas personas hicieron la acción que querías (llenar formulario, llamar, comprar). Es lo que realmente importa.
-                  </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Dinero en el banco
                 </div>
               </div>
             </div>

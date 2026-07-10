@@ -65,45 +65,57 @@ export default function SeccionPaginas() {
             transition={{ duration: 0.8, ease: EASE }}
             className="mb-20"
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-8">
-              ¿Por qué múltiples páginas?
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              Lo que ganas con 5 páginas
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
                 <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">🎯</span> Mejor en Google
+                  <span className="text-[#C9A84C]">🔍</span> Más clientes desde Google
                 </h3>
                 <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Cada página puede posicionarse para palabras clave diferentes. "Servicios de diseño", "contacto cercano", etc.
+                  Cada página aparece en Google. Es como tener 5 anuncios trabajando para ti.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ +50% más visibilidad
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
                 <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">👥</span> Mejor para clientes
+                  <span className="text-[#C9A84C]">⚡</span> Clientes van directo
                 </h3>
                 <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Acceden directamente al contenido que buscan sin pasar por toda la página de inicio.
+                  Buscan "servicios" → van a tu página de Servicios. No pierdes clientes scrolleando.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ +30% más ventas
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
                 <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">📊</span> Información específica
+                  <span className="text-[#C9A84C]">📱</span> Actualiza sin riesgos
                 </h3>
                 <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Puedes profundizar en cada tema sin saturar una sola página larga.
+                  Cambias precios en una página. Las otras quedan intactas. Cero riesgos.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Cambios rápidos
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
                 <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">📱</span> Más flexible
+                  <span className="text-[#C9A84C]">📊</span> Sabes qué funciona
                 </h3>
                 <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Cambia el contenido de una página sin afectar a las otras.
+                  Ves exactamente qué página trae clientes. Inviertes en lo que funciona.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Decisiones inteligentes
+                </div>
               </div>
             </div>
           </motion.div>
@@ -153,127 +165,7 @@ export default function SeccionPaginas() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
-          >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Cómo trabajan juntas 5 páginas independientes
-            </h2>
 
-            <div className="space-y-6">
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">📍</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Cada página es autónoma
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Puedes actualizar contenido en tu página de servicios sin tocar la de contacto. Cambias precios, descripciones, imágenes de forma independiente. Cada página vive su propia vida.
-                </p>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🌐</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    URLs propias = más presencia en Google
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  En lugar de un sitio que aparece una vez en Google, tienes 5 oportunidades de aparecer en diferentes búsquedas. Si un cliente busca "servicios de diseño", aparece tu página de servicios. Si busca tu dirección, aparece tu página de contacto.
-                </p>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">⚡</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Usuarios encuentran exactamente lo que buscan
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Un cliente que va a tu página de "Servicios" no tiene que scrollear por tu historia. Va directo. Menos distracciones, más conversiones.
-                </p>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">📊</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Analytics más claros
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Puedes ver exactamente qué página genera más tráfico, dónde se concentran los clientes interesados y dónde optimizar tu estrategia.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
-          >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Estructura recomendada según tipo de negocio
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-4">
-                  Servicio profesional (diseñador, contador, abogado)
-                </h3>
-                <ul className="space-y-2">
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Inicio
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Sobre mí / Credenciales
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Servicios
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Portafolio / Casos
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Contacto
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-4">
-                  Tienda o comercio local
-                </h3>
-                <ul className="space-y-2">
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Inicio
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Productos / Catálogo
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Promociones
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Ubicación / Horarios
-                  </li>
-                  <li className="text-[0.9rem] text-[#F5F2EC]/50 font-light flex items-center gap-2">
-                    <span className="text-[#C9A84C]">✓</span> Contacto
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 40 }}

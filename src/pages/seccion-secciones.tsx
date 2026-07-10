@@ -147,104 +147,80 @@ export default function SeccionesSecciones() {
             className="mb-20"
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Cómo benefician cada sección a tu negocio
+              Lo que ganas con cada sección
             </h2>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
-                    <Home size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
-                      Inicio - Tu gancho emocional
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Es tu primera impresión. Aquí cuentas qué hace tu empresa y por qué un cliente debería quedarse. Una buena sección de inicio convierte visitantes ocasionales en prospectos interesados.
-                    </p>
-                  </div>
+                <div className="flex items-start gap-3 mb-4">
+                  <Home size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
+                    Inicio
+                  </h3>
                 </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Convence a la gente en 3 segundos.
+                </p>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
-                    <Users size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
-                      Sobre Nosotros - Construye confianza
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Los clientes quieren saber con quién trabajan. Cuéntales tu historia, tu experiencia y qué te diferencia. La confianza es lo que cierra ventas.
-                    </p>
-                  </div>
+                <div className="flex items-start gap-3 mb-4">
+                  <Users size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
+                    Sobre Nosotros
+                  </h3>
                 </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Construye confianza. Cuéntales quién eres.
+                </p>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
-                    <Briefcase size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
-                      Servicios - Demuestra tu valor
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Aquí brillan tus ofertas. Explica qué haces, cómo lo haces mejor que otros, y cómo resuelves los problemas de tu cliente. Es donde se generan conversiones.
-                    </p>
-                  </div>
+                <div className="flex items-start gap-3 mb-4">
+                  <Briefcase size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
+                    Servicios
+                  </h3>
                 </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Vende. Aquí pasan las conversiones.
+                </p>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
-                    <MessageSquare size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
-                      Testimonios - La prueba social
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Un cliente potencial cree más en otros clientes que en ti mismo. Los testimonios son evidencia de que entregas lo que prometes.
-                    </p>
-                  </div>
+                <div className="flex items-start gap-3 mb-4">
+                  <MessageSquare size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
+                    Testimonios
+                  </h3>
                 </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Otros clientes hablan por ti. Aumenta confianza.
+                </p>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
-                    <Images size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
-                      Galería / Portafolio - Muestra tu talento
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Una imagen vale más que mil palabras. Si trabajas con diseño, fotografía o construcción, tu galería es tu mejor vendedor.
-                    </p>
-                  </div>
+                <div className="flex items-start gap-3 mb-4">
+                  <Images size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
+                    Galería/Portafolio
+                  </h3>
                 </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Muestra tu trabajo. Una imagen vale 1000 palabras.
+                </p>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#C9A84C]/10 border border-[#C9A84C]/30 flex items-center justify-center flex-shrink-0">
-                    <Mail size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
-                      Contacto - Cierra la venta
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Es el final de tu historia. Un formulario o información de contacto clara convierte el interés en una pregunta real. Es donde pasan cosas.
-                    </p>
-                  </div>
+                <div className="flex items-start gap-3 mb-4">
+                  <Mail size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
+                    Contacto
+                  </h3>
                 </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Cierra la venta. El cliente contacta aquí.
+                </p>
               </div>
             </div>
           </motion.div>

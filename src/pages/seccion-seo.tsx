@@ -138,127 +138,55 @@ export default function SeccionSEO() {
             className="mb-20"
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Por qué el SEO básico cambia tu negocio
+              Lo que ganas con SEO
             </h2>
 
-            <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🔍</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Apareces en Google sin pagar publicidad
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Un cliente que te encuentra en Google organicamente está más calificado que alguien que ve tu anuncio. Es tráfico gratis, permanente y de mejor calidad.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">🔍</span> Clientes gratis desde Google
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Alguien busca tu servicio y te encuentra. Sin pagar publicidad.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Tráfico gratis, permanente
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">📈</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Crece con el tiempo, no desaparece
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Google Ads se acaban cuando dejas de pagar. El SEO es como plantar un árbol: toma tiempo, pero crece solo y da frutos por años.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">📈</span> Crece con el tiempo
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  A diferencia de publicidad, el SEO crece mes a mes. Es como plantar un árbol.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Retorno exponencial
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">💰</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    ROI exponencial
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Después de 6-12 meses bien posicionado en Google, cada visita te cuesta prácticamente nada. Compara con Google Ads donde pagas por cada clic.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">💰</span> Ahorro total
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Después de 6 meses, cada cliente que entra por Google no te cuesta nada.
                 </p>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Rentabilidad infinita
+                </div>
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-3">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🏆</span>
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Establece autoridad en tu industria
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
-                  Si apareces primero en Google, la gente te percibe como la opción más confiable y profesional. El posicionamiento es poder.
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
+                  <span className="text-[#C9A84C]">🏆</span> Te ves profesional
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Si apareces primero en Google, la gente te ve como la mejor opción.
                 </p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
-          >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Qué sucede después de implementar SEO
-            </h2>
-
-            <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12">
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">1-3 meses</span>
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                      Fase de preparación
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                      Google comienza a rastrear e indexar tu sitio. Implementamos todos los elementos técnicos (títulos, descripciones, velocidad, etc.). Es trabajo silencioso pero crucial.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">3-6 meses</span>
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                      Primeros resultados
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                      Empiezas a aparecer en Google para búsquedas específicas. El tráfico es modesto pero creciendo. Los visitantes son altamente relevantes.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">6-12 meses</span>
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                      Momentum
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                      Apareces consistentemente en primeras posiciones. El tráfico se multiplica. El costo por cliente adquirido baja significativamente.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">1+ año</span>
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                      Liderazgo consolidado
-                    </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                      Tu sitio es una máquina de clientes. El SEO sigue siendo una inversión pero con retorno residual: genera clientes prácticamente gratis.
-                    </p>
-                  </div>
+                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
+                  ✓ Autoridad automática
                 </div>
               </div>
             </div>
