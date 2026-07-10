@@ -153,6 +153,140 @@ export default function SeccionSearchConsole() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
+            className="mb-20"
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              Qué descubres en Search Console
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🔍</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Qué palabras clave te traen clientes
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  Ves exactamente qué busca la gente para encontrarte. Si muchos buscan "diseño gráfico en CABA", sabes que debes enfatizar ese nicho en tu marketing.
+                </p>
+              </div>
+
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">📊</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    En qué posición apareces en Google
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  Si apareces en posición 15 para una palabra clave importante, sabes que necesitas mejorar tu contenido para esa búsqueda. El objetivo es siempre primeras 3 posiciones.
+                </p>
+              </div>
+
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">⚠️</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Errores que impiden que Google te vea
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  Si hay errores de indexación, Google te lo dice. Podrían ser enlaces rotos, contenido duplicado, o problemas técnicos. Los ves y los corriges rápido.
+                </p>
+              </div>
+
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🔗</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Quién te enlaza desde internet
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  Los backlinks (enlaces externos a tu sitio) son votos de confianza para Google. Search Console te muestra quién te menciona y de dónde viene autoridad.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+            className="mb-20"
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              Acciones que puedes tomar
+            </h2>
+
+            <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12">
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">1</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Solicitar indexación
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      Si creaste una página nueva, le dices a Google que la revise de inmediato. No esperas a que la encuentre solo.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">2</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Fijar que tu sitio sea HTTPS
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      Search Console te muestra si hay problemas de seguridad. Un sitio seguro es un sitio que Google premia en rankings.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">3</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Mejorar para palabras clave que casi rankean
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      Si apareces en posición 8-10 para una palabra clave, con pequeños ajustes podrías llegar a posición 1-3. Es donde están las conversiones reales.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">4</span>
+                  </div>
+                  <div>
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Monitorear y responder a cambios de algoritmo
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      Cuando Google actualiza su algoritmo, Search Console te alerta de cambios en tráfico. Sabes de inmediato si estás siendo afectado.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
             className="bg-gradient-to-r from-[#C9A84C]/10 to-transparent border border-[#C9A84C]/20 rounded-lg p-8 md:p-12"
           >
             <div className="flex items-start gap-4">
@@ -161,12 +295,14 @@ export default function SeccionSearchConsole() {
                 <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-3">
                   Ya viene integrado en tu sitio
                 </h3>
-                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed mb-3">
+                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed mb-4">
                   No necesitas instalar nada. Google Search Console está configurado desde el primer día para que puedas empezar a monitorear tu presencia en Google inmediatamente.
                 </p>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                  <span className="text-[#C9A84C] font-normal">✦</span> Entender cómo Google ve tu sitio es la base para mejorar tu posicionamiento.
-                </p>
+                <div className="bg-[#0E0E0E] rounded-lg p-4 border border-[#F5F2EC]/[0.06]">
+                  <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
+                    <span className="text-[#C9A84C] font-normal">La verdad:</span> Entender cómo Google ve tu sitio es el superpoder del marketing digital moderno. Sin estos datos, estás navegando a ciegas.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>

@@ -159,6 +159,129 @@ export default function SeccionAnalytics() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
+            className="mb-20"
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              Decisiones que puedes tomar con estos datos
+            </h2>
+
+            <div className="space-y-6">
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🎯</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Optimizar tu contenido
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  Si tu página de "Servicios" recibe 10x más tráfico que "Sobre Nosotros", sabes dónde enfocar tus esfuerzos. Podés ampliar servicios, mejorar descripciones, agregar casos de éxito.
+                </p>
+              </div>
+
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">📱</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Entender tu audiencia
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  ¿El 70% de tu tráfico viene de celular? Debes asegurar que tu sitio sea perfecto en móvil. ¿El 80% viene de Instagram? Invierte en contenido visual. Los datos te guían.
+                </p>
+              </div>
+
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">💼</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Invertir en marketing inteligentemente
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  Si Google te trae clientes de 35 años, profesionales, ¿por qué gastar en TikTok? Los datos te muestran dónde invertir para máximo retorno.
+                </p>
+              </div>
+
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                <div className="flex items-start gap-4 mb-3">
+                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">🔄</span>
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Mejorar continuamente
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed ml-12">
+                  Pruebas A/B, cambios en diseño, ajustes en call-to-action: con Analytics puedes medir si funcionan. Es el ciclo de mejora constante.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+            className="mb-20"
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              Cuáles son las métricas clave a observar
+            </h2>
+
+            <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12">
+              <div className="space-y-8">
+                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
+                    Sessions (Sesiones)
+                  </h3>
+                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    Cuántas personas visitaron tu sitio. Si crece mes a mes, tu estrategia funciona. Si cae, es hora de hacer cambios.
+                  </p>
+                </div>
+
+                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
+                    User Engagement (Compromiso)
+                  </h3>
+                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    Cuánto tiempo pasan en tu sitio y cuántas páginas visitan. Un usuario que ve 5 páginas está más interesado que uno que ve 1.
+                  </p>
+                </div>
+
+                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
+                    Bounce Rate (Tasa de rebote)
+                  </h3>
+                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    Qué porcentaje entra y se va sin interactuar. Un bounce rate alto significa que tu página de inicio no está convenciendo. Bajo es bueno.
+                  </p>
+                </div>
+
+                <div className="border-b border-[#F5F2EC]/[0.06] pb-8 last:border-b-0 last:pb-0">
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
+                    Traffic Sources (Fuentes)
+                  </h3>
+                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    De dónde vienen tus clientes: Google, redes sociales, directo. Así sabes en qué canal invertir más.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-3">
+                    Conversions (Conversiones)
+                  </h3>
+                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    Cuántas personas hicieron la acción que querías (llenar formulario, llamar, comprar). Es lo que realmente importa.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
             className="bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-lg p-8 md:p-12"
           >
             <div className="flex items-start gap-4">
@@ -167,9 +290,14 @@ export default function SeccionAnalytics() {
                 <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-3">
                   Viene configurado y listo para usar
                 </h3>
-                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed">
-                  No necesitas saber de tecnología. Nosotros integramos Google Analytics en tu sitio desde el primer día y te mostramos los datos más importantes de manera simple.
+                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed mb-4">
+                  No necesitas saber de tecnología. Nosotros integramos Google Analytics en tu sitio desde el primer día y te mostramos los datos más importantes de manera simple y accionable.
                 </p>
+                <div className="bg-[#0E0E0E] rounded-lg p-4 border border-[#F5F2EC]/[0.06]">
+                  <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
+                    <span className="text-[#C9A84C] font-normal">La verdad:</span> Medir es la diferencia entre un sitio que funciona y uno que solo existe. Los datos son tu brújula en la era digital.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
