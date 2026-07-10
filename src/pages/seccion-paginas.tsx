@@ -1,14 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ArrowLeft, FileText, Users, Briefcase, Mail, Settings } from "lucide-react";
+import { ArrowLeft, Home, Users, Briefcase, Phone, Award, TrendingUp, Clock, Zap } from "lucide-react";
 import { Link } from "wouter";
-
-const EXAMPLE_PAGES = [
-  { icon: FileText, title: "Inicio", url: "/", desc: "Tu página de bienvenida" },
-  { icon: Users, title: "Sobre Nosotros", url: "/nosotros", desc: "Quiénes eres y tu historia" },
-  { icon: Briefcase, title: "Servicios", url: "/servicios", desc: "Lo que ofreces" },
-  { icon: Mail, title: "Contacto", url: "/contacto", desc: "Cómo te encuentren" },
-  { icon: Settings, title: "+1 página", url: "custom", desc: "Completamente personalizada" },
-];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -16,7 +8,7 @@ export default function SeccionPaginas() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-20 md:pt-48 md:pb-24 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -39,158 +31,352 @@ export default function SeccionPaginas() {
               </span>
             </Link>
 
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-5 h-px bg-[#C9A84C]/70" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">
-                5 páginas independientes
-              </span>
-            </div>
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-3xl mb-6">
-              Múltiples páginas con URLs propias en Google
+            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+              Hasta 6 páginas distintas que trabajan juntas
             </h1>
-            <p className="text-[1.1rem] text-[#F5F2EC]/45 font-light max-w-2xl">
-              Cada página tiene su propia dirección en internet y aparece de manera independiente en los resultados de búsqueda.
+            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+              En lugar de una única página, tienes 6 secciones separadas con su propio menú. Cada una muestra exactamente lo que buscan tus clientes.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44">
+      {/* Section 1: ¿Qué significa hasta 6 secciones? */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              ¿Qué significa "hasta 6 secciones"?
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Imagina que tu sitio web es como una oficina. En lugar de un único mostrador donde lo explicar todo, tienes 6 mostrador dedicados a diferentes temas.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Home size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Página 1: Inicio
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Tu tarjeta de presentación. Lo primero que ven es quién eres en 3 segundos.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Users size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Página 2: Sobre ti
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Tu historia. Por qué empezaste, tu experiencia y por qué los clientes confían en ti.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Briefcase size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Página 3: Servicios
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Lo que ofreces. Precios, beneficios y qué esperar cuando contratan.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.25 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Phone size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Página 4: Contacto
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Cómo te llaman. Formulario, teléfono, email o redes. Fácil de encontrar.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:col-span-2"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Award size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Página 5 y 6: Lo que diferencia
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Casos de éxito, trabajos realizados, certificaciones, testimonios de clientes o lo que haga que confíen en ti.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 2: ¿Por qué debería importarte? */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              ¿Por qué debería importarte?
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Porque cada página es como un "anuncio gratis" en Google que trabaja 24/7 para traerte clientes.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Más clientes
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Si alguien busca en Google "consultoría legal en Madrid", tu página de servicios aparece. Si busca "casos de éxito", aparece la otra. Ganas en más búsquedas.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Clientes exactos
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  No todos llegan a tu página de inicio. El que busca "contacto" va directo al contacto. Sin perder tiempo.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Cambios sin riesgo
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Actualizas precios en una página. Las otras siguen igual. Pruebas cambios sin miedo a romper nada.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 3: Visual Comparison */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Lo que ganas con 5 páginas
+              Antes vs. Después
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">🔍</span> Más clientes desde Google
+              {/* Sin múltiples páginas */}
+              <div className="bg-[#1A1A1A] border border-[#FF6B6B]/30 rounded-lg p-8">
+                <h3 className="font-serif text-[1.1rem] font-light text-[#FF6B6B] mb-6">
+                  ❌ Una única página
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Cada página aparece en Google. Es como tener 5 anuncios trabajando para ti.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ +50% más visibilidad
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
+                    <span>Un cliente busca "servicios" y termina en tu inicio</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
+                    <span>Debe scrollear para encontrar lo que busca</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
+                    <span>Muchos abandonan por impaciencia</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
+                    <span>Google ve todo junto, sin estructura clara</span>
+                  </li>
+                </ul>
               </div>
 
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">⚡</span> Clientes van directo
+              {/* Con múltiples páginas */}
+              <div className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8">
+                <h3 className="font-serif text-[1.1rem] font-light text-[#51CF66] mb-6">
+                  ✓ Hasta 6 páginas
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Buscan "servicios" → van a tu página de Servicios. No pierdes clientes scrolleando.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ +30% más ventas
-                </div>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">📱</span> Actualiza sin riesgos
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Cambias precios en una página. Las otras quedan intactas. Cero riesgos.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Cambios rápidos
-                </div>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">📊</span> Sabes qué funciona
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Ves exactamente qué página trae clientes. Inviertes en lo que funciona.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 mt-4 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Decisiones inteligentes
-                </div>
+                <ul className="space-y-3">
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">•</span>
+                    <span>El cliente va directo a lo que busca</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">•</span>
+                    <span>Página de servicios en 1 click</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">•</span>
+                    <span>Mayor probabilidad de venta</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">•</span>
+                    <span>Google entiende perfectamente tu negocio</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Section 4: Quick Numbers */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-8">
-              Ejemplos de páginas que puedes tener
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              El impacto en números
             </h2>
 
-            <div className="space-y-4">
-              {EXAMPLE_PAGES.map((page, index) => {
-                const Icon = page.icon;
-                return (
-                  <motion.div
-                    key={page.title}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.08 }}
-                    className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.06] rounded-lg p-6 flex items-center justify-between hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/[0.02] transition-all duration-300"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-lg border border-[#F5F2EC]/[0.1] flex items-center justify-center bg-[#1A1A1A]">
-                        <Icon size={18} className="text-[#C9A84C]/70" strokeWidth={1.5} />
-                      </div>
-                      <div>
-                        <h3 className="font-serif text-[0.95rem] font-light text-[#F5F2EC]">
-                          {page.title}
-                        </h3>
-                        <p className="text-[0.8rem] text-[#F5F2EC]/40 font-light">
-                          {page.desc}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-[#F5F2EC]/30 text-[0.85rem] font-sans">
-                      {page.url}
-                    </div>
-                  </motion.div>
-                );
-              })}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 text-center"
+              >
+                <p className="text-[2.5rem] font-serif font-light text-[#C9A84C] mb-2">
+                  +300%
+                </p>
+                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
+                  Más búsquedas en Google que te encuentran
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 text-center"
+              >
+                <p className="text-[2.5rem] font-serif font-light text-[#C9A84C] mb-2">
+                  -60%
+                </p>
+                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
+                  Menos visitantes que se van sin convertir
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 text-center"
+              >
+                <p className="text-[2.5rem] font-serif font-light text-[#C9A84C] mb-2">
+                  24/7
+                </p>
+                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
+                  Trabajan por ti sin descanso
+                </p>
+              </motion.div>
             </div>
           </motion.div>
-
-
-
+        </div>
+      </section>
+      {/* Final CTA */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-lg p-8 md:p-12"
+            className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
           >
-            <div className="flex items-start gap-4 mb-6">
-              <span className="text-[#C9A84C] text-[2rem] flex-shrink-0">🔗</span>
-              <div className="flex-1">
-                <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
-                  Estructura jerárquica inteligente
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Aunque tengas 5 páginas independientes, todas están conectadas de manera lógica a través del menú, enlaces internos y estructura de navegación, creando una experiencia cohesiva.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-[#0E0E0E] rounded-lg p-6 border border-[#F5F2EC]/[0.06]">
-              <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
-                <span className="text-[#C9A84C] font-normal">Resultado:</span> Los visitantes encuentran fácilmente lo que buscan, Google entiende la estructura de tu negocio, y cada página trabaja como un pequeño motor de ventas.
-              </p>
-            </div>
+            <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
+              Listo para que 6 páginas trabajen por ti
+            </h2>
+            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
+              Sin complicaciones. Sin código. Sin riesgo. Solo más clientes encontrándote.
+            </p>
+            <Link href="/servicios" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
+              Ver todos nuestros servicios
+              <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </motion.div>
         </div>
       </section>
