@@ -3,10 +3,10 @@ import { Link, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ServiceAccordionNav } from "../ServiceAccordionNav";
 
 const NAV_LINKS = [
   { label: "Inicio",    href: "/" },
-  { label: "Servicios", href: "/servicios" },
   { label: "Proceso",   href: "/proceso" },
   { label: "Planes",    href: "/planes" },
   { label: "Contacto",  href: "/contacto" },
@@ -61,6 +61,7 @@ export default function Navbar() {
                 {link.label}
               </DesktopLink>
             ))}
+            <ServiceAccordionNav isActive={location === "/servicios"} />
           </nav>
 
           {/* CTA + burger */}
@@ -123,15 +124,18 @@ export default function Navbar() {
                 </motion.button>
               </div>
 
-              <ul className="flex flex-col gap-0.5 flex-1">
+              <div className="flex flex-col gap-0.5 flex-1">
                 {NAV_LINKS.map((link, i) => (
-                  <motion.li key={link.href} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + i * 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                  <motion.div key={link.href} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + i * 0.065, ease: [0.22, 1, 0.36, 1] }}>
                     <Link href={link.href} className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === link.href ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
                       {link.label}
                     </Link>
-                  </motion.li>
+                  </motion.div>
                 ))}
-              </ul>
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + NAV_LINKS.length * 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                  <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
+                </motion.div>
+              </div>
 
               <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.42 }} className="mt-auto pt-10 border-t border-[#F5F2EC]/[0.08]">
                 <Link href="/contacto" className={cn("flex items-center justify-center w-full no-underline border border-[#C9A84C]/60 px-6 py-3.5 text-[0.65rem] tracking-[0.2em] uppercase font-sans text-[#C9A84C] transition-all duration-300 hover:bg-[#C9A84C] hover:text-[#0E0E0E]")}>
