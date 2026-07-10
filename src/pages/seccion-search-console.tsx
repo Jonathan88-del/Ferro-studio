@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Search, AlertTriangle, CheckCircle2, TrendingUp, Bug } from "lucide-react";
+import { ArrowLeft, Search, AlertTriangle, CheckCircle2, TrendingUp, Bug, BarChart3 } from "lucide-react";
 import { Link } from "wouter";
 
 const CONSOLE_FEATURES = [
