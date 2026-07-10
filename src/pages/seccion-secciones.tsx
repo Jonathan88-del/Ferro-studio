@@ -47,10 +47,10 @@ export default function SeccionesSecciones() {
               </span>
             </div>
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-3xl mb-6">
-              Personaliza tu sitio con hasta 6 secciones
+              Tu sitio web, estructurado para convertir
             </h1>
             <p className="text-[1.1rem] text-[#F5F2EC]/45 font-light max-w-2xl">
-              Tu sitio puede incluir hasta 6 secciones personalizadas para comunicar todo lo que tu negocio necesita. Totalmente flexible y adaptado a tus objetivos.
+              6 secciones estratégicamente ordenadas para guiar a tus clientes desde el primer click hasta la compra. Sin templetes genéricos, solo lo que tu negocio necesita.
             </p>
           </motion.div>
         </div>
@@ -59,39 +59,78 @@ export default function SeccionesSecciones() {
       {/* Content */}
       <section className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44">
         <div className="container-ferro">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+          {/* Problem & Solution */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+            className="max-w-3xl mb-24"
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-6 leading-tight">
+              El problema con los sitios sin estructura
+            </h2>
+            <p className="text-[1rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-6">
+              Muchos negocios tienen sitios confusos: visitantes no entienden qué ofrecen, no saben en qué orden debe ir la información, o peor: se van sin dejar contacto.
+            </p>
+            <div className="bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-lg p-6 md:p-8">
+              <p className="text-[1rem] text-[#F5F2EC]/60 font-light leading-relaxed">
+                <span className="text-[#C9A84C] font-normal">Nuestra solución:</span> 6 secciones estratégicas que guían a tu cliente perfecto desde "¿Quién eres?" hasta "¿Cómo contrato?". Es un funnel de ventas disfrazado de sitio web elegante.
+              </p>
+            </div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8, ease: EASE }}
             >
-              <h2 className="font-serif text-[2.5rem] font-light text-[#F5F2EC] mb-6 leading-tight">
-                Cada sección está diseñada para contar tu historia
-              </h2>
-              <p className="text-[1rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-6">
-                No se trata solo de llenar espacios. Cada sección tiene un propósito específico en tu estrategia digital. Desde tu entrada principal hasta el contacto, todo trabaja en conjunto para convertir visitantes en clientes.
-              </p>
-              <div className="space-y-4">
+              <h3 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-8 leading-tight">
+                Cada sección cumple un rol en tu venta
+              </h3>
+              <div className="space-y-5">
                 <div className="flex items-start gap-4">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">✦</span>
+                  <span className="text-[#C9A84C] text-[1.3rem] flex-shrink-0">1</span>
                   <div>
-                    <h3 className="font-serif text-[1.1rem] text-[#F5F2EC] mb-1">Flexibilidad Total</h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/45 font-light">Elige solo las secciones que necesitas y en el orden que tenga sentido para tu negocio.</p>
+                    <h4 className="font-serif text-[1rem] text-[#F5F2EC] mb-1">Inicio</h4>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light">Convence en 3 segundos. El cliente decide si se queda o se va.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">✦</span>
+                  <span className="text-[#C9A84C] text-[1.3rem] flex-shrink-0">2</span>
                   <div>
-                    <h3 className="font-serif text-[1.1rem] text-[#F5F2EC] mb-1">Diseño Cohesivo</h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/45 font-light">Todas las secciones mantienen la identidad visual de tu marca, creando una experiencia consistente.</p>
+                    <h4 className="font-serif text-[1rem] text-[#F5F2EC] mb-1">Sobre Nosotros</h4>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light">Construye confianza. Cuéntale tu historia, tus valores, por qué existes.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <span className="text-[#C9A84C] text-[1.5rem] flex-shrink-0">✦</span>
+                  <span className="text-[#C9A84C] text-[1.3rem] flex-shrink-0">3</span>
                   <div>
-                    <h3 className="font-serif text-[1.1rem] text-[#F5F2EC] mb-1">Funcionalidad Integrada</h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/45 font-light">Formularios, mapas, galerías y más funcionan sin problemas en cualquier sección.</p>
+                    <h4 className="font-serif text-[1rem] text-[#F5F2EC] mb-1">Servicios</h4>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light">Vende. Aquí es donde la mayoría de conversiones pasan.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-[#C9A84C] text-[1.3rem] flex-shrink-0">4</span>
+                  <div>
+                    <h4 className="font-serif text-[1rem] text-[#F5F2EC] mb-1">Testimonios</h4>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light">Deja que otros clientes hablen por ti. Aumenta confianza.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-[#C9A84C] text-[1.3rem] flex-shrink-0">5</span>
+                  <div>
+                    <h4 className="font-serif text-[1rem] text-[#F5F2EC] mb-1">Galería / Portafolio</h4>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light">Muestra tu trabajo. Una imagen vale más que 1000 palabras.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <span className="text-[#C9A84C] text-[1.3rem] flex-shrink-0">6</span>
+                  <div>
+                    <h4 className="font-serif text-[1rem] text-[#F5F2EC] mb-1">Contacto</h4>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light">Cierra la venta. El cliente sabe cómo conectar contigo.</p>
                   </div>
                 </div>
               </div>
@@ -104,11 +143,11 @@ export default function SeccionesSecciones() {
               transition={{ duration: 0.8, ease: EASE }}
               className="relative"
             >
-              <div className="bg-gradient-to-b from-[#1A1A1A] to-[#0E0E0E] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12">
-                <h3 className="font-serif text-[1.3rem] font-light text-[#F5F2EC] mb-8">
+              <div className="bg-gradient-to-b from-[#1A1A1A] to-[#0E0E0E] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12 sticky top-8">
+                <h4 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-8">
                   Ejemplos de secciones
-                </h3>
-                <div className="space-y-5">
+                </h4>
+                <div className="space-y-4">
                   {SECTIONS.map((section, index) => {
                     const Icon = section.icon;
                     return (
@@ -117,17 +156,17 @@ export default function SeccionesSecciones() {
                         initial={{ opacity: 0, y: 12 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: index * 0.08 }}
-                        className="flex items-start gap-4 p-4 rounded-lg border border-[#F5F2EC]/[0.06] hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/[0.02] transition-all duration-300"
+                        transition={{ delay: index * 0.06 }}
+                        className="flex items-start gap-3 p-3 rounded-lg border border-[#F5F2EC]/[0.06] hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/[0.02] transition-all duration-300"
                       >
-                        <div className="flex-shrink-0 w-10 h-10 rounded-lg border border-[#F5F2EC]/[0.1] flex items-center justify-center bg-[#1A1A1A]">
-                          <Icon size={18} className="text-[#C9A84C]/70" strokeWidth={1.5} />
+                        <div className="flex-shrink-0 w-8 h-8 rounded border border-[#F5F2EC]/[0.1] flex items-center justify-center bg-[#1A1A1A]">
+                          <Icon size={16} className="text-[#C9A84C]/70" strokeWidth={1.5} />
                         </div>
-                        <div>
-                          <h4 className="font-serif text-[0.95rem] font-light text-[#F5F2EC]">
+                        <div className="flex-1">
+                          <h5 className="font-serif text-[0.9rem] font-light text-[#F5F2EC]">
                             {section.name}
-                          </h4>
-                          <p className="text-[0.8rem] text-[#F5F2EC]/40 font-light">
+                          </h5>
+                          <p className="text-[0.75rem] text-[#F5F2EC]/40 font-light">
                             {section.description}
                           </p>
                         </div>
@@ -146,80 +185,47 @@ export default function SeccionesSecciones() {
             transition={{ duration: 0.8, ease: EASE }}
             className="mb-20"
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Lo que ganas con cada sección
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-8 leading-tight">
+              Lo que realmente obtienes
             </h2>
+            <p className="text-[1rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-12 max-w-2xl">
+              No es solo tener 6 espacios para contenido. Es tener un sistema probado que reduce "bounce rates" y aumenta conversiones:
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-3 mb-4">
-                  <Home size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 hover:border-[#C9A84C]/30 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-[#C9A84C] text-[1.5rem]">✦</span>
                   <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
-                    Inicio
+                    Claridad Inmediata
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Convence a la gente en 3 segundos.
+                <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light leading-relaxed">
+                  El visitante entiende en 10 segundos qué haces, cómo lo haces y por qué debería trabajar contigo.
                 </p>
               </div>
 
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-3 mb-4">
-                  <Users size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 hover:border-[#C9A84C]/30 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-[#C9A84C] text-[1.5rem]">✦</span>
                   <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
-                    Sobre Nosotros
+                    Camino Claro
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Construye confianza. Cuéntales quién eres.
+                <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light leading-relaxed">
+                  Cada sección guía naturalmente al cliente hacia la siguiente. No hay confusión sobre qué hacer.
                 </p>
               </div>
 
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-3 mb-4">
-                  <Briefcase size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 hover:border-[#C9A84C]/30 transition-all duration-300">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-[#C9A84C] text-[1.5rem]">✦</span>
                   <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
-                    Servicios
+                    Más Conversiones
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Vende. Aquí pasan las conversiones.
-                </p>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-3 mb-4">
-                  <MessageSquare size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
-                    Testimonios
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Otros clientes hablan por ti. Aumenta confianza.
-                </p>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-3 mb-4">
-                  <Images size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
-                    Galería/Portafolio
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Muestra tu trabajo. Una imagen vale 1000 palabras.
-                </p>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-3 mb-4">
-                  <Mail size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC]">
-                    Contacto
-                  </h3>
-                </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Cierra la venta. El cliente contacta aquí.
+                <p className="text-[0.9rem] text-[#F5F2EC]/45 font-light leading-relaxed">
+                  Una estructura bien pensada puede aumentar tus conversiones hasta 3x en comparación con sitios desordenados.
                 </p>
               </div>
             </div>
@@ -230,20 +236,38 @@ export default function SeccionesSecciones() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-lg p-8 md:p-12"
+            className="bg-gradient-to-r from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8 md:p-12"
           >
             <div className="flex items-start gap-4">
-              <span className="text-[#C9A84C] text-[1.8rem] flex-shrink-0">💡</span>
+              <span className="text-[#C9A84C] text-[1.6rem] flex-shrink-0">→</span>
               <div>
-                <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
-                  Piensa en las 6 secciones como actos en una obra de teatro
+                <h3 className="font-serif text-[1.3rem] font-light text-[#F5F2EC] mb-3">
+                  ¿Por qué funciona?
                 </h3>
-                <p className="text-[0.95rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Cada una tiene su momento, su propósito y su audiencia. Juntas cuentan la historia completa de tu negocio y guían a tus clientes hacia la acción que deseas: comprar, contratar o ponerse en contacto.
+                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed mb-6">
+                  Es simple: los clientes necesitan un camino claro. Cuando llegan a tu sitio no quieren pensar dónde ir. Una estructura de 6 secciones es como un "mapa del tesoro" para tu negocio. Cada sección responde una pregunta que tu cliente se hace:
                 </p>
-                <div className="bg-[#0E0E0E] rounded-lg p-4 border border-[#F5F2EC]/[0.06]">
-                  <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
-                    <span className="text-[#C9A84C] font-normal">Beneficio clave:</span> Una estructura clara y bien pensada reduce el "bounce rate" (visitantes que se van sin hacer nada) y aumenta tus conversiones en hasta 3x.
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
+                  <div className="flex items-start gap-2 text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#C9A84C] mt-0.5">→</span>
+                    <span>"¿Quién eres?" → Sobre nosotros</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#C9A84C] mt-0.5">→</span>
+                    <span>"¿Qué ofreces?" → Servicios</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#C9A84C] mt-0.5">→</span>
+                    <span>"¿Es bueno?" → Testimonios + Galería</span>
+                  </div>
+                  <div className="flex items-start gap-2 text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#C9A84C] mt-0.5">→</span>
+                    <span>"¿Cómo contrato?" → Contacto</span>
+                  </div>
+                </div>
+                <div className="bg-[#0E0E0E]/60 rounded-lg p-4 border border-[#F5F2EC]/[0.06]">
+                  <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#C9A84C] font-normal">Resultado:</span> Visitantes que entienden tu valor en 1-2 minutos y saben exactamente cómo trabajar contigo.
                   </p>
                 </div>
               </div>
