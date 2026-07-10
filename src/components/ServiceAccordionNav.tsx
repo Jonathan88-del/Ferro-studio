@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SERVICES_FEATURES = [
-  "Hasta 6 secciones",
-  "SEO básico",
-  "Hasta 5 páginas independientes",
-  "Google Analytics",
-  "Search Console",
+  { label: "Hasta 6 secciones", href: "/seccion-secciones" },
+  { label: "SEO básico", href: "/seccion-seo" },
+  { label: "Hasta 5 páginas independientes", href: "/seccion-paginas" },
+  { label: "Google Analytics", href: "/seccion-analytics" },
+  { label: "Search Console", href: "/seccion-search-console" },
 ];
 
 interface ServiceAccordionNavProps {
@@ -72,12 +72,16 @@ export function ServiceAccordionNav({ isActive, isMobile = false }: ServiceAccor
               <ul className="flex flex-col gap-2.5 mb-3">
                 {SERVICES_FEATURES.map((feature) => (
                   <motion.li
-                    key={feature}
+                    key={feature.href}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
-                    className="text-[1.1rem] text-[#F5F2EC]/60 font-light"
                   >
-                    {feature}
+                    <Link
+                      href={feature.href}
+                      className="text-[1.1rem] text-[#F5F2EC]/60 font-light hover:text-[#C9A84C] transition-colors no-underline"
+                    >
+                      {feature.label}
+                    </Link>
                   </motion.li>
                 ))}
               </ul>
@@ -129,13 +133,17 @@ export function ServiceAccordionNav({ isActive, isMobile = false }: ServiceAccor
             <ul className="flex flex-col gap-0 py-2 min-w-[240px]">
               {SERVICES_FEATURES.map((feature, i) => (
                 <motion.li
-                  key={feature}
+                  key={feature.href}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="px-4 py-2.5 text-[0.85rem] text-[#F5F2EC]/70 hover:text-[#F5F2EC] hover:bg-[#F5F2EC]/[0.05] transition-colors duration-200"
                 >
-                  {feature}
+                  <Link
+                    href={feature.href}
+                    className="px-4 py-2.5 text-[0.85rem] text-[#F5F2EC]/70 hover:text-[#F5F2EC] hover:bg-[#F5F2EC]/[0.05] transition-colors duration-200 block no-underline"
+                  >
+                    {feature.label}
+                  </Link>
                 </motion.li>
               ))}
             </ul>

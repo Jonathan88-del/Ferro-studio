@@ -7,6 +7,11 @@ import Servicios from "@/pages/servicios";
 import Proceso from "@/pages/proceso";
 import Planes from "@/pages/planes";
 import Contacto from "@/pages/contacto";
+import SeccionSecciones from "@/pages/seccion-secciones";
+import SeccionSEO from "@/pages/seccion-seo";
+import SeccionPaginas from "@/pages/seccion-paginas";
+import SeccionAnalytics from "@/pages/seccion-analytics";
+import SeccionSearchConsole from "@/pages/seccion-search-console";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient({
@@ -33,6 +38,11 @@ function Router() {
         <Route path="/proceso" component={Proceso} />
         <Route path="/planes" component={Planes} />
         <Route path="/contacto" component={Contacto} />
+        <Route path="/seccion-secciones" component={SeccionSecciones} />
+        <Route path="/seccion-seo" component={SeccionSEO} />
+        <Route path="/seccion-paginas" component={SeccionPaginas} />
+        <Route path="/seccion-analytics" component={SeccionAnalytics} />
+        <Route path="/seccion-search-console" component={SeccionSearchConsole} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
