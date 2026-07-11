@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ServiceAccordionNav } from "../ServiceAccordionNav";
+import { PlansAccordionNav } from "../PlansAccordionNav";
 
 const NAV_LINKS = [
   { label: "Inicio",    href: "/" },
@@ -61,6 +62,7 @@ export default function Navbar() {
                 {link.label}
               </DesktopLink>
             ))}
+            <PlansAccordionNav isActive={location === "/planes"} />
             <ServiceAccordionNav isActive={location === "/servicios"} />
           </nav>
 
@@ -133,6 +135,9 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + NAV_LINKS.length * 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                  <PlansAccordionNav isActive={location === "/planes"} isMobile />
+                </motion.div>
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + (NAV_LINKS.length + 1) * 0.065, ease: [0.22, 1, 0.36, 1] }}>
                   <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
                 </motion.div>
               </div>
