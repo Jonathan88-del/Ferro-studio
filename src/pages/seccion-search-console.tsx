@@ -1,15 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Search, AlertTriangle, CheckCircle2, TrendingUp, Bug, BarChart3 } from "lucide-react";
+import { ArrowLeft, Search, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, Eye, Target, Bug, BarChart3 } from "lucide-react";
 import { Link } from "wouter";
-
-const CONSOLE_FEATURES = [
-  { icon: Search, title: "Apariciones en Google", desc: "Conocé cuántas veces tu sitio aparece en los resultados de búsqueda." },
-  { icon: TrendingUp, title: "Clics desde Google", desc: "Visualizá cuántos usuarios ingresan a tu sitio directamente desde buscadores." },
-  { icon: BarChart3, title: "Posición promedio", desc: "Consultá en qué lugar suelen aparecer tus páginas en Google." },
-  { icon: Search, title: "Palabras clave", desc: "Descubrí qué búsquedas realizan los usuarios para encontrar tu empresa." },
-  { icon: CheckCircle2, title: "Páginas con mejor rendimiento", desc: "Identificá qué páginas reciben más visitas desde Google." },
-  { icon: Bug, title: "Errores de indexación", desc: "Detectá problemas que puedan impedir que aparezcan en Google." },
-];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -17,7 +8,7 @@ export default function SeccionSearchConsole() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-20 md:pt-48 md:pb-24 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -40,199 +31,458 @@ export default function SeccionSearchConsole() {
               </span>
             </Link>
 
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-5 h-px bg-[#C9A84C]/70" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">
-                Search Console
-              </span>
-            </div>
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-3xl mb-6">
-              Descubrí cómo encuentran tu empresa en Google
+            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+              Search Console: Ve exactamente cómo Google ve tu sitio
             </h1>
-            <p className="text-[1.1rem] text-[#F5F2EC]/45 font-light max-w-2xl">
-              Es como tener una conversación directa con Google sobre tu sitio. Ves exactamente cómo Google ve tu contenido y qué palabras clave te traen clientes.
+            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+              Es como una conversación directa con Google. Te dice qué palabras buscan, si tu sitio tiene problemas y cómo mejorar.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44">
+      {/* Section 1: ¿Qué es en realidad? */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              La comunicación directa con Google
+              ¿Qué es Search Console?
             </h2>
-            <p className="text-[1rem] text-[#F5F2EC]/50 font-light mb-12 max-w-2xl">
-              Search Console es tu herramienta para entender cómo Google ve, rastrea e indexa tu sitio.
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Es el teléfono directo entre tú y Google. Mientras Analytics te muestra qué hacen los visitantes, Search Console te muestra cómo Google ve tu sitio.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {CONSOLE_FEATURES.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.08 }}
-                    className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/[0.02] transition-all duration-300"
-                  >
-                    <Icon size={24} className="text-[#C9A84C] mb-4" strokeWidth={1.5} />
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                      {feature.title}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <Eye size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
+                  <div>
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Analytics (visitantes)
                     </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
-                      {feature.desc}
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                      Te muestra qué hace la gente en tu sitio: dónde hace clic, cuánto tiempo pasa, si compra.
                     </p>
-                  </motion.div>
-                );
-              })}
+                    <p className="text-[0.8rem] text-[#C9A84C] font-light mt-3">
+                      → Pregunta: "¿Qué hizo el visitante?"
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <Search size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
+                  <div>
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Search Console (Google)
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                      Te muestra qué buscan las personas para encontrarte, en qué posición apareces, si hay errores.
+                    </p>
+                    <p className="text-[0.8rem] text-[#C9A84C] font-light mt-3">
+                      → Pregunta: "¿Cómo me ve Google?"
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Section 2: Los 3 superpoderes */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-8">
-              Tres modos de uso
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Los 3 superpoderes de Search Console
             </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Tres cosas que ves que son imposibles de ver en otro lado:
+            </p>
 
-            <div className="space-y-6">
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <CheckCircle2 size={24} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
-                    Modo vigilancia
-                  </h3>
+            <div className="space-y-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                    <Search size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Superpoder 1: Ve qué buscan
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                      Alguien busca en Google "consultor legal en Madrid" y apareces. Ves exactamente esa búsqueda.
+                    </p>
+                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                      → Sabes exactamente qué pide la gente
+                    </p>
+                  </div>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light ml-10">
-                  Monitorea si Google puede encontrar e indexar todas tus páginas sin problemas.
-                </p>
-              </div>
+              </motion.div>
 
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <TrendingUp size={24} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
-                    Modo análisis
-                  </h3>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                    <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Superpoder 2: Ve tu posición
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                      Apareces en posición 7 en Google. ¿Tu meta? Llegar a posición 1-3. Ves el camino claramente.
+                    </p>
+                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                      → Sabes exactamente dónde estás
+                    </p>
+                  </div>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light ml-10">
-                  Observa qué palabras clave traen visitantes y en qué posición aparecer en Google.
-                </p>
-              </div>
+              </motion.div>
 
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <div className="flex items-start gap-4 mb-4">
-                  <Bug size={24} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
-                    Modo corrección
-                  </h3>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-6 md:p-8"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                    <AlertTriangle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Superpoder 3: Ve problemas antes de que exploten
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                      Google encuentra un error en tu sitio y te lo dice: "Tu página no carga bien en móvil". Lo corriges y listo.
+                    </p>
+                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                      → Prevención de daño automática
+                    </p>
+                  </div>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light ml-10">
-                  Detecta y soluciona problemas que impiden que tus páginas aparezcan en Google.
-                </p>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Section 3: Qué ves específicamente */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Lo que ves en Search Console
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Qué información ves en el panel
             </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Todo organizado de forma simple para tomar decisiones rápidas:
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">🔍</span> Qué busca la gente
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  Ves exactamente cuál fue la búsqueda que llevó a tu sitio.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Marketing inteligente
-                </div>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">📊</span> En qué posición estás
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  ¿Posición 1? Excelente. ¿Posición 10? Tiempo de mejorar.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Meta claro
-                </div>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">⚠️</span> Problemas técnicos
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  Si hay errores, Google te los dice. Los corriges y listo.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Prevención de daño
-                </div>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">🔗</span> Quién te menciona
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  Enlaces desde otros sitios que aumentan tu credibilidad.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Autoridad aumenta
-                </div>
-              </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  emoji: "🔍",
+                  title: "Qué búsquedas te traen",
+                  desc: "Lista exacta de búsquedas que usó la gente para encontrarte. Si ves 'consultor', creas contenido sobre eso."
+                },
+                {
+                  emoji: "📊",
+                  title: "En qué posición estás",
+                  desc: "Para cada búsqueda, ves en qué posición apareces. Posición 1-3 = excelente. Posición 10+ = trabaja en mejorar."
+                },
+                {
+                  emoji: "📈",
+                  title: "Cuántos clics recibes",
+                  desc: "No solo vistas, sino clics reales. Si ves 1000 apariciones pero solo 50 clics, tu título no es atractivo."
+                },
+                {
+                  emoji: "⚠️",
+                  title: "Problemas técnicos",
+                  desc: "Google detecta si tu sitio no carga bien en móvil, si hay enlaces rotos, si las imágenes no se ven. Te lo dice al instante."
+                },
+                {
+                  emoji: "🔗",
+                  title: "Quién te menciona",
+                  desc: "Enlaces desde otros sitios que apuntan al tuyo. Más enlaces = mayor autoridad en Google."
+                },
+                {
+                  emoji: "🌐",
+                  title: "Datos de móvil vs. desktop",
+                  desc: "¿De dónde viene más tráfico? ¿Celular o computadora? Así optimizas para lo que funciona."
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
+                    <div className="flex-1">
+                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Section 4: Qué cambias con esa info */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="bg-gradient-to-r from-[#C9A84C]/10 to-transparent border border-[#C9A84C]/20 rounded-lg p-8 md:p-12"
           >
-            <div className="flex items-start gap-4">
-              <span className="text-[#C9A84C] text-[2rem] flex-shrink-0">🎯</span>
-              <div>
-                <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-3">
-                  Ya viene integrado en tu sitio
-                </h3>
-                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed mb-4">
-                  No necesitas instalar nada. Google Search Console está configurado desde el primer día para que puedas empezar a monitorear tu presencia en Google inmediatamente.
-                </p>
-                <div className="bg-[#0E0E0E] rounded-lg p-4 border border-[#F5F2EC]/[0.06]">
-                  <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
-                    <span className="text-[#C9A84C] font-normal">La verdad:</span> Entender cómo Google ve tu sitio es el superpoder del marketing digital moderno. Sin estos datos, estás navegando a ciegas.
-                  </p>
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Decisiones que tomas con esa información
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Cada dato lleva a una acción específica:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">1</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Ves que apareces en posición 5
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      → Mejoras tu contenido para esa palabra clave. En 2 meses pasas a posición 2. Esto da +200% de clics.
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">2</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Ves que hay un error en móvil
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      → Lo corriges. Google indexa mejor tu sitio. Comienzas a aparecer en más búsquedas.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">3</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Ves búsquedas que no sabías
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      → Descubres palabras nuevas que traen clientes. Creas contenido específico. Ganancias inesperadas.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.25 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">4</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Ves que hay muchos clics pero muchas apariciones
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      → Tu título o descripción no es atractiva. La cambias. Clics suben 50%.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 5: Por qué importa */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Por qué Search Console es tu brújula SEO
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Sin Search Console, estás optimizando a ciegas. Con ella, ves exactamente qué mejorar:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Target size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Meta clara
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Quieres estar en posición 1 para "consultor legal". Ves que ahora estás 7. Sabes exactamente qué perseguir.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <CheckCircle2 size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Validación inmediata
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Cambias algo y ves si funcionó en 2-4 semanas. Sabes si fue buena idea o no.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Lightbulb size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Oportunidades escondidas
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Descubres búsquedas que no sabías que existían. Oportunidades de dinero que otros no ven.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+            className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
+          >
+            <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
+              Ya viene configurado y listo para usar
+            </h2>
+            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
+              No necesitas hacer nada técnico. Nosotros integramos Search Console desde el primer día para que veas cómo Google ve tu sitio desde el primer momento.
+            </p>
+            <Link href="/servicios" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
+              Ver todos nuestros servicios
+              <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </motion.div>
         </div>
       </section>
