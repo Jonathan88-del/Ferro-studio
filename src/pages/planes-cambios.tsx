@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle, AlertCircle, Zap, RefreshCw, Edit3, Lightbulb, Clock } from "lucide-react";
+import { ArrowLeft, Wrench, Calendar, CheckCircle, AlertCircle, Zap, Edit3, Clock } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -35,13 +35,13 @@ export default function PlanesCambios() {
               Hasta 3 cambios mensuales al sitio
             </h1>
             <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Tu sitio evoluciona. Cada mes, podés hacer cambios y mejoras sin límite en cantidad de solicitudes.
+              Mantén tu sitio siempre actualizado sin complicaciones. Tres cambios al mes para que tu información esté siempre fresca.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 1: ¿Por qué cambios mensuales importan? */}
+      {/* Section 1: ¿Por qué mantener el sitio actualizado? */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
@@ -51,10 +51,10 @@ export default function PlanesCambios() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              ¿Por qué tu sitio necesita cambios?
+              ¿Por qué mantener el sitio actualizado es clave?
             </h2>
             <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Un sitio estático es un sitio muerto. Los negocios cambian, y tu sitio debe cambiar contigo:
+              Un sitio desactualizado es como un negocio cerrado. Cuando algo cambia, necesitás reflejarlo rápido:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,24 +72,24 @@ export default function PlanesCambios() {
                       Sin cambios mensuales
                     </h3>
                     <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Tu sitio envejece. Los clientes notan la falta de actualización.
+                      Tu sitio se queda atrás.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
-                        <span>Información desactualizada ahuyenta clientes</span>
+                        <span>Horarios viejos, clientes confundidos</span>
                       </li>
                       <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
-                        <span>Tus ofertas nuevas nunca aparecen en el sitio</span>
+                        <span>Precios desactualizados causan reclamos</span>
                       </li>
                       <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
-                        <span>Perdes oportunidades de venta</span>
+                        <span>Personas de tu equipo ya no aparecen</span>
                       </li>
                       <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
-                        <span>Los competidores te pasan de largo</span>
+                        <span>Pierdes profesionalismo y confianza</span>
                       </li>
                     </ul>
                   </div>
@@ -107,27 +107,27 @@ export default function PlanesCambios() {
                   <CheckCircle size={24} className="text-[#51CF66] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
-                      Con cambios mensuales
+                      Con 3 cambios mensuales
                     </h3>
                     <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Tu sitio siempre está fresco. Los clientes ven un negocio vivo.
+                      Tu sitio siempre está fresco y actualizado.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
-                        <span>Información siempre actualizada</span>
+                        <span>Actualizas información cuando la necesitás</span>
                       </li>
                       <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
-                        <span>Tus ofertas nuevas en el sitio al instante</span>
+                        <span>Sin esperar, sin hacer vos mismo</span>
                       </li>
                       <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
-                        <span>Mas oportunidades de venta</span>
+                        <span>Tu sitio se ve profesional siempre</span>
                       </li>
                       <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
-                        <span>Sitio siempre competitivo</span>
+                        <span>Los clientes confían más en ti</span>
                       </li>
                     </ul>
                   </div>
@@ -138,7 +138,7 @@ export default function PlanesCambios() {
         </div>
       </section>
 
-      {/* Section 2: Qué tipos de cambios */}
+      {/* Section 2: Qué tipos de cambios podés hacer */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
@@ -148,22 +148,22 @@ export default function PlanesCambios() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              ¿Qué podés cambiar?
+              ¿Qué tipos de cambios podés hacer?
             </h2>
             <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Básicamente todo. Aquí hay algunos ejemplos:
+              Casi todo lo que imagines para mantener tu sitio actualizado:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { emoji: "✏️", title: "Textos", desc: "Actualizar descripciones, títulos, promociones" },
-                { emoji: "🖼️", title: "Imágenes", desc: "Cambiar fotos, agregar nuevas galerías" },
-                { emoji: "🎨", title: "Colores y diseño", desc: "Refrescar la estética del sitio" },
-                { emoji: "📍", title: "Secciones", desc: "Reorganizar, agregar o quitar áreas" },
-                { emoji: "🔗", title: "Enlaces", desc: "Actualizar links internos y externos" },
-                { emoji: "⚙️", title: "Funcionalidad", desc: "Agregar formularios, botones, etc" },
-                { emoji: "📋", title: "Información de contacto", desc: "Actualizar teléfono, email, ubicación" },
-                { emoji: "🎯", title: "CTA", desc: "Cambiar llamadas a la acción (botones)" }
+                { emoji: "✏️", title: "Textos y contenido", desc: "Cambiar descripciones, actualizar información" },
+                { emoji: "📸", title: "Fotografías", desc: "Reemplazar imágenes con versiones nuevas" },
+                { emoji: "🕐", title: "Horarios", desc: "Actualizar horarios de atención o promociones" },
+                { emoji: "💰", title: "Precios", desc: "Cambiar precios de productos o servicios" },
+                { emoji: "👥", title: "Equipo", desc: "Agregar o modificar miembros del equipo" },
+                { emoji: "📞", title: "Contacto", desc: "Actualizar teléfono, email, redes sociales" },
+                { emoji: "🎨", title: "Elementos de diseño", desc: "Ajustar colores, tamaños o estilos menores" },
+                { emoji: "🔗", title: "Botones y enlaces", desc: "Modificar donde apuntan o qué dicen" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -191,7 +191,7 @@ export default function PlanesCambios() {
         </div>
       </section>
 
-      {/* Section 3: Cómo funciona el proceso */}
+      {/* Section 3: Cómo funciona */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
@@ -201,17 +201,17 @@ export default function PlanesCambios() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              Cómo funciona el proceso
+              Cómo funciona el servicio
             </h2>
             <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Es simple. Cada mes tenés derecho a 3 cambios. Así funciona:
+              Simple: tenés 3 cambios cada mes para usar como necesites:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
               {[
-                { step: "1", emoji: "📝", title: "Solicitas", desc: "Envías tus cambios por WhatsApp o email" },
-                { step: "2", emoji: "👨‍💼", title: "Revisamos", desc: "Analizamos qué cambios necesitas" },
-                { step: "3", emoji: "✅", title: "Hacemos", desc: "Implementamos los cambios en tu sitio" }
+                { step: "1", emoji: "📋", title: "Solicitas", desc: "Un cambio simple por mes, o 3 seguidos" },
+                { step: "2", emoji: "⚙️", title: "Realizamos", desc: "Hacemos el cambio rápido y correcto" },
+                { step: "3", emoji: "✅", title: "Publicado", desc: "Tu sitio ya está actualizado" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -236,58 +236,7 @@ export default function PlanesCambios() {
         </div>
       </section>
 
-      {/* Section 4: Ejemplos de cambios */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              Ejemplos reales de cambios
-            </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Aquí hay algunos cambios que nuestros clientes hacen regularmente:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                { title: "Cambio de promoción", desc: "Antes: \"50% de descuento\". Ahora: \"Envío gratis por $100+\"", icon: "🎁" },
-                { title: "Nueva sección de blog", desc: "Agregar artículos nuevos, actualizar testimonios", icon: "📰" },
-                { title: "Renovar galería de fotos", desc: "Mostrar trabajos nuevos, eventos recientes", icon: "📸" },
-                { title: "Cambiar información de contacto", desc: "Nuevo teléfono, new ubicación, horarios", icon: "📞" },
-                { title: "Agregar nuevo servicio", desc: "Un producto nuevo que lanzas, una opción adicional", icon: "⭐" },
-                { title: "Mejorar página de precios", desc: "Actualizar tarifas, agregar planes nuevos", icon: "💰" }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 text-[1.8rem]">{item.icon}</div>
-                    <div className="flex-1">
-                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 5: Lo que ganas */}
+      {/* Section 4: Ventajas de tener cambios incluidos */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
@@ -297,7 +246,7 @@ export default function PlanesCambios() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Lo que ganas con cambios mensuales
+              Lo que ganas con cambios mensuales incluidos
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -309,17 +258,14 @@ export default function PlanesCambios() {
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <Lightbulb size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Flexibilidad total
+                    Sin esperar
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Tu sitio se adapta a los cambios de tu negocio. Nada queda congelado.
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  No necesitás aprender a hacerlo. Nos dices qué cambiar, nosotros lo hacemos.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
-                  → Sitio que evoluciona contigo
-                </div>
               </motion.div>
 
               <motion.div
@@ -330,17 +276,14 @@ export default function PlanesCambios() {
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <Wrench size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Contenido siempre fresco
+                    Sin riesgos
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Los visitantes ven novedad. El sitio nunca se siente viejo.
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  No lo haces vos y no rompes nada accidentalmente.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
-                  → Clientes vuelven por novedades
-                </div>
               </motion.div>
 
               <motion.div
@@ -351,17 +294,14 @@ export default function PlanesCambios() {
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <Calendar size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Responder rápido a oportunidades
+                    Mes a mes
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Lanzas una oferta nueva el lunes, está en el sitio el martes.
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Tenés 3 cambios cada mes. No los usás este mes, no se pierden después.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
-                  → Agilidad para vender más
-                </div>
               </motion.div>
 
               <motion.div
@@ -372,19 +312,132 @@ export default function PlanesCambios() {
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <RefreshCw size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
-                    Mejora continua
+                    Profesional siempre
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Cada mes optimizas. Cada mes el sitio se vuelve más rentable.
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Tu sitio se ve actualizado y profesional todos los meses.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
-                  → Crecimiento mes a mes
-                </div>
               </motion.div>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 5: Qué incluye y qué no */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              ¿Qué está incluido?
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Ejemplos de modificaciones */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-8 h-8 rounded-full bg-[#51CF66]/15 flex items-center justify-center">
+                    <CheckCircle size={18} className="text-[#51CF66]" strokeWidth={2} />
+                  </div>
+                  <h3 className="font-serif text-[1.3rem] font-light text-[#F5F2EC]">
+                    Ejemplos de modificaciones
+                  </h3>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Cambiar textos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Reemplazar fotografías</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Actualizar horarios</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Cambiar precios</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Agregar o modificar integrantes del equipo</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Actualizar datos de contacto</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Ajustar pequeños elementos del diseño</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#51CF66] mt-0.5">✓</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/60 font-light">Modificar botones, enlaces o íconos</span>
+                  </li>
+                </ul>
+              </motion.div>
+
+              {/* No incluye */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-8 h-8 rounded-full bg-[#F5F2EC]/10 flex items-center justify-center">
+                    <AlertCircle size={18} className="text-[#F5F2EC]/40" strokeWidth={2} />
+                  </div>
+                  <h3 className="font-serif text-[1.3rem] font-light text-[#F5F2EC]">
+                    No incluye
+                  </h3>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F5F2EC]/30 mt-0.5">—</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/40 font-light">Nuevas páginas</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F5F2EC]/30 mt-0.5">—</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/40 font-light">Rediseño completo</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F5F2EC]/30 mt-0.5">—</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/40 font-light">Desarrollo de funcionalidades nuevas</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-[#F5F2EC]/30 mt-0.5">—</span>
+                    <span className="text-[0.95rem] text-[#F5F2EC]/40 font-light">Integraciones complejas</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.25 }}
+              className="mt-12 p-6 bg-[#1A1A1A]/50 border border-[#C9A84C]/20 rounded-lg"
+            >
+              <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed">
+                <span className="text-[#C9A84C] font-light">💡 Aclaración:</span> Cada modificación corresponde a una solicitud relacionada. Por ejemplo, actualizar la información completa de un empleado (foto, nombre, cargo y teléfono) cuenta como una sola modificación.
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -400,10 +453,10 @@ export default function PlanesCambios() {
             className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
           >
             <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
-              Un sitio que crece con tu negocio
+              3 cambios cada mes para mantener tu sitio actualizado
             </h2>
             <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
-              3 cambios mensuales para mantener tu sitio siempre actualizado, relevante y competitivo.
+              Sin complicaciones, sin esperar, sin hacer vos mismo. Tu sitio siempre fresco y profesional.
             </p>
             <Link href="/planes" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
               Ver todos nuestros planes

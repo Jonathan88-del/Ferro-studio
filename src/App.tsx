@@ -9,6 +9,7 @@ import Planes from "@/pages/planes";
 import PlanesHosting from "@/pages/planes-hosting";
 import PlanesSSL from "@/pages/planes-ssl";
 import PlanesWhatsapp from "@/pages/planes-whatsapp";
+import PlanesCambios from "@/pages/planes-cambios";
 import Contacto from "@/pages/contacto";
 import SeccionSecciones from "@/pages/seccion-secciones";
 import SeccionSEO from "@/pages/seccion-seo";
@@ -43,6 +44,7 @@ function Router() {
         <Route path="/planes-hosting" component={PlanesHosting} />
         <Route path="/planes-ssl" component={PlanesSSL} />
         <Route path="/planes-whatsapp" component={PlanesWhatsapp} />
+        <Route path="/planes-cambios" component={PlanesCambios} />
         <Route path="/contacto" component={Contacto} />
         <Route path="/seccion-secciones" component={SeccionSecciones} />
         <Route path="/seccion-seo" component={SeccionSEO} />
