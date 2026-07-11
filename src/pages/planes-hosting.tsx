@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Shield, Clock, AlertCircle, Zap } from "lucide-react";
+import { ArrowLeft, Shield, CheckCircle, AlertCircle, Zap, Clock, Server, Lock } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -41,7 +41,7 @@ export default function PlanesHosting() {
         </div>
       </section>
 
-      {/* Section 1: Qué significa */}
+      {/* Section 1: Sin vs Con hosting administrado */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
@@ -51,96 +51,351 @@ export default function PlanesHosting() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              ¿Qué significa "hosting administrado"?
+              ¿Por qué es importante el hosting administrado?
             </h2>
             <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              No es solo guardar tus archivos en un servidor. Es que alguien esté atento, cuidando que funcione 24/7.
+              Tu sitio es tu vendedor 24/7. Si no funciona, pierdes clientes:
             </p>
 
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.05 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <AlertCircle size={24} className="text-[#FF6B6B] flex-shrink-0" strokeWidth={1.5} />
+                  <div>
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Sin hosting administrado
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                      Todo depende de vos. Un error y tu sitio cae.
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                        <span className="flex-shrink-0">•</span>
+                        <span>Sitio cae sin que lo sepas</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                        <span className="flex-shrink-0">•</span>
+                        <span>Pierdes clientes mientras duermes</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                        <span className="flex-shrink-0">•</span>
+                        <span>Tenés que encontrar un técnico a las 3 AM</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                        <span className="flex-shrink-0">•</span>
+                        <span>Actualizaciones de seguridad te asustan</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <CheckCircle size={24} className="text-[#51CF66] flex-shrink-0" strokeWidth={1.5} />
+                  <div>
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Con hosting administrado
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                      Nosotros nos encargamos. Vos solo vos ocupate de tu negocio.
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                        <span className="flex-shrink-0">✓</span>
+                        <span>Tu sitio funciona 99.9% del tiempo</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                        <span className="flex-shrink-0">✓</span>
+                        <span>Los clientes siempre pueden contactarte</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                        <span className="flex-shrink-0">✓</span>
+                        <span>Nosotros resolvemos cualquier problema</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                        <span className="flex-shrink-0">✓</span>
+                        <span>Vos duermes tranquilo</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 2: Lo que hacemos 24/7 */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              6 cosas que hacemos por vos 24/7
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Hosting administrado significa que estas 6 cosas funcionan automáticamente:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                { emoji: "🛡️", title: "Monitoreo constante", desc: "Vigilamos tu sitio cada segundo. Si algo falla, nos enteramos antes que tú" },
+                { emoji: "⚡", title: "Respuesta instantánea", desc: "El problema se detecta y se arregla automáticamente o lo hacemos al instante" },
+                { emoji: "💾", title: "Backups automáticos", desc: "Tu sitio se respalda todos los días. Nada se pierde, nunca" },
+                { emoji: "🔒", title: "Seguridad 24/7", desc: "Protección contra ataques, malware y accesos no autorizados" },
+                { emoji: "🆙", title: "Actualizaciones automáticas", desc: "Las actualizaciones de seguridad se instalan sin que tengas que hacer nada" },
+                { emoji: "⚙️", title: "Mantenimiento preventivo", desc: "Limpieza, optimización y ajustes para que todo funcione al máximo" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
+                    <div className="flex-1">
+                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-1">
+                        {item.title}
+                      </h3>
+                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 3: Los 3 pilares del hosting administrado */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Los 3 pilares del hosting administrado
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Todo se reduce a 3 promesas simples:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Server size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  1. Servidor confiable
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  No es cualquier servidor. Es infraestructura de clase empresarial con garantía de disponibilidad.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  2. Atención rápida
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Si algo falla, reaccionamos en segundos. No esperas horas ni días para que se arregle.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Lock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  3. Seguridad garantizada
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Tu sitio está protegido contra ataques, malware y datos perdidos. Siempre.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 4: Qué incluye */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Lo que está incluido siempre
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              No hay sorpresas. Todo esto viene de serie en nuestro hosting:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Shield size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
+                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
-                      Servidor confiable
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Almacenamiento suficiente
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
-                      Tu sitio está alojado en infraestructura de calidad empresarial. No en un servidor viejo que falla cada dos meses.
+                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      Espacio para tu sitio, imágenes, videos y bases de datos. Sin limitaciones raras.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
+                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
-                      Monitoreo 24/7
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Ancho de banda ilimitado
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
-                      Tenemos sistemas vigilando tu sitio todo el tiempo. Si algo falla, nosotros nos enteramos antes que tus clientes.
+                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      Tus clientes acceden desde cualquier lugar del mundo sin ralentizaciones.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <AlertCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
+                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
-                      Resolución rápida
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Backups semanales
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
-                      Si tu sitio cae, nosotros lo restauramos. No necesitas saber qué pasó ni llamar a un técnico: nosotros lo solucionamos.
+                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      Tu sitio se respalda automáticamente. Nada se pierde nunca.
                     </p>
                   </div>
                 </div>
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-6 md:p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
               >
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
+                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
-                      Actualizaciones y mantenimiento
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      Email corporativo
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
-                      No te preocupes por actualizaciones de seguridad o parches. Nosotros lo hacemos. Tu sitio siempre está actualizado y seguro.
+                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      Correo profesional con tu dominio (info@tuempresa.com).
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.25 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
+              >
+                <div className="flex items-start gap-4">
+                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      SSL gratuito
+                    </h3>
+                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      HTTPS en tu sitio. Ese candadito que dice "este sitio es seguro".
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
+              >
+                <div className="flex items-start gap-4">
+                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                      CDN global
+                    </h3>
+                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      Tu sitio carga rápido desde cualquier parte del mundo.
                     </p>
                   </div>
                 </div>
@@ -150,88 +405,7 @@ export default function PlanesHosting() {
         </div>
       </section>
 
-      {/* Section 2: Por qué importa */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              ¿Por qué es importante?
-            </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Tu sitio web es tu vendedor 24/7. Si no funciona, pierdes clientes.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <h3 className="font-serif text-[1.3rem] font-light text-[#F5F2EC] mb-3">
-                  Si tu sitio cae
-                </h3>
-                <ul className="space-y-3 text-[0.95rem] text-[#F5F2EC]/60 font-light">
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">→</span>
-                    <span>Pierdes clientes que intentaron contactarte</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">→</span>
-                    <span>Dañas tu reputación online</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">→</span>
-                    <span>Google baja tu posición en búsquedas</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">→</span>
-                    <span>Tú estarás buscando a quién llamar a las 3 AM</span>
-                  </li>
-                </ul>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-8"
-              >
-                <h3 className="font-serif text-[1.3rem] font-light text-[#F5F2EC] mb-3">
-                  Con hosting administrado
-                </h3>
-                <ul className="space-y-3 text-[0.95rem] text-[#F5F2EC]/60 font-light">
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">✓</span>
-                    <span>Tu sitio funciona 99.9% del tiempo</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">✓</span>
-                    <span>Los clientes siempre pueden contactarte</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">✓</span>
-                    <span>Tu sitio es rápido y seguro</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-[#C9A84C] font-light mt-1">✓</span>
-                    <span>Vos podés dormir tranquilo</span>
-                  </li>
-                </ul>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 3: Lo que incluye */}
+      {/* Section 5: Lo que ganas */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
@@ -241,34 +415,93 @@ export default function PlanesHosting() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Qué incluye el hosting administrado
+              Lo que ganas con hosting administrado
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                { title: "Almacenamiento suficiente", desc: "Espacio para tu sitio, imágenes, y bases de datos. Sin limitaciones absurdas." },
-                { title: "Ancho de banda ilimitado", desc: "Tus clientes pueden acceder desde cualquier lugar del mundo sin problemas." },
-                { title: "Backups automáticos", desc: "Tu sitio se respalda regularmente. Si algo sale mal, lo restauramos en minutos." },
-                { title: "Seguridad de nivel empresarial", desc: "Protección contra ataques, malware y accesos no autorizados." },
-                { title: "Email corporativo", desc: "Correo profesional con tu dominio (tuempresa@tuempresa.com)." },
-                { title: "Certificado SSL gratuito", desc: "HTTPS en tu sitio. Esencial para seguridad y confianza." },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.06 }}
-                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-                >
-                  <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
-                    {item.title}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Shield size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Tranquilidad mental
                   </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                    {item.desc}
-                  </p>
-                </motion.div>
-              ))}
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                  No tienes que preocuparte por nada técnico. Tu sitio funciona, punto.
+                </p>
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                  → Duermes tranquilo. Nosotros vigilamos.
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Clientes siempre satisfechos
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                  Tu sitio nunca cae. Los clientes siempre pueden contactarte.
+                </p>
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                  → 99.9% de disponibilidad garantizada
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Sitio ultrarrápido
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                  Carga en 1 segundo desde cualquier lugar. Los clientes no se van aburridos.
+                </p>
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                  → Google también te premia por la velocidad
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.25 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Lock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                    Datos seguros
+                  </h3>
+                </div>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                  Tu información está blindada. Ataques, malware, robos: no pasan.
+                </p>
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                  → Protección multinivel 24/7
+                </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -285,7 +518,7 @@ export default function PlanesHosting() {
             className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
           >
             <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
-              La tranquilidad que necesitas
+              Un hosting que funciona mientras vos trabajas
             </h2>
             <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
               Hosting administrado para que vos no tengas que preocuparte. Nosotros cuidamos tu sitio.
