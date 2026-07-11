@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield, Lock, RefreshCw, CheckCircle2, HelpCircle } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 
 const SSL_INFO = [
   { icon: Shield, title: "Encriptación", description: "Protege datos sensibles de clientes" },
@@ -28,17 +29,22 @@ export default function SSLTooltip() {
 
   return (
     <div className="relative inline-block" onMouseLeave={handleClickOutside}>
-      <button
-        onMouseEnter={() => !isLocked && setIsOpen(true)}
-        onMouseLeave={() => !isLocked && setIsOpen(false)}
-        onClick={handleClick}
-        className={`inline-flex items-center gap-2 text-[0.95rem] font-sans font-light leading-[1.65] transition-colors text-left cursor-help ${
-          isLocked ? "text-[#C9A84C] underline" : "hover:text-[#C9A84C]"
-        }`}
-      >
-        Gestión y renovación automática del SSL
-        <HelpCircle size={14} strokeWidth={2} className="shrink-0" />
-      </button>
+      <Link href="/planes-ssl" className="no-underline">
+        <button
+          onMouseEnter={() => !isLocked && setIsOpen(true)}
+          onMouseLeave={() => !isLocked && setIsOpen(false)}
+          onClick={(e) => {
+            e.preventDefault();
+            handleClick();
+          }}
+          className={`inline-flex items-center gap-2 text-[0.95rem] font-sans font-light leading-[1.65] transition-colors text-left cursor-help ${
+            isLocked ? "text-[#C9A84C] underline" : "hover:text-[#C9A84C]"
+          }`}
+        >
+          Gestión y renovación automática del SSL
+          <HelpCircle size={14} strokeWidth={2} className="shrink-0" />
+        </button>
+      </Link>
 
       {/* Tooltip */}
       {isOpen && (
