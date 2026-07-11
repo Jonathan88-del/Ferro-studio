@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -44,14 +45,23 @@ export default function HostingTooltip() {
           onMouseLeave={() => !isLocked && setIsOpen(false)}
           className="absolute left-full top-1/2 -translate-y-1/2 ml-4 z-50 w-80 bg-[#0E0E0E] border border-[#F5F2EC]/[0.1] rounded-lg p-6 pointer-events-auto"
         >
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35, ease: EASE, delay: 0.05 }}
-            className="text-[#F5F2EC]/45 font-sans font-light text-[0.95rem] leading-relaxed"
+            className="flex flex-col gap-4"
           >
-            Nos encargamos de que tu página esté siempre online y funcionando correctamente. Si surge un problema con el hosting, nosotros lo resolvemos para que vos no tengas que preocuparte.
-          </motion.p>
+            <p className="text-[#F5F2EC]/45 font-sans font-light text-[0.95rem] leading-relaxed">
+              Nos encargamos de que tu página esté siempre online y funcionando correctamente. Si surge un problema con el hosting, nosotros lo resolvemos para que vos no tengas que preocuparte.
+            </p>
+            <Link
+              href="/planes-hosting"
+              className="inline-flex items-center gap-2 text-[0.8rem] text-[#C9A84C] hover:text-[#C9A84C]/80 transition-colors no-underline group"
+            >
+              Saber más
+              <ArrowRight size={13} strokeWidth={1.8} className="group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+          </motion.div>
         </motion.div>
       )}
     </div>
