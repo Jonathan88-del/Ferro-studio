@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { HelpCircle } from "lucide-react";
 import { useState } from "react";
+import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -21,17 +22,22 @@ export default function HostingTooltip() {
 
   return (
     <div className="relative inline-block" onMouseLeave={handleClickOutside}>
-      <button
-        onMouseEnter={() => !isLocked && setIsOpen(true)}
-        onMouseLeave={() => !isLocked && setIsOpen(false)}
-        onClick={handleClick}
-        className={`inline-flex items-center gap-2 text-[0.95rem] font-sans font-light leading-[1.65] transition-colors text-left cursor-help ${
-          isLocked ? "text-[#C9A84C] underline" : "hover:text-[#C9A84C]"
-        }`}
-      >
-        Hosting administrado por Ferro Studio
-        <HelpCircle size={14} strokeWidth={2} className="shrink-0" />
-      </button>
+      <Link href="/planes-hosting" className="no-underline">
+        <button
+          onMouseEnter={() => !isLocked && setIsOpen(true)}
+          onMouseLeave={() => !isLocked && setIsOpen(false)}
+          onClick={(e) => {
+            e.preventDefault();
+            handleClick();
+          }}
+          className={`inline-flex items-center gap-2 text-[0.95rem] font-sans font-light leading-[1.65] transition-colors text-left cursor-help ${
+            isLocked ? "text-[#C9A84C] underline" : "hover:text-[#C9A84C]"
+          }`}
+        >
+          Hosting administrado por Ferro Studio
+          <HelpCircle size={14} strokeWidth={2} className="shrink-0" />
+        </button>
+      </Link>
 
       {/* Tooltip */}
       {isOpen && (
