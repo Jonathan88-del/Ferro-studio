@@ -1,15 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Users, Globe, Smartphone, TrendingUp, BarChart3 } from "lucide-react";
+import { ArrowLeft, BarChart3, TrendingUp, Users, MapPin, Eye, Smartphone, Target, DollarSign, Lightbulb } from "lucide-react";
 import { Link } from "wouter";
-
-const ANALYTICS_FEATURES = [
-  { icon: TrendingUp, title: "Visitas al sitio", desc: "Visualizá cuántas personas ingresan a tu página." },
-  { icon: Users, title: "Usuarios nuevos y recurrentes", desc: "Descubrí cuántos visitantes llegan por primera vez y cuántos vuelven." },
-  { icon: BarChart3, title: "Páginas más visitadas", desc: "Identificá qué servicios o secciones generan mayor interés." },
-  { icon: Smartphone, title: "Dispositivos utilizados", desc: "Conocé si navegan desde celular, computadora o tablet." },
-  { icon: Globe, title: "Ubicación de visitantes", desc: "Descubrí desde qué ciudades o países visitan tu sitio." },
-  { icon: Users, title: "Origen del tráfico", desc: "Sabé si llegaron desde Google, redes sociales, WhatsApp o enlaces directos." },
-];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -17,7 +8,7 @@ export default function SeccionAnalytics() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-20 md:pt-48 md:pb-24 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -40,205 +31,461 @@ export default function SeccionAnalytics() {
               </span>
             </Link>
 
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-5 h-px bg-[#C9A84C]/70" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">
-                Google Analytics
-              </span>
-            </div>
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-3xl mb-6">
-              Conocé cómo utilizan los visitantes tu sitio
+            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+              Google Analytics: Ve exactamente qué hace cada visitante
             </h1>
-            <p className="text-[1.1rem] text-[#F5F2EC]/45 font-light max-w-2xl">
-              Con datos en tiempo real, podrás entender mejor a tus clientes y mejorar continuamente tu presencia digital.
+            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+              Es como tener una cámara en tu sitio web. Ves quién entra, qué hace, de dónde vino y si se convirtió en cliente.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44">
+      {/* Section 1: ¿Qué es en realidad? */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
           >
             <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
-              Métricas que importan
+              ¿Qué es Google Analytics en términos simples?
             </h2>
-            <p className="text-[1rem] text-[#F5F2EC]/50 font-light mb-12 max-w-2xl">
-              Google Analytics es como tener un microscopio digital: ves exactamente qué funcionó, qué no, y por dónde debes mejorar.
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Es una herramienta gratis de Google que te muestra todo lo que ocurre en tu sitio web en tiempo real.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {ANALYTICS_FEATURES.map((feature, index) => {
-                const Icon = feature.icon;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <Eye size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
+                  <div>
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Sin Analytics (lo común)
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                      Tu sitio existe pero es una "caja negra". No sabes quién entra, qué ven, o si alguien se interesa.
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                        <span className="flex-shrink-0">•</span>
+                        <span>¿Entran 10 personas o 1000? No sabes</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                        <span className="flex-shrink-0">•</span>
+                        <span>¿De dónde vienen? Ni idea</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                        <span className="flex-shrink-0">•</span>
+                        <span>¿Llamas a qué cambiar? Pura suposición</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <BarChart3 size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
+                  <div>
+                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                      Con Analytics (lo que ofrecemos)
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                      Ves exactamente qué sucede. Datos claros sobre visitantes, de dónde vienen y qué hacen.
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                        <span className="flex-shrink-0">✓</span>
+                        <span>Número exacto de visitantes</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                        <span className="flex-shrink-0">✓</span>
+                        <span>Dónde vienen (Google, Instagram, etc)</span>
+                      </li>
+                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                        <span className="flex-shrink-0">✓</span>
+                        <span>Decisiones basadas en datos reales</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 2: Qué ves exactamente */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Qué información ves en Analytics
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Todo lo importante resumido en un dashboard fácil de entender:
+            </p>
+
+            <div className="space-y-4">
+              {[
+                {
+                  icon: TrendingUp,
+                  title: "Cuánta gente entra",
+                  desc: "100 visitas en enero, 150 en febrero = va bien. Si baja = algo cambió."
+                },
+                {
+                  icon: Users,
+                  title: "Nuevos vs. clientes que vuelven",
+                  desc: "¿Son visitantes nuevos o gente que ya conoce tu sitio?"
+                },
+                {
+                  icon: MapPin,
+                  title: "De dónde vienen",
+                  desc: "¿De Google Search? ¿De redes sociales? ¿De un anuncio? ¿Directamente?"
+                },
+                {
+                  icon: Smartphone,
+                  title: "Desde qué dispositivo",
+                  desc: "¿Entran desde celular, computadora o tablet?"
+                },
+                {
+                  icon: Eye,
+                  title: "Qué página ven primero",
+                  desc: "¿Todos entran por inicio o muchos van directo a servicios?"
+                },
+                {
+                  icon: Target,
+                  title: "Dónde se van",
+                  desc: "¿Ven solo una página y se van? ¿O exploran varias antes de contactar?"
+                }
+              ].map((item, index) => {
+                const Icon = item.icon;
                 return (
                   <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.08 }}
-                    className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/[0.02] transition-all duration-300"
+                    transition={{ delay: index * 0.05 }}
+                    className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
                   >
-                    <Icon size={24} className="text-[#C9A84C] mb-4" strokeWidth={1.5} />
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
-                      {feature.desc}
-                    </p>
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                        <Icon size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
                   </motion.div>
                 );
               })}
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Section 3: Qué haces con esa info */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20 bg-gradient-to-r from-[#1A1A1A] to-[#0E0E0E] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12"
           >
-            <h2 className="font-serif text-[1.8rem] font-light text-[#F5F2EC] mb-6">
-              Casos reales de uso
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Qué cambias con esa información
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Los datos son poderosos porque te permiten mejorar cosas específicas:
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">1</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Descubre qué atrae clientes
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      Si tu página de "Portafolio" recibe 5x más clics que "Sobre nosotros", sabes en qué debe enfocarse tu contenido.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">2</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Inviertes dinero donde funciona
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      Si los clientes mejores vienen de Google, inviertes en SEO. Si vienen de Instagram, creas más contenido allá.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">3</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Mejoras sin adivinar
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      En lugar de cambiar cosas al azar, cambias las que realmente afectan tu negocio.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.25 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">4</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      Crecimiento verificable
+                    </h3>
+                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      Ves el antes y después. ¿Cambio la foto? Antes 10 clics, después 50. Resultado cuantificable.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 4: Casos de uso reales */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+              Ejemplos reales (todos han pasado)
             </h2>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">1</span>
-                </div>
-                <div>
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                    Descubre qué funciona
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                    Si tu página de "Servicios" recibe 10x más clics que tu página de "About", sabes dónde enfocar tus esfuerzos.
-                  </p>
-                </div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  "Nadie llama por teléfono"
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                  Con Analytics ves que 500 personas entraron pero nadie tocó el botón de WhatsApp. La CTA estaba muy pequeña. La hiciste más grande = 10x más contactos.
+                </p>
+                <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                  → Cambio basado en datos, no en suposiciones.
+                </p>
+              </motion.div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">2</span>
-                </div>
-                <div>
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                    Identifica a tus clientes
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                    Entiende de dónde vienen tus visitantes más comprometidos: ¿Instagram? ¿Google? ¿Referidos directos?
-                  </p>
-                </div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  "Instagram no trae clientes"
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                  Ves que el 60% del tráfico viene de Google, no Instagram. Así que el presupuesto de publicidad Instagram se traslada a SEO y Google Ads. El resultado: 3x más ventas.
+                </p>
+                <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                  → Dinero invertido donde realmente funciona.
+                </p>
+              </motion.div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-8 h-8 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#C9A84C] text-[0.9rem] font-serif font-light">3</span>
-                </div>
-                <div>
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
-                    Mejora constantemente
-                  </h3>
-                  <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
-                    Con datos reales, tomas decisiones basadas en hechos, no en suposiciones.
-                  </p>
-                </div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+              >
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  "Nadie va a mi página de Galería"
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                  Ves en Analytics que de 200 visitantes, solo 5 van a la galería. Entonces añades fotos en la página de inicio. Ahora 80 van a la galería. Las conversiones suben 40%.
+                </p>
+                <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                  → Mejora específica = resultado inmediato.
+                </p>
+              </motion.div>
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Section 5: Por qué importa */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="mb-20"
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
-              Lo que ves y qué haces con eso
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              ¿Por qué Analytics es tu arma secreta?
             </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Porque la diferencia entre un sitio que crece y uno que estanca es simple:
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">📊</span> Visitas totales
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  Cuánta gente entra. Si crece cada mes = funciona.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Sabes si va bien o mal
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <Lightbulb size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-              </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Decisiones inteligentes
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Basadas en datos reales, no en corazonadas. Eso = inversiones que dan retorno.
+                </p>
+              </motion.div>
 
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">🔗</span> De dónde vienen
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  ¿De Google? ¿Instagram? ¿Direct? Inviertes en lo que funciona.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Dinero bien gastado
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-              </div>
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Mejora continua
+                </h3>
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Cada mes ves cómo mejoró. El mes que viene cambias algo más. Crecimiento acumulativo.
+                </p>
+              </motion.div>
 
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">⏱️</span> Tiempo en sitio
-                </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  Si pasan 5 seg = no les interesa. Si pasan 2 min = interesados.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Engagement real
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
+                  <DollarSign size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3 flex items-center gap-2">
-                  <span className="text-[#C9A84C]">✉️</span> Conversiones
+                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                  Dinero ahorrado
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-3">
-                  Cuántos pidieron presupuesto, llamaron, compraron. Lo que importa.
+                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                  Inviertes dinero solo en lo que funciona. Nada desperdiciado en canales que no convierten.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-3 py-2 text-[0.8rem] text-[#C9A84C] font-sans">
-                  ✓ Dinero en el banco
-                </div>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Final CTA */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
-            className="bg-[#1A1A1A] border border-[#C9A84C]/20 rounded-lg p-8 md:p-12"
+            className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
           >
-            <div className="flex items-start gap-4">
-              <span className="text-[#C9A84C] text-[2rem] flex-shrink-0">📊</span>
-              <div>
-                <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-3">
-                  Viene configurado y listo para usar
-                </h3>
-                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light leading-relaxed mb-4">
-                  No necesitas saber de tecnología. Nosotros integramos Google Analytics en tu sitio desde el primer día y te mostramos los datos más importantes de manera simple y accionable.
-                </p>
-                <div className="bg-[#0E0E0E] rounded-lg p-4 border border-[#F5F2EC]/[0.06]">
-                  <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
-                    <span className="text-[#C9A84C] font-normal">La verdad:</span> Medir es la diferencia entre un sitio que funciona y uno que solo existe. Los datos son tu brújula en la era digital.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
+              Analytics está integrado desde el primer día
+            </h2>
+            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
+              No necesitas hacer nada. Nosotros lo configuramos y tú simplemente ves los datos que importan.
+            </p>
+            <Link href="/servicios" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
+              Ver todos nuestros servicios
+              <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </motion.div>
         </div>
       </section>
