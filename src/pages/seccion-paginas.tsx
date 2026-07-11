@@ -295,7 +295,149 @@ export default function SeccionPaginas() {
         </div>
       </section>
 
-      {/* Section 4: Quick Numbers */}
+      {/* Section 4: Visual Example */}
+      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+        <div className="container-ferro">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+              Cómo lo ve un cliente en la práctica
+            </h2>
+            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Imagina que alguien busca en Google "tus servicios":
+            </p>
+
+            <div className="space-y-8">
+              {/* Paso 1: Búsqueda en Google */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12"
+              >
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">1</span>
+                  </div>
+                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
+                    Busca en Google
+                  </h3>
+                </div>
+                <p className="text-[0.95rem] text-[#F5F2EC]/50 font-light mb-6 ml-14">
+                  Alguien escribe "servicios de diseño en Madrid" en Google
+                </p>
+                <div className="ml-14 bg-[#0E0E0E] rounded-lg p-6 border border-[#F5F2EC]/[0.06]">
+                  <p className="text-[0.9rem] text-[#F5F2EC]/40 font-light mb-3">
+                    Resultado de búsqueda:
+                  </p>
+                  <div className="space-y-2">
+                    <p className="text-[0.95rem] text-[#C9A84C] font-light">
+                      Tu Empresa - Servicios de Diseño
+                    </p>
+                    <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
+                      www.tuempresa.com/servicios
+                    </p>
+                    <p className="text-[0.85rem] text-[#F5F2EC]/35 font-light">
+                      Descubre nuestros servicios de diseño profesional...
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Paso 2: Hace clic */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 md:p-12"
+              >
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#C9A84C] font-light">2</span>
+                  </div>
+                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
+                    Hace clic y va directamente a Servicios
+                  </h3>
+                </div>
+                <p className="text-[0.95rem] text-[#F5F2EC]/50 font-light mb-6 ml-14">
+                  No va al inicio, va directamente a la página que busca
+                </p>
+                <div className="ml-14 bg-[#0E0E0E] rounded-lg p-6 border border-[#F5F2EC]/[0.06] space-y-4">
+                  {/* Mock Header */}
+                  <div className="flex items-center justify-between pb-4 border-b border-[#F5F2EC]/[0.1]">
+                    <p className="text-[0.9rem] text-[#C9A84C] font-light">Logo</p>
+                    <div className="flex gap-6 text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      <p>Inicio</p>
+                      <p className="text-[#C9A84C]">Servicios ← Está aquí</p>
+                      <p>Contacto</p>
+                    </div>
+                  </div>
+                  {/* Mock Content */}
+                  <div className="pt-4 space-y-2">
+                    <p className="text-[1.1rem] text-[#F5F2EC] font-serif font-light">
+                      Nuestros Servicios
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 mt-4 text-[0.8rem] text-[#F5F2EC]/40 font-light">
+                      <div className="bg-[#1A1A1A] p-3 rounded border border-[#F5F2EC]/[0.1]">
+                        <p className="text-[#C9A84C] font-light mb-1">Diseño Web</p>
+                        <p className="text-[0.75rem]">Sitios modernos y rápidos</p>
+                      </div>
+                      <div className="bg-[#1A1A1A] p-3 rounded border border-[#F5F2EC]/[0.1]">
+                        <p className="text-[#C9A84C] font-light mb-1">Branding</p>
+                        <p className="text-[0.75rem]">Tu identidad visual</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Paso 3: Ve exactamente lo que busca */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.15 }}
+                className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8 md:p-12"
+              >
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-[#51CF66]/20 flex items-center justify-center flex-shrink-0">
+                    <span className="font-serif text-[#51CF66] font-light">3</span>
+                  </div>
+                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
+                    Resultado: Conversión
+                  </h3>
+                </div>
+                <ul className="ml-14 space-y-3">
+                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
+                    <span>Ve exactamente lo que buscaba: tus servicios</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
+                    <span>No pierde tiempo scrolleando</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
+                    <span>Te llama, pide presupuesto o compra</span>
+                  </li>
+                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
+                    <span>¡Nuevo cliente!</span>
+                  </li>
+                </ul>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Section 5: Quick Numbers */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
