@@ -10,6 +10,7 @@ const SERVICES_FEATURES = [
   { label: "Hasta 5 páginas independientes", href: "/seccion-paginas" },
   { label: "Google Analytics", href: "/seccion-analytics" },
   { label: "Search Console", href: "/seccion-search-console" },
+  { label: "Soporte por WhatsApp", href: "/seccion-whatsapp" },
 ];
 
 interface ServiceAccordionNavProps {
