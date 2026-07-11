@@ -9,7 +9,6 @@ import { PlansAccordionNav } from "../PlansAccordionNav";
 const NAV_LINKS = [
   { label: "Inicio",    href: "/" },
   { label: "Proceso",   href: "/proceso" },
-  { label: "Planes",    href: "/planes" },
   { label: "Contacto",  href: "/contacto" },
 ];
 
