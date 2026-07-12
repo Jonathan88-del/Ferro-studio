@@ -247,7 +247,7 @@ export default function SeccionesSecciones() {
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center border border-[#C9A84C]/30">
-                      <span className="font-serif text-[#C9A84C] font-light text-[0.95rem]">{item.step}</span>
+                      <span className={`font-serif text-[#C9A84C] font-light text-[40px] ${item.step === "6" ? "pb-[2px]" : "pb-5"}`}>{item.step}</span>
                     </div>
                     <div className="flex-1">
                       <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
