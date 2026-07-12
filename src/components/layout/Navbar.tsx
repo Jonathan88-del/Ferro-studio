@@ -12,6 +12,11 @@ const NAV_LINKS = [
   { label: "Contacto",  href: "/contacto" },
 ];
 
+const ACCORDION_LINKS = [
+  { component: "ServiceAccordionNav", href: "/servicios" },
+  { component: "PlansAccordionNav", href: "/planes" },
+];
+
 export default function Navbar() {
   const [location] = useLocation();
   const [scrolled, setScrolled]   = useState(false);
@@ -61,8 +66,8 @@ export default function Navbar() {
                 {link.label}
               </DesktopLink>
             ))}
-            <PlansAccordionNav isActive={location === "/planes"} />
             <ServiceAccordionNav isActive={location === "/servicios"} />
+            <PlansAccordionNav isActive={location === "/planes"} />
           </nav>
 
           {/* CTA + burger */}
@@ -134,10 +139,10 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + NAV_LINKS.length * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                  <PlansAccordionNav isActive={location === "/planes"} isMobile />
+                  <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + (NAV_LINKS.length + 1) * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                  <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
+                  <PlansAccordionNav isActive={location === "/planes"} isMobile />
                 </motion.div>
               </div>
 
