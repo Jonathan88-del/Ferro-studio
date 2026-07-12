@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { MousePointerClick, Building2, LayoutGrid, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
-import SectionsTooltip from "../SectionsTooltip";
-import SEOTooltip from "../SEOTooltip";
-import PagestooltipTooltip from "../Pagestooltip";
-import AnalyticsTooltip from "../AnalyticsTooltip";
-import SearchConsoleTooltip from "../SearchConsoleTooltip";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -228,19 +223,7 @@ function ServiceCard({
         {service.includes.map((item) => (
           <li key={item} className="flex items-start gap-3">
             <span className="text-[#C9A84C]/60 text-[0.75rem] font-sans mt-[3px] shrink-0">✓</span>
-            {item === "Hasta 6 secciones" ? (
-              <SectionsTooltip />
-            ) : item === "SEO básico" ? (
-              <SEOTooltip />
-            ) : item === "Hasta 5 páginas independientes" ? (
-              <PagestooltipTooltip />
-            ) : item === "Google Analytics" ? (
-              <AnalyticsTooltip />
-            ) : item === "Search Console" ? (
-              <SearchConsoleTooltip />
-            ) : (
-              <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
-            )}
+            <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
           </li>
         ))}
       </ul>
