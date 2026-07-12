@@ -78,7 +78,7 @@ export default function WhyFerroSection() {
             </div>
             <h2
               id="why-ferro-heading"
-              className="font-serif font-light text-[clamp(2rem,5vw,4rem)] leading-[1.06] tracking-[-0.015em] text-[#0E0E0E]"
+              className="font-serif font-light text-[44px] leading-[1.06] tracking-[-0.015em] text-[#0E0E0E]"
             >
               Existimos para que los pequeños negocios se vean tan profesionales como los grandes.
             </h2>
@@ -113,13 +113,13 @@ export default function WhyFerroSection() {
           </div>
 
           <div className="flex-1">
-            <p className="text-[0.62rem] tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 mb-3">
+            <p className="text-[10px] tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 mb-3">
               Su código, siempre
             </p>
-            <h3 className="font-serif text-[1.6rem] md:text-[1.9rem] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em] mb-4">
+            <h3 className="font-serif text-[26px] md:text-[30px] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em] mb-4">
               Si algún día decide trabajar con otra persona, le entregamos el código completo de su sitio.
             </h3>
-            <p className="text-[0.95rem] text-[#F5F2EC]/40 font-sans font-light leading-[1.8]">
+            <p className="text-[15px] text-[#F5F2EC]/40 font-sans font-light leading-[1.8]">
               El sitio es suyo. No lo retenemos como forma de fidelización. Si en algún momento quiere cambiar de proveedor, recibirá el código fuente completo para continuar con quien desee, sin restricciones ni condiciones.
             </p>
           </div>
@@ -187,10 +187,10 @@ function ValueBlock({
       </div>
 
       <div className="flex flex-col gap-5">
-        <h3 className="font-serif text-[2.4rem] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
+        <h3 className="font-serif text-[38px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
           {value.title}
         </h3>
-        <p className="text-[1.15rem] text-[#0E0E0E]/45 font-sans font-light leading-[1.82]">
+        <p className="text-[18px] text-[#0E0E0E]/45 font-sans font-light leading-[1.82]">
           {value.description}
         </p>
       </div>

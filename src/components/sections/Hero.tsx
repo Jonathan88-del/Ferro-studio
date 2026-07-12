@@ -122,7 +122,7 @@ export default function Hero() {
               className="overflow-hidden"
             >
               <h1
-                className="font-serif font-light leading-[0.96] text-[clamp(48px,7.8vw,128px)] tracking-[-0.025em] text-[#F5F2EC]"
+                className="font-serif font-light leading-[0.96] text-[70px] tracking-[-0.025em] text-[#F5F2EC]"
               >
                 {line.text}
               </h1>
