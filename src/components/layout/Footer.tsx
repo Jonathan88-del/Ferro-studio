@@ -18,7 +18,7 @@ const SERVICE_LINKS = [
   { label: "Sitio Institucional",    href: "/servicios" },
   { label: "Sitio con Catálogo/CMS", href: "/servicios" },
   { label: "Rediseño Web",           href: "/servicios" },
-  { label: "Mantenimiento mensual",  href: "/planes" },
+  { label: "Mantenimiento cuatrimestral",  href: "/planes" },
 ];
 
 const CONTACT_ITEMS = [
