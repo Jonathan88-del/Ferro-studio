@@ -95,7 +95,6 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
   return (
     <div className="relative">
       <button
-        onClick={handleClick}
         className={cn(
           "ferro-focus relative inline-flex flex-col items-center px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group",
           isActive ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#F5F2EC]",
@@ -104,7 +103,12 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
       >
         <div className="flex items-center gap-1.5">
           Planes
-          <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+          <motion.div
+            onClick={handleClick}
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.2 }}
+            className="cursor-pointer"
+          >
             <ChevronDown size={14} strokeWidth={1.5} />
           </motion.div>
         </div>
