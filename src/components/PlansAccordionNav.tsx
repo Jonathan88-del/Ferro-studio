@@ -94,15 +94,16 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
   return (
     <div className="relative">
       <button
-        onClick={handleNavigate}
         className={cn(
           "ferro-focus relative inline-flex flex-col items-center px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group",
           isActive ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#F5F2EC]",
           "gap-1"
         )}
       >
-        <div className="flex items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
-          Planes
+        <div className="flex items-center gap-1.5">
+          <span onClick={handleNavigate} className="cursor-pointer hover:text-[#C9A84C] transition-colors">
+            Planes
+          </span>
           <motion.div
             onClick={handleArrowClick}
             animate={{ rotate: isOpen ? 180 : 0 }}
