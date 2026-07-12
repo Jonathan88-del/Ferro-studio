@@ -24,15 +24,9 @@ export function ServiceAccordionNav({ isActive, isMobile = false }: ServiceAccor
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-
-    if (!isActive) {
-      // Not on servicios page - navigate to it
-      window.location.href = "/servicios";
-    } else {
-      // Already on servicios page - toggle accordion
-      setIsOpen(!isOpen);
-      setExpandedOnce(true);
-    }
+    e.stopPropagation();
+    setIsOpen(!isOpen);
+    setExpandedOnce(true);
   };
 
   // Reset state when navigating away from servicios

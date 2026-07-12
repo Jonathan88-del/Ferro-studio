@@ -23,15 +23,9 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
 
   const handleClick = (e: React.MouseEvent) => {
     e.preventDefault();
-
-    if (!isActive) {
-      // Not on planes page - navigate to it
-      window.location.href = "/planes";
-    } else {
-      // Already on planes page - toggle accordion
-      setIsOpen(!isOpen);
-      setExpandedOnce(true);
-    }
+    e.stopPropagation();
+    setIsOpen(!isOpen);
+    setExpandedOnce(true);
   };
 
   // Reset state when navigating away from planes
