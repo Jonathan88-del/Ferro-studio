@@ -112,7 +112,7 @@ export default function Services() {
             </div>
             <h2
               id="services-heading"
-              className="font-serif font-light text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC]"
+              className="font-serif font-light text-[50px] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC]"
             >
               Soluciones para cada etapa de su negocio.
             </h2>
