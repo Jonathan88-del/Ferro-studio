@@ -8,13 +8,9 @@ import { PlansAccordionNav } from "../PlansAccordionNav";
 
 const NAV_LINKS = [
   { label: "Inicio",    href: "/" },
+  { label: "Servicio",  href: "/servicios" },
   { label: "Proceso",   href: "/proceso" },
   { label: "Contacto",  href: "/contacto" },
-];
-
-const ACCORDION_LINKS = [
-  { component: "ServiceAccordionNav", href: "/servicios" },
-  { component: "PlansAccordionNav", href: "/planes" },
 ];
 
 export default function Navbar() {
@@ -66,7 +62,6 @@ export default function Navbar() {
                 {link.label}
               </DesktopLink>
             ))}
-            <ServiceAccordionNav isActive={location === "/servicios"} />
             <PlansAccordionNav isActive={location === "/planes"} />
           </nav>
 
@@ -139,9 +134,6 @@ export default function Navbar() {
                   </motion.div>
                 ))}
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + NAV_LINKS.length * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                  <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
-                </motion.div>
-                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + (NAV_LINKS.length + 1) * 0.065, ease: [0.22, 1, 0.36, 1] }}>
                   <PlansAccordionNav isActive={location === "/planes"} isMobile />
                 </motion.div>
               </div>
