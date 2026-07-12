@@ -126,7 +126,7 @@ export default function IndustrySection() {
             href="/contacto"
             className={cn(
               "inline-flex items-center gap-2 no-underline shrink-0",
-              "text-[0.78rem] tracking-[0.2em] uppercase font-sans",
+              "text-[13px] tracking-[0.2em] uppercase font-sans",
               "text-[#0E0E0E]/65 hover:text-[#C9A84C]",
               "border-b border-[#0E0E0E]/20 hover:border-[#C9A84C]/50 pb-1",
               "transition-all duration-300"
