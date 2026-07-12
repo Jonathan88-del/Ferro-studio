@@ -25,7 +25,7 @@ const PLANS: Plan[] = [
   {
     id: "presencia",
     name: "Plan Presencia",
-    price: "$20.000 – $25.000 ARS/mes",
+    price: "$25.000 ARS/mes",
     tagline: "Hosting administrado, SSL y soporte técnico. Ideal para mantener su presencia digital segura y siempre disponible.",
     items: [
       "Hosting administrado por Ferro Studio",
@@ -85,14 +85,14 @@ export default function PricingSection() {
             <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-5 h-px bg-[#C9A84C]/70" />
-                <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">Mantenimiento mensual</span>
+                <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">Mantenimiento Cuatrimestral</span>
               </div>
               <h2 id="pricing-heading" className="font-serif font-light text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
                 Su socio digital permanente.
               </h2>
             </motion.div>
             <motion.p variants={fadeUp(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
-              El mantenimiento mensual es el corazón del modelo de Ferro Studio. Garantiza que su sitio funcione siempre, esté actualizado y tenga soporte técnico disponible. Requiere haber contratado un proyecto web previamente.
+              El mantenimiento cuatrimestral es el corazón del modelo de Ferro Studio. Garantiza que su sitio funcione siempre, esté actualizado y tenga soporte técnico disponible. Requiere haber contratado un proyecto web previamente.
             </motion.p>
           </div>
 
