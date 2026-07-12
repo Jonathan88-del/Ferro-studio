@@ -62,7 +62,7 @@ export default function CTASection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="font-serif font-light text-[clamp(2.8rem,7.5vw,7rem)] leading-[1.02] tracking-[-0.02em] text-[#F5F2EC] max-w-4xl mb-10 md:mb-12"
+          className="font-serif font-light text-[68px] leading-[1.02] tracking-[-0.02em] text-[#F5F2EC] max-w-4xl mb-10 md:mb-12"
         >
           ¿Listo para dar el siguiente paso?
         </motion.h2>

@@ -61,17 +61,17 @@ export default function Footer() {
                 Ferro<span className="text-[#C9A84C]">.</span>
               </span>
             </Link>
-            <p className="text-[1.1rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.85] max-w-[300px] mb-7">
+            <p className="text-[18px] text-[#F5F2EC]/35 font-sans font-light leading-[1.85] max-w-[300px] mb-7">
               Nos ocupamos completamente de su presencia online para que usted pueda enfocarse en hacer crecer su negocio.
             </p>
-            <p className="text-[0.82rem] tracking-[0.14em] uppercase text-[#F5F2EC]/18 font-sans font-light">
+            <p className="text-[14px] tracking-[0.14em] uppercase text-[#F5F2EC]/18 font-sans font-light">
               ferro.studio · Est. 2024
             </p>
           </div>
 
           {/* Col 2: Navigation */}
           <div>
-            <p className="text-[0.76rem] tracking-[0.24em] uppercase font-sans text-[#F5F2EC]/28 mb-8">
+            <p className="text-[13px] tracking-[0.24em] uppercase font-sans text-[#F5F2EC]/28 mb-8">
               Navegación
             </p>
             <ul className="flex flex-col gap-5">
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Col 3: Services */}
           <div>
-            <p className="text-[0.76rem] tracking-[0.24em] uppercase font-sans text-[#F5F2EC]/28 mb-8">
+            <p className="text-[13px] tracking-[0.24em] uppercase font-sans text-[#F5F2EC]/28 mb-8">
               Servicios
             </p>
             <ul className="flex flex-col gap-5">
@@ -109,7 +109,7 @@ export default function Footer() {
 
           {/* Col 4: Contact */}
           <div>
-            <p className="text-[0.76rem] tracking-[0.24em] uppercase font-sans text-[#F5F2EC]/28 mb-8">
+            <p className="text-[13px] tracking-[0.24em] uppercase font-sans text-[#F5F2EC]/28 mb-8">
               Contacto
             </p>
             <ul className="flex flex-col gap-5">
@@ -160,10 +160,10 @@ export default function Footer() {
 
       <div className="container-ferro py-8">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <p className="text-[0.88rem] tracking-[0.1em] text-[#F5F2EC]/22 font-sans font-light">
+          <p className="text-[14px] tracking-[0.1em] text-[#F5F2EC]/22 font-sans font-light">
             © {year} Ferro Studio · Jonathan Ferrara · Buenos Aires, Argentina
           </p>
-          <p className="text-[0.88rem] tracking-[0.1em] text-[#F5F2EC]/18 font-sans font-light">
+          <p className="text-[14px] tracking-[0.1em] text-[#F5F2EC]/18 font-sans font-light">
             Tranquilidad digital · ferro.studio
           </p>
         </div>
