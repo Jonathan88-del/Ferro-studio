@@ -56,13 +56,17 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <nav className="hidden md:flex items-center gap-[2px]" aria-label="Navegación principal">
-            {NAV_LINKS.map((link) => (
-              <DesktopLink key={link.href} href={link.href} active={location === link.href}>
-                {link.label}
-              </DesktopLink>
-            ))}
-            <PlansAccordionNav isActive={location === "/planes"} />
+            <DesktopLink href="/" active={location === "/"}>
+              Inicio
+            </DesktopLink>
             <ServiceAccordionNav isActive={location === "/servicios"} />
+            <DesktopLink href="/proceso" active={location === "/proceso"}>
+              Proceso
+            </DesktopLink>
+            <PlansAccordionNav isActive={location === "/planes"} />
+            <DesktopLink href="/contacto" active={location === "/contacto"}>
+              Contacto
+            </DesktopLink>
           </nav>
 
           {/* CTA + burger */}
@@ -126,18 +130,26 @@ export default function Navbar() {
               </div>
 
               <div className="flex flex-col gap-0.5 flex-1">
-                {NAV_LINKS.map((link, i) => (
-                  <motion.div key={link.href} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + i * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                    <Link href={link.href} className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === link.href ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
-                      {link.label}
-                    </Link>
-                  </motion.div>
-                ))}
-                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + NAV_LINKS.length * 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}>
+                  <Link href="/" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/" ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
+                    Inicio
+                  </Link>
+                </motion.div>
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                  <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
+                </motion.div>
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 2 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                  <Link href="/proceso" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/proceso" ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
+                    Proceso
+                  </Link>
+                </motion.div>
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 3 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
                   <PlansAccordionNav isActive={location === "/planes"} isMobile />
                 </motion.div>
-                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + (NAV_LINKS.length + 1) * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                  <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 4 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                  <Link href="/contacto" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/contacto" ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
+                    Contacto
+                  </Link>
                 </motion.div>
               </div>
 
