@@ -21,11 +21,18 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
   const [expandedOnce, setExpandedOnce] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleArrowClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsOpen(!isOpen);
-    setExpandedOnce(true);
+
+    if (!isActive) {
+      // Not on planes page - navigate to it
+      window.location.href = "/planes";
+    } else {
+      // Already on planes page - toggle accordion
+      setIsOpen(!isOpen);
+      setExpandedOnce(true);
+    }
   };
 
   // Reset state when navigating away from planes
@@ -98,7 +105,7 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
         <div className="flex items-center gap-1.5">
           Planes
           <motion.div
-            onClick={handleClick}
+            onClick={handleArrowClick}
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.2 }}
             className="cursor-pointer"

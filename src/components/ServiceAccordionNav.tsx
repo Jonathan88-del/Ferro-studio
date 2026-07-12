@@ -22,11 +22,18 @@ export function ServiceAccordionNav({ isActive, isMobile = false }: ServiceAccor
   const [expandedOnce, setExpandedOnce] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleArrowClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsOpen(!isOpen);
-    setExpandedOnce(true);
+
+    if (!isActive) {
+      // Not on servicios page - navigate to it
+      window.location.href = "/servicios";
+    } else {
+      // Already on servicios page - toggle accordion
+      setIsOpen(!isOpen);
+      setExpandedOnce(true);
+    }
   };
 
   // Reset state when navigating away from servicios
@@ -99,7 +106,7 @@ export function ServiceAccordionNav({ isActive, isMobile = false }: ServiceAccor
         <div className="flex items-center gap-1.5">
           Servicios
           <motion.div
-            onClick={handleClick}
+            onClick={handleArrowClick}
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.2 }}
             className="cursor-pointer"
