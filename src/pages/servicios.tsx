@@ -31,7 +31,7 @@ export default function Servicios() {
                 Lo que hacemos
               </span>
             </div>
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-2xl">
+            <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-2xl">
               Servicios diseñados para hacer crecer tu negocio.
             </h1>
           </motion.div>
