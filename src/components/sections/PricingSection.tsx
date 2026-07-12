@@ -40,7 +40,7 @@ const PLANS: Plan[] = [
   {
     id: "activo",
     name: "Plan Activo",
-    price: "$45.000 – $55.000 ARS/mes",
+    price: "$45.000 ARS/mes",
     tagline: "Todo lo del Plan Presencia, más cambios mensuales, analíticas y optimización. Para empresas que necesitan un sitio siempre actualizado.",
     items: [
       "Todo lo incluido en Plan Presencia",
@@ -54,7 +54,7 @@ const PLANS: Plan[] = [
   {
     id: "total",
     name: "Plan Total",
-    price: "$80.000 – $95.000 ARS/mes",
+    price: "$80.000 ARS/mes",
     tagline: "La solución más completa. SEO mensual, Google Business Profile, soporte prioritario e informe mensual detallado.",
     items: [
       "Todo lo incluido en Plan Activo",
