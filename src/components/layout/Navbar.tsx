@@ -172,7 +172,7 @@ export default function Navbar() {
 
 function DesktopLink({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
   return (
-    <Link href={href} className={cn("ferro-focus relative inline-flex flex-col items-center no-underline px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group", active ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#F5F2EC]")}>
+    <Link href={href} className={cn("ferro-focus relative inline-flex flex-col items-center no-underline px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group", active ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#C9A84C]")}>
       {children}
       <motion.span initial={false} animate={{ scaleX: active ? 1 : 0 }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }} className="absolute bottom-0 left-3.5 right-3.5 h-px bg-[#C9A84C] origin-left" aria-hidden="true" />
       {!active && <span className="absolute bottom-0 left-3.5 right-3.5 h-px bg-[#F5F2EC]/20 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" aria-hidden="true" />}
