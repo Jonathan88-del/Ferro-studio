@@ -143,7 +143,7 @@ export default function Services() {
           viewport={{ once: true, margin: "-40px" }}
           className="mt-12 text-center text-[#F5F2EC]/25 font-sans font-light tracking-wide text-[20px]"
         >
-          Todos los proyectos incluyen SSL, diseño responsive y consulta inicial sin costo. Los precios están en la sección de Planes.
+          Todos los proyectos incluyen SSL, diseño responsive y consulta inicial sin costo.
         </motion.p>
       </div>
     </section>
