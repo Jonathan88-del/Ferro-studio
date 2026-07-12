@@ -66,7 +66,7 @@ export default function Hero() {
         className="absolute top-[84px] right-[max(1.5rem,env(safe-area-inset-right))] md:right-[3rem] lg:right-[5rem] flex flex-col items-end gap-1 pointer-events-none"
         aria-hidden="true"
       >
-        <span className="text-[0.55rem] tracking-[0.25em] uppercase text-[#F5F2EC]/20 font-sans">
+        <span className="text-[9px] tracking-[0.25em] uppercase text-[#F5F2EC]/20 font-sans">
           Est. 2024
         </span>
         <span className="w-[1px] h-8 bg-[#C9A84C]/25 block ml-auto" />
@@ -80,7 +80,7 @@ export default function Hero() {
         aria-hidden="true"
         style={{ writingMode: "vertical-rl", transform: "translateY(-50%) rotate(180deg)" }}
       >
-        <span className="text-[0.5rem] tracking-[0.22em] uppercase text-[#F5F2EC]/16 font-sans">
+        <span className="text-[8px] tracking-[0.22em] uppercase text-[#F5F2EC]/16 font-sans">
           28.1°N · 15.4°W
         </span>
       </motion.div>
@@ -122,7 +122,7 @@ export default function Hero() {
               className="overflow-hidden"
             >
               <h1
-                className="font-serif font-light leading-[0.96] text-[clamp(3rem,7.8vw,8rem)] tracking-[-0.025em] text-[#F5F2EC]"
+                className="font-serif font-light leading-[0.96] text-[clamp(48px,7.8vw,128px)] tracking-[-0.025em] text-[#F5F2EC]"
               >
                 {line.text}
               </h1>
@@ -144,7 +144,7 @@ export default function Hero() {
           variants={fadeUp(0.78)}
           initial="hidden"
           animate="show"
-          className="text-[0.92rem] text-[#F5F2EC]/42 font-sans font-light leading-[1.8] max-w-[400px] mb-10 md:mb-12"
+          className="text-[15px] text-[#F5F2EC]/42 font-sans font-light leading-[1.8] max-w-[400px] mb-10 md:mb-12"
         >
           No vendemos páginas web. Vendemos tranquilidad digital —
           precisión en cada píxel, calma en cada interacción.
@@ -167,7 +167,7 @@ export default function Hero() {
                 "inline-flex items-center gap-3",
                 "bg-[#C9A84C] text-[#0E0E0E]",
                 "px-8 py-[15px]",
-                "text-[0.65rem] tracking-[0.2em] uppercase font-sans font-medium",
+                "text-[10px] tracking-[0.2em] uppercase font-sans font-medium",
                 "transition-all duration-300",
                 "hover:bg-[#D9BC72] hover:shadow-[0_8px_32px_rgba(201,168,76,0.22)]",
                 "cursor-pointer"
@@ -188,7 +188,7 @@ export default function Hero() {
                 "inline-flex items-center gap-3",
                 "border border-[#F5F2EC]/18",
                 "px-8 py-[15px]",
-                "text-[0.65rem] tracking-[0.2em] uppercase font-sans font-light",
+                "text-[10px] tracking-[0.2em] uppercase font-sans font-light",
                 "text-[#F5F2EC]/55",
                 "transition-all duration-300",
                 "hover:border-[#F5F2EC]/40 hover:text-[#F5F2EC]",
@@ -220,7 +220,7 @@ export default function Hero() {
           aria-hidden="true"
         >
           <span className="w-px h-3.5 bg-[#F5F2EC]/12" />
-          <span className="text-[0.52rem] tracking-[0.28em] uppercase text-[#F5F2EC]/25 font-sans">
+          <span className="text-[8px] tracking-[0.28em] uppercase text-[#F5F2EC]/25 font-sans">
             Scroll
           </span>
           <span className="w-px h-3.5 bg-[#F5F2EC]/12" />
