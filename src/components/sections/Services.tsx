@@ -201,8 +201,8 @@ function ServiceCard({
           />
         </div>
         <div className="text-right shrink-0 pt-0.5">
-          <p className="font-serif text-[1.2rem] font-light text-[#F5F2EC]/85 leading-none">{service.price}</p>
-          <p className="text-[0.66rem] text-[#F5F2EC]/28 font-sans font-light mt-1">{service.ref} ref.</p>
+          <p className="font-serif text-[20px] font-light text-[#F5F2EC]/85 leading-none">{service.price}</p>
+          <p className="text-[11px] text-[#F5F2EC]/28 font-sans font-light mt-1">{service.ref} ref.</p>
         </div>
       </div>
 
@@ -223,7 +223,7 @@ function ServiceCard({
         {service.includes.map((item) => (
           <li key={item} className="flex items-start gap-3">
             <span className="text-[#C9A84C]/60 text-[0.75rem] font-sans mt-[3px] shrink-0">✓</span>
-            <span className="text-[0.92rem] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
+            <span className="text-[15px] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
           </li>
         ))}
       </ul>
