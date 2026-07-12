@@ -24,15 +24,13 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
   const handleArrowClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    // Only toggle accordion, never navigate
+    setIsOpen(!isOpen);
+    setExpandedOnce(true);
+  };
 
-    if (!isActive) {
-      // Not on planes page - navigate to it
-      window.location.href = "/planes";
-    } else {
-      // Already on planes page - toggle accordion
-      setIsOpen(!isOpen);
-      setExpandedOnce(true);
-    }
+  const handleNavigate = () => {
+    window.location.href = "/planes";
   };
 
   // Reset state when navigating away from planes
@@ -96,13 +94,14 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
   return (
     <div className="relative">
       <button
+        onClick={handleNavigate}
         className={cn(
           "ferro-focus relative inline-flex flex-col items-center px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group",
           isActive ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#F5F2EC]",
           "gap-1"
         )}
       >
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5" onClick={(e) => e.stopPropagation()}>
           Planes
           <motion.div
             onClick={handleArrowClick}
