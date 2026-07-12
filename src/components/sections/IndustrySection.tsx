@@ -89,7 +89,7 @@ export default function IndustrySection() {
             </div>
             <h2
               id="industry-heading"
-              className="font-serif font-light text-[clamp(2rem,5vw,4rem)] leading-[1.06] tracking-[-0.015em] text-[#0E0E0E]"
+              className="font-serif font-light text-[45px] leading-[1.06] tracking-[-0.015em] text-[#0E0E0E]"
             >
               Especialistas en empresas que viven de la confianza.
             </h2>
@@ -190,7 +190,7 @@ function IndustryCard({
       </div>
 
       <div className="flex flex-col gap-4 flex-1">
-        <h3 className="font-serif text-[1.6rem] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
+        <h3 className="font-serif text-[26px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
           {industry.title}
         </h3>
         <p className="text-[1rem] text-[#0E0E0E]/45 font-sans font-light leading-[1.8]">
@@ -199,8 +199,8 @@ function IndustryCard({
       </div>
 
       <div className="pt-5 border-t border-[#0E0E0E]/[0.07] mt-auto">
-        <p className="text-[0.72rem] tracking-[0.16em] uppercase font-sans text-[#C9A84C]/90 mb-2">Solución recomendada</p>
-        <p className="text-[0.92rem] font-sans font-light text-[#0E0E0E]/75">{industry.recommend}</p>
+        <p className="text-[12px] tracking-[0.16em] uppercase font-sans text-[#C9A84C]/90 mb-2">Solución recomendada</p>
+        <p className="text-[15px] font-sans font-light text-[#0E0E0E]/75">{industry.recommend}</p>
       </div>
     </motion.article>
   );
