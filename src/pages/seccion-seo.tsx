@@ -309,10 +309,10 @@ export default function SeccionSEO() {
                     Crece con el tiempo
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   A diferencia de publicidad, el SEO crece mes a mes. Es como plantar un árbol.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
                   → Mes 1: poco | Mes 6: mucho | Año 1: dominas Google
                 </div>
               </motion.div>
@@ -326,14 +326,14 @@ export default function SeccionSEO() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Award size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
                     Apareces primero
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Si apareces en la primera página de Google, las personas creen que eres la mejor opción.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
                   → Autoridad automática sin hacer nada
                 </div>
               </motion.div>
@@ -347,14 +347,14 @@ export default function SeccionSEO() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
                     No necesitas publicidad
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Con SEO, tu sitio trabaja 24/7 sin pagar a Google. La publicidad es temporal.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
                   → Ahorro de miles en publicidad
                 </div>
               </motion.div>
@@ -372,36 +372,36 @@ export default function SeccionSEO() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               SEO vs. Publicidad (Google Ads)
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Ambas traen clientes, pero tienen formas muy diferentes de hacerlo:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-[#1A1A1A] border border-[#FF6B6B]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#FF6B6B] mb-6">
+                <h3 className="font-serif text-[20px] font-light text-[#FF6B6B] mb-6">
                   Publicidad (Google Ads)
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Pagas por cada click</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Dejas de pagar = desapareces</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Resultados inmediatos</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>$1000+ al mes en muchos casos</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Útil para lanzamientos rápidos</span>
                   </li>
@@ -409,27 +409,27 @@ export default function SeccionSEO() {
               </div>
 
               <div className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#51CF66] mb-6">
+                <h3 className="font-serif text-[20px] font-light text-[#51CF66] mb-6">
                   SEO (lo que hacemos)
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>Pagas una sola vez (implementación)</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>Sigue trayendo clientes para siempre</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>Resultados en 3-6 meses</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>Cero costo por cliente (después de 6 meses)</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>Inversión a largo plazo que crece</span>
                   </li>
