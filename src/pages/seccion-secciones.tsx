@@ -70,13 +70,13 @@ export default function SeccionesSecciones() {
                     <Home size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
                       Sección 1: Inicio
                     </h3>
-                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/60 font-light mb-3">
                       Tu portada. El primer encuentro. Tienes 3 segundos para que NO se vaya.
                     </p>
-                    <p className="text-[14px] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → Muestra un beneficio claro, un título convincente y una llamada a acción
                     </p>
                   </div>
@@ -95,13 +95,13 @@ export default function SeccionesSecciones() {
                     <Users size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
                       Sección 2: Sobre ti / Tu historia
                     </h3>
-                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/60 font-light mb-3">
                       Aquí construyes confianza. El cliente quiere saber quién eres y por qué debería creerte.
                     </p>
-                    <p className="text-[14px] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → Tu experiencia, años en el negocio, por qué empezaste, qué te diferencia
                     </p>
                   </div>
@@ -120,13 +120,13 @@ export default function SeccionesSecciones() {
                     <Briefcase size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
                       Sección 3: Servicios / Productos
                     </h3>
-                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/60 font-light mb-3">
                       Aquí VENDES. Explica qué ofreces, precios, paquetes y qué esperar.
                     </p>
-                    <p className="text-[14px] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → La sección más importante. Aquí pasan las conversiones
                     </p>
                   </div>
@@ -145,13 +145,13 @@ export default function SeccionesSecciones() {
                     <MessageSquare size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
                       Sección 4: Testimonios / Casos de éxito
                     </h3>
-                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/60 font-light mb-3">
                       Otros clientes hablan por ti. Esto MULTIPLICA la confianza.
                     </p>
-                    <p className="text-[14px] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → "Yo traté con ellos y fue excelente". Más poderoso que cualquier cosa que digas tú
                     </p>
                   </div>
@@ -170,13 +170,13 @@ export default function SeccionesSecciones() {
                     <Images size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
                       Sección 5: Galería / Portafolio / Proyectos
                     </h3>
-                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/60 font-light mb-3">
                       Muestra tu trabajo. Una imagen vale 1.000 palabras.
                     </p>
-                    <p className="text-[14px] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → Fotos de trabajos anteriores, proyectos completados, resultados tangibles
                     </p>
                   </div>
@@ -195,13 +195,13 @@ export default function SeccionesSecciones() {
                     <Mail size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
                       Sección 6: Contacto
                     </h3>
-                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/60 font-light mb-3">
                       El final. Aquí el cliente se contacta contigo. Hazlo fácil.
                     </p>
-                    <p className="text-[14px] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → Formulario, teléfono, email, ubicación, horarios. Visible y clara
                     </p>
                   </div>
