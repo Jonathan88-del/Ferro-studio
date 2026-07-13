@@ -200,10 +200,10 @@ export default function PlanesCambios() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Cómo funciona el servicio
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Simple: tenés 3 cambios cada mes para usar como necesites:
             </p>
 
@@ -221,12 +221,12 @@ export default function PlanesCambios() {
                   transition={{ delay: index * 0.05 }}
                   className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 text-center"
                 >
-                  <div className="text-[2.5rem] mb-3">{item.emoji}</div>
-                  <div className="text-[0.75rem] text-[#C9A84C] font-serif mb-2">Paso {item.step}</div>
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                  <div className="text-[3.75rem] mb-3">{item.emoji}</div>
+                  <div className="text-[1.25rem] text-[#C9A84C] font-serif mb-2">Paso {item.step}</div>
+                  <h3 className="font-serif text-[1.125rem] font-light text-[#F5F2EC] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-[0.8rem] text-[#F5F2EC]/50 font-light">
+                  <p className="text-[1rem] text-[#F5F2EC]/50 font-light">
                     {item.desc}
                   </p>
                 </motion.div>
@@ -245,7 +245,7 @@ export default function PlanesCambios() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-12">
               Lo que ganas con cambios mensuales incluidos
             </h2>
 
@@ -259,11 +259,11 @@ export default function PlanesCambios() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Sin esperar
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   No necesitás aprender a hacerlo. Nos dices qué cambiar, nosotros lo hacemos.
                 </p>
               </motion.div>
@@ -277,11 +277,11 @@ export default function PlanesCambios() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Wrench size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Sin riesgos
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   No lo haces vos y no rompes nada accidentalmente.
                 </p>
               </motion.div>
@@ -295,11 +295,11 @@ export default function PlanesCambios() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Calendar size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Mes a mes
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tenés 3 cambios cada mes. No los usás este mes, no se pierden después.
                 </p>
               </motion.div>
@@ -313,11 +313,11 @@ export default function PlanesCambios() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Profesional siempre
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tu sitio se ve actualizado y profesional todos los meses.
                 </p>
               </motion.div>
