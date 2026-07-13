@@ -35,7 +35,7 @@ const STEPS = [
     title: "Revisión del cliente",
     icon: ScanLine,
     description:
-      "El cliente tiene hasta 2 rondas de cambios incluidas (1 para Landing). Cada ronda tiene un plazo máximo de 5 días hábiles para responder — pasado ese tiempo, se considera aprobado.",
+      "El cliente tiene hasta 2 rondas de cambios incluidas. Cada ronda tiene un plazo máximo de 5 días hábiles para responder — pasado ese tiempo, se considera aprobado.",
     note: "2 rondas incluidas",
   },
   {
@@ -86,6 +86,7 @@ export default function ProcessSection() {
             <h2
               id="process-heading"
               className="font-serif font-light text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC]"
+              style={{ fontSize: "50px !important" }}
             >
               Un proceso claro.<br />
               Sin sorpresas.
@@ -196,16 +197,16 @@ function ProcessStep({
           >
             {step.number}
           </span>
-          <h3 className="font-serif text-[1.95rem] md:text-[2.3rem] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em]">
+          <h3 className="font-serif text-[1.95rem] md:text-[2.3rem] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em]" style={{ fontSize: "37px !important" }}>
             {step.title}
           </h3>
         </div>
 
-        <p className="text-[1.1rem] text-[#F5F2EC]/40 font-sans font-light leading-[1.85] max-w-[620px] mb-5">
+        <p className="text-[1.1rem] text-[#F5F2EC]/40 font-sans font-light leading-[1.85] max-w-[620px] mb-5" style={{ fontSize: "18px" }}>
           {step.description}
         </p>
 
-        <span className="inline-flex items-center text-[0.82rem] tracking-[0.18em] uppercase font-sans text-[#C9A84C]/55">
+        <span className="inline-flex items-center text-[0.82rem] tracking-[0.18em] uppercase font-sans text-[#C9A84C]/55" style={{ fontSize: "14px" }}>
           {step.note}
         </span>
 
