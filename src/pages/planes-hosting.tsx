@@ -26,15 +26,15 @@ export default function PlanesHosting() {
           >
             <Link href="/planes" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+              <span className="text-[0.875rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Planes
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,3.375rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Hosting administrado por Ferro Studio
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               Nos encargamos de que tu página esté siempre online y funcionando correctamente. Si surge un problema con el hosting, nosotros lo resolvemos para que vos no tengas que preocuparte.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function PlanesHosting() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               ¿Por qué es importante el hosting administrado?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Tu sitio es tu vendedor 24/7. Si no funciona, pierdes clientes:
             </p>
 
@@ -68,26 +68,26 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4 mb-4">
                   <AlertCircle size={24} className="text-[#FF6B6B] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-2">
                       Sin hosting administrado
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Todo depende de vos. Un error y tu sitio cae.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Sitio cae sin que lo sepas</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Pierdes clientes mientras duermes</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Tenés que encontrar un técnico a las 3 AM</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Actualizaciones de seguridad te asustan</span>
                       </li>
@@ -106,26 +106,26 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4 mb-4">
                   <CheckCircle size={24} className="text-[#51CF66] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-2">
                       Con hosting administrado
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Nosotros nos encargamos. Vos solo vos ocupate de tu negocio.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Tu sitio funciona 99.9% del tiempo</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Los clientes siempre pueden contactarte</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Nosotros resolvemos cualquier problema</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Vos duermes tranquilo</span>
                       </li>
@@ -147,10 +147,10 @@ export default function PlanesHosting() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               6 cosas que hacemos por vos 24/7
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Hosting administrado significa que estas 6 cosas funcionan automáticamente:
             </p>
 
@@ -174,10 +174,10 @@ export default function PlanesHosting() {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-1">
+                      <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
