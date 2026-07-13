@@ -250,10 +250,10 @@ export default function SeccionesSecciones() {
                       <span className={`font-serif text-[#C9A84C] font-light text-[40px] ${item.step === "6" ? "pb-[2px]" : "pb-5"}`}>{item.step}</span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-[17px] font-light text-[#F5F2EC] mb-2">
+                      <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-[15px] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[22px] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
