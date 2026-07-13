@@ -51,7 +51,7 @@ export default function SeccionPaginas() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              ¿Qué significa "hasta 6 secciones"?
+              ¿Qué significa "hasta 6 paginas"?
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Imagina que tu sitio web es como una oficina. En lugar de un único mostrador donde lo explicar todo, tienes 6 mostrador dedicados a diferentes temas.
@@ -243,23 +243,23 @@ export default function SeccionPaginas() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Sin múltiples páginas */}
               <div className="bg-[#1A1A1A] border border-[#FF6B6B]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[20px] font-light text-[#FF6B6B] mb-6">
+                <h3 className="font-serif text-[22px] font-light text-[#FF6B6B] mb-6">
                   ❌ Una única página
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Un cliente busca "servicios" y termina en tu inicio</span>
                   </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Debe scrollear para encontrar lo que busca</span>
                   </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Muchos abandonan por impaciencia</span>
                   </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Google ve todo junto, sin estructura clara</span>
                   </li>
@@ -268,23 +268,23 @@ export default function SeccionPaginas() {
 
               {/* Con múltiples páginas */}
               <div className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[20px] font-light text-[#51CF66] mb-6">
+                <h3 className="font-serif text-[22px] font-light text-[#51CF66] mb-6">
                   ✓ Hasta 6 páginas
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>El cliente va directo a lo que busca</span>
                   </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>Página de servicios en 1 click</span>
                   </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>Mayor probabilidad de venta</span>
                   </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>Google entiende perfectamente tu negocio</span>
                   </li>
