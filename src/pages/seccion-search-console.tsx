@@ -34,7 +34,7 @@ export default function SeccionSearchConsole() {
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Search Console: Ve exactamente cómo Google ve tu sitio
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               Es como una conversación directa con Google. Te dice qué palabras buscan, si tu sitio tiene problemas y cómo mejorar.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function SeccionSearchConsole() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[34px] font-light text-[#F5F2EC] mb-4">
               ¿Qué es Search Console?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Es el teléfono directo entre tú y Google. Mientras Analytics te muestra qué hacen los visitantes, Search Console te muestra cómo Google ve tu sitio.
             </p>
 
@@ -68,13 +68,13 @@ export default function SeccionSearchConsole() {
                 <div className="flex items-start gap-4 mb-4">
                   <Eye size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Analytics (visitantes)
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Te muestra qué hace la gente en tu sitio: dónde hace clic, cuánto tiempo pasa, si compra.
                     </p>
-                    <p className="text-[0.8rem] text-[#C9A84C] font-light mt-3">
+                    <p className="text-[18px] text-[#C9A84C] font-light mt-3">
                       → Pregunta: "¿Qué hizo el visitante?"
                     </p>
                   </div>
@@ -91,13 +91,13 @@ export default function SeccionSearchConsole() {
                 <div className="flex items-start gap-4 mb-4">
                   <Search size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Search Console (Google)
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Te muestra qué buscan las personas para encontrarte, en qué posición apareces, si hay errores.
                     </p>
-                    <p className="text-[0.8rem] text-[#C9A84C] font-light mt-3">
+                    <p className="text-[18px] text-[#C9A84C] font-light mt-3">
                       → Pregunta: "¿Cómo me ve Google?"
                     </p>
                   </div>
@@ -117,10 +117,10 @@ export default function SeccionSearchConsole() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Los 3 superpoderes de Search Console
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Tres cosas que ves que son imposibles de ver en otro lado:
             </p>
 
@@ -137,13 +137,13 @@ export default function SeccionSearchConsole() {
                     <Search size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Superpoder 1: Ve qué buscan
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-3">
                       Alguien busca en Google "consultor legal en Madrid" y apareces. Ves exactamente esa búsqueda.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → Sabes exactamente qué pide la gente
                     </p>
                   </div>
@@ -162,13 +162,13 @@ export default function SeccionSearchConsole() {
                     <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Superpoder 2: Ve tu posición
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-3">
                       Apareces en posición 7 en Google. ¿Tu meta? Llegar a posición 1-3. Ves el camino claramente.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → Sabes exactamente dónde estás
                     </p>
                   </div>
@@ -187,13 +187,13 @@ export default function SeccionSearchConsole() {
                     <AlertTriangle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Superpoder 3: Ve problemas antes de que exploten
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                    <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-3">
                       Google encuentra un error en tu sitio y te lo dice: "Tu página no carga bien en móvil". Lo corriges y listo.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[18px] text-[#C9A84C] font-light">
                       → Prevención de daño automática
                     </p>
                   </div>
@@ -213,10 +213,10 @@ export default function SeccionSearchConsole() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Qué información ves en el panel
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Todo organizado de forma simple para tomar decisiones rápidas:
             </p>
 
@@ -264,10 +264,10 @@ export default function SeccionSearchConsole() {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-1">
+                      <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
@@ -288,10 +288,10 @@ export default function SeccionSearchConsole() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Decisiones que tomas con esa información
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Cada dato lleva a una acción específica:
             </p>
 
@@ -308,10 +308,10 @@ export default function SeccionSearchConsole() {
                     <span className="font-serif text-[#C9A84C] font-light">1</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Ves que apareces en posición 5
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       → Mejoras tu contenido para esa palabra clave. En 2 meses pasas a posición 2. Esto da +200% de clics.
                     </p>
                   </div>
@@ -330,10 +330,10 @@ export default function SeccionSearchConsole() {
                     <span className="font-serif text-[#C9A84C] font-light">2</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Ves que hay un error en móvil
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       → Lo corriges. Google indexa mejor tu sitio. Comienzas a aparecer en más búsquedas.
                     </p>
                   </div>
@@ -352,10 +352,10 @@ export default function SeccionSearchConsole() {
                     <span className="font-serif text-[#C9A84C] font-light">3</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Ves búsquedas que no sabías
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       → Descubres palabras nuevas que traen clientes. Creas contenido específico. Ganancias inesperadas.
                     </p>
                   </div>
@@ -374,10 +374,10 @@ export default function SeccionSearchConsole() {
                     <span className="font-serif text-[#C9A84C] font-light">4</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Ves que hay muchos clics pero muchas apariciones
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       → Tu título o descripción no es atractiva. La cambias. Clics suben 50%.
                     </p>
                   </div>
@@ -397,10 +397,10 @@ export default function SeccionSearchConsole() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Por qué Search Console es tu brújula SEO
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Sin Search Console, estás optimizando a ciegas. Con ella, ves exactamente qué mejorar:
             </p>
 
@@ -415,10 +415,10 @@ export default function SeccionSearchConsole() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Target size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Meta clara
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Quieres estar en posición 1 para "consultor legal". Ves que ahora estás 7. Sabes exactamente qué perseguir.
                 </p>
               </motion.div>
@@ -433,10 +433,10 @@ export default function SeccionSearchConsole() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <CheckCircle2 size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Validación inmediata
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Cambias algo y ves si funcionó en 2-4 semanas. Sabes si fue buena idea o no.
                 </p>
               </motion.div>
@@ -451,10 +451,10 @@ export default function SeccionSearchConsole() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Lightbulb size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Oportunidades escondidas
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Descubres búsquedas que no sabías que existían. Oportunidades de dinero que otros no ven.
                 </p>
               </motion.div>
