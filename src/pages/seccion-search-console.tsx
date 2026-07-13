@@ -305,7 +305,7 @@ export default function SeccionSearchConsole() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">1</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '10px'}}>1</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -327,7 +327,7 @@ export default function SeccionSearchConsole() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">2</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '10px'}}>2</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -349,7 +349,7 @@ export default function SeccionSearchConsole() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">3</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '25px'}}>3</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -371,7 +371,7 @@ export default function SeccionSearchConsole() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">4</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '20px'}}>4</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
