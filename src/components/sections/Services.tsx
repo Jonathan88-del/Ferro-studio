@@ -63,6 +63,7 @@ const SERVICES = [
       "1 sesión de capacitación",
       "90 días de soporte post-entrega",
     ],
+    soon: true,
   },
   {
     icon: Pencil,
@@ -172,9 +173,17 @@ function ServiceCard({
         "flex flex-col gap-8",
         "px-10 py-12 md:px-14 md:py-16",
         "transition-colors duration-400",
-        "hover:bg-[#111111]"
+        "hover:bg-[#111111]",
+        service.soon && "opacity-60"
       )}
     >
+      {service.soon && (
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/40 rounded px-6 py-2">
+            <span className="text-[#C9A84C] font-serif text-[1.1rem] font-light tracking-wide">Proximamente</span>
+          </div>
+        </div>
+      )}
       <motion.span
         variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
         initial="initial"
