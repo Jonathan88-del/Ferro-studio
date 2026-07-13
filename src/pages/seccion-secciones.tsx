@@ -253,7 +253,7 @@ export default function SeccionesSecciones() {
                       <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-[20px] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
@@ -289,10 +289,10 @@ export default function SeccionesSecciones() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-3">
                   Más clientes
                 </h3>
-                <p className="text-[15px] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Cada sección tiene su propósito. Los clientes encuentran exactamente lo que buscaban.
                 </p>
               </motion.div>
@@ -307,10 +307,10 @@ export default function SeccionesSecciones() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Target size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-3">
                   Conversiones más altas
                 </h3>
-                <p className="text-[15px] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Una estructura clara reduce abandonos. Los clientes van de punto A a B sin perderse.
                 </p>
               </motion.div>
@@ -325,10 +325,10 @@ export default function SeccionesSecciones() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-3">
                   Experiencia profesional
                 </h3>
-                <p className="text-[15px] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tu sitio se ve organizado y confiable. Eso comunica que tu negocio es serio.
                 </p>
               </motion.div>
