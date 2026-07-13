@@ -122,7 +122,7 @@ export default function Navbar() {
               exit={{ opacity: 0, x: "100%" }}
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               aria-label="Menú móvil"
-              className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-xs bg-[#0E0E0E] border-l border-[#F5F2EC]/[0.07] flex flex-col px-8 py-10"
+              className="fixed top-0 right-0 bottom-0 z-50 w-full max-w-xs bg-[#0E0E0E] border-l border-[#F5F2EC]/[0.07] flex flex-col px-8 py-10 overflow-y-auto overscroll-contain"
             >
               <div className="flex justify-end mb-12">
                 <motion.button aria-label="Cerrar menú" onClick={() => setMenuOpen(false)} whileTap={{ scale: 0.9 }} className="ferro-focus text-[#F5F2EC]/40 hover:text-[#F5F2EC] transition-colors duration-200">
@@ -130,7 +130,7 @@ export default function Navbar() {
                 </motion.button>
               </div>
 
-              <div className="flex flex-col gap-0.5 flex-1">
+              <div className="flex flex-col gap-0.5 flex-1 min-h-0 overflow-y-auto">
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}>
                   <Link href="/" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/" ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
                     Inicio

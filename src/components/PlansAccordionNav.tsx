@@ -45,7 +45,10 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
     return (
       <div className="flex flex-col gap-2">
         <button
-          onClick={handleClick}
+          onClick={() => {
+            setIsOpen((open) => !open);
+            setExpandedOnce(true);
+          }}
           className={cn(
             "block font-serif text-[2.2rem] font-light py-2 transition-colors duration-200",
             isActive ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]",
