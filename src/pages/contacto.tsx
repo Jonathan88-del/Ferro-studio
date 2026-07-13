@@ -52,7 +52,7 @@ export default function Contacto() {
                 <span className="w-5 h-px bg-[#C9A84C]/70" />
                 <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">Contacto</span>
               </div>
-              <h1 className="font-serif font-light text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
+              <h1 className="font-serif font-light text-[clamp(2.25rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
                 Hablemos de su proyecto.
               </h1>
               <p className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
@@ -121,7 +121,7 @@ export default function Contacto() {
 
                   <div className="flex items-center gap-2.5 mb-2">
                     <Mail size={15} strokeWidth={1.8} className="text-[#C9A84C]/70" />
-                    <span className="text-[0.78rem] tracking-[0.22em] uppercase font-sans text-[#F5F2EC]/35">
+                    <span className="text-[0.8125rem] tracking-[0.22em] uppercase font-sans text-[#F5F2EC]/35">
                       Formulario de contacto
                     </span>
                   </div>
@@ -130,7 +130,7 @@ export default function Contacto() {
                   <div className="flex flex-col gap-3">
                     <label
                       htmlFor="nombre"
-                      className="text-[0.78rem] tracking-[0.18em] uppercase font-sans text-[#F5F2EC]/45"
+                      className="text-[0.8125rem] tracking-[0.18em] uppercase font-sans text-[#F5F2EC]/45"
                     >
                       Nombre
                     </label>
@@ -145,7 +145,7 @@ export default function Contacto() {
                       placeholder="Su nombre o empresa"
                       className="
                         w-full bg-transparent border-b border-[#F5F2EC]/15
-                        text-[#F5F2EC] font-sans font-light text-[1.1rem]
+                        text-[#F5F2EC] font-sans font-light text-[1.125rem]
                         py-3 placeholder:text-[#F5F2EC]/20
                         focus:outline-none focus:border-[#C9A84C]/60
                         transition-colors duration-300
@@ -157,7 +157,7 @@ export default function Contacto() {
                   <div className="flex flex-col gap-3">
                     <label
                       htmlFor="descripcion"
-                      className="text-[0.78rem] tracking-[0.18em] uppercase font-sans text-[#F5F2EC]/45"
+                      className="text-[0.8125rem] tracking-[0.18em] uppercase font-sans text-[#F5F2EC]/45"
                     >
                       Descripción del trabajo
                     </label>
@@ -171,7 +171,7 @@ export default function Contacto() {
                       placeholder="Contenos qué necesita, en qué rubro trabaja, si ya tiene un sitio web…"
                       className="
                         w-full bg-transparent border-b border-[#F5F2EC]/15
-                        text-[#F5F2EC] font-sans font-light text-[1.1rem]
+                        text-[#F5F2EC] font-sans font-light text-[1.125rem]
                         py-3 placeholder:text-[#F5F2EC]/20 resize-none
                         focus:outline-none focus:border-[#C9A84C]/60
                         transition-colors duration-300
