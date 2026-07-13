@@ -261,7 +261,7 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <MessageCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Sin cambiar de app
                   </h3>
                 </div>
