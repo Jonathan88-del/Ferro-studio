@@ -26,7 +26,7 @@ export default function PlanesWhatsapp() {
           >
             <Link href="/planes" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+              <span className="text-[0.875rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Planes
               </span>
             </Link>
@@ -34,7 +34,7 @@ export default function PlanesWhatsapp() {
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Soporte por WhatsApp (24–48 hs hábiles)
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               Respuestas rápidas cuando las necesitás. Tu contacto directo con nuestro equipo en el canal que prefieres.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function PlanesWhatsapp() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Por qué el soporte accesible es clave
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Cuando algo no funciona, necesitás respuestas rápidas, no correos que tardan días:
             </p>
 
@@ -68,26 +68,26 @@ export default function PlanesWhatsapp() {
                 <div className="flex items-start gap-4 mb-4">
                   <AlertCircle size={24} className="text-[#FF6B6B] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-2">
                       Sin soporte cercano
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Estás solo cuando pasa algo.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Envías email, esperas respuesta</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Tardan horas o días en contestar</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Perdés dinero mientras esperas</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Frustrante cuando es urgente</span>
                       </li>
@@ -106,26 +106,26 @@ export default function PlanesWhatsapp() {
                 <div className="flex items-start gap-4 mb-4">
                   <CheckCircle size={24} className="text-[#51CF66] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-2">
                       Con soporte por WhatsApp
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Conectás directamente con nuestro equipo.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Escribís, nosotros contestamos rápido</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Respuestas en 24–48 horas hábiles</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Problemas resueltos rápidamente</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Tranquilidad cuando necesitás ayuda</span>
                       </li>
@@ -147,10 +147,10 @@ export default function PlanesWhatsapp() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Cómo funciona el soporte
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Es simple. Cuando necesitás ayuda:
             </p>
 
@@ -169,12 +169,12 @@ export default function PlanesWhatsapp() {
                   transition={{ delay: index * 0.05 }}
                   className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 text-center"
                 >
-                  <div className="text-[2.5rem] mb-3">{item.emoji}</div>
-                  <div className="text-[0.75rem] text-[#C9A84C] font-serif mb-2">Paso {item.step}</div>
-                  <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                  <div className="text-[3.75rem] mb-3">{item.emoji}</div>
+                  <div className="text-[1.25rem] text-[#C9A84C] font-serif mb-2">Paso {item.step}</div>
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-[0.8rem] text-[#F5F2EC]/50 font-light">
+                  <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light">
                     {item.desc}
                   </p>
                 </motion.div>
@@ -193,10 +193,10 @@ export default function PlanesWhatsapp() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               ¿Qué podés preguntar?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               El soporte cubre todas estas áreas:
             </p>
 
@@ -220,10 +220,10 @@ export default function PlanesWhatsapp() {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-1">
+                      <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
@@ -244,10 +244,10 @@ export default function PlanesWhatsapp() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               ¿Por qué soporte por WhatsApp?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Elegimos WhatsApp porque es donde vos ya estás:
             </p>
 
@@ -337,7 +337,7 @@ export default function PlanesWhatsapp() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-12">
               Lo que ganas con soporte cercano
             </h2>
 
@@ -439,7 +439,7 @@ export default function PlanesWhatsapp() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-12">
               ¿Qué está incluido?
             </h2>
 
