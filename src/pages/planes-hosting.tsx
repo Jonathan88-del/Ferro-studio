@@ -198,10 +198,10 @@ export default function PlanesHosting() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Los 3 pilares del hosting administrado
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Todo se reduce a 3 promesas simples:
             </p>
 
@@ -216,10 +216,10 @@ export default function PlanesHosting() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Server size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
-                  1. Servidor confiable
+                <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-3">
+                  Servidor confiable
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   No es cualquier servidor. Es infraestructura de clase empresarial con garantía de disponibilidad.
                 </p>
               </motion.div>
@@ -234,10 +234,10 @@ export default function PlanesHosting() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
-                  2. Atención rápida
+                <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-3">
+                  Atención rápida
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Si algo falla, reaccionamos en segundos. No esperas horas ni días para que se arregle.
                 </p>
               </motion.div>
@@ -252,10 +252,10 @@ export default function PlanesHosting() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Lock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
-                  3. Seguridad garantizada
+                <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-3">
+                  Seguridad garantizada
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tu sitio está protegido contra ataques, malware y datos perdidos. Siempre.
                 </p>
               </motion.div>
@@ -273,10 +273,10 @@ export default function PlanesHosting() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Lo que está incluido siempre
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               No hay sorpresas. Todo esto viene de serie en nuestro hosting:
             </p>
 
@@ -291,10 +291,10 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4">
                   <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
                       Almacenamiento suficiente
                     </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
                       Espacio para tu sitio, imágenes, videos y bases de datos. Sin limitaciones raras.
                     </p>
                   </div>
@@ -311,10 +311,10 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4">
                   <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
                       Ancho de banda ilimitado
                     </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
                       Tus clientes acceden desde cualquier lugar del mundo sin ralentizaciones.
                     </p>
                   </div>
@@ -331,10 +331,10 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4">
                   <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
                       Backups semanales
                     </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
                       Tu sitio se respalda automáticamente. Nada se pierde nunca.
                     </p>
                   </div>
@@ -351,10 +351,10 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4">
                   <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
                       Email corporativo
                     </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
                       Correo profesional con tu dominio (info@tuempresa.com).
                     </p>
                   </div>
@@ -371,10 +371,10 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4">
                   <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
                       SSL gratuito
                     </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
                       HTTPS en tu sitio. Ese candadito que dice "este sitio es seguro".
                     </p>
                   </div>
@@ -391,10 +391,10 @@ export default function PlanesHosting() {
                 <div className="flex items-start gap-4">
                   <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
                       CDN global
                     </h3>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
                       Tu sitio carga rápido desde cualquier parte del mundo.
                     </p>
                   </div>
@@ -414,7 +414,7 @@ export default function PlanesHosting() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-12">
               Lo que ganas con hosting administrado
             </h2>
 
@@ -428,14 +428,14 @@ export default function PlanesHosting() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Shield size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Tranquilidad mental
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   No tienes que preocuparte por nada técnico. Tu sitio funciona, punto.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1rem] text-[#C9A84C]">
                   → Duermes tranquilo. Nosotros vigilamos.
                 </div>
               </motion.div>
@@ -449,14 +449,14 @@ export default function PlanesHosting() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Clientes siempre satisfechos
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Tu sitio nunca cae. Los clientes siempre pueden contactarte.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1rem] text-[#C9A84C]">
                   → 99.9% de disponibilidad garantizada
                 </div>
               </motion.div>
