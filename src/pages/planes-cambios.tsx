@@ -26,7 +26,7 @@ export default function PlanesCambios() {
           >
             <Link href="/planes" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+              <span className="text-[0.875rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Planes
               </span>
             </Link>
@@ -34,7 +34,7 @@ export default function PlanesCambios() {
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Hasta 3 cambios mensuales al sitio
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               Mantén tu sitio siempre actualizado sin complicaciones. Tres cambios al mes para que tu información esté siempre fresca.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function PlanesCambios() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               ¿Por qué mantener el sitio actualizado es clave?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Un sitio desactualizado es como un negocio cerrado. Cuando algo cambia, necesitás reflejarlo rápido:
             </p>
 
@@ -68,26 +68,26 @@ export default function PlanesCambios() {
                 <div className="flex items-start gap-4 mb-4">
                   <AlertCircle size={24} className="text-[#FF6B6B] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-2">
                       Sin cambios mensuales
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Tu sitio se queda atrás.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Horarios viejos, clientes confundidos</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Precios desactualizados causan reclamos</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Personas de tu equipo ya no aparecen</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Pierdes profesionalismo y confianza</span>
                       </li>
@@ -106,26 +106,26 @@ export default function PlanesCambios() {
                 <div className="flex items-start gap-4 mb-4">
                   <CheckCircle size={24} className="text-[#51CF66] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-2">
                       Con 3 cambios mensuales
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Tu sitio siempre está fresco y actualizado.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Actualizas información cuando la necesitás</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Sin esperar, sin hacer vos mismo</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Tu sitio se ve profesional siempre</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Los clientes confían más en ti</span>
                       </li>
@@ -147,10 +147,10 @@ export default function PlanesCambios() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               ¿Qué tipos de cambios podés hacer?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Casi todo lo que imagines para mantener tu sitio actualizado:
             </p>
 
@@ -176,10 +176,10 @@ export default function PlanesCambios() {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-1">
+                      <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
