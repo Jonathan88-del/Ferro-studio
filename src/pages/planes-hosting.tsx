@@ -430,14 +430,14 @@ export default function PlanesHosting() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Sitio ultrarrápido
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Carga en 1 segundo desde cualquier lugar. Los clientes no se van aburridos.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-base text-[#C9A84C]">
                   → Google también te premia por la velocidad
                 </div>
               </motion.div>
@@ -451,14 +451,14 @@ export default function PlanesHosting() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Lock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Datos seguros
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Tu información está blindada. Ataques, malware, robos: no pasan.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-base text-[#C9A84C]">
                   → Protección multinivel 24/7
                 </div>
               </motion.div>
