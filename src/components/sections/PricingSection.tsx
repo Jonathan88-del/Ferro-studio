@@ -55,7 +55,7 @@ const PLANS: Plan[] = [
     id: "total",
     name: "Plan Total",
     price: "$80.000 ARS/mes",
-    tagline: "La solución más completa. SEO mensual, Google Business Profile, soporte prioritario e informe mensual detallado.",
+    tagline: "La solución más completa. Soporte prioritario,",
     items: [
       "Todo lo incluido en Plan Activo",
       "Hasta 6 cambios mensuales al sitio",
