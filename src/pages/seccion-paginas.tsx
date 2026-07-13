@@ -304,10 +304,10 @@ export default function SeccionPaginas() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Cómo lo ve un cliente en la práctica
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Imagina que alguien busca en Google "tus servicios":
             </p>
 
@@ -322,27 +322,27 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">1</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light pb-[10px]">1</span>
                   </div>
-                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[24px] font-light text-[#F5F2EC]">
                     Busca en Google
                   </h3>
                 </div>
-                <p className="text-[0.95rem] text-[#F5F2EC]/50 font-light mb-6 ml-14">
+                <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-6 ml-14">
                   Alguien escribe "servicios de diseño en Madrid" en Google
                 </p>
                 <div className="ml-14 bg-[#0E0E0E] rounded-lg p-6 border border-[#F5F2EC]/[0.06]">
-                  <p className="text-[0.9rem] text-[#F5F2EC]/40 font-light mb-3">
+                  <p className="text-[18px] text-[#F5F2EC]/40 font-light mb-3">
                     Resultado de búsqueda:
                   </p>
                   <div className="space-y-2">
-                    <p className="text-[0.95rem] text-[#C9A84C] font-light">
+                    <p className="text-[16px] text-[#C9A84C] font-light">
                       Tu Empresa - Servicios de Diseño
                     </p>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/40 font-light">
+                    <p className="text-[14px] text-[#F5F2EC]/40 font-light">
                       www.tuempresa.com/servicios
                     </p>
-                    <p className="text-[0.85rem] text-[#F5F2EC]/35 font-light">
+                    <p className="text-[16px] text-[#F5F2EC]/35 font-light">
                       Descubre nuestros servicios de diseño profesional...
                     </p>
                   </div>
@@ -359,20 +359,20 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">2</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light pb-[10px]">2</span>
                   </div>
-                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[24px] font-light text-[#F5F2EC]">
                     Hace clic y va directamente a Servicios
                   </h3>
                 </div>
-                <p className="text-[0.95rem] text-[#F5F2EC]/50 font-light mb-6 ml-14">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light mb-6 ml-14">
                   No va al inicio, va directamente a la página que busca
                 </p>
                 <div className="ml-14 bg-[#0E0E0E] rounded-lg p-6 border border-[#F5F2EC]/[0.06] space-y-4">
                   {/* Mock Header */}
                   <div className="flex items-center justify-between pb-4 border-b border-[#F5F2EC]/[0.1]">
-                    <p className="text-[0.9rem] text-[#C9A84C] font-light">Logo</p>
-                    <div className="flex gap-6 text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[16px] text-[#C9A84C] font-light">Logo</p>
+                    <div className="flex gap-6 text-[16px] text-[#F5F2EC]/50 font-light">
                       <p>Inicio</p>
                       <p className="text-[#C9A84C]">Servicios ← Está aquí</p>
                       <p>Contacto</p>
@@ -380,17 +380,17 @@ export default function SeccionPaginas() {
                   </div>
                   {/* Mock Content */}
                   <div className="pt-4 space-y-2">
-                    <p className="text-[1.1rem] text-[#F5F2EC] font-serif font-light">
+                    <p className="text-[20px] text-[#F5F2EC] font-serif font-light">
                       Nuestros Servicios
                     </p>
                     <div className="grid grid-cols-2 gap-2 mt-4 text-[0.8rem] text-[#F5F2EC]/40 font-light">
                       <div className="bg-[#1A1A1A] p-3 rounded border border-[#F5F2EC]/[0.1]">
-                        <p className="text-[#C9A84C] font-light mb-1">Diseño Web</p>
-                        <p className="text-[0.75rem]">Sitios modernos y rápidos</p>
+                        <p className="text-[16px] text-[#C9A84C] font-light mb-1">Diseño Web</p>
+                        <p className="text-[14px]">Sitios modernos y rápidos</p>
                       </div>
                       <div className="bg-[#1A1A1A] p-3 rounded border border-[#F5F2EC]/[0.1]">
-                        <p className="text-[#C9A84C] font-light mb-1">Branding</p>
-                        <p className="text-[0.75rem]">Tu identidad visual</p>
+                        <p className="text-[16px] text-[#C9A84C] font-light mb-1">Branding</p>
+                        <p className="text-[14px]">Tu identidad visual</p>
                       </div>
                     </div>
                   </div>
@@ -407,26 +407,26 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-10 h-10 rounded-full bg-[#51CF66]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#51CF66] font-light">3</span>
+                    <span className="font-serif text-[40px] text-[#51CF66] font-light pb-[23px]">3</span>
                   </div>
-                  <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[24px] font-light text-[#F5F2EC]">
                     Resultado: Conversión
                   </h3>
                 </div>
                 <ul className="ml-14 space-y-3">
-                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>Ve exactamente lo que buscaba: tus servicios</span>
                   </li>
-                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>No pierde tiempo scrolleando</span>
                   </li>
-                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>Te llama, pide presupuesto o compra</span>
                   </li>
-                  <li className="flex gap-3 text-[0.95rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
                     <span>¡Nuevo cliente!</span>
                   </li>
@@ -446,7 +446,7 @@ export default function SeccionPaginas() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">
               El impacto en números
             </h2>
 
@@ -458,10 +458,10 @@ export default function SeccionPaginas() {
                 transition={{ delay: 0.1 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 text-center"
               >
-                <p className="text-[2.5rem] font-serif font-light text-[#C9A84C] mb-2">
+                <p className="text-[50px] font-serif font-light text-[#C9A84C] mb-2">
                   +300%
                 </p>
-                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
+                <p className="text-[18px] text-[#F5F2EC]/60 font-light">
                   Más búsquedas en Google que te encuentran
                 </p>
               </motion.div>
@@ -473,10 +473,10 @@ export default function SeccionPaginas() {
                 transition={{ delay: 0.15 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 text-center"
               >
-                <p className="text-[2.5rem] font-serif font-light text-[#C9A84C] mb-2">
+                <p className="text-[50px] font-serif font-light text-[#C9A84C] mb-2">
                   -60%
                 </p>
-                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
+                <p className="text-[18px] text-[#F5F2EC]/60 font-light">
                   Menos visitantes que se van sin convertir
                 </p>
               </motion.div>
@@ -488,10 +488,10 @@ export default function SeccionPaginas() {
                 transition={{ delay: 0.2 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8 text-center"
               >
-                <p className="text-[2.5rem] font-serif font-light text-[#C9A84C] mb-2">
+                <p className="text-[50px] font-serif font-light text-[#C9A84C] mb-2">
                   24/7
                 </p>
-                <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light">
+                <p className="text-[18px] text-[#F5F2EC]/60 font-light">
                   Trabajan por ti sin descanso
                 </p>
               </motion.div>
