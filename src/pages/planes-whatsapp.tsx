@@ -265,7 +265,7 @@ export default function PlanesWhatsapp() {
                     Sin cambiar de app
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Ya tenés WhatsApp abierto. No necesitás buscar otro programa para hablar con nosotros.
                 </p>
               </motion.div>
@@ -279,11 +279,11 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Respuestas rápidas
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   WhatsApp es inmediato. No esperas como con email que tarda días.
                 </p>
               </motion.div>
@@ -297,11 +297,11 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Phone size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Comunicación personal
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Es como hablar directo con nosotros. Más humano, menos corporativo.
                 </p>
               </motion.div>
@@ -315,11 +315,11 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Fácil compartir
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Compartís fotos, links o archivos sin complicaciones. Todo en un solo lugar.
                 </p>
               </motion.div>
@@ -351,14 +351,14 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <HeartHandshake size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Tranquilidad
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Sabés que tenés a alguien a tu lado si necesitás ayuda.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
                   → No estás solo
                 </div>
               </motion.div>
@@ -372,14 +372,14 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Problemas resueltos rápido
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Menos tiempo perdido, más tiempo haciendo crecer tu negocio.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
                   → Eficiencia garantizada
                 </div>
               </motion.div>
@@ -393,14 +393,14 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <MessageCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Aprendizaje constante
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   No solo resolvemos, también te enseñamos cómo hacerlo mejor.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
                   → Crecimiento junto a nosotros
                 </div>
               </motion.div>
@@ -414,14 +414,14 @@ export default function PlanesWhatsapp() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
                     Relación de confianza
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Conocemos tu sitio, tu negocio, tus necesidades. Somos tu aliados.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
                   → Soporte que entiende tu realidad
                 </div>
               </motion.div>
