@@ -26,15 +26,15 @@ export default function SeccionPaginas() {
           >
             <Link href="/servicios" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+              <span className="text-[14px] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Servicios
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+            <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Hasta 6 páginas distintas que trabajan juntas
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               En lugar de una única página, tienes 6 secciones separadas con su propio menú. Cada una muestra exactamente lo que buscan tus clientes.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function SeccionPaginas() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Qué significa "hasta 6 secciones"?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Imagina que tu sitio web es como una oficina. En lugar de un único mostrador donde lo explicar todo, tienes 6 mostrador dedicados a diferentes temas.
             </p>
 
@@ -67,11 +67,11 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Home size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[20px] font-light text-[#F5F2EC]">
                     Página 1: Inicio
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tu tarjeta de presentación. Lo primero que ven es quién eres en 3 segundos.
                 </p>
               </motion.div>
@@ -85,11 +85,11 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Users size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[20px] font-light text-[#F5F2EC]">
                     Página 2: Sobre ti
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tu historia. Por qué empezaste, tu experiencia y por qué los clientes confían en ti.
                 </p>
               </motion.div>
@@ -103,11 +103,11 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Briefcase size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[20px] font-light text-[#F5F2EC]">
                     Página 3: Servicios
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Lo que ofreces. Precios, beneficios y qué esperar cuando contratan.
                 </p>
               </motion.div>
@@ -121,11 +121,11 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Phone size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[20px] font-light text-[#F5F2EC]">
                     Página 4: Contacto
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Cómo te llaman. Formulario, teléfono, email o redes. Fácil de encontrar.
                 </p>
               </motion.div>
@@ -139,11 +139,11 @@ export default function SeccionPaginas() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Award size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[20px] font-light text-[#F5F2EC]">
                     Página 5 y 6: Lo que diferencia
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Casos de éxito, trabajos realizados, certificaciones, testimonios de clientes o lo que haga que confíen en ti.
                 </p>
               </motion.div>
@@ -161,10 +161,10 @@ export default function SeccionPaginas() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Por qué debería importarte?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Porque cada página es como un "anuncio gratis" en Google que trabaja 24/7 para traerte clientes.
             </p>
 
@@ -179,10 +179,10 @@ export default function SeccionPaginas() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Más clientes
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Si alguien busca en Google "consultoría legal en Madrid", tu página de servicios aparece. Si busca "casos de éxito", aparece la otra. Ganas en más búsquedas.
                 </p>
               </motion.div>
@@ -197,10 +197,10 @@ export default function SeccionPaginas() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Clientes exactos
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   No todos llegan a tu página de inicio. El que busca "contacto" va directo al contacto. Sin perder tiempo.
                 </p>
               </motion.div>
@@ -215,10 +215,10 @@ export default function SeccionPaginas() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Cambios sin riesgo
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Actualizas precios en una página. Las otras siguen igual. Pruebas cambios sin miedo a romper nada.
                 </p>
               </motion.div>
@@ -236,30 +236,30 @@ export default function SeccionPaginas() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">
               Antes vs. Después
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Sin múltiples páginas */}
               <div className="bg-[#1A1A1A] border border-[#FF6B6B]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#FF6B6B] mb-6">
+                <h3 className="font-serif text-[20px] font-light text-[#FF6B6B] mb-6">
                   ❌ Una única página
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Un cliente busca "servicios" y termina en tu inicio</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Debe scrollear para encontrar lo que busca</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Muchos abandonan por impaciencia</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#FF6B6B] flex-shrink-0">•</span>
                     <span>Google ve todo junto, sin estructura clara</span>
                   </li>
@@ -268,23 +268,23 @@ export default function SeccionPaginas() {
 
               {/* Con múltiples páginas */}
               <div className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[1.1rem] font-light text-[#51CF66] mb-6">
+                <h3 className="font-serif text-[20px] font-light text-[#51CF66] mb-6">
                   ✓ Hasta 6 páginas
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>El cliente va directo a lo que busca</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>Página de servicios en 1 click</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>Mayor probabilidad de venta</span>
                   </li>
-                  <li className="flex gap-3 text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">•</span>
                     <span>Google entiende perfectamente tu negocio</span>
                   </li>
