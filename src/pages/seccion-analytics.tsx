@@ -26,15 +26,15 @@ export default function SeccionAnalytics() {
           >
             <Link href="/servicios" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+              <span className="text-[14px] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Servicios
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+            <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Google Analytics: Ve exactamente qué hace cada visitante
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               Es como tener una cámara en tu sitio web. Ves quién entra, qué hace, de dónde vino y si se convirtió en cliente.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function SeccionAnalytics() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Qué es Google Analytics en términos simples?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Es una herramienta gratis de Google que te muestra todo lo que ocurre en tu sitio web en tiempo real.
             </p>
 
@@ -68,22 +68,22 @@ export default function SeccionAnalytics() {
                 <div className="flex items-start gap-4 mb-4">
                   <Eye size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Sin Analytics (lo común)
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Tu sitio existe pero es una "caja negra". No sabes quién entra, qué ven, o si alguien se interesa.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>¿Entran 10 personas o 1000? No sabes</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>¿De dónde vienen? Ni idea</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>¿Llamas a qué cambiar? Pura suposición</span>
                       </li>
@@ -102,22 +102,22 @@ export default function SeccionAnalytics() {
                 <div className="flex items-start gap-4 mb-4">
                   <BarChart3 size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Con Analytics (lo que ofrecemos)
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Ves exactamente qué sucede. Datos claros sobre visitantes, de dónde vienen y qué hacen.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[16px] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Número exacto de visitantes</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[16px] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Dónde vienen (Google, Instagram, etc)</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[16px] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Decisiones basadas en datos reales</span>
                       </li>
@@ -139,10 +139,10 @@ export default function SeccionAnalytics() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Qué información ves en Analytics
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Todo lo importante resumido en un dashboard fácil de entender:
             </p>
 
@@ -194,10 +194,10 @@ export default function SeccionAnalytics() {
                         <Icon size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                        <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                        <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                           {item.desc}
                         </p>
                       </div>
@@ -219,10 +219,10 @@ export default function SeccionAnalytics() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Qué cambias con esa información
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Los datos son poderosos porque te permiten mejorar cosas específicas:
             </p>
 
@@ -236,13 +236,13 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">1</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">1</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Descubre qué atrae clientes
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       Si tu página de "Portafolio" recibe 5x más clics que "Sobre nosotros", sabes en qué debe enfocarse tu contenido.
                     </p>
                   </div>
@@ -258,13 +258,13 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">2</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">2</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Inviertes dinero donde funciona
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       Si los clientes mejores vienen de Google, inviertes en SEO. Si vienen de Instagram, creas más contenido allá.
                     </p>
                   </div>
@@ -280,13 +280,13 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">3</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">3</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Mejoras sin adivinar
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       En lugar de cambiar cosas al azar, cambias las que realmente afectan tu negocio.
                     </p>
                   </div>
@@ -302,13 +302,13 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[#C9A84C] font-light">4</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">4</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Crecimiento verificable
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                       Ves el antes y después. ¿Cambio la foto? Antes 10 clics, después 50. Resultado cuantificable.
                     </p>
                   </div>
@@ -328,7 +328,7 @@ export default function SeccionAnalytics() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">
               Ejemplos reales (todos han pasado)
             </h2>
 
@@ -340,13 +340,13 @@ export default function SeccionAnalytics() {
                 transition={{ delay: 0.05 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   "Nadie llama por teléfono"
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light mb-3">
                   Con Analytics ves que 500 personas entraron pero nadie tocó el botón de WhatsApp. La CTA estaba muy pequeña. La hiciste más grande = 10x más contactos.
                 </p>
-                <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                <p className="text-[14px] text-[#C9A84C] font-light">
                   → Cambio basado en datos, no en suposiciones.
                 </p>
               </motion.div>
@@ -358,13 +358,13 @@ export default function SeccionAnalytics() {
                 transition={{ delay: 0.1 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   "Instagram no trae clientes"
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light mb-3">
                   Ves que el 60% del tráfico viene de Google, no Instagram. Así que el presupuesto de publicidad Instagram se traslada a SEO y Google Ads. El resultado: 3x más ventas.
                 </p>
-                <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                <p className="text-[14px] text-[#C9A84C] font-light">
                   → Dinero invertido donde realmente funciona.
                 </p>
               </motion.div>
@@ -376,13 +376,13 @@ export default function SeccionAnalytics() {
                 transition={{ delay: 0.15 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   "Nadie va a mi página de Galería"
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light mb-3">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light mb-3">
                   Ves en Analytics que de 200 visitantes, solo 5 van a la galería. Entonces añades fotos en la página de inicio. Ahora 80 van a la galería. Las conversiones suben 40%.
                 </p>
-                <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                <p className="text-[14px] text-[#C9A84C] font-light">
                   → Mejora específica = resultado inmediato.
                 </p>
               </motion.div>
@@ -400,10 +400,10 @@ export default function SeccionAnalytics() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Por qué Analytics es tu arma secreta?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Porque la diferencia entre un sitio que crece y uno que estanca es simple:
             </p>
 
