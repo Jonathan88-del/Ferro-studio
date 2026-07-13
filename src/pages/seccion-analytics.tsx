@@ -236,7 +236,7 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">1</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '10px'}}>1</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -257,7 +257,7 @@ export default function SeccionAnalytics() {
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0" style={{paddingBottom: '10px'}}>
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">2</span>
                   </div>
                   <div className="flex-1">
@@ -279,7 +279,7 @@ export default function SeccionAnalytics() {
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0" style={{paddingBottom: '25px'}}>
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">3</span>
                   </div>
                   <div className="flex-1">
@@ -302,7 +302,7 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">4</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '20px'}}>4</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -343,10 +343,10 @@ export default function SeccionAnalytics() {
                 <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   "Nadie llama por teléfono"
                 </h3>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light mb-3">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light mb-3">
                   Con Analytics ves que 500 personas entraron pero nadie tocó el botón de WhatsApp. La CTA estaba muy pequeña. La hiciste más grande = 10x más contactos.
                 </p>
-                <p className="text-[14px] text-[#C9A84C] font-light">
+                <p className="text-[16px] text-[#C9A84C] font-light">
                   → Cambio basado en datos, no en suposiciones.
                 </p>
               </motion.div>
@@ -361,10 +361,10 @@ export default function SeccionAnalytics() {
                 <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   "Instagram no trae clientes"
                 </h3>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light mb-3">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light mb-3">
                   Ves que el 60% del tráfico viene de Google, no Instagram. Así que el presupuesto de publicidad Instagram se traslada a SEO y Google Ads. El resultado: 3x más ventas.
                 </p>
-                <p className="text-[14px] text-[#C9A84C] font-light">
+                <p className="text-[16px] text-[#C9A84C] font-light">
                   → Dinero invertido donde realmente funciona.
                 </p>
               </motion.div>
@@ -379,10 +379,10 @@ export default function SeccionAnalytics() {
                 <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   "Nadie va a mi página de Galería"
                 </h3>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light mb-3">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light mb-3">
                   Ves en Analytics que de 200 visitantes, solo 5 van a la galería. Entonces añades fotos en la página de inicio. Ahora 80 van a la galería. Las conversiones suben 40%.
                 </p>
-                <p className="text-[14px] text-[#C9A84C] font-light">
+                <p className="text-[16px] text-[#C9A84C] font-light">
                   → Mejora específica = resultado inmediato.
                 </p>
               </motion.div>
@@ -418,10 +418,10 @@ export default function SeccionAnalytics() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Lightbulb size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Decisiones inteligentes
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Basadas en datos reales, no en corazonadas. Eso = inversiones que dan retorno.
                 </p>
               </motion.div>
@@ -436,10 +436,10 @@ export default function SeccionAnalytics() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Mejora continua
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Cada mes ves cómo mejoró. El mes que viene cambias algo más. Crecimiento acumulativo.
                 </p>
               </motion.div>
@@ -454,10 +454,10 @@ export default function SeccionAnalytics() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <DollarSign size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   Dinero ahorrado
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Inviertes dinero solo en lo que funciona. Nada desperdiciado en canales que no convierten.
                 </p>
               </motion.div>
