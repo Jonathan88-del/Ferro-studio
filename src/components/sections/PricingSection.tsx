@@ -87,7 +87,7 @@ export default function PricingSection() {
                 <span className="w-5 h-px bg-[#C9A84C]/70" />
                 <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">Mantenimiento Cuatrimestral</span>
               </div>
-              <h2 id="pricing-heading" className="font-serif font-light text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
+              <h2 id="pricing-heading" className="font-serif font-light text-[clamp(2.2rem,5.5vw,3.125rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
                 Su socio digital permanente.
               </h2>
             </motion.div>
@@ -150,7 +150,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       {plan.featured && (
         <div className="flex items-center gap-2 mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C]" aria-hidden="true" />
-          <span className="text-[0.65rem] tracking-[0.24em] uppercase font-sans text-[#C9A84C]">Más contratado</span>
+          <span className="text-[0.875rem] tracking-[0.24em] uppercase font-sans text-[#C9A84C]">Más contratado</span>
         </div>
       )}
 
@@ -164,7 +164,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
         {plan.price}
       </p>
 
-      <p className={cn("text-[0.95rem] font-sans font-light leading-[1.8] mb-9", plan.featured ? "text-[#0E0E0E]/50" : "text-[#F5F2EC]/38")}>
+      <p className={cn("text-[1.125rem] font-sans font-light leading-[1.8] mb-9", plan.featured ? "text-[#0E0E0E]/50" : "text-[#F5F2EC]/38")}>
         {plan.tagline}
       </p>
 
@@ -179,7 +179,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
               className={cn("shrink-0 mt-[4px]", plan.featured ? "text-[#C9A84C]" : "text-[#C9A84C]/60")}
               aria-hidden="true"
             />
-            <span className={cn("text-[0.95rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+            <span className={cn("text-[1rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
               {item}
             </span>
           </li>
