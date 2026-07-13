@@ -26,15 +26,15 @@ export default function SeccionSEO() {
           >
             <Link href="/servicios" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+              <span className="text-[14px] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Servicios
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+            <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               SEO: Que clientes te encuentren en Google sin pagar publicidad
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               SEO es simple: preparar tu sitio para que Google lo entienda y lo muestre cuando alguien busca lo que ofreces.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function SeccionSEO() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Qué es SEO en realidad?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Imagina que tu sitio es una tienda física. El SEO es asegurarse de que esté en una calle concurrida, bien señalizado y fácil de encontrar.
             </p>
 
@@ -68,22 +68,22 @@ export default function SeccionSEO() {
                 <div className="flex items-start gap-4 mb-4">
                   <Search size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Sin SEO (la mayoría)
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Tu sitio existe, pero está escondido en Google. Los clientes no te encuentran.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Gente busca tu servicio pero no apareces</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Pagas publicidad para que te vean</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Cuando dejas de pagar, desapareces</span>
                       </li>
@@ -102,22 +102,22 @@ export default function SeccionSEO() {
                 <div className="flex items-start gap-4 mb-4">
                   <Search size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
-                    <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Con SEO (lo que ofrecemos)
                     </h3>
-                    <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                    <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Tu sitio aparece en Google cuando buscan lo que ofreces. Tráfico gratis.
                     </p>
                     <ul className="mt-4 space-y-2">
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[16px] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Clientes te encuentran sin pagar</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[16px] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Tráfico crece mes a mes</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[16px] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Efecto acumulativo: mejora con el tiempo</span>
                       </li>
@@ -139,10 +139,10 @@ export default function SeccionSEO() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Las 3 pilares del SEO básico
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Todo el SEO se reduce a ayudar a Google a entender tu negocio:
             </p>
 
@@ -157,10 +157,10 @@ export default function SeccionSEO() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   1. Google te entiende
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Títulos claros, descripciones, estructura ordenada. Google lee tu sitio como un humano.
                 </p>
               </motion.div>
@@ -175,10 +175,10 @@ export default function SeccionSEO() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <Search size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   2. Usas las palabras correctas
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Si buscas "abogado en Madrid", tu contenido menciona exactamente eso.
                 </p>
               </motion.div>
@@ -193,10 +193,10 @@ export default function SeccionSEO() {
                 <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
                   <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
+                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
                   3. Tu sitio es rápido y confiable
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Carga en 1 segundo, funciona en móvil, es seguro. Google lo premia.
                 </p>
               </motion.div>
@@ -214,10 +214,10 @@ export default function SeccionSEO() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               11 cosas que hacemos en SEO básico
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Todas están incluidas desde el día 1. No es algo que se agrega después:
             </p>
 
@@ -246,10 +246,10 @@ export default function SeccionSEO() {
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-[1rem] font-light text-[#F5F2EC] mb-1">
+                      <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-1">
                         {item.title}
                       </h3>
-                      <p className="text-[0.85rem] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[18px] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
@@ -270,7 +270,7 @@ export default function SeccionSEO() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">
               Por qué el SEO es tu mejor inversión
             </h2>
 
@@ -282,16 +282,16 @@ export default function SeccionSEO() {
                 transition={{ delay: 0.1 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-4 text-[18px]">
                   <DollarSign size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
                     Clientes GRATIS
                   </h3>
                 </div>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
+                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
                   Alguien busca en Google "servicios de diseño" y te encuentra. No le cuesta nada.
                 </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[0.8rem] text-[#C9A84C]">
+                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
                   → Tráfico gratuito permanente
                 </div>
               </motion.div>
@@ -305,7 +305,7 @@ export default function SeccionSEO() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
                     Crece con el tiempo
                   </h3>
                 </div>
