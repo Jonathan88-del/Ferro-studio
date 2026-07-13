@@ -26,15 +26,15 @@ export default function SeccionesSecciones() {
           >
             <Link href="/servicios" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+              <span className="text-[14px] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Servicios
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+            <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Hasta 6 secciones para contar tu historia completa
             </h1>
-            <p className="text-[1.2rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
+            <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               Cada sección tiene un trabajo específico. Juntas forman una historia que convence a tus clientes en menos de 30 segundos.
             </p>
           </motion.div>
@@ -50,10 +50,10 @@ export default function SeccionesSecciones() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Cuál es el trabajo de cada sección?
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Es como el viaje de un cliente real en tu oficina: entra, te conoce, ve lo que haces, confía en ti y finalmente te contacta.
             </p>
 
@@ -70,13 +70,13 @@ export default function SeccionesSecciones() {
                     <Home size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Sección 1: Inicio
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
                       Tu portada. El primer encuentro. Tienes 3 segundos para que NO se vaya.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[14px] text-[#C9A84C] font-light">
                       → Muestra un beneficio claro, un título convincente y una llamada a acción
                     </p>
                   </div>
@@ -95,13 +95,13 @@ export default function SeccionesSecciones() {
                     <Users size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Sección 2: Sobre ti / Tu historia
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
                       Aquí construyes confianza. El cliente quiere saber quién eres y por qué debería creerte.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[14px] text-[#C9A84C] font-light">
                       → Tu experiencia, años en el negocio, por qué empezaste, qué te diferencia
                     </p>
                   </div>
@@ -120,13 +120,13 @@ export default function SeccionesSecciones() {
                     <Briefcase size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Sección 3: Servicios / Productos
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
                       Aquí VENDES. Explica qué ofreces, precios, paquetes y qué esperar.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[14px] text-[#C9A84C] font-light">
                       → La sección más importante. Aquí pasan las conversiones
                     </p>
                   </div>
@@ -145,13 +145,13 @@ export default function SeccionesSecciones() {
                     <MessageSquare size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Sección 4: Testimonios / Casos de éxito
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
                       Otros clientes hablan por ti. Esto MULTIPLICA la confianza.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[14px] text-[#C9A84C] font-light">
                       → "Yo traté con ellos y fue excelente". Más poderoso que cualquier cosa que digas tú
                     </p>
                   </div>
@@ -170,13 +170,13 @@ export default function SeccionesSecciones() {
                     <Images size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Sección 5: Galería / Portafolio / Proyectos
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
                       Muestra tu trabajo. Una imagen vale 1.000 palabras.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[14px] text-[#C9A84C] font-light">
                       → Fotos de trabajos anteriores, proyectos completados, resultados tangibles
                     </p>
                   </div>
@@ -195,13 +195,13 @@ export default function SeccionesSecciones() {
                     <Mail size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-serif text-[1.2rem] font-light text-[#F5F2EC] mb-2">
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
                       Sección 6: Contacto
                     </h3>
-                    <p className="text-[0.95rem] text-[#F5F2EC]/60 font-light mb-3">
+                    <p className="text-[16px] text-[#F5F2EC]/60 font-light mb-3">
                       El final. Aquí el cliente se contacta contigo. Hazlo fácil.
                     </p>
-                    <p className="text-[0.85rem] text-[#C9A84C] font-light">
+                    <p className="text-[14px] text-[#C9A84C] font-light">
                       → Formulario, teléfono, email, ubicación, horarios. Visible y clara
                     </p>
                   </div>
@@ -221,10 +221,10 @@ export default function SeccionesSecciones() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.2rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               El viaje del cliente en tu sitio
             </h2>
-            <p className="text-[1.1rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Como una buena película, cada escena prepara la siguiente:
             </p>
 
@@ -250,10 +250,10 @@ export default function SeccionesSecciones() {
                       <span className={`font-serif text-[#C9A84C] font-light text-[40px] ${item.step === "6" ? "pb-[2px]" : "pb-5"}`}>{item.step}</span>
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-[1.05rem] font-light text-[#F5F2EC] mb-2">
+                      <h3 className="font-serif text-[17px] font-light text-[#F5F2EC] mb-2">
                         {item.title}
                       </h3>
-                      <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light">
+                      <p className="text-[15px] text-[#F5F2EC]/50 font-light">
                         {item.desc}
                       </p>
                     </div>
@@ -292,7 +292,7 @@ export default function SeccionesSecciones() {
                 <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
                   Más clientes
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[15px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Cada sección tiene su propósito. Los clientes encuentran exactamente lo que buscaban.
                 </p>
               </motion.div>
@@ -310,7 +310,7 @@ export default function SeccionesSecciones() {
                 <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
                   Conversiones más altas
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[15px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Una estructura clara reduce abandonos. Los clientes van de punto A a B sin perderse.
                 </p>
               </motion.div>
@@ -328,7 +328,7 @@ export default function SeccionesSecciones() {
                 <h3 className="font-serif text-[1.1rem] font-light text-[#F5F2EC] mb-3">
                   Experiencia profesional
                 </h3>
-                <p className="text-[0.9rem] text-[#F5F2EC]/50 font-light leading-relaxed">
+                <p className="text-[15px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tu sitio se ve organizado y confiable. Eso comunica que tu negocio es serio.
                 </p>
               </motion.div>
