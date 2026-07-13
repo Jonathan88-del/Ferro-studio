@@ -345,26 +345,6 @@ export default function PlanesHosting() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
-                      Email corporativo
-                    </h3>
-                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
-                      Correo profesional con tu dominio (info@tuempresa.com).
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
                 transition={{ delay: 0.25 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
               >
