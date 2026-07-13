@@ -79,15 +79,15 @@ export default function PlanesSSL() {
                         <span className="flex-shrink-0">•</span>
                         <span>Datos de clientes viajan sin protección</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>El navegador advierte "Sitio no seguro"</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Google penaliza tu posicionamiento</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#FF6B6B]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>Pierdes clientes por desconfianza</span>
                       </li>
@@ -117,15 +117,15 @@ export default function PlanesSSL() {
                         <span className="flex-shrink-0">✓</span>
                         <span>Datos encriptados de punta a punta</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>El navegador muestra "Sitio seguro"</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Google premia tu SEO por seguridad</span>
                       </li>
-                      <li className="flex gap-2 text-[0.85rem] text-[#51CF66]">
+                      <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Clientes cómodos compartiendo datos</span>
                       </li>
