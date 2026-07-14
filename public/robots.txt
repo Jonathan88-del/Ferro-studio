@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ferrostudio.com/sitemap.xml
+Sitemap: https://ferrostudioweb.com/sitemap.xml
