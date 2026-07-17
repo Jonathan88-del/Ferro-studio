@@ -160,7 +160,7 @@ function GoogleBusinessCard() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
-      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]"
+      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111]"
     >
       <motion.span
         variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
@@ -170,10 +170,12 @@ function GoogleBusinessCard() {
         aria-hidden="true"
       />
 
-      <div className="flex min-h-[180px] items-center justify-center overflow-hidden border-b border-[#F5F2EC]/[0.06] bg-[#F5F2EC] p-3 sm:min-h-[230px] sm:p-6 lg:min-h-[300px] lg:border-b-0 lg:border-r">
+      <div className="flex min-h-[180px] items-center justify-center overflow-hidden border-b border-[#F5F2EC]/[0.06] bg-[#F5F2EC] p-3 sm:min-h-[230px] sm:p-6 lg:min-h-[300px] lg:px-12 lg:py-8">
         <img
           src="/google-business.webp"
-          alt="Google Maps y Google Business en un teléfono móvil"
+          alt="Ilustración de un teléfono con Google Maps y una tienda local"
+          width="800"
+          height="213"
           className="h-auto w-full object-contain"
         />
       </div>
