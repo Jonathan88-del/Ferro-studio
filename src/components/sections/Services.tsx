@@ -170,15 +170,6 @@ function GoogleBusinessCard() {
         aria-hidden="true"
       />
 
-      <div className="flex min-h-[180px] items-center justify-center overflow-hidden border-b border-[#F5F2EC]/[0.06] bg-[#F5F2EC] p-3 sm:min-h-[230px] sm:p-6 lg:min-h-[300px] lg:px-12 lg:py-8">
-        <img
-          src="/google-business.webp"
-          alt="Ilustración de un teléfono con Google Maps y una tienda local"
-          width="800"
-          height="213"
-          className="h-auto w-full object-contain"
-        />
-      </div>
 
       <div className="flex flex-col gap-7 p-10 md:p-14">
         <div className="flex items-start justify-between gap-6">
