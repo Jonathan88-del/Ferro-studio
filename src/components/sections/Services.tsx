@@ -160,58 +160,64 @@ function GoogleBusinessCard() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
-      className="group mt-px grid grid-cols-1 overflow-hidden border border-[#F5F2EC]/[0.08] bg-[#F5F2EC] text-[#0E0E0E] lg:grid-cols-[minmax(0,1.35fr)_minmax(360px,1fr)]"
+      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]"
     >
-      <div className="flex min-h-[230px] items-center justify-center overflow-hidden bg-white p-4 sm:p-8 lg:min-h-[300px] lg:p-10">
+      <motion.span
+        variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
+        initial="initial"
+        transition={{ duration: 0.35, ease: EASE }}
+        className="absolute inset-x-0 top-0 z-10 h-px origin-left bg-[#C9A84C]/55"
+        aria-hidden="true"
+      />
+
+      <div className="flex min-h-[180px] items-center justify-center overflow-hidden border-b border-[#F5F2EC]/[0.06] bg-[#F5F2EC] p-3 sm:min-h-[230px] sm:p-6 lg:min-h-[300px] lg:border-b-0 lg:border-r">
         <img
-          src="https://cdn.builder.io/api/v1/image/assets%2F8a70fce578a44676b88e8de6b017e6e9%2Fd5fa0b4531bd4b74ba4c5a4330bb5627?format=webp&width=800&height=1200"
+          src="/google-business.webp"
           alt="Google Maps y Google Business en un teléfono móvil"
-          className="h-full max-h-[300px] w-full object-contain"
+          className="h-auto w-full object-contain"
         />
       </div>
 
-      <div className="flex flex-col gap-7 p-8 sm:p-10 lg:p-12">
+      <div className="flex flex-col gap-7 p-10 md:p-14">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <span className="inline-flex bg-[#EEF1FF] px-2 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#5368C8]">
-              Extra
-            </span>
-            <h3 className="mt-4 font-sans text-[1.55rem] font-bold leading-tight text-[#111111] sm:text-[1.8rem]">
+            <span className="font-serif text-[1.05rem] font-light text-[#C9A84C]/70">Extra</span>
+            <h3 className="mt-3 font-serif text-[1.75rem] font-light leading-tight tracking-[-0.01em] text-[#F5F2EC]">
               Google Maps (Google Business)
             </h3>
           </div>
-          <div className="shrink-0 text-right">
-            <p className="font-sans text-[1.25rem] font-bold leading-none text-[#354DB7] sm:text-[1.5rem]">$45.000</p>
-            <p className="mt-1 text-[11px] text-[#111111]/45">pago único</p>
+          <div className="shrink-0 pt-0.5 text-right">
+            <p className="font-serif text-[20px] font-light leading-none text-[#F5F2EC]/85">$45.000</p>
+            <p className="mt-1 font-sans text-[11px] font-light text-[#F5F2EC]/28">pago único</p>
           </div>
         </div>
 
-        <p className="max-w-2xl font-sans text-[15px] leading-[1.65] text-[#111111]/65">
+        <p className="font-sans text-[1rem] font-light leading-[1.82] text-[#F5F2EC]/38">
           Hacé que tu negocio aparezca en Google y Google Maps. Configuramos y optimizamos tu perfil de Google Business para que tus clientes puedan encontrarte fácilmente y tengan toda la información de tu empresa en un solo lugar.
         </p>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-3 border-t border-[#F5F2EC]/[0.06] pt-5 sm:grid-cols-2 sm:gap-x-6">
           {[
             "Creación y configuración del perfil",
-            "Vinculación con tu página web",
             "Datos del negocio (horarios, teléfono, web)",
-            "Botón de WhatsApp (si corresponde)",
             "Categorías y servicios",
-            "Asistencia durante la verificación",
             "Logo, portada y fotografías",
-            "Perfil listo para comenzar a recibir clientes",
             "Descripción optimizada",
+            "Vinculación con tu página web",
+            "Botón de WhatsApp (si corresponde)",
+            "Asistencia durante la verificación",
+            "Perfil listo para comenzar a recibir clientes",
           ].map((item) => (
-            <div key={item} className="flex items-start gap-2 text-[13px] leading-[1.45] text-[#111111]/65">
-              <span className="mt-0.5 shrink-0 text-[#5368C8]">✓</span>
-              <span>{item}</span>
-            </div>
+            <li key={item} className="flex items-start gap-3">
+              <span className="mt-[3px] shrink-0 font-sans text-[0.75rem] text-[#C9A84C]/60">✓</span>
+              <span className="font-sans text-[13px] font-light leading-[1.6] text-[#F5F2EC]/35">{item}</span>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <a
           href="/contacto"
-          className="self-start bg-[#394FC1] px-5 py-3 font-sans text-[13px] font-semibold text-white transition-colors duration-300 hover:bg-[#2E40A1]"
+          className="self-start border border-[#C9A84C]/60 px-5 py-3 font-sans text-[13px] font-medium text-[#C9A84C] transition-colors duration-300 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10"
         >
           Solicitar este servicio
         </a>
