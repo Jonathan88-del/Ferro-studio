@@ -132,7 +132,7 @@ export default function Navbar() {
 
               <div className="flex flex-col gap-0.5 flex-1 min-h-0 overflow-y-auto">
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}>
-                  <Link href="/" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/" ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
+                  <Link href="/" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/" ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
                     Inicio
                   </Link>
                 </motion.div>
@@ -140,7 +140,7 @@ export default function Navbar() {
                   <ServiceAccordionNav isActive={location === "/servicios"} isMobile />
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 2 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                  <Link href="/proceso" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/proceso" ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
+                  <Link href="/proceso" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/proceso" ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
                     Proceso
                   </Link>
                 </motion.div>
@@ -148,7 +148,7 @@ export default function Navbar() {
                   <PlansAccordionNav isActive={location === "/planes"} isMobile />
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 4 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                  <Link href="/contacto" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/contacto" ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
+                  <Link href="/contacto" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/contacto" ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
                     Contacto
                   </Link>
                 </motion.div>

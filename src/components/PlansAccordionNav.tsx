@@ -44,22 +44,33 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
   if (isMobile) {
     return (
       <div className="flex flex-col gap-2">
-        <button
-          onClick={() => {
-            setIsOpen((open) => !open);
-            setExpandedOnce(true);
-          }}
-          className={cn(
-            "block font-serif text-[2.2rem] font-light py-2 transition-colors duration-200",
-            isActive ? "text-[#F5F2EC]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]",
-            "text-left flex items-center gap-2"
-          )}
-        >
-          Planes
-          <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
-            <ChevronDown size={24} strokeWidth={1.5} />
-          </motion.div>
-        </button>
+        <div className="flex items-center gap-2">
+          <Link
+            href="/planes"
+            className={cn(
+              "font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200",
+              isActive ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]"
+            )}
+          >
+            Planes
+          </Link>
+          <button
+            type="button"
+            aria-label={isOpen ? "Cerrar planes" : "Abrir planes"}
+            onClick={() => {
+              setIsOpen((open) => !open);
+              setExpandedOnce(true);
+            }}
+            className={cn(
+              "ferro-focus p-2 transition-colors duration-200",
+              isActive ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]"
+            )}
+          >
+            <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+              <ChevronDown size={24} strokeWidth={1.5} />
+            </motion.div>
+          </button>
+        </div>
 
         <AnimatePresence>
           {isOpen && expandedOnce && (
