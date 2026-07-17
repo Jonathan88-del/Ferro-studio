@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Services from "@/components/sections/Services";
 import IndustrySection from "@/components/sections/IndustrySection";
@@ -6,6 +7,14 @@ import CTASection from "@/components/sections/CTASection";
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function Servicios() {
+  useEffect(() => {
+    document.title = "Landing Pages y Sitios Institucionales | Ferro Studio";
+
+    return () => {
+      document.title = "Ferro Studio | Diseño y Desarrollo de Páginas Web Profesionales";
+    };
+  }, []);
+
   return (
     <>
       {/* Page header */}
