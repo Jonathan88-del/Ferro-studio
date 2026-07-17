@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight, Mail } from "lucide-react";
 
@@ -12,6 +13,14 @@ const fadeUp = (delay = 0) => ({
 });
 
 export default function Contacto() {
+  useEffect(() => {
+    document.title = "Contacto | Solicitá tu Presupuesto Web | Ferro Studio";
+
+    return () => {
+      document.title = "Ferro Studio | Diseño y Desarrollo de Páginas Web Profesionales";
+    };
+  }, []);
+
   const [form, setForm] = useState({ nombre: "", descripcion: "" });
   const [sent, setSent] = useState(false);
 
