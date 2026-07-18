@@ -253,15 +253,11 @@ function GoogleBusinessCard() {
             "Descripción optimizada",
             "Vinculación con tu página web",
             "Botón de WhatsApp (si corresponde)",
-            "Asistencia durante la verificación",
             "Perfil listo para comenzar a recibir clientes",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <span className="mt-[3px] shrink-0 font-sans text-[0.75rem] text-[#C9A84C]/60">✓</span>
-              <span className={cn(
-                "font-sans font-light leading-[1.6] text-[#F5F2EC]/35",
-                item === "Asistencia durante la verificación" ? "text-[13px]" : "text-[15px]"
-              )}>{item}</span>
+              <span className="font-sans font-light leading-[1.6] text-[#F5F2EC]/35 text-[15px]">{item}</span>
             </li>
           ))}
         </ul>
