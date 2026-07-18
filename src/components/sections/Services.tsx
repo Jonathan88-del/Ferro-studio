@@ -235,8 +235,7 @@ function GoogleBusinessCard() {
             </h3>
           </div>
           <div className="shrink-0 pt-0.5 text-right">
-            <p className="font-serif text-[20px] font-light leading-none text-[#F5F2EC]/85">$45.000</p>
-            <p className="mt-1 font-sans text-[11px] font-light text-[#F5F2EC]/28">pago único</p>
+            <p className="font-serif text-[25px] font-light leading-none text-[#F5F2EC]/85">$30.000</p>
           </div>
         </div>
 
