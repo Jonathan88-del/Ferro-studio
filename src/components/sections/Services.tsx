@@ -229,7 +229,7 @@ function GoogleBusinessCard() {
       <div className="flex flex-col gap-7 p-10 md:p-14 lg:ml-[35%]">
         <div className="flex items-start justify-between gap-6">
           <div>
-            <span className="font-serif text-[1.05rem] font-light text-[#C9A84C]/70">Extra</span>
+            <span className="font-serif text-[25px] font-light text-[#C9A84C]/70">Servicios extra</span>
             <h3 className="mt-3 font-serif text-[1.75rem] font-light leading-tight tracking-[-0.01em] text-[#F5F2EC]">
               Google Maps (Google Business)
             </h3>
@@ -241,7 +241,7 @@ function GoogleBusinessCard() {
         </div>
 
         <p className="font-sans text-[1rem] font-light leading-[1.82] text-[#F5F2EC]/38">
-          Hacé que tu negocio aparezca en Google y Google Maps. Configuramos y optimizamos tu perfil de Google Business para que tus clientes puedan encontrarte fácilmente y tengan toda la información de tu empresa en un solo lugar.
+          Hacé que tu negocio aparezca en Google Maps. Configuramos y optimizamos tu perfil de Google Business para que tus clientes puedan encontrarte fácilmente y tengan toda la información de tu empresa en un solo lugar.
         </p>
 
         <ul className="grid grid-cols-1 gap-3 border-t border-[#F5F2EC]/[0.06] pt-5 sm:grid-cols-2 sm:gap-x-6">
@@ -258,7 +258,10 @@ function GoogleBusinessCard() {
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <span className="mt-[3px] shrink-0 font-sans text-[0.75rem] text-[#C9A84C]/60">✓</span>
-              <span className="font-sans text-[13px] font-light leading-[1.6] text-[#F5F2EC]/35">{item}</span>
+              <span className={cn(
+                "font-sans font-light leading-[1.6] text-[#F5F2EC]/35",
+                item === "Asistencia durante la verificación" ? "text-[13px]" : "text-[15px]"
+              )}>{item}</span>
             </li>
           ))}
         </ul>
