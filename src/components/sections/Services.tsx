@@ -173,33 +173,39 @@ function GoogleBusinessCard() {
 
       <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[35%] overflow-hidden lg:block" aria-hidden="true">
         <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3279C8]/[0.12] blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-[72%] -translate-y-[72%] rotate-[-45deg] rounded-[2.3rem_2.3rem_2.3rem_0.6rem] border border-[#5B9FE4]/35 bg-[#3279C8]/20 shadow-[0_20px_45px_rgba(0,0,0,0.35)]">
-          <div className="absolute inset-[1.7rem] rounded-full border border-[#B9D8F4]/45 bg-[#0E0E0E]/60" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-[8%] -translate-y-[92%] text-[#3279C8]/90 drop-shadow-[0_18px_24px_rgba(0,0,0,0.35)]">
+          <MapPin size={112} strokeWidth={1.4} fill="currentColor" />
+          <span className="absolute left-1/2 top-[31%] h-8 w-8 -translate-x-1/2 rounded-full bg-[#0E0E0E]/80 ring-1 ring-[#F5F2EC]/30" />
+          <span className="absolute left-[18%] top-[18%] h-5 w-8 rotate-[-38deg] rounded-full bg-[#EA4335]/90" />
+          <span className="absolute right-[16%] top-[32%] h-7 w-5 rotate-[35deg] rounded-full bg-[#34A853]/90" />
+          <span className="absolute bottom-[20%] left-[33%] h-6 w-5 rotate-[22deg] rounded-full bg-[#FBBC05]/90" />
         </div>
 
-        <div className="absolute left-1/2 top-1/2 h-[17.25rem] w-[8.8rem] -translate-x-[30%] -translate-y-[55%] rotate-[6deg] rounded-[1.7rem] border border-[#F5F2EC]/20 bg-[#171717] p-[0.35rem] shadow-[0_28px_50px_rgba(0,0,0,0.5)]">
-          <div className="relative h-full overflow-hidden rounded-[1.38rem] bg-[#101419] px-3 pt-5">
-            <div className="absolute left-1/2 top-2 h-1 w-8 -translate-x-1/2 rounded-full bg-[#F5F2EC]/25" />
+        <div className="absolute left-1/2 top-1/2 h-[21rem] w-[10rem] -translate-x-[55%] -translate-y-[53%] rotate-[4deg] rounded-[1.7rem] border border-[#F5F2EC]/25 bg-[#111820] p-[0.4rem] shadow-[0_28px_50px_rgba(0,0,0,0.55)]">
+          <div className="relative h-full overflow-hidden rounded-[1.35rem] bg-[#F5F2EC] px-3 pt-5">
+            <div className="absolute left-1/2 top-2 h-1 w-8 -translate-x-1/2 rounded-full bg-[#172331]/35" />
             <div className="flex items-center gap-1.5">
               <div className="flex h-5 w-5 items-center justify-center rounded-md bg-[#3279C8] font-sans text-[10px] font-semibold text-white">G</div>
-              <div className="h-1.5 w-12 rounded-full bg-[#F5F2EC]/25" />
+              <div className="h-1.5 w-12 rounded-full bg-[#172331]/25" />
             </div>
             <div className="mt-4 flex flex-col items-center">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A84C]/50 bg-[#C9A84C]/15 font-serif text-[15px] text-[#C9A84C]">F</div>
-              <div className="mt-2 h-2 w-16 rounded-full bg-[#F5F2EC]/70" />
-              <div className="mt-1.5 h-1.5 w-11 rounded-full bg-[#F5F2EC]/20" />
-              <div className="mt-3 flex items-center gap-1 text-[#C9A84C]"><span className="text-[10px] leading-none">★</span><span className="h-1.5 w-9 rounded-full bg-[#F5F2EC]/25" /></div>
+              <div className="flex h-12 w-full items-end justify-center rounded-md bg-gradient-to-b from-[#9BC6F2] to-[#6688B5] pb-1">
+                <div className="h-5 w-8 rounded-t-md bg-[#172331]/75" />
+              </div>
+              <div className="mt-2 h-2 w-16 rounded-full bg-[#172331]/75" />
+              <div className="mt-1.5 h-1.5 w-11 rounded-full bg-[#172331]/25" />
+              <div className="mt-3 flex items-center gap-1 text-[#C9A84C]"><span className="text-[10px] leading-none">★ ★ ★ ★</span><span className="h-1.5 w-4 rounded-full bg-[#172331]/20" /></div>
             </div>
-            <div className="mt-5 space-y-2 border-t border-[#F5F2EC]/10 pt-3">
-              <div className="h-1.5 w-full rounded-full bg-[#F5F2EC]/15" />
-              <div className="h-1.5 w-4/5 rounded-full bg-[#F5F2EC]/10" />
+            <div className="mt-5 space-y-2 border-t border-[#172331]/10 pt-3">
+              <div className="h-1.5 w-full rounded-full bg-[#172331]/15" />
+              <div className="h-1.5 w-4/5 rounded-full bg-[#172331]/10" />
               <div className="h-5 w-full rounded-md bg-[#3279C8]/70" />
             </div>
           </div>
         </div>
 
-        <div className="absolute left-1/2 top-1/2 w-36 -translate-x-[62%] translate-y-[52%] rounded-xl border border-[#F5F2EC]/15 bg-[#171717]/95 p-2.5 shadow-[0_16px_30px_rgba(0,0,0,0.45)] backdrop-blur-sm">
-          <div className="relative h-16 overflow-hidden rounded-lg bg-[#183149]">
+        <div className="absolute left-1/2 top-1/2 w-40 -translate-x-[48%] translate-y-[48%] rounded-xl border border-[#F5F2EC]/25 bg-[#171717]/95 p-2.5 shadow-[0_16px_30px_rgba(0,0,0,0.5)] backdrop-blur-sm">
+          <div className="relative h-20 overflow-hidden rounded-lg bg-[#183149]">
             <span className="absolute -left-2 top-8 h-px w-24 rotate-[-24deg] bg-[#5B9FE4]/45" />
             <span className="absolute left-5 -top-3 h-24 w-px rotate-[35deg] bg-[#5B9FE4]/30" />
             <span className="absolute right-5 top-0 h-20 w-px rotate-[-35deg] bg-[#5B9FE4]/35" />
