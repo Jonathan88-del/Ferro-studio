@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MousePointerClick, Building2, LayoutGrid, Pencil, MapPin } from "lucide-react";
+import { MousePointerClick, Building2, LayoutGrid, Pencil, MapPin, Phone, Bookmark, Globe2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -172,11 +172,6 @@ function GoogleBusinessCard() {
 
 
       <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[35%] overflow-hidden lg:block" aria-hidden="true">
-        <img
-          src="https://cdn.builder.io/api/v1/image/assets%2Fc456b5aba9e34f4da55ba9df2d327e26%2Fa1aee72b2817481da3c61fb9df110f70?format=webp&width=800&height=1200"
-          alt="Perfil de Ferro Studio en Google Business y Google Maps"
-          className="absolute inset-0 z-20 h-full w-full scale-[1.08] object-contain object-center"
-        />
         <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3279C8]/[0.12] blur-3xl" />
         <div className="absolute left-1/2 top-1/2 translate-x-[2%] -translate-y-[96%] text-[#3279C8]/90 drop-shadow-[0_18px_24px_rgba(0,0,0,0.35)]">
           <MapPin size={112} strokeWidth={1.4} fill="currentColor" />
@@ -203,11 +198,16 @@ function GoogleBusinessCard() {
                 </div>
                 <div className="h-6 w-9 rounded-t-md bg-[#172331]/75" />
               </div>
-              <div className="mt-2 h-2 w-16 rounded-full bg-[#172331]/75" />
-              <div className="mt-1.5 h-1.5 w-11 rounded-full bg-[#172331]/25" />
-              <div className="mt-3 flex items-center gap-1 text-[#C9A84C]"><span className="text-[10px] leading-none">★ ★ ★ ★</span><span className="h-1.5 w-4 rounded-full bg-[#172331]/20" /></div>
+              <span className="mt-2 font-sans text-[11px] font-semibold text-[#172331]/90">Ferro Studio</span>
+              <div className="mt-1.5 flex items-center gap-1 text-[#C9A84C]"><span className="text-[9px] leading-none">★ ★ ★ ★ ★</span><span className="font-sans text-[7px] text-[#172331]/45">(56)</span></div>
+              <div className="mt-3 grid w-full grid-cols-4 gap-1 border-t border-[#172331]/10 pt-2 text-[#3279C8]">
+                <div className="flex flex-col items-center gap-1"><Phone size={11} strokeWidth={1.8} /><span className="font-sans text-[5px] text-[#172331]/60">Llamar</span></div>
+                <div className="flex flex-col items-center gap-1"><MapPin size={11} strokeWidth={1.8} /><span className="font-sans text-[5px] text-[#172331]/60">Cómo llegar</span></div>
+                <div className="flex flex-col items-center gap-1"><Bookmark size={11} strokeWidth={1.8} /><span className="font-sans text-[5px] text-[#172331]/60">Guardar</span></div>
+                <div className="flex flex-col items-center gap-1"><Globe2 size={11} strokeWidth={1.8} /><span className="font-sans text-[5px] text-[#172331]/60">Sitio web</span></div>
+              </div>
             </div>
-            <div className="mt-5 space-y-2 border-t border-[#172331]/10 pt-3">
+            <div className="mt-4 space-y-2 border-t border-[#172331]/10 pt-3">
               <div className="h-1.5 w-full rounded-full bg-[#172331]/15" />
               <div className="h-1.5 w-4/5 rounded-full bg-[#172331]/10" />
               <div className="h-5 w-full rounded-md bg-[#3279C8]/70" />
