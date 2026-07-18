@@ -173,7 +173,7 @@ function GoogleBusinessCard() {
 
       <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[35%] overflow-hidden lg:block" aria-hidden="true">
         <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3279C8]/[0.12] blur-3xl" />
-        <div className="absolute left-1/2 top-1/2 -translate-x-[8%] -translate-y-[92%] text-[#3279C8]/90 drop-shadow-[0_18px_24px_rgba(0,0,0,0.35)]">
+        <div className="absolute left-1/2 top-1/2 translate-x-[2%] -translate-y-[96%] text-[#3279C8]/90 drop-shadow-[0_18px_24px_rgba(0,0,0,0.35)]">
           <MapPin size={112} strokeWidth={1.4} fill="currentColor" />
           <span className="absolute left-1/2 top-[31%] h-8 w-8 -translate-x-1/2 rounded-full bg-[#0E0E0E]/80 ring-1 ring-[#F5F2EC]/30" />
           <span className="absolute left-[18%] top-[18%] h-5 w-8 rotate-[-38deg] rounded-full bg-[#EA4335]/90" />
@@ -181,16 +181,22 @@ function GoogleBusinessCard() {
           <span className="absolute bottom-[20%] left-[33%] h-6 w-5 rotate-[22deg] rounded-full bg-[#FBBC05]/90" />
         </div>
 
-        <div className="absolute left-1/2 top-1/2 h-[21rem] w-[10rem] -translate-x-[55%] -translate-y-[53%] rotate-[4deg] rounded-[1.7rem] border border-[#F5F2EC]/25 bg-[#111820] p-[0.4rem] shadow-[0_28px_50px_rgba(0,0,0,0.55)]">
-          <div className="relative h-full overflow-hidden rounded-[1.35rem] bg-[#F5F2EC] px-3 pt-5">
+        <div className="absolute left-1/2 top-1/2 h-[22.5rem] w-[10.5rem] -translate-x-[70%] -translate-y-[51%] rotate-[3deg] rounded-[1.7rem] border border-[#F5F2EC]/25 bg-[#111820] p-[0.4rem] shadow-[0_28px_50px_rgba(0,0,0,0.55)]">
+          <div className="relative h-full overflow-hidden rounded-[1.35rem] bg-[#F5F2EC] px-3 pt-6">
             <div className="absolute left-1/2 top-2 h-1 w-8 -translate-x-1/2 rounded-full bg-[#172331]/35" />
             <div className="flex items-center gap-1.5">
               <div className="flex h-5 w-5 items-center justify-center rounded-md bg-[#3279C8] font-sans text-[10px] font-semibold text-white">G</div>
               <div className="h-1.5 w-12 rounded-full bg-[#172331]/25" />
             </div>
-            <div className="mt-4 flex flex-col items-center">
-              <div className="flex h-12 w-full items-end justify-center rounded-md bg-gradient-to-b from-[#9BC6F2] to-[#6688B5] pb-1">
-                <div className="h-5 w-8 rounded-t-md bg-[#172331]/75" />
+            <div className="mt-5 flex flex-col items-center">
+              <div className="relative flex h-14 w-full items-end justify-center overflow-hidden rounded-md bg-gradient-to-b from-[#A9D0F4] to-[#6688B5] pb-1">
+                <div className="absolute inset-x-0 top-0 flex h-4 justify-center gap-1 bg-[#F5F2EC]/85 px-2">
+                  <span className="h-4 w-2.5 rounded-b-md bg-[#3279C8]" />
+                  <span className="h-4 w-2.5 rounded-b-md bg-[#F5F2EC]" />
+                  <span className="h-4 w-2.5 rounded-b-md bg-[#3279C8]" />
+                  <span className="h-4 w-2.5 rounded-b-md bg-[#F5F2EC]" />
+                </div>
+                <div className="h-6 w-9 rounded-t-md bg-[#172331]/75" />
               </div>
               <div className="mt-2 h-2 w-16 rounded-full bg-[#172331]/75" />
               <div className="mt-1.5 h-1.5 w-11 rounded-full bg-[#172331]/25" />
@@ -204,12 +210,12 @@ function GoogleBusinessCard() {
           </div>
         </div>
 
-        <div className="absolute left-1/2 top-1/2 w-40 -translate-x-[48%] translate-y-[48%] rounded-xl border border-[#F5F2EC]/25 bg-[#171717]/95 p-2.5 shadow-[0_16px_30px_rgba(0,0,0,0.5)] backdrop-blur-sm">
-          <div className="relative h-20 overflow-hidden rounded-lg bg-[#183149]">
+        <div className="absolute left-1/2 top-1/2 w-40 -translate-x-[18%] translate-y-[54%] rounded-xl border border-[#F5F2EC]/25 bg-[#171717]/95 p-2.5 shadow-[0_16px_30px_rgba(0,0,0,0.5)] backdrop-blur-sm">
+          <div className="relative h-20 overflow-hidden rounded-lg border border-[#F5F2EC]/10 bg-[#183149]">
             <span className="absolute -left-2 top-8 h-px w-24 rotate-[-24deg] bg-[#5B9FE4]/45" />
             <span className="absolute left-5 -top-3 h-24 w-px rotate-[35deg] bg-[#5B9FE4]/30" />
             <span className="absolute right-5 top-0 h-20 w-px rotate-[-35deg] bg-[#5B9FE4]/35" />
-            <MapPin className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full text-[#C9A84C] drop-shadow-[0_3px_5px_rgba(0,0,0,0.45)]" size={18} strokeWidth={2} />
+            <MapPin className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full text-[#E24A3B] drop-shadow-[0_3px_5px_rgba(0,0,0,0.45)]" size={28} strokeWidth={1.8} fill="currentColor" />
           </div>
           <div className="mt-2 h-1.5 w-16 rounded-full bg-[#F5F2EC]/30" />
         </div>
