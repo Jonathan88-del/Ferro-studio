@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MousePointerClick, Building2, LayoutGrid, Pencil } from "lucide-react";
+import { MousePointerClick, Building2, LayoutGrid, Pencil, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -160,7 +160,7 @@ function GoogleBusinessCard() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
-      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111]"
+      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111] lg:min-h-[540px]"
     >
       <motion.span
         variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
@@ -171,7 +171,45 @@ function GoogleBusinessCard() {
       />
 
 
-      <div className="flex flex-col gap-7 p-10 md:p-14">
+      <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[35%] overflow-hidden lg:block" aria-hidden="true">
+        <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3279C8]/[0.12] blur-3xl" />
+        <div className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-[72%] -translate-y-[72%] rotate-[-45deg] rounded-[2.3rem_2.3rem_2.3rem_0.6rem] border border-[#5B9FE4]/35 bg-[#3279C8]/20 shadow-[0_20px_45px_rgba(0,0,0,0.35)]">
+          <div className="absolute inset-[1.7rem] rounded-full border border-[#B9D8F4]/45 bg-[#0E0E0E]/60" />
+        </div>
+
+        <div className="absolute left-1/2 top-1/2 h-[17.25rem] w-[8.8rem] -translate-x-[30%] -translate-y-[55%] rotate-[6deg] rounded-[1.7rem] border border-[#F5F2EC]/20 bg-[#171717] p-[0.35rem] shadow-[0_28px_50px_rgba(0,0,0,0.5)]">
+          <div className="relative h-full overflow-hidden rounded-[1.38rem] bg-[#101419] px-3 pt-5">
+            <div className="absolute left-1/2 top-2 h-1 w-8 -translate-x-1/2 rounded-full bg-[#F5F2EC]/25" />
+            <div className="flex items-center gap-1.5">
+              <div className="flex h-5 w-5 items-center justify-center rounded-md bg-[#3279C8] font-sans text-[10px] font-semibold text-white">G</div>
+              <div className="h-1.5 w-12 rounded-full bg-[#F5F2EC]/25" />
+            </div>
+            <div className="mt-4 flex flex-col items-center">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#C9A84C]/50 bg-[#C9A84C]/15 font-serif text-[15px] text-[#C9A84C]">F</div>
+              <div className="mt-2 h-2 w-16 rounded-full bg-[#F5F2EC]/70" />
+              <div className="mt-1.5 h-1.5 w-11 rounded-full bg-[#F5F2EC]/20" />
+              <div className="mt-3 flex items-center gap-1 text-[#C9A84C]"><span className="text-[10px] leading-none">★</span><span className="h-1.5 w-9 rounded-full bg-[#F5F2EC]/25" /></div>
+            </div>
+            <div className="mt-5 space-y-2 border-t border-[#F5F2EC]/10 pt-3">
+              <div className="h-1.5 w-full rounded-full bg-[#F5F2EC]/15" />
+              <div className="h-1.5 w-4/5 rounded-full bg-[#F5F2EC]/10" />
+              <div className="h-5 w-full rounded-md bg-[#3279C8]/70" />
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute left-1/2 top-1/2 w-36 -translate-x-[62%] translate-y-[52%] rounded-xl border border-[#F5F2EC]/15 bg-[#171717]/95 p-2.5 shadow-[0_16px_30px_rgba(0,0,0,0.45)] backdrop-blur-sm">
+          <div className="relative h-16 overflow-hidden rounded-lg bg-[#183149]">
+            <span className="absolute -left-2 top-8 h-px w-24 rotate-[-24deg] bg-[#5B9FE4]/45" />
+            <span className="absolute left-5 -top-3 h-24 w-px rotate-[35deg] bg-[#5B9FE4]/30" />
+            <span className="absolute right-5 top-0 h-20 w-px rotate-[-35deg] bg-[#5B9FE4]/35" />
+            <MapPin className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-full text-[#C9A84C] drop-shadow-[0_3px_5px_rgba(0,0,0,0.45)]" size={18} strokeWidth={2} />
+          </div>
+          <div className="mt-2 h-1.5 w-16 rounded-full bg-[#F5F2EC]/30" />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-7 p-10 md:p-14 lg:ml-[35%]">
         <div className="flex items-start justify-between gap-6">
           <div>
             <span className="font-serif text-[1.05rem] font-light text-[#C9A84C]/70">Extra</span>
