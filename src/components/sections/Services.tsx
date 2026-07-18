@@ -172,6 +172,11 @@ function GoogleBusinessCard() {
 
 
       <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[35%] overflow-hidden lg:block" aria-hidden="true">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fc456b5aba9e34f4da55ba9df2d327e26%2Fa1aee72b2817481da3c61fb9df110f70?format=webp&width=800&height=1200"
+          alt="Perfil de Ferro Studio en Google Business y Google Maps"
+          className="absolute inset-0 z-20 h-full w-full scale-[1.08] object-contain object-center"
+        />
         <div className="absolute left-1/2 top-1/2 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#3279C8]/[0.12] blur-3xl" />
         <div className="absolute left-1/2 top-1/2 translate-x-[2%] -translate-y-[96%] text-[#3279C8]/90 drop-shadow-[0_18px_24px_rgba(0,0,0,0.35)]">
           <MapPin size={112} strokeWidth={1.4} fill="currentColor" />
