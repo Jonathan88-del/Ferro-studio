@@ -170,6 +170,15 @@ function GoogleBusinessCard() {
         aria-hidden="true"
       />
 
+      <div className="flex min-h-[220px] items-center justify-center overflow-hidden border-b border-[#F5F2EC]/[0.06] bg-[#F5F2EC] p-6 sm:min-h-[280px] sm:p-8 lg:min-h-[340px] lg:px-16">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2Fc456b5aba9e34f4da55ba9df2d327e26%2F54179a4adcc94478a8ca4654bf1e434e?format=webp&width=800&height=1200"
+          alt="Ilustración de Google Business con un perfil de negocio y Google Maps"
+          width="800"
+          height="1200"
+          className="h-auto max-h-[340px] w-full object-contain sm:max-h-[390px]"
+        />
+      </div>
 
       <div className="flex flex-col gap-7 p-10 md:p-14">
         <div className="flex items-start justify-between gap-6">
