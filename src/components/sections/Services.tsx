@@ -35,10 +35,10 @@ const SERVICES = [
     price: "$250.000 ARS",
     delivery: "12–18 días hábiles",
     description:
-      "Presencia digital completa para empresas y profesionales. Hasta 6 páginas independientes, Google Analytics, Search Console, FAQ y 60 días de soporte. Ideal para estudios jurídicos, contadores, clínicas e inmobiliarias.",
+      "Presencia digital completa para empresas y profesionales. Hasta 10 páginas independientes, Google Analytics, Search Console, FAQ y 60 días de soporte. Ideal para estudios jurídicos, contadores, clínicas e inmobiliarias.",
     includes: [
       "Todo lo de Landing Page",
-      "Hasta 6 páginas independientes",
+      "Hasta 10 páginas independientes",
       "Google Analytics",
       "Search Console",
       "60 días de soporte post-entrega",
