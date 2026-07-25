@@ -156,12 +156,12 @@ export default function PlanesHosting() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { emoji: "🛡️", title: "Monitoreo constante", desc: "Vigilamos tu sitio cada segundo. Si algo falla, nos enteramos antes que tú" },
-                { emoji: "⚡", title: "Respuesta instantánea", desc: "El problema se detecta y se arregla automáticamente o lo hacemos al instante" },
-                { emoji: "💾", title: "Backups automáticos", desc: "Tu sitio se respalda todos los días. Nada se pierde, nunca" },
-                { emoji: "🔒", title: "Seguridad 24/7", desc: "Protección contra ataques, malware y accesos no autorizados" },
-                { emoji: "🆙", title: "Actualizaciones automáticas", desc: "Las actualizaciones de seguridad se instalan sin que tengas que hacer nada" },
-                { emoji: "⚙️", title: "Mantenimiento preventivo", desc: "Limpieza, optimización y ajustes para que todo funcione al máximo" }
+                { emoji: "⚡", title: "Monitoreo constante", desc: "Supervisamos que tu sitio esté disponible las 24 horas. Si se detecta una caída, recibimos una alerta automáticamente." },
+                { emoji: "🔁", title: "Recuperación rápida", desc: "Si una actualización o despliegue genera un problema, restauramos la última versión estable lo antes posible." },
+                { emoji: "💾", title: "Control de versiones y respaldo", desc: "Conservamos el historial del proyecto para poder recuperar versiones anteriores cuando sea necesario." },
+                { emoji: "🔒", title: "Seguridad gestionada", desc: "Protección mediante Cloudflare, HTTPS, firewall y buenas prácticas de seguridad." },
+                { emoji: "🆙", title: "Mantenimiento técnico", desc: "Actualizamos dependencias y realizamos tareas de mantenimiento para mantener el sitio seguro y estable." },
+                { emoji: "⚙️", title: "Optimización continua", desc: "Revisamos el rendimiento, la velocidad y aplicamos mejoras periódicas para mantener una buena experiencia de uso." }
               ].map((item, index) => (
                 <motion.div
                   key={index}
