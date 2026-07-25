@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const SERVICES_FEATURES = [
   { label: "Hasta 6 secciones", href: "/seccion-secciones" },
   { label: "SEO básico", href: "/seccion-seo" },
-  { label: "Hasta 6 páginas independientes", href: "/seccion-paginas" },
+  { label: "Hasta 10 páginas independientes", href: "/seccion-paginas" },
   { label: "Google Analytics", href: "/seccion-analytics" },
   { label: "Search Console", href: "/seccion-search-console" },
 ];
