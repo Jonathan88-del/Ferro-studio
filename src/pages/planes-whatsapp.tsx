@@ -206,7 +206,6 @@ export default function PlanesWhatsapp() {
                 { emoji: "📝", title: "Cambios y ediciones", desc: "¿Cómo cambio este texto o imagen?" },
                 { emoji: "🔧", title: "Configuración", desc: "¿Cómo configuro esto?" },
                 { emoji: "❓", title: "Dudas generales", desc: "Cualquier pregunta sobre tu sitio o plan" },
-                { emoji: "⚡", title: "Optimización", desc: "¿Cómo hago mi sitio más rápido?" },
                 { emoji: "📈", title: "Estrategia", desc: "Recomendaciones para mejorar tu sitio" }
               ].map((item, index) => (
                 <motion.div
