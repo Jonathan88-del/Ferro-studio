@@ -32,16 +32,16 @@ export default function SeccionPaginas() {
             </Link>
 
             <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
-              Hasta 6 páginas distintas que trabajan juntas
+              Hasta 10 páginas distintas que trabajan juntas
             </h1>
             <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              En lugar de una única página, tienes 6 secciones separadas con su propio menú. Cada una muestra exactamente lo que buscan tus clientes.
+              En lugar de una única página, tienes 10 secciones separadas con su propio menú. Cada una muestra exactamente lo que buscan tus clientes.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 1: ¿Qué significa hasta 6 secciones? */}
+      {/* Section 1: ¿Qué significa hasta 10 secciones? */}
       <section className="relative bg-[#0E0E0E] py-24 md:py-32">
         <div className="container-ferro">
           <motion.div
@@ -51,10 +51,10 @@ export default function SeccionPaginas() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              ¿Qué significa "hasta 6 paginas"?
+              ¿Qué significa "hasta 10 paginas"?
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Imagina que tu sitio web es como una oficina. En lugar de un único mostrador donde lo explicar todo, tienes 6 mostrador dedicados a diferentes temas.
+              Imagina que tu sitio web es como una oficina. En lugar de un único mostrador donde lo explicar todo, tienes 10 mostradores dedicados a diferentes temas.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -269,7 +269,7 @@ export default function SeccionPaginas() {
               {/* Con múltiples páginas */}
               <div className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8">
                 <h3 className="font-serif text-[22px] font-light text-[#51CF66] mb-6">
-                  ✓ Hasta 6 páginas
+                  ✓ Hasta 10 páginas
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
@@ -510,7 +510,7 @@ export default function SeccionPaginas() {
             className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
           >
             <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
-              Listo para que 6 páginas trabajen por ti
+              Listo para que 10 páginas trabajen por ti
             </h2>
             <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
               Sin complicaciones. Sin código. Sin riesgo. Solo más clientes encontrándote.
