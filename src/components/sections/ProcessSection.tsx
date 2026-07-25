@@ -35,7 +35,7 @@ const STEPS = [
     title: "Revisión del cliente",
     icon: ScanLine,
     description:
-      "El cliente tiene hasta 2 rondas de cambios incluidas. Cada ronda tiene un plazo máximo de 5 días hábiles para responder — pasado ese tiempo, se considera aprobado.",
+      "El cliente tiene hasta 5 rondas de cambios incluidas. Cada ronda tiene un plazo máximo de 5 días hábiles para responder — pasado ese tiempo, se considera aprobado.",
     note: "2 rondas incluidas",
   },
   {
@@ -43,7 +43,7 @@ const STEPS = [
     title: "Publicación en entorno de prueba",
     icon: Globe,
     description:
-      "El sitio se publica en un dominio temporal de Ferro Studio (staging). El cliente lo ve online completo antes de pagar. Solo entonces se emite la factura y se cobra el 100% del proyecto.",
+      "El sitio se publica en un dominio temporal de Ferro Studio. El cliente lo ve online completo antes de pagar. Solo entonces se emite la factura y se cobra el 100% del proyecto.",
     note: "Cobra el 100% recién aquí",
   },
   {
