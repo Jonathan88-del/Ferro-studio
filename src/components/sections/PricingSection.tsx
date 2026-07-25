@@ -109,7 +109,7 @@ export default function PricingSection() {
             viewport={{ once: true, margin: "-40px" }}
             className="mt-12 text-center text-[#F5F2EC]/22 font-sans font-light tracking-wide text-[20px]"
           >
-            Pago mensual por adelantado · Transferencia bancaria o Mercado Pago · Sin contratos de largo plazo
+            Pago cuatrimestral por adelantado · Transferencia bancaria o Mercado Pago · Sin contratos de largo plazo
           </motion.p>
         </div>
       </section>
