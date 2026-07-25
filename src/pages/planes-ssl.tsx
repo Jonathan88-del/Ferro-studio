@@ -156,10 +156,10 @@ export default function PlanesSSL() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { emoji: "⏰", title: "Sin renovación automática", desc: "Tienes que acordarte de renovar el SSL cada año. Si lo olvidas, tu sitio queda inseguro." },
-                { emoji: "🔄", title: "Con renovación automática", desc: "Nosotros lo renovamos antes de que expire. Tú no tienes que hacer nada." },
-                { emoji: "🛑", title: "Problemas si falla", desc: "Si el SSL vence, los clientes ven advertencia de peligro y pierden confianza al instante." },
-                { emoji: "✅", title: "Garantía de continuidad", desc: "SSL siempre vigente. Clientes siempre conectan con seguridad. Negocio sin interrupciones." }
+                { emoji: "⏰", title: "Sin renovación automática", desc: "Tienes que acordarte de renovar el SSL cada año. Si lo olvidas, tu sitio queda inseguro.", borderColor: "border-[#FF6B6B]/40" },
+                { emoji: "🔄", title: "Con renovación automática", desc: "Nosotros lo renovamos antes de que expire. Tú no tienes que hacer nada.", borderColor: "border-[#51CF66]/40" },
+                { emoji: "🛑", title: "Problemas si falla", desc: "Si el SSL vence, los clientes ven advertencia de peligro y pierden confianza al instante.", borderColor: "border-[#FF6B6B]/40" },
+                { emoji: "✅", title: "Garantía de continuidad", desc: "SSL siempre vigente. Clientes siempre conectan con seguridad. Negocio sin interrupciones.", borderColor: "border-[#51CF66]/40" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -167,7 +167,7 @@ export default function PlanesSSL() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
+                  className={`bg-[#1A1A1A] border ${item.borderColor} rounded-lg p-6`}
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
