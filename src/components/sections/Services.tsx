@@ -19,7 +19,7 @@ const SERVICES = [
     description:
       "Una página de conversión diseñada para generar consultas y ventas. Incluye hasta 6 secciones, redacción de textos, imágenes de banco, formulario de contacto, botón de WhatsApp flotante, SSL y 30 días de soporte post-entrega.",
     includes: [
-      "Diseño personalizado (no template)",
+      "Diseño personalizado",
       "Hasta 6 secciones",
       "Redacción de textos incluida",
       "Formulario + WhatsApp flotante",
