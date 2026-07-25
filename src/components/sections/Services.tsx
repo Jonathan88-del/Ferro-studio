@@ -15,7 +15,6 @@ const SERVICES = [
     id: "A1",
     title: "Landing Page",
     price: "$150.000 ARS",
-    ref: "~$100 USD",
     delivery: "7–10 días hábiles",
     description:
       "Una página de conversión diseñada para generar consultas y ventas. Incluye hasta 6 secciones, redacción de textos, imágenes de banco, formulario de contacto, botón de WhatsApp flotante, SSL y 30 días de soporte post-entrega.",
@@ -34,7 +33,6 @@ const SERVICES = [
     id: "A2",
     title: "Sitio Institucional",
     price: "$250.000 ARS",
-    ref: "~$16USD",
     delivery: "12–18 días hábiles",
     description:
       "Presencia digital completa para empresas y profesionales. Hasta 6 páginas independientes, Google Analytics, Search Console, FAQ y 60 días de soporte. Ideal para estudios jurídicos, contadores, clínicas e inmobiliarias.",
@@ -51,7 +49,6 @@ const SERVICES = [
     id: "A3",
     title: "Sitio con Catálogo / CMS",
     price: "$420.000 ARS",
-    ref: "~$330 USD",
     delivery: "18–25 días hábiles",
     description:
       "Sitio institucional con panel de administración para que el cliente cargue su propio contenido: propiedades (inmobiliarias), vehículos, productos o servicios. Incluye capacitación y 10 fichas de ejemplo cargadas.",
@@ -70,7 +67,6 @@ const SERVICES = [
     id: "A4",
     title: "Rediseño Web",
     price: "$200.000 ARS",
-    ref: "~$130 USD",
     delivery: "10–15 días hábiles",
     description:
       "Modernización de un sitio existente que ya no representa al negocio. Nuevo diseño visual completo, migración de contenido, optimización de velocidad y SEO básico conservando el posicionamiento actual.",
@@ -330,8 +326,7 @@ function ServiceCard({
           />
         </div>
         <div className="text-right shrink-0 pt-0.5">
-          <p className="font-serif text-[20px] font-light text-[#F5F2EC]/85 leading-none">{service.price}</p>
-          <p className="text-[11px] text-[#F5F2EC]/28 font-sans font-light mt-1">{service.ref} ref.</p>
+          <p className="font-serif text-[23px] font-light text-[#F5F2EC]/85 leading-none">{service.price}</p>
         </div>
       </div>
 
