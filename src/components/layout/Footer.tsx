@@ -157,7 +157,7 @@ export default function Footer() {
             Horarios de atención
           </p>
           <p className="text-[1.1rem] text-[#F5F2EC]/45 font-sans font-light">
-            De lunes a sábado de 10 a 22 hs
+            De lunes a sábado de 10 a 21 hs
           </p>
         </div>
       </motion.div>
