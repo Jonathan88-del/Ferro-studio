@@ -156,7 +156,7 @@ export default function Footer() {
           <p className="text-[13px] tracking-[0.24em] uppercase font-sans text-[#C9A84C]/70 mb-4">
             Horarios de atención
           </p>
-          <p className="font-serif text-[30px] md:text-[36px] font-light text-[#F5F2EC]">
+          <p className="text-[1.1rem] text-[#F5F2EC]/45 font-sans font-light">
             De lunes a sábado de 10 a 22 hs
           </p>
         </div>
