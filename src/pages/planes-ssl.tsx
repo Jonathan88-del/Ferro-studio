@@ -8,7 +8,7 @@ export default function PlanesSSL() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-[68px] pb-8 md:pt-[76px] md:pb-12 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-[68px] pb-0 md:pt-[76px] md:pb-0 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -24,14 +24,14 @@ export default function PlanesSSL() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <Link href="/planes" className="inline-flex items-center gap-2 mb-4 no-underline ferro-focus group">
+            <Link href="/planes" className="inline-flex items-center gap-2 mb-2 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
               <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Planes
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-4">
+            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-2">
               Gestión y renovación automática del SSL
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
@@ -42,7 +42,7 @@ export default function PlanesSSL() {
       </section>
 
       {/* Section 1: ¿Qué es SSL y por qué importa? */}
-      <section className="relative bg-[#0E0E0E] py-12 md:py-16">
+      <section className="relative bg-[#0E0E0E] pt-0 pb-8 md:pt-0 md:pb-12">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
