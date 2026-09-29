@@ -24,14 +24,14 @@ export default function PlanesHosting() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <Link href="/planes" className="inline-flex items-center gap-2 mb-8 no-underline ferro-focus group">
+            <Link href="/planes" className="inline-flex items-center gap-2 mb-4 no-underline ferro-focus group">
               <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
               <span className="text-[0.875rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
                 Volver a Planes
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,3.375rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
+            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,3.375rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-4">
               Hosting administrado por Ferro Studio
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
@@ -42,7 +42,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 1: Sin vs Con hosting administrado */}
-      <section className="relative bg-[#0E0E0E] pt-4 pb-8 md:pt-6 md:pb-10">
+      <section className="relative bg-[#0E0E0E] pt-0 pb-4 md:pt-2 md:pb-6">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
