@@ -87,10 +87,6 @@ export default function PlanesHosting() {
                         <span className="flex-shrink-0">•</span>
                         <span>Tenés que encontrar un técnico a las 3 AM</span>
                       </li>
-                      <li className="flex gap-2 text-[1.125rem] text-[#FF6B6B]">
-                        <span className="flex-shrink-0">•</span>
-                        <span>Actualizaciones de seguridad te asustan</span>
-                      </li>
                     </ul>
                   </div>
                 </div>
