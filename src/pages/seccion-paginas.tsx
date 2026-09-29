@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Home, Users, Briefcase, Phone, Award, TrendingUp, Clock, Zap } from "lucide-react";
+import { ArrowLeft, Home, Users, Briefcase, Phone, Award, TrendingUp, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -8,7 +8,7 @@ export default function SeccionPaginas() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[10px] md:pt-48 md:pb-[10px] overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -32,17 +32,17 @@ export default function SeccionPaginas() {
             </Link>
 
             <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
-              Hasta 10 páginas distintas que trabajan juntas
+              10 páginas distintas que trabajan juntas
             </h1>
             <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              En lugar de una única página, tienes 10 secciones separadas con su propio menú. Cada una muestra exactamente lo que buscan tus clientes.
+              En lugar de una única página, tienes 10 secciones separadas con su propio menú.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Section 1: ¿Qué significa hasta 10 secciones? */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -54,7 +54,7 @@ export default function SeccionPaginas() {
               ¿Qué significa "hasta 10 paginas"?
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Imagina que tu sitio web es como una oficina. En lugar de un único mostrador donde lo explicar todo, tienes 10 mostradores dedicados a diferentes temas.
+              Sitio web es como una oficina. En lugar de un único mostrador donde lo explicar todo, tienes 10 mostradores dedicados a diferentes temas.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,7 +72,7 @@ export default function SeccionPaginas() {
                   </h3>
                 </div>
                 <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Tu tarjeta de presentación. Lo primero que ven es quién eres en 3 segundos.
+                  Tu tarjeta de presentación. Lo primero que ven es quién eres.
                 </p>
               </motion.div>
 
@@ -153,7 +153,7 @@ export default function SeccionPaginas() {
       </section>
 
       {/* Section 2: ¿Por qué debería importarte? */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -164,9 +164,6 @@ export default function SeccionPaginas() {
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Por qué debería importarte?
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Porque cada página es como un "anuncio gratis" en Google que trabaja 24/7 para traerte clientes.
-            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <motion.div
@@ -205,94 +202,14 @@ export default function SeccionPaginas() {
                 </p>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
-                  <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  Cambios sin riesgo
-                </h3>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Actualizas precios en una página. Las otras siguen igual. Pruebas cambios sin miedo a romper nada.
-                </p>
-              </motion.div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Section 3: Visual Comparison */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">
-              Antes vs. Después
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Sin múltiples páginas */}
-              <div className="bg-[#1A1A1A] border border-[#FF6B6B]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[22px] font-light text-[#FF6B6B] mb-6">
-                  ❌ Una única página
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Un cliente busca "servicios" y termina en tu inicio</span>
-                  </li>
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Debe scrollear para encontrar lo que busca</span>
-                  </li>
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Muchos abandonan por impaciencia</span>
-                  </li>
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Google ve todo junto, sin estructura clara</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Con múltiples páginas */}
-              <div className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[22px] font-light text-[#51CF66] mb-6">
-                  ✓ Hasta 10 páginas
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">•</span>
-                    <span>El cliente va directo a lo que busca</span>
-                  </li>
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">•</span>
-                    <span>Página de servicios en 1 click</span>
-                  </li>
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">•</span>
-                    <span>Mayor probabilidad de venta</span>
-                  </li>
-                  <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">•</span>
-                    <span>Google entiende perfectamente tu negocio</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-24 md:pb-32">
+        <div className="container-ferro" />
       </section>
 
       {/* Section 4: Visual Example */}
