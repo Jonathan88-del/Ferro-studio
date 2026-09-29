@@ -8,7 +8,7 @@ export default function PlanesWhatsapp() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[10px] md:pt-48 md:pb-[10px] overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -42,7 +42,7 @@ export default function PlanesWhatsapp() {
       </section>
 
       {/* Section 1: ¿Por qué soporte es importante? */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-5">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -139,7 +139,7 @@ export default function PlanesWhatsapp() {
       </section>
 
       {/* Section 2: Cómo funciona */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-[2px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -185,7 +185,7 @@ export default function PlanesWhatsapp() {
       </section>
 
       {/* Section 3: Qué podés preguntar */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-1 pb-5">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -235,7 +235,7 @@ export default function PlanesWhatsapp() {
       </section>
 
       {/* Section 4: Por qué WhatsApp */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-5">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -301,7 +301,7 @@ export default function PlanesWhatsapp() {
                   </h3>
                 </div>
                 <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Es como hablar directo con nosotros. Más humano, menos corporativo.
+                  Hablas directo con nosotros. Nada de robots{"\u00A0"}
                 </p>
               </motion.div>
 
@@ -328,7 +328,7 @@ export default function PlanesWhatsapp() {
       </section>
 
       {/* Section 5: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-5">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -430,7 +430,7 @@ export default function PlanesWhatsapp() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] -mt-1 pt-[70px] pb-24 md:pb-32">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
