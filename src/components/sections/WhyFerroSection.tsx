@@ -57,7 +57,7 @@ const VALUES = [
 export default function WhyFerroSection() {
   return (
     <section
-      className="relative bg-[#F5F2EC] pt-28 md:pt-36 lg:pt-44 pb-[70px] overflow-hidden"
+      className="relative bg-[#F5F2EC] pt-20 pb-[70px] overflow-hidden"
       aria-labelledby="why-ferro-heading"
     >
       <div

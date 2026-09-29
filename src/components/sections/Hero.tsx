@@ -30,8 +30,7 @@ const fadeIn = (delay = 0) => ({
 /* ─── Word-split title ─── */
 const TITLE_LINES = [
   { text: "Presencia digital" },
-  { text: "que genera" },
-  { text: "confianza." },
+  { text: "que genera confianza." },
 ];
 
 export default function Hero() {
