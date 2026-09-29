@@ -28,10 +28,10 @@ const PLANS: Plan[] = [
     price: "$20.000 ARS/cuatrimestral",
     tagline: "Ideal para mantener su presencia digital segura y siempre disponible.",
     items: [
-      "Hosting administrado por Ferro Studio",
+      "Hosting administrado\u00a0",
       "Certificado SSL renovado automáticamente",
-      "Backups semanales del sitio completo",
-      "Monitoreo de disponibilidad 24/7",
+      "Backups semanales\u00a0",
+      "Monitoreo 24/7",
       "Soporte por WhatsApp (24–48 hs hábiles)",
     ],
     cta: "Solicitar presupuesto",
