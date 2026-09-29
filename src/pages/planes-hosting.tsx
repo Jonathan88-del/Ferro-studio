@@ -139,7 +139,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 2: Lo que hacemos 24/7 */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-16 md:py-24">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -150,11 +150,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               6 cosas que hacemos por vos 24/7
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
               Hosting administrado significa que estas 6 cosas funcionan automáticamente:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
                 { emoji: "⚡", title: "Monitoreo constante", desc: "Supervisamos que tu sitio esté disponible las 24 horas. Si se detecta una caída, recibimos una alerta automáticamente." },
                 { emoji: "🔁", title: "Recuperación rápida", desc: "Si una actualización o despliegue genera un problema, restauramos la última versión estable lo antes posible." },
@@ -169,7 +169,7 @@ export default function PlanesHosting() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
+                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-5"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
