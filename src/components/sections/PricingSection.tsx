@@ -62,7 +62,7 @@ const PLANS: Plan[] = [
       "Soporte prioritario (respuesta en 4–8 hs hábiles)",
       "1 reunión mensual por videollamada (30 min)",
     ],
-    cta: "Hablar con nosotros",
+    cta: "Solicitar presupuesto",
     featured: false,
   },
 ];
