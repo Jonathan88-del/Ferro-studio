@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Scale, Home, BarChart2, Compass, Brain, Stethoscope } from "lucide-react";
+import { Scale, Home, Compass, Stethoscope } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 
@@ -13,9 +13,9 @@ const fadeUp = (delay = 0) => ({
 const INDUSTRIES = [
   {
     icon: Scale,
-    title: "Estudios Jurídicos",
+    title: "Estudios Jurídicos y contadores",
     description:
-      "Muy sensibles a la confidencialidad. Sitios que transmiten autoridad y seriedad, con énfasis en privacidad y hosting propio. Generan confianza desde el primer contacto.",
+      "Sitios que transmiten autoridad y seriedad. Genera confianza desde el primer contacto.",
     recommend: "Sitio Institucional → Plan Activo",
     channel: "LinkedIn + referidos",
   },
@@ -28,14 +28,6 @@ const INDUSTRIES = [
     channel: "Instagram + Google Maps",
   },
   {
-    icon: BarChart2,
-    title: "Contadores y Escribanías",
-    description:
-      "Trabajan por referidos, no tienen presencia digital y tienen clientela consolidada. Deciden rápido si confían. Una landing o sitio institucional es suficiente para diferenciarse.",
-    recommend: "Landing o Institucional → Plan Presencia",
-    channel: "LinkedIn + cámaras profesionales",
-  },
-  {
     icon: Compass,
     title: "Arquitectos y Diseñadores",
     description:
@@ -44,18 +36,10 @@ const INDUSTRIES = [
     channel: "Instagram + Behance",
   },
   {
-    icon: Brain,
-    title: "Psicólogos y Terapeutas",
-    description:
-      "Agenda en crecimiento y poco tiempo para lo digital. Valoran la comunicación humana y la empatía. Landing pages enfocadas en generar confianza y facilitar la consulta.",
-    recommend: "Landing Page → Plan Presencia",
-    channel: "Instagram + referidos",
-  },
-  {
     icon: Stethoscope,
     title: "Clínicas y Médicos",
     description:
-      "Especialidad de nicho, sin web o con web muy antigua. Requieren énfasis en credibilidad y profesionalismo. El SEO local es muy valioso para captar pacientes por Google.",
+      "Especialidad de nicho. Requieren énfasis en credibilidad y profesionalismo. El SEO local es muy valioso para captar pacientes por Google.",
     recommend: "Sitio Institucional → Plan Total",
     channel: "Google + referidos médicos",
   },
@@ -102,7 +86,7 @@ export default function IndustrySection() {
             viewport={{ once: true, margin: "-60px" }}
             className="text-[#0E0E0E]/50 font-sans font-light lg:self-end text-[24px]"
           >
-            El cliente ideal de Ferro Studio entiende que su presencia digital es una inversión, no un gasto, y que valora el trabajo bien hecho por encima del precio más bajo.
+            Tu presencia digital es una inversión, no un gasto.
           </motion.p>
         </div>
 

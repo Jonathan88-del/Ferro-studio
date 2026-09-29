@@ -24,7 +24,7 @@ const SERVICES = [
       "Formulario + WhatsApp flotante",
       "SEO básico",
       "Adaptada a Android, tablet, notebook y más",
-      "30 días de soporte post-entrega",
+      "30 días del Plan Total Gratis",
     ],
   },
   {
@@ -39,7 +39,7 @@ const SERVICES = [
       "Hasta 10 páginas independientes",
       "Google Analytics",
       "Search Console",
-      "60 días de soporte post-entrega",
+      "60 días del Plan Total Gratis",
     ],
   },
   {
@@ -55,14 +55,14 @@ const SERVICES = [
       "Ideal para inmobiliarias y concesionarias",
       "Categorías y etiquetas incluidas",
       "1 sesión de capacitación",
-      "90 días de soporte post-entrega",
+      "90 días del Plan Total Griatis",
     ],
     soon: true,
   },
   {
     icon: Pencil,
     title: "Rediseño Web",
-    price: "$200.000 ARS",
+    price: "$150.000 ARS",
     delivery: "10–15 días hábiles",
     description:
       "Modernización de un sitio existente que ya no representa al negocio.",
@@ -73,7 +73,7 @@ const SERVICES = [
       "Optimización de velocidad",
       "SEO conservando posicionamiento",
       "Adaptada a Android, tablet, notebook y más",
-      "30 días de soporte post-entrega",
+      "30 días del Plan Total Gratis",
     ],
   },
 ] as const;
@@ -131,15 +131,6 @@ export default function Services() {
 
         <GoogleBusinessCard />
 
-        <motion.p
-          variants={fadeUp(0.5)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-40px" }}
-          className="mt-12 text-center text-[#F5F2EC]/25 font-sans font-light tracking-wide text-[20px]"
-        >
-          Todos los proyectos incluyen SSL, diseño responsive y consulta inicial sin costo.
-        </motion.p>
       </div>
     </section>
   );
@@ -232,7 +223,7 @@ function GoogleBusinessCard() {
         </div>
 
         <p className="font-sans text-[1rem] font-light leading-[1.82] text-[#F5F2EC]/38">
-          Hacé que tu negocio aparezca en Google Maps. Configuramos y optimizamos tu perfil de Google Business para que tus clientes puedan encontrarte fácilmente y tengan toda la información de tu empresa en un solo lugar.
+          Tu negocio en Google Maps. Configuramos y optimizamos tu perfil de Google Business para que tus clientes puedan encontrarte fácilmente y tengan toda la información de tu empresa en un solo lugar.
         </p>
 
         <ul className="grid grid-cols-1 gap-3 border-t border-[#F5F2EC]/[0.06] pt-5 sm:grid-cols-2 sm:gap-x-6">
