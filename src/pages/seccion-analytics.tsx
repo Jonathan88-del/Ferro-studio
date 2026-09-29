@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, BarChart3, TrendingUp, Users, MapPin, Eye, Smartphone, Target, DollarSign, Lightbulb } from "lucide-react";
+import { ArrowLeft, BarChart3, TrendingUp, Users, MapPin, Eye, Smartphone, Target } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -8,7 +8,7 @@ export default function SeccionAnalytics() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[10px] md:pt-48 md:pb-[10px] overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -35,14 +35,14 @@ export default function SeccionAnalytics() {
               Google Analytics: Ve exactamente qué hace cada visitante
             </h1>
             <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Es como tener una cámara en tu sitio web. Ves quién entra, qué hace, de dónde vino y si se convirtió en cliente.
+              Una cámara en tu sitio web. Ves quién entra, qué hace, de dónde vino y si se convirtió en cliente.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Section 1: ¿Qué es en realidad? */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -54,7 +54,7 @@ export default function SeccionAnalytics() {
               ¿Qué es Google Analytics en términos simples?
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Es una herramienta de Google que te muestra todo lo que ocurre en tu sitio web en tiempo real.
+              Una herramienta de Google que te muestra todo lo que ocurre en tu sitio web en tiempo real.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -82,10 +82,6 @@ export default function SeccionAnalytics() {
                       <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>¿De dónde vienen? Ni idea</span>
-                      </li>
-                      <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
-                        <span className="flex-shrink-0">•</span>
-                        <span>¿Llamas a qué cambiar? Pura suposición</span>
                       </li>
                     </ul>
                   </div>
@@ -131,7 +127,7 @@ export default function SeccionAnalytics() {
       </section>
 
       {/* Section 2: Qué ves exactamente */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -142,9 +138,6 @@ export default function SeccionAnalytics() {
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Qué información ves en Analytics
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Todo lo importante resumido en un dashboard fácil de entender:
-            </p>
 
             <div className="space-y-4">
               {[
@@ -211,7 +204,7 @@ export default function SeccionAnalytics() {
       </section>
 
       {/* Section 3: Qué haces con esa info */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -222,9 +215,6 @@ export default function SeccionAnalytics() {
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Qué cambias con esa información
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Los datos son poderosos porque te permiten mejorar cosas específicas:
-            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
@@ -319,155 +309,8 @@ export default function SeccionAnalytics() {
         </div>
       </section>
 
-      {/* Section 4: Casos de uso reales */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">
-              Ejemplos reales
-            </h2>
-
-            <div className="space-y-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  "Nadie llama por teléfono"
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light mb-3">
-                  Con Analytics ves que 500 personas entraron pero nadie tocó el botón de WhatsApp. La CTA estaba muy pequeña. La hiciste más grande = 10x más contactos.
-                </p>
-                <p className="text-[16px] text-[#C9A84C] font-light">
-                  → Cambio basado en datos, no en suposiciones.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  "Instagram no trae clientes"
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light mb-3">
-                  Ves que el 60% del tráfico viene de Google, no Instagram. Así que el presupuesto de publicidad Instagram se traslada a SEO y Google Ads. El resultado: 3x más ventas.
-                </p>
-                <p className="text-[16px] text-[#C9A84C] font-light">
-                  → Dinero invertido donde realmente funciona.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  "Nadie va a mi página de Galería"
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light mb-3">
-                  Ves en Analytics que de 200 visitantes, solo 5 van a la galería. Entonces añades fotos en la página de inicio. Ahora 80 van a la galería. Las conversiones suben 40%.
-                </p>
-                <p className="text-[16px] text-[#C9A84C] font-light">
-                  → Mejora específica = resultado inmediato.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 5: Por qué importa */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              ¿Por qué Analytics es tu arma secreta?
-            </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Porque la diferencia entre un sitio que crece y uno que estanca es simple:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
-                  <Lightbulb size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  Decisiones inteligentes
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Basadas en datos reales, no en corazonadas. Eso = inversiones que dan retorno.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
-                  <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  Mejora continua
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Cada mes ves cómo mejoró. El mes que viene cambias algo más. Crecimiento acumulativo.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-8"
-              >
-                <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-[#C9A84C]/10 mb-4">
-                  <DollarSign size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  Dinero ahorrado
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Inviertes dinero solo en lo que funciona. Nada desperdiciado en canales que no convierten.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[50px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
