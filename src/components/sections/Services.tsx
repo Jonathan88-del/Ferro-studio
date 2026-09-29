@@ -306,7 +306,7 @@ function ServiceCard({
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 flex-1">
+      <div className={cn("flex flex-col gap-4 flex-1", service.title === "Sitio Institucional" && "pt-[20px] px-[20px]")}>
         <div className="flex items-baseline gap-3">
           <h3 className="font-serif text-[1.75rem] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em]">
             {service.title}

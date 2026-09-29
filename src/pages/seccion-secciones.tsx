@@ -8,7 +8,7 @@ export default function SeccionesSecciones() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[160px] md:pt-48 md:pb-40 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -34,15 +34,12 @@ export default function SeccionesSecciones() {
             <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
               Hasta 6 secciones para contar tu historia completa
             </h1>
-            <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Cada sección tiene un trabajo específico. Juntas forman una historia que convence a tus clientes en menos de 30 segundos.
-            </p>
           </motion.div>
         </div>
       </section>
 
       {/* Section 1: Qué es cada sección */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={false}
@@ -212,61 +209,8 @@ export default function SeccionesSecciones() {
         </div>
       </section>
 
-      {/* Section 2: El viaje del cliente */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={false}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              El viaje del cliente en tu sitio
-            </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Como una buena película, cada escena prepara la siguiente:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {[
-                { step: "1", title: "Aterriza en Inicio", desc: "¿Es atractivo? ¿Entiendo de qué hablas? ¿Quiero seguir?" },
-                { step: "2", title: "Conoce tu historia", desc: "¿Quién eres? ¿Cuánta experiencia tienes? ¿Puedo confiar?" },
-                { step: "3", title: "Ve tus Servicios", desc: "¿Qué ofreces? ¿Hay algo para mí? ¿Cuánto cuesta?" },
-                { step: "4", title: "Lee Testimonios", desc: "¿Otros están satisfechos? ¿Es seguro contratar?" },
-                { step: "5", title: "Ve tu Galería", desc: "¿Puedo ver ejemplos reales? ¿Cómo fue el resultado?" },
-                { step: "6", title: "Se Contacta", desc: "Listo. Quiero contratar. ¿Cómo lo hago?" }
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={false}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.08 }}
-                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center border border-[#C9A84C]/30">
-                      <span className={`font-serif text-[#C9A84C] font-light text-[40px] ${item.step === "6" ? "pb-[2px]" : "pb-5"}`}>{item.step}</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-[18px] text-[#F5F2EC]/50 font-light">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Section 3: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={false}
@@ -338,7 +282,7 @@ export default function SeccionesSecciones() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[60px] pb-24 md:pb-32">
         <div className="container-ferro">
           <motion.div
             initial={false}
