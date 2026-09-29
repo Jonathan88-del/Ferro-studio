@@ -8,7 +8,7 @@ export default function PlanesSSL() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-[68px] pb-8 md:pt-[76px] md:pb-12 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
