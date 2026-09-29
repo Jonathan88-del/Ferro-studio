@@ -207,13 +207,8 @@ export default function SeccionPaginas() {
         </div>
       </section>
 
-      {/* Section 3: Visual Comparison */}
-      <section className="relative bg-[#0E0E0E] pt-[40px] pb-24 md:pb-32">
-        <div className="container-ferro" />
-      </section>
-
       {/* Section 4: Visual Example */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[30px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -246,7 +241,7 @@ export default function SeccionPaginas() {
                   </h3>
                 </div>
                 <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-6 ml-14">
-                  Alguien escribe "servicios de diseño en Madrid" en Google
+                  Alguien escribe "Contador en CABA" en Google
                 </p>
                 <div className="ml-14 bg-[#0E0E0E] rounded-lg p-6 border border-[#F5F2EC]/[0.06]">
                   <p className="text-[18px] text-[#F5F2EC]/40 font-light mb-3">
@@ -254,13 +249,13 @@ export default function SeccionPaginas() {
                   </p>
                   <div className="space-y-2">
                     <p className="text-[16px] text-[#C9A84C] font-light">
-                      Tu Empresa - Servicios de Diseño
+                      Tu Empresa - Servicio contable
                     </p>
                     <p className="text-[14px] text-[#F5F2EC]/40 font-light">
                       www.tuempresa.com/servicios
                     </p>
                     <p className="text-[16px] text-[#F5F2EC]/35 font-light">
-                      Descubre nuestros servicios de diseño profesional...
+                      Descubre nuestros servicios financieros.
                     </p>
                   </div>
                 </div>
@@ -302,12 +297,10 @@ export default function SeccionPaginas() {
                     </p>
                     <div className="grid grid-cols-2 gap-2 mt-4 text-[0.8rem] text-[#F5F2EC]/40 font-light">
                       <div className="bg-[#1A1A1A] p-3 rounded border border-[#F5F2EC]/[0.1]">
-                        <p className="text-[16px] text-[#C9A84C] font-light mb-1">Diseño Web</p>
-                        <p className="text-[14px]">Sitios modernos y rápidos</p>
+                        <p className="text-[16px] text-[#C9A84C] font-light mb-1">Monotributo</p>
                       </div>
                       <div className="bg-[#1A1A1A] p-3 rounded border border-[#F5F2EC]/[0.1]">
-                        <p className="text-[16px] text-[#C9A84C] font-light mb-1">Branding</p>
-                        <p className="text-[14px]">Tu identidad visual</p>
+                        <p className="text-[16px] text-[#C9A84C] font-light mb-1">AFIP</p>
                       </div>
                     </div>
                   </div>
@@ -341,7 +334,7 @@ export default function SeccionPaginas() {
                   </li>
                   <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
-                    <span>Te llama, pide presupuesto o compra</span>
+                    <span>Te llama</span>
                   </li>
                   <li className="flex gap-3 text-[18px] text-[#F5F2EC]/50 font-light">
                     <span className="text-[#51CF66] flex-shrink-0">✓</span>
@@ -355,7 +348,7 @@ export default function SeccionPaginas() {
       </section>
 
       {/* Section 5: Quick Numbers */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-1 pb-5">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -413,29 +406,6 @@ export default function SeccionPaginas() {
                 </p>
               </motion.div>
             </div>
-          </motion.div>
-        </div>
-      </section>
-      {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
-          >
-            <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
-              Listo para que 10 páginas trabajen por ti
-            </h2>
-            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
-              Sin complicaciones. Sin código. Sin riesgo. Solo más clientes encontrándote.
-            </p>
-            <Link href="/servicios" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
-              Ver todos nuestros servicios
-              <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
-            </Link>
           </motion.div>
         </div>
       </section>
