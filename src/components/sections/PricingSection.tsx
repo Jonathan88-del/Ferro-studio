@@ -26,7 +26,7 @@ const PLANS: Plan[] = [
     id: "presencia",
     name: "Plan Presencia",
     price: "$20.000 ARS/cuatrimestral",
-    tagline: "Hosting administrado, SSL y soporte técnico. Ideal para mantener su presencia digital segura y siempre disponible.",
+    tagline: "Ideal para mantener su presencia digital segura y siempre disponible.",
     items: [
       "Hosting administrado por Ferro Studio",
       "Certificado SSL renovado automáticamente",
@@ -41,7 +41,7 @@ const PLANS: Plan[] = [
     id: "activo",
     name: "Plan Activo",
     price: "$25.000 ARS/cuatrimestral",
-    tagline: "Todo lo del Plan Presencia, más cambios mensuales, analíticas y optimización. Para empresas que necesitan un sitio siempre actualizado.",
+    tagline: "Para empresas que necesitan un sitio siempre actualizado.",
     items: [
       "Todo lo incluido en Plan Presencia",
       "Hasta 3 cambios mensuales al sitio",
@@ -70,7 +70,7 @@ export default function PricingSection() {
   return (
     <div>
       <section
-        className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44 overflow-hidden"
+        className="relative bg-[#0E0E0E] pt-28 md:pt-36 lg:pt-44 pb-[60px] overflow-hidden"
         aria-labelledby="pricing-heading"
       >
         <div
@@ -87,7 +87,7 @@ export default function PricingSection() {
                 <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">Mantenimiento Cuatrimestral</span>
               </div>
               <h2 id="pricing-heading" className="font-serif font-light text-[clamp(2.2rem,5.5vw,3.125rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
-                Su socio digital permanente.
+                Su socio digital
               </h2>
             </motion.div>
             <motion.p variants={fadeUp(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
