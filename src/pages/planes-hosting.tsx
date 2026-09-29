@@ -53,11 +53,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               ¿Por qué es importante el hosting administrado?
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-4">
               Tu sitio es tu vendedor 24/7. Si no funciona, pierdes clientes:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -139,7 +139,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 2: Lo que hacemos 24/7 */}
-      <section className="relative bg-[#0E0E0E] py-10 md:py-16">
+      <section className="relative bg-[#0E0E0E] py-6 md:py-10">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -150,11 +150,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               6 cosas que hacemos por vos 24/7
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-4">
               Hosting administrado significa que estas 6 cosas funcionan automáticamente:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {[
                 { emoji: "⚡", title: "Monitoreo constante", desc: "Supervisamos que tu sitio esté disponible las 24 horas. Si se detecta una caída, recibimos una alerta automáticamente." },
                 { emoji: "🔁", title: "Recuperación rápida", desc: "Si una actualización o despliegue genera un problema, restauramos la última versión estable lo antes posible." },
@@ -190,7 +190,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 3: Los 3 pilares del hosting administrado */}
-      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
+      <section className="relative bg-[#0E0E0E] py-8 md:py-12">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -201,11 +201,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Los 3 pilares del hosting administrado
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-4">
               Todo se reduce a 3 promesas simples:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -265,7 +265,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 4: Qué incluye */}
-      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
+      <section className="relative bg-[#0E0E0E] py-8 md:py-12">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -276,11 +276,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Lo que está incluido siempre
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-4">
               No hay sorpresas. Todo esto viene de serie en nuestro hosting:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -366,7 +366,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 5: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
+      <section className="relative bg-[#0E0E0E] py-8 md:py-12">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -374,11 +374,11 @@ export default function PlanesHosting() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-8">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Lo que ganas con hosting administrado
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -468,7 +468,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
+      <section className="relative bg-[#0E0E0E] py-8 md:py-12">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -480,7 +480,7 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
               Un hosting que funciona mientras vos trabajas
             </h2>
-            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
+            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-4">
               Hosting administrado para que vos no tengas que preocuparte. Nosotros cuidamos tu sitio.
             </p>
             <Link href="/planes" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
