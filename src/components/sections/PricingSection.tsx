@@ -197,7 +197,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
             "transition-all duration-300",
             plan.featured
               ? "bg-[#0E0E0E] text-[#F5F2EC] hover:bg-[#C9A84C] hover:text-[#0E0E0E] hover:shadow-[0_8px_28px_rgba(201,168,76,0.18)]"
-              : "border border-[#F5F2EC]/18 text-[#F5F2EC]/55 hover:border-[#C9A84C]/50 hover:text-[#C9A84C]"
+              : "border border-[#F5F2EC]/18 text-[#F5F2EC]/55 hover:bg-[#C9A84C] hover:text-[#0E0E0E] hover:shadow-[0_8px_28px_rgba(201,168,76,0.18)]"
           )}
         >
           {plan.cta}
