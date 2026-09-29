@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, ArrowLeft, Search, TrendingUp, DollarSign, Award, Clock, Zap } from "lucide-react";
+import { ArrowLeft, Search, TrendingUp, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -8,7 +8,7 @@ export default function SeccionSEO() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[20px] md:pt-48 md:pb-[20px] overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -35,14 +35,14 @@ export default function SeccionSEO() {
               SEO: Que clientes te encuentren en Google sin pagar publicidad
             </h1>
             <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              SEO es simple: preparar tu sitio para que Google lo entienda y lo muestre cuando alguien busca lo que ofreces.
+              Google{"\u00A0"}entiende tu sitio y lo muestre cuando alguien busca lo que ofreces.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Section 1: ¿Qué es SEO en términos simples? */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -51,10 +51,10 @@ export default function SeccionSEO() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              ¿Qué es SEO en realidad?
+              ¿Qué es SEO ?
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Imagina que tu sitio es una tienda física. El SEO es asegurarse de que esté en una calle concurrida, bien señalizado y fácil de encontrar.
+              Imagina que tu sitio es una tienda física. El SEO se asegura de que esté en una calle concurrida, bien señalizado y fácil de encontrar.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,7 +72,7 @@ export default function SeccionSEO() {
                       Sin SEO (la mayoría)
                     </h3>
                     <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Tu sitio existe, pero está escondido en Google. Los clientes no te encuentran.
+                      Tu sitio existe, pero está escondido. Los clientes no te encuentran.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
@@ -131,7 +131,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* Section 2: Las 3 cosas que hace el SEO */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[2px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -142,9 +142,6 @@ export default function SeccionSEO() {
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Las 3 pilares del SEO básico
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Todo el SEO se reduce a ayudar a Google a entender tu negocio:
-            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <motion.div
@@ -158,7 +155,7 @@ export default function SeccionSEO() {
                   <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  1. Google te entiende
+                  Google te entiende
                 </h3>
                 <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Títulos claros, descripciones, estructura ordenada. Google lee tu sitio como un humano.
@@ -176,10 +173,10 @@ export default function SeccionSEO() {
                   <Search size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  2. Usas las palabras correctas
+                  Usas las palabras correctas
                 </h3>
                 <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Si buscas "abogado en Madrid", tu contenido menciona exactamente eso.
+                  Si buscas "abogado en CABA", tu contenido menciona exactamente eso.
                 </p>
               </motion.div>
 
@@ -194,7 +191,7 @@ export default function SeccionSEO() {
                   <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">
-                  3. Tu sitio es rápido y confiable
+                  Tu sitio es rápido y confiable
                 </h3>
                 <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Carga en 1 segundo, funciona en móvil, es seguro. Google lo premia.
@@ -206,7 +203,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* Section 3: Qué incluye el SEO básico */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[1px] pb-[3px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -261,187 +258,8 @@ export default function SeccionSEO() {
         </div>
       </section>
 
-      {/* Section 4: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">
-              Por qué el SEO es tu mejor inversión
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4 text-[18px]">
-                  <DollarSign size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
-                    Clientes GRATIS
-                  </h3>
-                </div>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Alguien busca en Google "servicios de diseño" y te encuentra. No le cuesta nada.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
-                  → Tráfico gratuito permanente
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
-                    Crece con el tiempo
-                  </h3>
-                </div>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  A diferencia de publicidad, el SEO crece mes a mes. Es como plantar un árbol.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
-                  → Mes 1: poco | Mes 6: mucho | Año 1: dominas Google
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Award size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
-                    Apareces primero
-                  </h3>
-                </div>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Si apareces en la primera página de Google, las personas creen que eres la mejor opción.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
-                  → Autoridad automática sin hacer nada
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[18px] font-light text-[#F5F2EC]">
-                    No necesitas publicidad
-                  </h3>
-                </div>
-                <p className="text-[16px] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Con SEO, tu sitio trabaja 24/7 sin pagar a Google. La publicidad es temporal.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[14px] text-[#C9A84C]">
-                  → Ahorro de miles en publicidad
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 5: Comparativa */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              SEO vs. Publicidad (Google Ads)
-            </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Ambas traen clientes, pero tienen formas muy diferentes de hacerlo:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-[#1A1A1A] border border-[#FF6B6B]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[20px] font-light text-[#FF6B6B] mb-6">
-                  Publicidad (Google Ads)
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Pagas por cada click</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Dejas de pagar = desapareces</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Resultados inmediatos</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>$1000+ al mes en muchos casos</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#FF6B6B] flex-shrink-0">•</span>
-                    <span>Útil para lanzamientos rápidos</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-[#1A1A1A] border border-[#51CF66]/30 rounded-lg p-8">
-                <h3 className="font-serif text-[20px] font-light text-[#51CF66] mb-6">
-                  SEO (lo que hacemos)
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
-                    <span>Pagas una sola vez (implementación)</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
-                    <span>Sigue trayendo clientes para siempre</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
-                    <span>Resultados en 3-6 meses</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
-                    <span>Cero costo por cliente (después de 6 meses)</span>
-                  </li>
-                  <li className="flex gap-3 text-[16px] text-[#F5F2EC]/50 font-light">
-                    <span className="text-[#51CF66] flex-shrink-0">✓</span>
-                    <span>Inversión a largo plazo que crece</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-[50px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
