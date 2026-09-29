@@ -25,7 +25,7 @@ const PLANS: Plan[] = [
   {
     id: "presencia",
     name: "Plan Presencia",
-    price: "$25.000 ARS",
+    price: "$25.000 ARS/cuatrimestral",
     tagline: "Hosting administrado, SSL y soporte técnico. Ideal para mantener su presencia digital segura y siempre disponible.",
     items: [
       "Hosting administrado por Ferro Studio",
@@ -40,7 +40,7 @@ const PLANS: Plan[] = [
   {
     id: "activo",
     name: "Plan Activo",
-    price: "$45.000 ARS/mes",
+    price: "$45.000 ARS/cuatrimestral",
     tagline: "Todo lo del Plan Presencia, más cambios mensuales, analíticas y optimización. Para empresas que necesitan un sitio siempre actualizado.",
     items: [
       "Todo lo incluido en Plan Presencia",
