@@ -92,7 +92,7 @@ export default function PricingSection() {
               </h2>
             </motion.div>
             <motion.p variants={fadeUp(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
-              El mantenimiento cuatrimestral es el corazón del modelo de Ferro Studio. Garantiza que su sitio funcione siempre, esté actualizado y tenga soporte técnico disponible. Requiere haber contratado un proyecto web previamente.
+              El mantenimiento cuatrimestral es el corazón del modelo de Ferro{"\u00A0"}Studio. Garantiza que su sitio funcione siempre, esté actualizado y tenga soporte técnico disponible. Requiere haber contratado un proyecto web previamente.
             </motion.p>
           </div>
 
