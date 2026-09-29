@@ -121,17 +121,6 @@ export default function CTASection() {
         </motion.p>
 
       </div>
-      {/* ── Bottom brand mark ── */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.6 }}
-        aria-hidden="true"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 tracking-[0.3em] uppercase font-sans text-[#F5F2EC]/12 select-none text-[17px]"
-      >
-        Ferro Studio · Tranquilidad digital
-      </motion.div>
     </section>
   );
 }

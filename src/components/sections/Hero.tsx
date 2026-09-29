@@ -30,8 +30,7 @@ const fadeIn = (delay = 0) => ({
 /* ─── Word-split title ─── */
 const TITLE_LINES = [
   { text: "Presencia digital" },
-  { text: "que genera" },
-  { text: "confianza." },
+  { text: "que genera confianza." },
 ];
 
 export default function Hero() {
@@ -146,8 +145,7 @@ export default function Hero() {
           animate="show"
           className="text-[15px] text-[#F5F2EC]/42 font-sans font-light leading-[1.8] max-w-[400px] mb-10 md:mb-12"
         >
-          No vendemos páginas web. Vendemos tranquilidad digital —
-          precisión en cada píxel, calma en cada interacción.
+          Vendemos páginas web profesionales, seguras y confiables para tus clientes
         </motion.p>
 
         {/* CTAs */}
