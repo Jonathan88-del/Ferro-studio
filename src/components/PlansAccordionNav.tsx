@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const PLANS_FEATURES = [
-  { label: "🖥️ Hosting administrado por Ferro Studio", href: "/planes-hosting" },
+  { label: "🖥️ Hosting administrado por solo Hosting administrado", href: "/planes-hosting" },
   { label: "🔒 Gestión y renovación automática del SSL", href: "/planes-ssl" },
   { label: "💬 Soporte por WhatsApp (24–48 hs hábiles)", href: "/planes-whatsapp" },
   { label: "✏️ Hasta 3 cambios mensuales al sitio", href: "/planes-cambios" },
