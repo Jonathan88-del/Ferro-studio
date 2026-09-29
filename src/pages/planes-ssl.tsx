@@ -209,11 +209,11 @@ export default function PlanesSSL() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Lock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Monitoreo continuo
                   </h3>
                 </div>
@@ -227,11 +227,11 @@ export default function PlanesSSL() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <RefreshCw size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Renovación automática
                   </h3>
                 </div>
@@ -245,11 +245,11 @@ export default function PlanesSSL() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Key size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Resolución de problemas
                   </h3>
                 </div>
@@ -263,11 +263,11 @@ export default function PlanesSSL() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Shield size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
+                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
                     Encriptación vigente
                   </h3>
                 </div>
