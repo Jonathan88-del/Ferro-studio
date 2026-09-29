@@ -8,7 +8,7 @@ export default function PlanesHosting() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -42,7 +42,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 1: Sin vs Con hosting administrado */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -139,7 +139,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 2: Lo que hacemos 24/7 */}
-      <section className="relative bg-[#0E0E0E] py-16 md:py-24">
+      <section className="relative bg-[#0E0E0E] py-12 md:py-20">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -190,7 +190,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 3: Los 3 pilares del hosting administrado */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -265,7 +265,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 4: Qué incluye */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -366,7 +366,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 5: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -468,7 +468,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
