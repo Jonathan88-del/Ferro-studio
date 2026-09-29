@@ -17,7 +17,7 @@ const SERVICES = [
     price: "$150.000 ARS",
     delivery: "7–10 días hábiles",
     description:
-      "Una página de conversión diseñada para generar consultas y ventas. Incluye hasta 6 secciones, redacción de textos, imágenes de banco, formulario de contacto, botón de WhatsApp flotante, SSL y 30 días de soporte post-entrega.",
+      "Una sola página diseñada para captar clientes o generar ventas. Toda la información se presenta en una única página que el usuario recorre haciendo scroll, guiándolo hacia una acción concreta, como solicitar un presupuesto, contactar por WhatsApp o realizar una compra.",
     includes: [
       "Diseño personalizado",
       "Hasta 6 secciones",
@@ -35,7 +35,7 @@ const SERVICES = [
     price: "$250.000 ARS",
     delivery: "12–18 días hábiles",
     description:
-      "Presencia digital completa para empresas y profesionales. Hasta 10 páginas independientes, Google Analytics, Search Console, FAQ y 60 días de soporte. Ideal para estudios jurídicos, contadores, clínicas e inmobiliarias.",
+      "Una web más completa que presenta la empresa, sus servicios, proyectos y trayectoria. Suele estar organizada en varias páginas o secciones, permitiendo al visitante conocer en profundidad la marca, generar confianza y encontrar toda la información necesaria sobre el negocio.",
     includes: [
       "Todo lo de Landing Page",
       "Hasta 10 páginas independientes",
