@@ -12,12 +12,11 @@ const fadeUp = (delay = 0) => ({
 const SERVICES = [
   {
     icon: MousePointerClick,
-    id: "A1",
     title: "Landing Page",
     price: "$150.000 ARS",
     delivery: "7–10 días hábiles",
     description:
-      "Una sola página diseñada para captar clientes o generar ventas. Toda la información se presenta en una única página que el usuario recorre haciendo scroll, guiándolo hacia una acción concreta, como solicitar un presupuesto, contactar por WhatsApp o realizar una compra.",
+      "Una sola página diseñada para captar clientes. Toda la información se presenta en una única página que el usuario recorre haciendo scroll, guiándolo hacia un contacto.",
     includes: [
       "Diseño personalizado",
       "Hasta 6 secciones",
@@ -30,12 +29,11 @@ const SERVICES = [
   },
   {
     icon: Building2,
-    id: "A2",
     title: "Sitio Institucional",
     price: "$250.000 ARS",
     delivery: "12–18 días hábiles",
     description:
-      "Una web más completa que presenta la empresa, sus servicios, proyectos y trayectoria. Suele estar organizada en varias páginas o secciones, permitiendo al visitante conocer en profundidad la marca, generar confianza y encontrar toda la información necesaria sobre el negocio.",
+      "Una web más completa que presenta la empresa, sus servicios, proyectos y trayectoria. Tiene varias, permitiendo al visitante conocer en profundidad la marca, generar confianza y encontrar toda la información necesaria sobre el negocio.",
     includes: [
       "Todo lo de Landing Page",
       "Hasta 10 páginas independientes",
@@ -46,12 +44,11 @@ const SERVICES = [
   },
   {
     icon: LayoutGrid,
-    id: "A3",
     title: "Sitio con Catálogo / CMS",
     price: "$420.000 ARS",
     delivery: "18–25 días hábiles",
     description:
-      "Sitio institucional con panel de administración para que el cliente cargue su propio contenido: propiedades (inmobiliarias), vehículos, productos o servicios. Incluye capacitación y 10 fichas de ejemplo cargadas.",
+      "Sitio con panel de administración para que el cliente cargue su propio contenido: propiedades (inmobiliarias), vehículos, productos o servicios. Incluye capacitación y 10 fichas de ejemplo cargadas.",
     includes: [
       "Todo lo de Sitio Institucional",
       "Panel de administración propio",
@@ -64,12 +61,11 @@ const SERVICES = [
   },
   {
     icon: Pencil,
-    id: "A4",
     title: "Rediseño Web",
     price: "$200.000 ARS",
     delivery: "10–15 días hábiles",
     description:
-      "Modernización de un sitio existente que ya no representa al negocio. Nuevo diseño visual completo, migración de contenido, optimización de velocidad y SEO básico conservando el posicionamiento actual.",
+      "Modernización de un sitio existente que ya no representa al negocio.",
     includes: [
       "Análisis del sitio actual",
       "Nuevo diseño visual completo",
@@ -129,7 +125,7 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#F5F2EC]/[0.06]">
           {SERVICES.map((service, i) => (
-            <ServiceCard key={service.id} service={service} index={i} />
+            <ServiceCard key={service.title} service={service} index={i} />
           ))}
         </div>
 
@@ -332,7 +328,6 @@ function ServiceCard({
 
       <div className="flex flex-col gap-4 flex-1">
         <div className="flex items-baseline gap-3">
-          <span className="font-serif text-[1.05rem] text-[#C9A84C]/40 font-light">{service.id}</span>
           <h3 className="font-serif text-[1.75rem] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em]">
             {service.title}
           </h3>
