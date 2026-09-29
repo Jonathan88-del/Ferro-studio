@@ -8,7 +8,7 @@ export default function PlanesCambios() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[10px] md:pt-48 md:pb-[10px] overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -35,14 +35,14 @@ export default function PlanesCambios() {
               Hasta 3 cambios mensuales al sitio
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Mantén tu sitio siempre actualizado sin complicaciones. Tres cambios al mes para que tu información esté siempre fresca.
+              Tu sitio siempre actualizado sin complicaciones. Tres cambios al mes para que tu información esté siempre fresca.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Section 1: ¿Por qué mantener el sitio actualizado? */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-5">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -51,7 +51,7 @@ export default function PlanesCambios() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
-              ¿Por qué mantener el sitio actualizado es clave?
+              ¿Por qué tener el sitio actualizado es clave?
             </h2>
             <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
               Un sitio desactualizado es como un negocio cerrado. Cuando algo cambia, necesitás reflejarlo rápido:
@@ -139,7 +139,7 @@ export default function PlanesCambios() {
       </section>
 
       {/* Section 2: Qué tipos de cambios podés hacer */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-5">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -192,7 +192,7 @@ export default function PlanesCambios() {
       </section>
 
       {/* Section 3: Cómo funciona */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -237,7 +237,7 @@ export default function PlanesCambios() {
       </section>
 
       {/* Section 4: Ventajas de tener cambios incluidos */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-5 pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -272,42 +272,6 @@ export default function PlanesCambios() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Wrench size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Sin riesgos
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  No lo haces vos y no rompes nada accidentalmente.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Calendar size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Mes a mes
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Tenés 3 cambios cada mes. No los usás este mes, no se pierden después.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
                 transition={{ delay: 0.25 }}
                 className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
               >
@@ -327,7 +291,7 @@ export default function PlanesCambios() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[110px] pb-24 md:pb-32">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
