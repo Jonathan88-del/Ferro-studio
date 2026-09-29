@@ -8,7 +8,7 @@ export default function PlanesHosting() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-24 pb-24 md:pt-32 md:pb-32 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-20 pb-20 md:pt-28 md:pb-28 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -42,7 +42,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 1: Sin vs Con hosting administrado */}
-      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
+      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -53,11 +53,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               ¿Por qué es importante el hosting administrado?
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
               Tu sitio es tu vendedor 24/7. Si no funciona, pierdes clientes:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -139,7 +139,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 2: Lo que hacemos 24/7 */}
-      <section className="relative bg-[#0E0E0E] py-12 md:py-20">
+      <section className="relative bg-[#0E0E0E] py-10 md:py-16">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -190,7 +190,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 3: Los 3 pilares del hosting administrado */}
-      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
+      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -201,11 +201,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Los 3 pilares del hosting administrado
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
               Todo se reduce a 3 promesas simples:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -265,7 +265,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 4: Qué incluye */}
-      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
+      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -276,11 +276,11 @@ export default function PlanesHosting() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Lo que está incluido siempre
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-8">
               No hay sorpresas. Todo esto viene de serie en nuestro hosting:
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -366,7 +366,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 5: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
+      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -374,11 +374,11 @@ export default function PlanesHosting() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-12">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-8">
               Lo que ganas con hosting administrado
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -468,7 +468,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-20 md:py-28">
+      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
