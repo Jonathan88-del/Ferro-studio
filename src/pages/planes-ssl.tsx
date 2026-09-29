@@ -35,20 +35,21 @@ export default function PlanesSSL() {
               Gestión y renovación automática del SSL
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Después de publicar tu sitio, nos encargamos de supervisar que la seguridad SSL siga funcionando correctamente, mantenerla activa y resolver cualquier inconveniente relacionado con la conexión segura.
+              Nos encargamos de supervisar que la seguridad SSL siga funcionando correctamente, mantenerla activa y resolver cualquier inconveniente relacionado con la conexión segura.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Section 1: ¿Qué es SSL y por qué importa? */}
-      <section className="relative bg-[#0E0E0E] pt-0 pb-8 md:pt-0 md:pb-12">
+      <section className="relative bg-[#0E0E0E] pt-0 pb-[4px] md:pt-0 md:pb-[4px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
+            className="mt-10"
           >
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-2">
               ¿Qué es SSL y por qué es importante?
@@ -139,7 +140,7 @@ export default function PlanesSSL() {
       </section>
 
       {/* Section 2: Renovación automática */}
-      <section className="relative bg-[#0E0E0E] py-12 md:py-16">
+      <section className="relative bg-[#0E0E0E] mt-0 pt-[50px] pb-[6px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -188,7 +189,7 @@ export default function PlanesSSL() {
       </section>
 
       {/* Section 3: Qué hacemos por ti */}
-      <section className="relative bg-[#0E0E0E] py-12 md:py-16">
+      <section className="relative bg-[#0E0E0E] pt-12 pb-[6px] md:pt-16">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
