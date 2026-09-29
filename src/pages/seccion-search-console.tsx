@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Search, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, Eye, Target, Bug, BarChart3 } from "lucide-react";
+import { ArrowLeft, Search, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, Eye, Target } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -8,7 +8,7 @@ export default function SeccionSearchConsole() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-32 md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[1px] md:pt-48 md:pb-[1px] overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -32,17 +32,14 @@ export default function SeccionSearchConsole() {
             </Link>
 
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
-              Search Console: Ve exactamente cómo Google ve tu sitio
+              Search Console: Ve cómo Google ve tu sitio
             </h1>
-            <p className="text-[20px] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Es como una conversación directa con Google. Te dice qué palabras buscan, si tu sitio tiene problemas y cómo mejorar.
-            </p>
           </motion.div>
         </div>
       </section>
 
       {/* Section 1: ¿Qué es en realidad? */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[1px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -54,7 +51,7 @@ export default function SeccionSearchConsole() {
               ¿Qué es Search Console?
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Es el teléfono directo entre tú y Google. Mientras Analytics te muestra qué hacen los visitantes, Search Console te muestra cómo Google ve tu sitio.
+              Mientras Analytics te muestra qué hacen los visitantes, Search Console te muestra cómo Google ve tu sitio.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -109,7 +106,7 @@ export default function SeccionSearchConsole() {
       </section>
 
       {/* Section 2: Los 3 superpoderes */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -120,10 +117,6 @@ export default function SeccionSearchConsole() {
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Los 3 superpoderes de Search Console
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Tres cosas que ves que son imposibles de ver en otro lado:
-            </p>
-
             <div className="space-y-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -141,7 +134,7 @@ export default function SeccionSearchConsole() {
                       Superpoder 1: Ve qué buscan
                     </h3>
                     <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-3">
-                      Alguien busca en Google "consultor legal en Madrid" y apareces. Ves exactamente esa búsqueda.
+                      Alguien busca en Google "Contador en Buenos Aires" y apareces. Ves exactamente esa búsqueda.
                     </p>
                     <p className="text-[18px] text-[#C9A84C] font-light">
                       → Sabes exactamente qué pide la gente
@@ -191,7 +184,7 @@ export default function SeccionSearchConsole() {
                       Superpoder 3: Ve problemas antes de que exploten
                     </h3>
                     <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-3">
-                      Google encuentra un error en tu sitio y te lo dice: "Tu página no carga bien en móvil". Lo corriges y listo.
+                      Google encuentra un error en tu sitio y te lo dice: "Tu página no carga bien en móvil". Lo corregimos y listo.
                     </p>
                     <p className="text-[18px] text-[#C9A84C] font-light">
                       → Prevención de daño automática
@@ -205,7 +198,7 @@ export default function SeccionSearchConsole() {
       </section>
 
       {/* Section 3: Qué ves específicamente */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -242,16 +235,6 @@ export default function SeccionSearchConsole() {
                   title: "Problemas técnicos",
                   desc: "Google detecta si tu sitio no carga bien en móvil, si hay enlaces rotos, si las imágenes no se ven. Te lo dice al instante."
                 },
-                {
-                  emoji: "🔗",
-                  title: "Quién te menciona",
-                  desc: "Enlaces desde otros sitios que apuntan al tuyo. Más enlaces = mayor autoridad en Google."
-                },
-                {
-                  emoji: "🌐",
-                  title: "Datos de móvil vs. desktop",
-                  desc: "¿De dónde viene más tráfico? ¿Celular o computadora? Así optimizas para lo que funciona."
-                }
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -279,117 +262,8 @@ export default function SeccionSearchConsole() {
         </div>
       </section>
 
-      {/* Section 4: Qué cambias con esa info */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              Decisiones que tomas con esa información
-            </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Cada dato lleva a una acción específica:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '10px'}}>1</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
-                      Ves que apareces en posición 5
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
-                      → Mejoras tu contenido para esa palabra clave. En 2 meses pasas a posición 2. Esto da +200% de clics.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '10px'}}>2</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
-                      Ves que hay un error en móvil
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
-                      → Lo corriges. Google indexa mejor tu sitio. Comienzas a aparecer en más búsquedas.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '25px'}}>3</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
-                      Ves búsquedas que no sabías
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
-                      → Descubres palabras nuevas que traen clientes. Creas contenido específico. Ganancias inesperadas.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '20px'}}>4</span>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
-                      Ves que hay muchos clics pero muchas apariciones
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/50 font-light">
-                      → Tu título o descripción no es atractiva. La cambias. Clics suben 50%.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 5: Por qué importa */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      {/* Section: Por qué importa */}
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[30px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -400,10 +274,6 @@ export default function SeccionSearchConsole() {
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               Por qué Search Console es tu brújula SEO
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Sin Search Console, estás optimizando a ciegas. Con ella, ves exactamente qué mejorar:
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -464,7 +334,7 @@ export default function SeccionSearchConsole() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-24 md:py-32">
+      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[50px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
