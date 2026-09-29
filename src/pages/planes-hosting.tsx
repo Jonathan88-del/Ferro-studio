@@ -8,7 +8,7 @@ export default function PlanesHosting() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-20 pb-20 md:pt-28 md:pb-28 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-12 pb-8 md:pt-16 md:pb-12 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -42,7 +42,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 1: Sin vs Con hosting administrado */}
-      <section className="relative bg-[#0E0E0E] py-14 md:py-20">
+      <section className="relative bg-[#0E0E0E] pt-8 pb-12 md:pt-12 md:pb-16">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
