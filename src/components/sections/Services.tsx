@@ -110,7 +110,7 @@ export default function Services() {
             className="lg:self-end"
           >
             <p className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
-              Cada proyecto es único y tratado con atención al detalle. El sitio se publica primero en un entorno de prueba — el cliente lo aprueba, y solo entonces se cobra y se migra al dominio definitivo. Sin anticipo.
+              Cada proyecto es único y tratado con atención al detalle. El sitio se publica primero en un entorno de prueba
             </p>
           </motion.div>
         </div>
@@ -206,7 +206,7 @@ function GoogleBusinessCard() {
           <div>
             <span className="font-serif text-[25px] font-light text-[#C9A84C]/70">Servicios extra</span>
             <h3 className="mt-3 font-serif text-[1.75rem] font-light leading-tight tracking-[-0.01em] text-[#F5F2EC]">
-              Google Maps (Google Business)
+              Google Maps
             </h3>
           </div>
           <div className="shrink-0 pt-0.5 text-right">
@@ -222,12 +222,9 @@ function GoogleBusinessCard() {
           {[
             "Creación y configuración del perfil",
             "Datos del negocio (horarios, teléfono, web)",
-            "Categorías y servicios",
             "Logo, portada y fotografías",
-            "Descripción optimizada",
             "Vinculación con tu página web",
-            "Botón de WhatsApp (si corresponde)",
-            "Perfil listo para comenzar a recibir clientes",
+            "Botón de WhatsApp",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <span className="mt-[3px] shrink-0 font-sans text-[0.75rem] text-[#C9A84C]/60">✓</span>

@@ -39,7 +39,7 @@ const INDUSTRIES = [
     icon: Stethoscope,
     title: "Clínicas y Médicos",
     description:
-      "Especialidad de nicho. Requieren énfasis en credibilidad y profesionalismo. El SEO local es muy valioso para captar pacientes por Google.",
+      "Requieren énfasis en credibilidad y profesionalismo. El SEO local es muy valioso para captar pacientes por Google.",
     recommend: "Sitio Institucional → Plan Total",
     channel: "Google + referidos médicos",
   },
