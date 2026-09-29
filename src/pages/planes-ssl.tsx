@@ -8,7 +8,7 @@ export default function PlanesSSL() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-[68px] pb-0 md:pt-[76px] md:pb-0 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-[72px] pb-0 md:pt-[84px] md:pb-0 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -31,7 +31,7 @@ export default function PlanesSSL() {
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-2">
+            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-1">
               Gestión y renovación automática del SSL
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
@@ -50,7 +50,7 @@ export default function PlanesSSL() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-2">
               ¿Qué es SSL y por qué es importante?
             </h2>
             <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-6">
