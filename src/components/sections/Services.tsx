@@ -84,14 +84,6 @@ export default function Services() {
       className="relative bg-[#0E0E0E] pt-10 pb-28 md:pt-12 md:pb-36 lg:pt-14 lg:pb-44"
       aria-labelledby="services-heading"
     >
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true, margin: "-80px" }}
-        transition={{ duration: 1.2, ease: EASE }}
-        className="absolute top-0 left-[max(1.5rem,env(safe-area-inset-left))] right-[max(1.5rem,env(safe-area-inset-right))] md:left-[3rem] md:right-[3rem] lg:left-[5rem] lg:right-[5rem] h-px bg-[#F5F2EC]/[0.07] origin-left"
-        aria-hidden="true"
-      />
       <div className="container-ferro">
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-20 mb-20 md:mb-28">
