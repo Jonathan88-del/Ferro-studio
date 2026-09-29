@@ -70,7 +70,7 @@ export default function PricingSection() {
   return (
     <div>
       <section
-        className="relative bg-[#0E0E0E] pt-28 md:pt-36 lg:pt-44 pb-[60px] overflow-hidden"
+        className="relative bg-[#0E0E0E] pt-20 md:pt-24 lg:pt-28 pb-8 overflow-hidden"
         aria-labelledby="pricing-heading"
       >
         <div
@@ -80,7 +80,7 @@ export default function PricingSection() {
         />
 
         <div className="container-ferro relative z-10">
-          <div className="max-w-2xl mb-20 md:mb-28">
+          <div className="max-w-2xl mb-12 md:mb-16">
             <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-5 h-px bg-[#C9A84C]/70" />
@@ -106,7 +106,7 @@ export default function PricingSection() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-40px" }}
-            className="mt-12 text-center text-[#F5F2EC]/22 font-sans font-light tracking-wide text-[20px]"
+            className="mt-8 text-center text-[#F5F2EC]/22 font-sans font-light tracking-wide text-[20px]"
           >
             Pago cuatrimestral por adelantado · Transferencia bancaria o Mercado Pago · Sin contratos de largo plazo
           </motion.p>
@@ -128,7 +128,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       whileHover="hover"
       className={cn(
         "group relative flex flex-col",
-        "px-12 py-14 md:px-14 md:py-16",
+        "px-12 py-10 md:px-14 md:py-12",
         "transition-colors duration-500",
         plan.featured ? "bg-[#F5F2EC]" : "bg-[#0E0E0E] hover:bg-[#0f0f0f]"
       )}
