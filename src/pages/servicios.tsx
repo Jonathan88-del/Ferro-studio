@@ -26,7 +26,7 @@ export default function Servicios() {
   return (
     <>
       {/* Page header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-20 md:pt-48 md:pb-24 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-20 pb-4 md:pt-24 md:pb-6 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"

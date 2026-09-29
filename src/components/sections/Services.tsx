@@ -81,7 +81,7 @@ const SERVICES = [
 export default function Services() {
   return (
     <section
-      className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44"
+      className="relative bg-[#0E0E0E] pt-10 pb-28 md:pt-12 md:pb-36 lg:pt-14 lg:pb-44"
       aria-labelledby="services-heading"
     >
       <motion.div
