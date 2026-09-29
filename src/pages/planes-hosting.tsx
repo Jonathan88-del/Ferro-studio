@@ -135,7 +135,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 2: Lo que hacemos 24/7 */}
-      <section className="relative bg-[#0E0E0E] py-6 md:py-10">
+      <section className="relative bg-[#0E0E0E] pt-6 pb-[10px] md:pt-10 md:pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -186,7 +186,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 3: Los 3 pilares del hosting administrado */}
-      <section className="relative bg-[#0E0E0E] py-8 md:py-12">
+      <section className="relative bg-[#0E0E0E] pt-8 pb-[2px] md:pt-12 md:pb-[2px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -261,7 +261,7 @@ export default function PlanesHosting() {
       </section>
 
       {/* Section 4: Qué incluye */}
-      <section className="relative bg-[#0E0E0E] py-8 md:py-12">
+      <section className="relative bg-[#0E0E0E] pt-[38px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
