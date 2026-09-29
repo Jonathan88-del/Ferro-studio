@@ -42,15 +42,6 @@ export default function Servicios() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-5 h-px bg-[#C9A84C]/70" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">
-                Lo que hacemos
-              </span>
-            </div>
-            <h1 className="font-serif font-light text-[54px] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-2xl">
-              Servicios diseñados para hacer crecer tu negocio.
-            </h1>
           </motion.div>
         </div>
       </section>
