@@ -8,7 +8,7 @@ export default function PlanesHosting() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-24 pb-24 md:pt-32 md:pb-32 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
