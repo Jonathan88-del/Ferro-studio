@@ -80,7 +80,7 @@ export default function PricingSection() {
         />
 
         <div className="container-ferro relative z-10">
-          <div className="max-w-2xl mb-12 md:mb-16">
+          <div className="max-w-2xl mb-2 md:mb-4">
             <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
               <div className="flex items-center gap-3 mb-8">
                 <span className="w-5 h-px bg-[#C9A84C]/70" />
