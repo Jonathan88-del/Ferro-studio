@@ -81,12 +81,12 @@ const SERVICES = [
 export default function Services() {
   return (
     <section
-      className="relative bg-[#0E0E0E] pt-10 pb-28 md:pt-12 md:pb-36 lg:pt-14 lg:pb-44"
+      className="relative bg-[#0E0E0E] pt-4 pb-12 md:pt-6 md:pb-16 lg:pt-8 lg:pb-20"
       aria-labelledby="services-heading"
     >
       <div className="container-ferro">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-20 mb-20 md:mb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-20 mb-8 md:mb-10">
           <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
             <div className="flex items-center gap-3 mb-8">
               <span className="w-5 h-px bg-[#C9A84C]/70" />
@@ -110,7 +110,7 @@ export default function Services() {
             className="lg:self-end"
           >
             <p className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
-              Cada proyecto es único y tratado con atención al detalle. El sitio se publica primero en un entorno de prueba
+              Cada proyecto es único y tratado con atención al detalle.
             </p>
           </motion.div>
         </div>
