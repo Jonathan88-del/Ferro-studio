@@ -48,7 +48,7 @@ export default function Footer() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.8, ease: EASE }}
-        className="container-ferro pt-24 pb-20 md:pt-32 md:pb-24"
+        className="container-ferro pt-24 pb-20 md:pt-[90px] md:pb-24"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-14">
 

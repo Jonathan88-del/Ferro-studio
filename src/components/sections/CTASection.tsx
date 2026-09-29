@@ -13,7 +13,7 @@ const fadeUp = (delay = 0) => ({
 export default function CTASection() {
   return (
     <section
-      className="relative bg-[#0E0E0E] min-h-[90svh] flex flex-col items-center justify-center overflow-hidden py-28 md:py-36"
+      className="relative bg-[#0E0E0E] min-h-[90svh] flex flex-col items-center justify-center overflow-hidden py-28 md:pt-20 md:pb-36"
       aria-labelledby="cta-heading"
     >
       {/* ── Geometric background ── */}
