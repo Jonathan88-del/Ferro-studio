@@ -70,7 +70,7 @@ export default function PricingSection() {
   return (
     <div>
       <section
-        className="relative bg-[#0E0E0E] pt-20 md:pt-24 lg:pt-28 pb-8 overflow-hidden"
+        className="relative bg-[#0E0E0E] pt-12 md:pt-14 lg:pt-16 pb-8 overflow-hidden"
         aria-labelledby="pricing-heading"
       >
         <div
