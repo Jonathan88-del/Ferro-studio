@@ -263,8 +263,8 @@ function ServiceCard({
       whileHover="hover"
       className={cn(
         "group relative bg-[#0E0E0E]",
-        "flex flex-col gap-4",
-        "px-7 py-7 md:px-9 md:py-9",
+        "flex flex-col gap-3",
+        "px-6 py-6 md:px-8 md:py-8",
         "transition-colors duration-400",
         "hover:bg-[#111111]",
         service.soon && "opacity-60"
