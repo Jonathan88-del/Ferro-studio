@@ -11,7 +11,7 @@ const STEPS = [
     title: "Briefing inicial",
     icon: MessageSquare,
     description:
-      "Reunión de diagnóstico para entender su negocio, su público y sus objetivos concretos. No es una reunión de ventas: es una consultoría gratuita. Respondemos en menos de 2 horas hábiles.",
+      "Reunión de diagnóstico para entender su negocio, su público y sus objetivos concretos.\u00A0",
     note: "30–45 minutos · Sin costo",
   },
   {
@@ -19,7 +19,7 @@ const STEPS = [
     title: "Propuesta personalizada",
     icon: FileText,
     description:
-      "Dentro de 24–48 horas recibís una propuesta detallada en PDF con diagnóstico, solución recomendada, alcance exacto, plazo y precio. La enviamos por email o whatsapp. Sin compromiso ni pago en esta etapa.",
+      "Dentro de 24–48 horas recibís una propuesta detallada en PDF con diagnóstico, solución recomendada, alcance exacto, plazo y precio. La enviamos por email o whatsapp.\u00A0",
     note: "24–48 hs · Sin anticipo",
   },
   {
@@ -27,7 +27,7 @@ const STEPS = [
     title: "Diseño y desarrollo",
     icon: Code2,
     description:
-      "Ferro Studio trabaja con la propuesta aprobada. El cliente entrega contenido propio en los primeros 3 días hábiles; si no, procedemos con recursos propios. Presentamos avances según el tipo de proyecto.",
+      "Ferro Studio trabaja con la propuesta aprobada. El cliente entrega contenido propio en los primeros 3 días hábiles; si no, procedemos con recursos propios.\u00A0",
     note: "Según plazo del proyecto",
   },
   {
@@ -36,23 +36,20 @@ const STEPS = [
     icon: ScanLine,
     description:
       "El cliente tiene hasta 5 rondas de cambios incluidas. Cada ronda tiene un plazo máximo de 5 días hábiles para responder — pasado ese tiempo, se considera aprobado.",
-    note: "2 rondas incluidas",
   },
   {
     number: "05",
     title: "Publicación en entorno de prueba",
     icon: Globe,
     description:
-      "El sitio se publica en un dominio temporal de Ferro Studio. El cliente lo ve online completo antes de pagar. Solo entonces se emite la factura y se cobra el 100% del proyecto.",
-    note: "Cobra el 100% recién aquí",
+      "El sitio se publica en un dominio temporal de Ferro Studio. El cliente lo ve online completo antes de pagar.\u00A0",
   },
   {
     number: "06",
     title: "Entrega y soporte",
     icon: HeartHandshake,
     description:
-      "Una vez acreditado el pago, el sitio migra al dominio definitivo del cliente. Comienza el período de soporte post-entrega: 30 días (Landing), 60 días (Institucional) o 90 días (CMS). Sin sorpresas.",
-    note: "Soporte garantizado post-entrega",
+      "El sitio migra al dominio definitivo del cliente.\u00A0Solo entonces se emite la factura y se cobra el 100% del proyecto.\u00A0Comienza el período de soporte post-entrega: 30 días (Landing), 60 días (Institucional) o 90 días (CMS). Sin sorpresas.",
   },
 ] as const;
 
@@ -60,6 +57,7 @@ export default function ProcessSection() {
   return (
     <section
       className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44 overflow-hidden"
+      style={{ paddingBottom: 40 }}
       aria-labelledby="process-heading"
     >
       <div
@@ -100,9 +98,6 @@ export default function ProcessSection() {
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
             className="lg:self-end"
           >
-            <p className="text-[#F5F2EC]/42 font-sans font-light text-[24px]">
-              El proceso comercial de Ferro Studio es un proceso de selección mutua: el cliente elige si quiere trabajar con nosotros, y nosotros elegimos si el proyecto es el adecuado para lo que construimos.
-            </p>
             <div className="mt-8 flex flex-col gap-3">
               {[
                 "Sin anticipo — cobro 100% post-entrega",
@@ -206,9 +201,11 @@ function ProcessStep({
           {step.description}
         </p>
 
-        <span className="inline-flex items-center text-[0.82rem] tracking-[0.18em] uppercase font-sans text-[#C9A84C]/55" style={{ fontSize: "14px" }}>
-          {step.note}
-        </span>
+        {"note" in step && (
+          <span className="inline-flex items-center text-[0.82rem] tracking-[0.18em] uppercase font-sans text-[#C9A84C]/55" style={{ fontSize: "14px" }}>
+            {step.note}
+          </span>
+        )}
 
         {!isLast && (
           <div className="mt-14 md:mt-18 h-px bg-[#F5F2EC]/[0.05] w-full" aria-hidden="true" />
