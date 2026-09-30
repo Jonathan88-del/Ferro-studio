@@ -32,10 +32,10 @@ export default function PlanesHosting() {
             </Link>
 
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,3.375rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-4">
-              Hosting administrado por Ferro Studio
+              Hosting administrado
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Nos encargamos de que tu página esté siempre online y funcionando correctamente. Si surge un problema con el hosting, nosotros lo resolvemos para que vos no tengas que preocuparte.
+              Tu página esté siempre online y funcionando correctamente.&nbsp;
             </p>
           </motion.div>
         </div>
@@ -144,19 +144,17 @@ export default function PlanesHosting() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
-              6 cosas que hacemos por vos 24/7
+              4 cosas que hacemos por vos 24/7
             </h2>
             <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-4">
-              Hosting administrado significa que estas 6 cosas funcionan automáticamente:
+              Hosting administrado significa que estas 4 cosas funcionan automáticamente:
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {[
-                { emoji: "⚡", title: "Monitoreo constante", desc: "Supervisamos que tu sitio esté disponible las 24 horas. Si se detecta una caída, recibimos una alerta automáticamente." },
-                { emoji: "🔁", title: "Recuperación rápida", desc: "Si una actualización o despliegue genera un problema, restauramos la última versión estable lo antes posible." },
+                { emoji: "⚡", title: "Monitoreo constante", desc: "Supervisamos que tu sitio esté disponible las 24 horas.\u00A0" },
                 { emoji: "💾", title: "Control de versiones y respaldo", desc: "Conservamos el historial del proyecto para poder recuperar versiones anteriores cuando sea necesario." },
-                { emoji: "🔒", title: "Seguridad gestionada", desc: "Protección mediante Cloudflare, HTTPS, firewall y buenas prácticas de seguridad." },
-                { emoji: "🆙", title: "Mantenimiento técnico", desc: "Actualizamos dependencias y realizamos tareas de mantenimiento para mantener el sitio seguro y estable." },
+                { emoji: "🔒", title: "Seguridad gestionada", desc: "Protección mediante Cloudflare, HTTPS, firewall." },
                 { emoji: "⚙️", title: "Optimización continua", desc: "Revisamos el rendimiento, la velocidad y aplicamos mejoras periódicas para mantener una buena experiencia de uso." }
               ].map((item, index) => (
                 <motion.div
@@ -216,7 +214,7 @@ export default function PlanesHosting() {
                   Servidor confiable
                 </h3>
                 <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  No es cualquier servidor. Es infraestructura de clase empresarial con garantía de disponibilidad.
+                  Infraestructura de clase empresarial con garantía de disponibilidad.
                 </p>
               </motion.div>
 
@@ -254,107 +252,6 @@ export default function PlanesHosting() {
                 <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                   Tu sitio está protegido contra ataques, malware y datos perdidos. Siempre.
                 </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 4: Qué incluye */}
-      <section className="relative bg-[#0E0E0E] pt-[38px] pb-[10px]">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
-              Lo que está incluido siempre
-            </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-4">
-              No hay sorpresas. Todo esto viene de serie en nuestro hosting:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
-                      Almacenamiento suficiente
-                    </h3>
-                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
-                      Espacio para tu sitio, imágenes, videos y bases de datos. Sin limitaciones raras.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
-                      Ancho de banda ilimitado
-                    </h3>
-                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
-                      Tus clientes acceden desde cualquier lugar del mundo sin ralentizaciones.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
-                      SSL gratuito
-                    </h3>
-                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
-                      HTTPS en tu sitio. Ese candadito que dice "este sitio es seguro".
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <Zap size={20} className="text-[#C9A84C] flex-shrink-0 mt-1" strokeWidth={1.5} />
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC] mb-2">
-                      CDN global
-                    </h3>
-                    <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light">
-                      Tu sitio carga rápido desde cualquier parte del mundo.
-                    </p>
-                  </div>
-                </div>
               </motion.div>
             </div>
           </motion.div>
