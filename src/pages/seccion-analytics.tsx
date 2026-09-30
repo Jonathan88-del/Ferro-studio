@@ -120,7 +120,7 @@ export default function SeccionAnalytics() {
       </section>
 
       {/* Section 2: Qué ves exactamente */}
-      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
+      <section className="relative bg-[#0E0E0E] pt-[20px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -132,7 +132,7 @@ export default function SeccionAnalytics() {
               Qué información ves en Analytics
             </h2>
 
-            <div className="space-y-4">
+            <div className="space-y-3">
               {[
                 {
                   icon: TrendingUp,
@@ -173,11 +173,11 @@ export default function SeccionAnalytics() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.05 }}
-                    className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
+                    className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4 md:p-5"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                        <Icon size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                        <Icon size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1">
                         <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -197,7 +197,7 @@ export default function SeccionAnalytics() {
       </section>
 
       {/* Section 3: Qué haces con esa info */}
-      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[20px]">
+      <section className="relative bg-[#0E0E0E] pt-[20px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
