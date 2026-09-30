@@ -81,7 +81,7 @@ const SERVICES = [
 export default function Services() {
   return (
     <section
-      className="relative bg-[#0E0E0E] pt-12 pb-[30px] md:pt-16 lg:pt-20"
+      className="relative bg-[#0E0E0E] pt-12 pb-[10px] md:pt-16 lg:pt-20"
       aria-labelledby="services-heading"
     >
       <div className="container-ferro">

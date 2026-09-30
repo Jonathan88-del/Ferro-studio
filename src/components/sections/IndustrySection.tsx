@@ -48,7 +48,7 @@ const INDUSTRIES = [
 export default function IndustrySection() {
   return (
     <section
-      className="relative bg-[#F5F2EC] py-[50px] md:py-[50px] lg:py-16 overflow-hidden"
+      className="relative bg-[#F5F2EC] pt-[20px] pb-[30px] md:pt-[20px] md:pb-[30px] lg:pt-[20px] lg:pb-[30px] overflow-hidden"
       aria-labelledby="industry-heading"
     >
       <span
