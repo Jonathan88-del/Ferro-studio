@@ -50,19 +50,19 @@ export default function SeccionSearchConsole() {
             <h2 className="font-serif text-[34px] font-light text-[#F5F2EC] mb-4">
               ¿Qué es Search Console?
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-6">
               Mientras Analytics te muestra qué hacen los visitantes, Search Console te muestra cómo Google ve tu sitio.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
               >
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-2 mb-2">
                   <Eye size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
@@ -71,7 +71,7 @@ export default function SeccionSearchConsole() {
                     <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Te muestra qué hace la gente en tu sitio: dónde hace clic, cuánto tiempo pasa, si compra.
                     </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light mt-3">
+                    <p className="text-[18px] text-[#C9A84C] font-light mt-2">
                       → Pregunta: "¿Qué hizo el visitante?"
                     </p>
                   </div>
@@ -83,9 +83,9 @@ export default function SeccionSearchConsole() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-8"
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-4"
               >
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-2 mb-2">
                   <Search size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
@@ -94,7 +94,7 @@ export default function SeccionSearchConsole() {
                     <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Te muestra qué buscan las personas para encontrarte, en qué posición apareces, si hay errores.
                     </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light mt-3">
+                    <p className="text-[18px] text-[#C9A84C] font-light mt-2">
                       → Pregunta: "¿Cómo me ve Google?"
                     </p>
                   </div>
