@@ -16,7 +16,7 @@ const INDUSTRIES = [
     title: "Estudios Jurídicos y contadores",
     description:
       "Sitios que transmiten autoridad y seriedad. Genera confianza desde el primer contacto.",
-    recommend: "Sitio Institucional → Plan Activo",
+    recommend: "Sitio Institucional\u00A0",
     channel: "LinkedIn + referidos",
   },
   {
@@ -24,7 +24,7 @@ const INDUSTRIES = [
     title: "Inmobiliarias",
     description:
       "Alta rotación de contenido. Catálogos de propiedades con panel de administración propio. El Plan Total es ideal por la necesidad de cambios constantes y posicionamiento local.",
-    recommend: "Sitio con Catálogo → Plan Total",
+    recommend: "Sitio con Catálogo\u00A0",
     channel: "Instagram + Google Maps",
   },
   {
@@ -32,7 +32,7 @@ const INDUSTRIES = [
     title: "Arquitectos y Diseñadores",
     description:
       "Muy visuales. El sitio debe reflejar su estética antes de mostrar servicios. Portfolios cuidados que destacan cada proyecto con elegancia, pensados para diferenciarse.",
-    recommend: "Sitio Institucional → Plan Activo",
+    recommend: "Sitio Institucional\u00A0",
     channel: "Instagram + Behance",
   },
   {
@@ -40,7 +40,7 @@ const INDUSTRIES = [
     title: "Clínicas y Médicos",
     description:
       "Requieren énfasis en credibilidad y profesionalismo. El SEO local es muy valioso para captar pacientes por Google.",
-    recommend: "Sitio Institucional → Plan Total",
+    recommend: "Sitio Institucional\u00A0",
     channel: "Google + referidos médicos",
   },
 ] as const;
@@ -48,7 +48,7 @@ const INDUSTRIES = [
 export default function IndustrySection() {
   return (
     <section
-      className="relative bg-[#F5F2EC] py-28 md:py-[50px] lg:py-44 overflow-hidden"
+      className="relative bg-[#F5F2EC] py-[50px] md:py-[50px] lg:py-44 overflow-hidden"
       aria-labelledby="industry-heading"
     >
       <span
