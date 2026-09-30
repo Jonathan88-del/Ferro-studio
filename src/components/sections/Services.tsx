@@ -86,7 +86,7 @@ export default function Services() {
     >
       <div className="container-ferro">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-20 mb-8 md:mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-16 mb-4 md:mb-6">
           <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
             <div className="flex items-center gap-3 mb-8">
               <span className="w-5 h-px bg-[#C9A84C]/70" />
@@ -135,7 +135,7 @@ function GoogleBusinessCard() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
-      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111] lg:min-h-[540px]"
+      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111] lg:min-h-[460px]"
     >
       <motion.span
         variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
@@ -201,7 +201,7 @@ function GoogleBusinessCard() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-7 p-10 md:p-14 lg:ml-[35%]">
+      <div className="flex flex-col gap-5 p-8 md:p-10 lg:ml-[35%]">
         <div className="flex items-start justify-between gap-6">
           <div>
             <span className="font-serif text-[25px] font-light text-[#C9A84C]/70">Servicios extra</span>
@@ -263,8 +263,8 @@ function ServiceCard({
       whileHover="hover"
       className={cn(
         "group relative bg-[#0E0E0E]",
-        "flex flex-col gap-8",
-        "px-10 py-12 md:px-14 md:py-16",
+        "flex flex-col gap-5",
+        "px-8 py-8 md:px-10 md:py-10",
         "transition-colors duration-400",
         "hover:bg-[#111111]",
         service.soon && "opacity-60"
