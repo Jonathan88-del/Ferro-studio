@@ -26,12 +26,12 @@ const PLANS: Plan[] = [
     id: "presencia",
     name: "Plan Presencia",
     price: "$20.000 ARS/cuatrimestral",
-    tagline: "Hosting administrado, SSL y soporte técnico. Ideal para mantener su presencia digital segura y siempre disponible.",
+    tagline: "Ideal para mantener su presencia digital segura y siempre disponible.",
     items: [
-      "Hosting administrado por Ferro Studio",
+      "Hosting administrado",
       "Certificado SSL renovado automáticamente",
-      "Backups semanales del sitio completo",
-      "Monitoreo de disponibilidad 24/7",
+      "Backups semanales",
+      "Monitoreo 24/7",
       "Soporte por WhatsApp (24–48 hs hábiles)",
     ],
     cta: "Solicitar presupuesto",
@@ -41,7 +41,7 @@ const PLANS: Plan[] = [
     id: "activo",
     name: "Plan Activo",
     price: "$25.000 ARS/cuatrimestral",
-    tagline: "Todo lo del Plan Presencia, más cambios mensuales, analíticas y optimización. Para empresas que necesitan un sitio siempre actualizado.",
+    tagline: "Para empresas que necesitan un sitio siempre actualizado.",
     items: [
       "Todo lo incluido en Plan Presencia",
       "Hasta 3 cambios mensuales al sitio",
@@ -70,7 +70,7 @@ export default function PricingSection() {
   return (
     <div>
       <section
-        className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44 overflow-hidden"
+        className="relative bg-[#0E0E0E] pt-28 pb-[90px] md:pt-36 md:pb-[90px] lg:pt-44 lg:pb-[90px] overflow-hidden"
         aria-labelledby="pricing-heading"
       >
         <div
