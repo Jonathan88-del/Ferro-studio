@@ -8,7 +8,7 @@ export default function SeccionesSecciones() {
   return (
     <>
       {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-40 pb-[160px] md:pt-48 md:pb-40 overflow-hidden">
+      <section className="relative bg-[#0E0E0E] pt-40 pb-[10px] md:pt-48 overflow-hidden">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -39,7 +39,7 @@ export default function SeccionesSecciones() {
       </section>
 
       {/* Section 1: Qué es cada sección */}
-      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
+      <section className="relative bg-[#0E0E0E] pt-[10px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
             initial={false}
@@ -50,10 +50,6 @@ export default function SeccionesSecciones() {
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
               ¿Cuál es el trabajo de cada sección?
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Es como el viaje de un cliente real en tu oficina: entra, te conoce, ve lo que haces, confía en ti y finalmente te contacta.
-            </p>
-
             <div className="space-y-4">
               <motion.div
                 initial={false}
@@ -210,7 +206,7 @@ export default function SeccionesSecciones() {
       </section>
 
       {/* Section 3: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] pt-[50px] pb-[20px]">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={false}
@@ -282,7 +278,7 @@ export default function SeccionesSecciones() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] pt-[60px] pb-24 md:pb-32">
+      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[30px]">
         <div className="container-ferro">
           <motion.div
             initial={false}
