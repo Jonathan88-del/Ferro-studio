@@ -56,10 +56,10 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-5"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <Eye size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
+                <div className="flex items-start gap-2 mb-2">
+                  <Eye size={20} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Sin Analytics (lo común)
@@ -67,7 +67,7 @@ export default function SeccionAnalytics() {
                     <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Tu sitio existe pero es una "caja negra". No sabes quién entra, qué ven, o si alguien se interesa.
                     </p>
-                    <ul className="mt-3 space-y-1">
+                    <ul className="mt-2 space-y-1">
                       <li className="flex gap-2 text-[16px] text-[#FF6B6B]">
                         <span className="flex-shrink-0">•</span>
                         <span>¿Entran 10 personas o 1000? No sabes</span>
@@ -86,10 +86,10 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-5"
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-4"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <BarChart3 size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
+                <div className="flex items-start gap-2 mb-2">
+                  <BarChart3 size={20} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
                       Con Analytics (lo que ofrecemos)
@@ -97,7 +97,7 @@ export default function SeccionAnalytics() {
                     <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Ves exactamente qué sucede. Datos claros sobre visitantes, de dónde vienen y qué hacen.
                     </p>
-                    <ul className="mt-3 space-y-1">
+                    <ul className="mt-2 space-y-1">
                       <li className="flex gap-2 text-[16px] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
                         <span>Número exacto de visitantes</span>
