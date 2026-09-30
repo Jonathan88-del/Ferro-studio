@@ -48,7 +48,7 @@ const INDUSTRIES = [
 export default function IndustrySection() {
   return (
     <section
-      className="relative bg-[#F5F2EC] py-[50px] md:py-[50px] lg:py-44 overflow-hidden"
+      className="relative bg-[#F5F2EC] py-[50px] md:py-[50px] lg:py-16 overflow-hidden"
       aria-labelledby="industry-heading"
     >
       <span
@@ -65,7 +65,7 @@ export default function IndustrySection() {
       />
       <div className="container-ferro relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-10 lg:gap-24 mb-20 md:mb-28">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-10 lg:gap-24 mb-12 md:mb-16">
           <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
             <div className="flex items-center gap-3 mb-8">
               <span className="w-5 h-px bg-[#C9A84C]" />
@@ -101,7 +101,7 @@ export default function IndustrySection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-40px" }}
-          className="mt-20 md:mt-24 flex flex-col sm:flex-row sm:items-center justify-between gap-8"
+          className="mt-10 md:mt-12 flex flex-col sm:flex-row sm:items-center justify-between gap-6"
         >
           <p className="text-[1rem] text-[#0E0E0E]/45 font-sans font-light max-w-lg leading-relaxed">
             ¿Su rubro no está en la lista? Trabajamos con cualquier sector donde la imagen y la confianza sean clave.
@@ -144,8 +144,8 @@ function IndustryCard({
       whileHover="hover"
       className={cn(
         "group relative bg-[#F5F2EC]",
-        "flex flex-col gap-7",
-        "px-10 py-12 md:px-14 md:py-14",
+        "flex flex-col gap-5",
+        "px-10 py-8 md:px-14 md:py-10",
         "transition-colors duration-500",
         "hover:bg-white"
       )}
@@ -173,7 +173,7 @@ function IndustryCard({
         />
       </div>
 
-      <div className="flex flex-col gap-4 flex-1">
+      <div className="flex flex-col gap-3 flex-1">
         <h3 className="font-serif text-[26px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
           {industry.title}
         </h3>
@@ -182,7 +182,7 @@ function IndustryCard({
         </p>
       </div>
 
-      <div className="pt-5 border-t border-[#0E0E0E]/[0.07] mt-auto">
+      <div className="pt-4 border-t border-[#0E0E0E]/[0.07] mt-auto">
         <p className="text-[12px] tracking-[0.16em] uppercase font-sans text-[#C9A84C]/90 mb-2">Solución recomendada</p>
         <p className="text-[15px] font-sans font-light text-[#0E0E0E]/75">{industry.recommend}</p>
       </div>
