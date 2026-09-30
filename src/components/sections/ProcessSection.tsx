@@ -56,7 +56,7 @@ const STEPS = [
 export default function ProcessSection() {
   return (
     <section
-      className="relative bg-[#0E0E0E] pt-8 md:pt-10 lg:pt-12 pb-[20px] overflow-hidden"
+      className="relative bg-[#0E0E0E] pt-16 md:pt-20 lg:pt-24 pb-[20px] overflow-hidden"
       aria-labelledby="process-heading"
     >
       <div
