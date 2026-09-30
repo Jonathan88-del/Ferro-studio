@@ -70,7 +70,7 @@ export default function PricingSection() {
   return (
     <div>
       <section
-        className="relative bg-[#0E0E0E] pt-28 pb-[90px] md:pt-36 md:pb-[90px] lg:pt-44 lg:pb-[90px] overflow-hidden"
+        className="relative bg-[#0E0E0E] pt-32 pb-28 md:pt-40 md:pb-32 lg:pt-48 lg:pb-36 overflow-hidden"
         aria-labelledby="pricing-heading"
       >
         <div
@@ -80,22 +80,22 @@ export default function PricingSection() {
         />
 
         <div className="container-ferro relative z-10">
-          <div className="max-w-2xl mb-20 md:mb-28">
+          <div className="max-w-3xl mb-24 md:mb-32">
             <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
-              <div className="flex items-center gap-3 mb-8">
-                <span className="w-5 h-px bg-[#C9A84C]/70" />
-                <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">Mantenimiento Cuatrimestral</span>
+              <div className="flex items-center gap-4 mb-10">
+                <span className="w-7 h-px bg-[#C9A84C]/70" />
+                <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 text-[22px] md:text-[24px]">Mantenimiento Cuatrimestral</span>
               </div>
-              <h2 id="pricing-heading" className="font-serif font-light text-[clamp(2.2rem,5.5vw,3.125rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-7">
+              <h2 id="pricing-heading" className="font-serif font-light text-[clamp(2.7rem,6.5vw,4rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] mb-9">
                 Su socio digital permanente.
               </h2>
             </motion.div>
-            <motion.p variants={fadeUp(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
+            <motion.p variants={fadeUp(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} className="max-w-3xl text-[#F5F2EC]/42 font-sans font-light text-[22px] md:text-[24px] leading-[1.8]">
               Garantiza que su sitio funcione siempre, esté actualizado y tenga soporte técnico disponible. Requiere haber contratado un proyecto web previamente.
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#F5F2EC]/[0.06] md:items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-4 md:items-stretch">
             {PLANS.map((plan, i) => (
               <PlanCard key={plan.id} plan={plan} index={i} />
             ))}
@@ -106,7 +106,7 @@ export default function PricingSection() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-40px" }}
-            className="mt-12 text-center text-[#F5F2EC]/22 font-sans font-light tracking-wide text-[20px]"
+            className="mt-16 text-center text-[#F5F2EC]/22 font-sans font-light tracking-wide text-[20px] md:text-[22px]"
           >
             Pago cuatrimestral por adelantado · Transferencia bancaria o Mercado Pago · Sin contratos de largo plazo
           </motion.p>
@@ -128,7 +128,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       whileHover="hover"
       className={cn(
         "group relative flex flex-col",
-        "px-12 py-14 md:px-14 md:py-16",
+        "px-9 py-16 md:px-10 md:py-20",
         "transition-colors duration-500",
         plan.featured ? "bg-[#F5F2EC]" : "bg-[#0E0E0E] hover:bg-[#0f0f0f]"
       )}
@@ -147,38 +147,38 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       )}
 
       {plan.featured && (
-        <div className="flex items-center gap-2 mb-8">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C]" aria-hidden="true" />
-          <span className="text-[0.875rem] tracking-[0.24em] uppercase font-sans text-[#C9A84C]">Más contratado</span>
+        <div className="flex items-center gap-3 mb-10">
+          <span className="w-2 h-2 rounded-full bg-[#C9A84C]" aria-hidden="true" />
+          <span className="text-[1rem] tracking-[0.24em] uppercase font-sans text-[#C9A84C]">Más contratado</span>
         </div>
       )}
 
-      <div className={cn("mb-4", !plan.featured && "mt-[34px]")}>
-        <h3 className={cn("font-serif text-[1.75rem] font-light leading-tight tracking-[-0.01em]", plan.featured ? "text-[#0E0E0E]" : "text-[#F5F2EC]")}>
+      <div className={cn("mb-5", !plan.featured && "mt-[42px]")}>
+        <h3 className={cn("font-serif text-[2rem] md:text-[2.125rem] font-light leading-tight tracking-[-0.01em]", plan.featured ? "text-[#0E0E0E]" : "text-[#F5F2EC]")}>
           {plan.name}
         </h3>
       </div>
 
-      <p className={cn("font-serif text-[1.25rem] font-light mb-6", plan.featured ? "text-[#0E0E0E]/70" : "text-[#C9A84C]/70")}>
+      <p className={cn("font-serif text-[1.5rem] font-light mb-8", plan.featured ? "text-[#0E0E0E]/70" : "text-[#C9A84C]/70")}>
         {plan.price}
       </p>
 
-      <p className={cn("text-[1.125rem] font-sans font-light leading-[1.8] mb-9", plan.featured ? "text-[#0E0E0E]/50" : "text-[#F5F2EC]/38")}>
+      <p className={cn("text-[1.25rem] font-sans font-light leading-[1.8] mb-10", plan.featured ? "text-[#0E0E0E]/50" : "text-[#F5F2EC]/38")}>
         {plan.tagline}
       </p>
 
-      <div className={cn("h-px mb-9", plan.featured ? "bg-[#0E0E0E]/10" : "bg-[#F5F2EC]/[0.08]")} aria-hidden="true" />
+      <div className={cn("h-px mb-10", plan.featured ? "bg-[#0E0E0E]/10" : "bg-[#F5F2EC]/[0.08]")} aria-hidden="true" />
 
-      <ul className="flex flex-col gap-5 flex-1 mb-12">
+      <ul className="flex flex-col gap-6 flex-1 mb-14">
         {plan.items.map((item) => (
-          <li key={item} className="flex items-start gap-3.5">
+          <li key={item} className="flex items-start gap-4">
             <Check
-              size={13}
+              size={16}
               strokeWidth={2}
-              className={cn("shrink-0 mt-[4px]", plan.featured ? "text-[#C9A84C]" : "text-[#C9A84C]/60")}
+              className={cn("shrink-0 mt-[5px]", plan.featured ? "text-[#C9A84C]" : "text-[#C9A84C]/60")}
               aria-hidden="true"
             />
-            <span className={cn("text-[1rem] font-sans font-light leading-[1.65]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
+            <span className={cn("text-[1.125rem] md:text-[1.25rem] font-sans font-light leading-[1.7]", plan.featured ? "text-[#0E0E0E]/65" : "text-[#F5F2EC]/45")}>
               {item}
             </span>
           </li>
@@ -192,8 +192,8 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
           transition={{ duration: 0.18, ease: EASE }}
           className={cn(
             "flex items-center justify-center gap-2.5 w-full",
-            "text-[0.72rem] tracking-[0.2em] uppercase font-sans",
-            "py-[16px] px-8",
+            "text-[0.85rem] md:text-[0.9rem] tracking-[0.2em] uppercase font-sans",
+            "py-5 px-8 md:px-10",
             "transition-all duration-300",
             plan.featured
               ? "bg-[#0E0E0E] text-[#F5F2EC] hover:bg-[#C9A84C] hover:text-[#0E0E0E] hover:shadow-[0_8px_28px_rgba(201,168,76,0.18)]"
@@ -201,7 +201,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
           )}
         >
           {plan.cta}
-          <ArrowRight size={13} strokeWidth={1.8} />
+          <ArrowRight size={16} strokeWidth={1.8} />
         </motion.span>
       </Link>
     </motion.article>
