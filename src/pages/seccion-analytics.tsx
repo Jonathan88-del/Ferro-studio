@@ -56,9 +56,9 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3"
               >
-                <div className="flex items-start gap-2 mb-2">
+                <div className="flex items-start gap-1 mb-1">
                   <Eye size={20} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
@@ -86,9 +86,9 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-4"
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-3"
               >
-                <div className="flex items-start gap-2 mb-2">
+                <div className="flex items-start gap-1 mb-1">
                   <BarChart3 size={20} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
@@ -197,7 +197,7 @@ export default function SeccionAnalytics() {
       </section>
 
       {/* Section 3: Qué haces con esa info */}
-      <section className="relative bg-[#0E0E0E] pt-[10px] pb-[10px]">
+      <section className="relative bg-[#0E0E0E] pt-[5px] pb-[5px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -205,19 +205,19 @@ export default function SeccionAnalytics() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-2">
               Qué cambias con esa información
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3"
               >
-                <div className="flex items-start gap-2 mb-2">
+                <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">1</span>
                   </div>
@@ -237,9 +237,9 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3"
               >
-                <div className="flex items-start gap-2 mb-2">
+                <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">2</span>
                   </div>
@@ -259,9 +259,9 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3"
               >
-                <div className="flex items-start gap-2 mb-2">
+                <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">3</span>
                   </div>
@@ -281,9 +281,9 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3"
               >
-                <div className="flex items-start gap-2 mb-2">
+                <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">4</span>
                   </div>
