@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation, Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
@@ -20,6 +20,20 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
   const [location] = useLocation();
   const [expandedOnce, setExpandedOnce] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (event.target instanceof Node && !containerRef.current?.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    return () => document.removeEventListener("pointerdown", handlePointerDown);
+  }, [isOpen]);
 
   const handleArrowClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -43,7 +57,7 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
 
   if (isMobile) {
     return (
-      <div className="flex flex-col gap-2">
+      <div ref={containerRef} className="flex flex-col gap-2">
         <div className="flex items-center gap-2">
           <Link
             href="/planes"
@@ -106,7 +120,7 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
 
   // Desktop version
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       <button
         className={cn(
           "ferro-focus relative inline-flex flex-col items-center px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group",
