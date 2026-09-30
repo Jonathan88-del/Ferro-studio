@@ -56,8 +56,7 @@ const STEPS = [
 export default function ProcessSection() {
   return (
     <section
-      className="relative bg-[#0E0E0E] py-28 md:py-36 lg:py-44 overflow-hidden"
-      style={{ paddingBottom: 40 }}
+      className="relative bg-[#0E0E0E] pt-16 md:pt-20 lg:pt-24 pb-[40px] overflow-hidden"
       aria-labelledby="process-heading"
     >
       <div
@@ -70,7 +69,7 @@ export default function ProcessSection() {
       />
       <div className="container-ferro relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 mb-24 md:mb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 mb-12 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +97,7 @@ export default function ProcessSection() {
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
             className="lg:self-end"
           >
-            <div className="mt-8 flex flex-col gap-3">
+            <div className="mt-4 flex flex-col gap-3">
               {[
                 "Sin anticipo — cobro 100% post-entrega",
                 "El cliente aprueba en staging antes de pagar",
@@ -163,7 +162,7 @@ function ProcessStep({
       transition={{ duration: 0.7, ease: EASE, delay: 0.05 + index * 0.07 }}
       className={cn(
         "group relative grid grid-cols-[62px_1fr] md:grid-cols-[88px_1fr] gap-10 md:gap-14",
-        !isLast && "pb-20 md:pb-24"
+        !isLast && "pb-12 md:pb-16"
       )}
     >
       <div className="flex flex-col items-center pt-0.5">
@@ -208,7 +207,7 @@ function ProcessStep({
         )}
 
         {!isLast && (
-          <div className="mt-14 md:mt-18 h-px bg-[#F5F2EC]/[0.05] w-full" aria-hidden="true" />
+          <div className="mt-8 md:mt-10 h-px bg-[#F5F2EC]/[0.05] w-full" aria-hidden="true" />
         )}
       </div>
     </motion.div>
