@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, MessageCircle, Clock, HeartHandshake, Zap, CheckCircle, AlertCircle, Phone } from "lucide-react";
+import { ArrowLeft, MessageCircle, Clock, Zap, CheckCircle, AlertCircle, Phone } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -327,110 +327,8 @@ export default function PlanesWhatsapp() {
         </div>
       </section>
 
-      {/* Section 5: Lo que ganas */}
-      <section className="relative bg-[#0E0E0E] pt-[30px] pb-5">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-12">
-              Lo que ganas con soporte cercano
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <HeartHandshake size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Tranquilidad
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Sabés que tenés a alguien a tu lado si necesitás ayuda.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
-                  → No estás solo
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Zap size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Problemas resueltos rápido
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Menos tiempo perdido, más tiempo haciendo crecer tu negocio.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
-                  → Eficiencia garantizada
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <MessageCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Aprendizaje constante
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  No solo resolvemos, también te enseñamos cómo hacerlo mejor.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
-                  → Crecimiento junto a nosotros
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Relación de confianza
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed mb-4">
-                  Conocemos tu sitio, tu negocio, tus necesidades. Somos tu aliados.
-                </p>
-                <div className="bg-[#0E0E0E] rounded px-4 py-2 text-[1.125rem] text-[#C9A84C]">
-                  → Soporte que entiende tu realidad
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] -mt-1 pt-[70px] pb-24 md:pb-32">
+      <section className="relative bg-[#0E0E0E] -mt-1 pt-[40px] pb-[70px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
