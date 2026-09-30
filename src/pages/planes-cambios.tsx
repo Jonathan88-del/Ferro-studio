@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Wrench, Calendar, CheckCircle, AlertCircle, Zap, Edit3, Clock } from "lucide-react";
+import { ArrowLeft, Wrench, Calendar, CheckCircle, AlertCircle, Zap, Edit3 } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -32,10 +32,10 @@ export default function PlanesCambios() {
             </Link>
 
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
-              Hasta 3 cambios mensuales al sitio
+              Cambios mensuales al sitio
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Tu sitio siempre actualizado sin complicaciones. Tres cambios al mes para que tu información esté siempre fresca.
+              Tu sitio siempre actualizado sin complicaciones.&nbsp;
             </p>
           </motion.div>
         </div>
@@ -107,7 +107,7 @@ export default function PlanesCambios() {
                   <CheckCircle size={24} className="text-[#51CF66] flex-shrink-0" strokeWidth={1.5} />
                   <div>
                     <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC] mb-2">
-                      Con 3 cambios mensuales
+                      Con cambios mensuales
                     </h3>
                     <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Tu sitio siempre está fresco y actualizado.
@@ -119,7 +119,7 @@ export default function PlanesCambios() {
                       </li>
                       <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
-                        <span>Sin esperar, sin hacer vos mismo</span>
+                        <span>Sin esperar</span>
                       </li>
                       <li className="flex gap-2 text-[1.125rem] text-[#51CF66]">
                         <span className="flex-shrink-0">✓</span>
@@ -192,7 +192,7 @@ export default function PlanesCambios() {
       </section>
 
       {/* Section 3: Cómo funciona */}
-      <section className="relative bg-[#0E0E0E] pt-[30px] pb-[10px]">
+      <section className="relative bg-[#0E0E0E] pt-[30px] pb-[2px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -203,10 +203,6 @@ export default function PlanesCambios() {
             <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
               Cómo funciona el servicio
             </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Simple: tenés 3 cambios cada mes para usar como necesites:
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
               {[
                 { step: "1", emoji: "📋", title: "Solicitas", desc: "Un cambio simple por mes, o 3 seguidos" },
@@ -236,83 +232,6 @@ export default function PlanesCambios() {
         </div>
       </section>
 
-      {/* Section 4: Ventajas de tener cambios incluidos */}
-      <section className="relative bg-[#0E0E0E] pt-5 pb-[10px]">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-12">
-              Lo que ganas con cambios mensuales incluidos
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Clock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Sin esperar
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  No necesitás aprender a hacerlo. Nos dices qué cambiar, nosotros lo hacemos.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <CheckCircle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.375rem] font-light text-[#F5F2EC]">
-                    Profesional siempre
-                  </h3>
-                </div>
-                <p className="text-[1.25rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Tu sitio se ve actualizado y profesional todos los meses.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] pt-[110px] pb-24 md:pb-32">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-12 md:p-16 text-center"
-          >
-            <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
-              3 cambios cada mes para mantener tu sitio actualizado
-            </h2>
-            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
-              Sin complicaciones, sin esperar, sin hacer vos mismo. Tu sitio siempre fresco y profesional.
-            </p>
-            <Link href="/planes" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
-              Ver todos nuestros planes
-              <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 }
