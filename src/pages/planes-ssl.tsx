@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Shield, Lock, CheckCircle, AlertCircle, RefreshCw, Server, Key } from "lucide-react";
+import { ArrowLeft, Shield, Lock, CheckCircle, AlertCircle, Server } from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -35,7 +35,7 @@ export default function PlanesSSL() {
               Gestión y renovación automática del SSL
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
-              Nos encargamos de supervisar que la seguridad SSL siga funcionando correctamente, mantenerla activa y resolver cualquier inconveniente relacionado con la conexión segura.
+              Supervisamos que la seguridad SSL siga funcionando correctamente.
             </p>
           </motion.div>
         </div>
@@ -188,101 +188,8 @@ export default function PlanesSSL() {
         </div>
       </section>
 
-      {/* Section 3: Qué hacemos por ti */}
-      <section className="relative bg-[#0E0E0E] pt-12 pb-[6px] md:pt-16">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[2.25rem] font-light text-[#F5F2EC] mb-4">
-              Lo que hacemos por ti con el SSL
-            </h2>
-            <p className="text-[1.125rem] text-[#F5F2EC]/60 font-light max-w-3xl mb-6">
-              4 cosas fundamentales que vigilamos constantemente:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Lock size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
-                    Monitoreo continuo
-                  </h3>
-                </div>
-                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Vigilamos que el certificado esté vigente y funcionando correctamente todos los días.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <RefreshCw size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
-                    Renovación automática
-                  </h3>
-                </div>
-                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Antes de que expire, nosotros renovamos el SSL automáticamente sin que tengas que intervenir.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Key size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
-                    Resolución de problemas
-                  </h3>
-                </div>
-                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Si surge algún problema con el SSL, lo detectamos y solucionamos antes de que afecte a tus clientes.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <Shield size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  <h3 className="font-serif text-[1.25rem] font-light text-[#F5F2EC]">
-                    Encriptación vigente
-                  </h3>
-                </div>
-                <p className="text-[1.125rem] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Garantizamos que la encriptación siempre está activa para que los datos de tus clientes sean seguros.
-                </p>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 4: Beneficios */}
-      <section className="relative bg-[#0E0E0E] py-12 md:py-16">
+      {/* Section 3: Beneficios */}
+      <section className="relative bg-[#0E0E0E] pt-10 pb-[60px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -383,29 +290,6 @@ export default function PlanesSSL() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] py-12 md:py-16">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-8 md:p-10 text-center"
-          >
-            <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-4 max-w-2xl mx-auto">
-              SSL que se renueva sin que hagas nada
-            </h2>
-            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-8">
-              Seguridad que funciona sola. Nosotros vigilamos, renovamos y mantenemos tu SSL activo para que tus clientes estén siempre protegidos.
-            </p>
-            <Link href="/planes" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
-              Ver todos nuestros planes
-              <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 }
