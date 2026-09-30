@@ -50,13 +50,6 @@ export default function SeccionAnalytics() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              ¿Qué es Google Analytics en términos simples?
-            </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Una herramienta de Google que te muestra todo lo que ocurre en tu sitio web en tiempo real.
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
