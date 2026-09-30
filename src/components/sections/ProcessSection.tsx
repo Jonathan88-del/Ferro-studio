@@ -56,7 +56,7 @@ const STEPS = [
 export default function ProcessSection() {
   return (
     <section
-      className="relative bg-[#0E0E0E] pt-16 md:pt-20 lg:pt-24 pb-[40px] overflow-hidden"
+      className="relative bg-[#0E0E0E] pt-8 md:pt-10 lg:pt-12 pb-[20px] overflow-hidden"
       aria-labelledby="process-heading"
     >
       <div
@@ -69,7 +69,7 @@ export default function ProcessSection() {
       />
       <div className="container-ferro relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-14 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-8 lg:gap-12 mb-6 md:mb-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -97,7 +97,7 @@ export default function ProcessSection() {
             transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
             className="lg:self-end"
           >
-            <div className="mt-4 flex flex-col gap-3">
+            <div className="mt-2 flex flex-col gap-3">
               {[
                 "Sin anticipo — cobro 100% post-entrega",
                 "El cliente aprueba en staging antes de pagar",
@@ -162,7 +162,7 @@ function ProcessStep({
       transition={{ duration: 0.7, ease: EASE, delay: 0.05 + index * 0.07 }}
       className={cn(
         "group relative grid grid-cols-[62px_1fr] md:grid-cols-[88px_1fr] gap-10 md:gap-14",
-        !isLast && "pb-12 md:pb-16"
+        !isLast && "pb-4 md:pb-6"
       )}
     >
       <div className="flex flex-col items-center pt-0.5">
@@ -184,7 +184,7 @@ function ProcessStep({
       </div>
 
       <div className="pb-1">
-        <div className="flex items-baseline gap-6 md:gap-7 mb-5">
+        <div className="flex items-baseline gap-6 md:gap-7 mb-3">
           <span
             className="font-serif text-[3.8rem] md:text-[5rem] font-light leading-none text-[#F5F2EC]/[0.07] select-none shrink-0 transition-colors duration-400 group-hover:text-[#C9A84C]/20"
             aria-hidden="true"
@@ -196,7 +196,7 @@ function ProcessStep({
           </h3>
         </div>
 
-        <p className="text-[1.1rem] text-[#F5F2EC]/40 font-sans font-light leading-[1.85] max-w-[620px] mb-5" style={{ fontSize: "18px" }}>
+        <p className="text-[1.1rem] text-[#F5F2EC]/40 font-sans font-light leading-[1.7] max-w-[620px] mb-2" style={{ fontSize: "18px" }}>
           {step.description}
         </p>
 
@@ -207,7 +207,7 @@ function ProcessStep({
         )}
 
         {!isLast && (
-          <div className="mt-8 md:mt-10 h-px bg-[#F5F2EC]/[0.05] w-full" aria-hidden="true" />
+          <div className="mt-3 md:mt-4 h-px bg-[#F5F2EC]/[0.05] w-full" aria-hidden="true" />
         )}
       </div>
     </motion.div>
