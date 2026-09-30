@@ -219,7 +219,7 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[32px] leading-none text-[#C9A84C] font-light">1</span>
+                    <span className="flex h-full w-full items-center justify-center text-center font-serif text-[32px] leading-none text-[#C9A84C] font-light">1</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -241,7 +241,7 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[32px] leading-none text-[#C9A84C] font-light">2</span>
+                    <span className="flex h-full w-full items-center justify-center text-center font-serif text-[32px] leading-none text-[#C9A84C] font-light">2</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -263,7 +263,7 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[32px] leading-none text-[#C9A84C] font-light">3</span>
+                    <span className="flex h-full w-full items-center justify-center text-center font-serif text-[32px] leading-none text-[#C9A84C] font-light">3</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -285,7 +285,7 @@ export default function SeccionAnalytics() {
               >
                 <div className="flex items-start gap-1 mb-1">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[32px] leading-none text-[#C9A84C] font-light">4</span>
+                    <span className="flex h-full w-full items-center justify-center text-center font-serif text-[32px] leading-none text-[#C9A84C] font-light">4</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
