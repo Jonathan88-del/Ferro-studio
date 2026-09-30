@@ -215,11 +215,11 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-5"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
               >
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-2 mb-2">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '10px'}}>1</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">1</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
@@ -237,10 +237,10 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-5"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0" style={{paddingBottom: '10px'}}>
+                <div className="flex items-start gap-2 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">2</span>
                   </div>
                   <div className="flex-1">
@@ -259,10 +259,10 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-5"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
               >
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0" style={{paddingBottom: '25px'}}>
+                <div className="flex items-start gap-2 mb-2">
+                  <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
                     <span className="font-serif text-[50px] text-[#C9A84C] font-light">3</span>
                   </div>
                   <div className="flex-1">
@@ -281,11 +281,11 @@ export default function SeccionAnalytics() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-5"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4"
               >
-                <div className="flex items-start gap-3 mb-3">
+                <div className="flex items-start gap-2 mb-2">
                   <div className="w-10 h-10 rounded-full bg-[#C9A84C]/20 flex items-center justify-center flex-shrink-0">
-                    <span className="font-serif text-[50px] text-[#C9A84C] font-light" style={{paddingBottom: '20px'}}>4</span>
+                    <span className="font-serif text-[50px] text-[#C9A84C] font-light">4</span>
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">
