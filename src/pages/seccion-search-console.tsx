@@ -71,9 +71,6 @@ export default function SeccionSearchConsole() {
                     <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Te muestra qué hace la gente en tu sitio: dónde hace clic, cuánto tiempo pasa, si compra.
                     </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light mt-2">
-                      → Pregunta: "¿Qué hizo el visitante?"
-                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -94,9 +91,6 @@ export default function SeccionSearchConsole() {
                     <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
                       Te muestra qué buscan las personas para encontrarte, en qué posición apareces, si hay errores.
                     </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light mt-2">
-                      → Pregunta: "¿Cómo me ve Google?"
-                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -106,7 +100,7 @@ export default function SeccionSearchConsole() {
       </section>
 
       {/* Section 2: Los 3 superpoderes */}
-      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[10px]">
+      <section className="relative bg-[#0E0E0E] pt-[15px] pb-[5px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -114,20 +108,20 @@ export default function SeccionSearchConsole() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
+            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-3">
               Los 3 superpoderes de Search Console
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4 md:p-5"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Search size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                <div className="flex items-start gap-2">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                    <Search size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
@@ -148,11 +142,11 @@ export default function SeccionSearchConsole() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
+                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-4 md:p-5"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <TrendingUp size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                <div className="flex items-start gap-2">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                    <TrendingUp size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
@@ -173,11 +167,11 @@ export default function SeccionSearchConsole() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-6 md:p-8"
+                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-4 md:p-5"
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <AlertTriangle size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                <div className="flex items-start gap-2">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
+                    <AlertTriangle size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
                     <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
