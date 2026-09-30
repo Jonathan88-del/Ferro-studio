@@ -42,7 +42,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* Section 1: ¿Qué es SEO en términos simples? */}
-      <section className="relative bg-[#0E0E0E] pt-[40px] pb-[20px]">
+      <section className="relative bg-[#0E0E0E] pt-[10px] pb-[20px]">
         <div className="container-ferro">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -212,25 +212,16 @@ export default function SeccionSEO() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              11 cosas que hacemos en SEO básico
+              6 cosas que hacemos en SEO básico
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Todas están incluidas desde el día 1. No es algo que se agrega después:
-            </p>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { emoji: "📝", title: "Títulos claros", desc: "Cada página tiene un título que Google entiende" },
                 { emoji: "👀", title: "Descripciones en Google", desc: "Resumen que ven los clientes antes de entrar" },
                 { emoji: "🔗", title: "URLs limpias", desc: "Direcciones cortas y fáciles de recordar" },
-                { emoji: "📊", title: "Contenido organizado", desc: "Estructura que Google lee perfectamente" },
-                { emoji: "🗺️", title: "Mapa del sitio", desc: "Google ve todas tus páginas al instante" },
                 { emoji: "📱", title: "Funciona en móvil", desc: "Perfecto en teléfono (donde vive el 80% de clientes)" },
                 { emoji: "⚡", title: "Ultra rápido", desc: "Carga en 1 segundo, no pierdes clientes impacientes" },
-                { emoji: "🔒", title: "Seguridad SSL", desc: "Candadito que dice 'este sitio es seguro'" },
-                { emoji: "🖼️", title: "Imágenes optimizadas", desc: "Google entiende tus fotos y aparecen en búsquedas" },
                 { emoji: "🎯", title: "Palabras clave", desc: "Usamos las palabras que buscan tus clientes" },
-                { emoji: "📈", title: "Conectado a Google", desc: "Google Search Console para ver cómo te ve Google" }
               ].map((item, index) => (
                 <motion.div
                   key={index}
