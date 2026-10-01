@@ -90,7 +90,7 @@ export default function Demos() {
                 loading="lazy"
                 referrerPolicy="strict-origin-when-cross-origin"
                 sandbox="allow-scripts allow-forms allow-same-origin"
-                className="h-[420px] w-full bg-[#F5F2EC] md:h-[560px]"
+                className="aspect-square w-full bg-[#F5F2EC]"
               />
             </motion.article>
           ))}
