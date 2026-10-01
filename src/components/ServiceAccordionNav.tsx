@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SERVICES_FEATURES = [
-  { label: "Hasta 6 secciones", emoji: "🧩", href: "/seccion-secciones" },
+  { label: "Hasta 6 secciones", emoji: "📑", href: "/seccion-secciones" },
   { label: "SEO básico", emoji: "🔎", href: "/seccion-seo" },
   { label: "Hasta 10 páginas independientes", emoji: "📄", href: "/seccion-paginas" },
   { label: "Google Analytics", emoji: "📊", href: "/seccion-analytics" },
