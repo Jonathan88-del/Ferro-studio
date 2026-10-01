@@ -15,7 +15,7 @@ const VALUES = [
     icon: Shield,
     title: "Calidad sin concesiones",
     description:
-      "Cada proyecto se construye como si fuera el más importante. No existe el \"suficientemente bueno\" en Ferro Studio.",
+      "Cada proyecto es el mas inportante.",
   },
   {
     number: "02",
@@ -36,14 +36,14 @@ const VALUES = [
     icon: Zap,
     title: "Simplicidad funcional",
     description:
-      "Soluciones simples que funcionan mejor que soluciones complejas que nadie entiende. La tecnología al servicio del negocio.",
+      "Soluciones simples que funcionan mejor que soluciones complejas que nadie entiende.",
   },
   {
     number: "05",
     icon: BarChart3,
     title: "Resultados medibles",
     description:
-      "No vendemos diseño bonito. Vendemos más clientes, más confianza y más negocio. Cada decisión de diseño tiene un objetivo.",
+      "No vendemos diseño bonito. Vendemos más clientes, más confianza y más negocio.",
   },
   {
     number: "06",
@@ -86,7 +86,7 @@ export default function WhyFerroSection() {
 
           <motion.div variants={fadeUp(0.12)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }} className="lg:self-end">
             <p className="text-[#0E0E0E]/48 font-sans font-light text-[24px]">
-              Ferro Studio nació con una convicción simple: un estudio jurídico, una clínica, una inmobiliaria o un contador tienen el mismo derecho a verse profesionales, transmitir confianza y conseguir clientes a través de internet.
+              Un estudio jurídico, una clínica, una inmobiliaria o un contador tienen el mismo derecho a verse profesionales, transmitir confianza y conseguir clientes a través de internet.
             </p>
             <p className="text-[#0E0E0E]/35 font-sans font-light mt-4 italic text-[18px]">
               "Nos ocupamos completamente de su presencia online para que usted pueda enfocarse en hacer crecer su negocio."

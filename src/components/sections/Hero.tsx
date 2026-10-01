@@ -30,8 +30,7 @@ const fadeIn = (delay = 0) => ({
 /* ─── Word-split title ─── */
 const TITLE_LINES = [
   { text: "Presencia digital" },
-  { text: "que genera" },
-  { text: "confianza." },
+  { text: "que genera confianza." },
 ];
 
 export default function Hero() {
@@ -122,7 +121,10 @@ export default function Hero() {
               className="overflow-hidden"
             >
               <h1
-                className="font-serif font-light leading-[0.96] text-[70px] tracking-[-0.025em] text-[#F5F2EC]"
+                className={cn(
+                  "font-serif font-light leading-[0.96] tracking-[-0.025em] text-[#F5F2EC]",
+                  i === 1 ? "whitespace-nowrap text-[clamp(1.75rem,5vw,70px)]" : "text-[70px]"
+                )}
               >
                 {line.text}
               </h1>
@@ -146,8 +148,7 @@ export default function Hero() {
           animate="show"
           className="text-[15px] text-[#F5F2EC]/42 font-sans font-light leading-[1.8] max-w-[400px] mb-10 md:mb-12"
         >
-          No vendemos páginas web. Vendemos tranquilidad digital —
-          precisión en cada píxel, calma en cada interacción.
+          Vendemos páginas web profesionales, seguras y confiables para tus clients
         </motion.p>
 
         {/* CTAs */}
