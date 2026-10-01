@@ -327,33 +327,6 @@ function ServiceCard({
         ))}
       </ul>
 
-      {service.title === "Landing Page" && (
-        <div className="overflow-hidden border border-[#F5F2EC]/10 bg-[#111111]">
-          <div className="flex items-center justify-between border-b border-[#F5F2EC]/10 px-3 py-2">
-            <div className="flex items-center gap-1.5" aria-hidden="true">
-              <span className="h-2 w-2 rounded-full bg-[#C9A84C]/70" />
-              <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/25" />
-              <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/25" />
-            </div>
-            <a
-              href="https://plantilla-para-contadores-landing-p.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-sans text-[12px] text-[#C9A84C] transition-colors hover:text-[#F5F2EC]"
-            >
-              Ver muestra ↗
-            </a>
-          </div>
-          <iframe
-            src="https://plantilla-para-contadores-landing-p.vercel.app/"
-            title="Vista previa de la landing page para contadores"
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-            sandbox="allow-scripts allow-forms allow-same-origin"
-            className="h-[180px] w-full bg-[#F5F2EC]"
-          />
-        </div>
-      )}
     </motion.article>
   );
 }

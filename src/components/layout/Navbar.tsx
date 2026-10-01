@@ -65,6 +65,9 @@ export default function Navbar() {
               Proceso
             </DesktopLink>
             <PlansAccordionNav isActive={location === "/planes"} />
+            <DesktopLink href="https://plantilla-para-contadores-landing-p.vercel.app/" active={false} external>
+              Demos
+            </DesktopLink>
             <DesktopLink href="/contacto" active={location === "/contacto"}>
               Contacto
             </DesktopLink>
@@ -148,6 +151,11 @@ export default function Navbar() {
                   <PlansAccordionNav isActive={location === "/planes"} isMobile />
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 4 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
+                  <a href="https://plantilla-para-contadores-landing-p.vercel.app/" target="_blank" rel="noopener noreferrer" className="block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200 text-[#F5F2EC]/50 hover:text-[#F5F2EC]">
+                    Demos
+                  </a>
+                </motion.div>
+                <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 5 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
                   <Link href="/contacto" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/contacto" ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
                     Contacto
                   </Link>
@@ -170,13 +178,20 @@ export default function Navbar() {
   );
 }
 
-function DesktopLink({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
-  return (
-    <Link href={href} className={cn("ferro-focus relative inline-flex flex-col items-center no-underline px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group", active ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#C9A84C]")}>
+function DesktopLink({ href, active, children, external = false }: { href: string; active: boolean; children: React.ReactNode; external?: boolean }) {
+  const className = cn("ferro-focus relative inline-flex flex-col items-center no-underline px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group", active ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#C9A84C]");
+  const content = (
+    <>
       {children}
       <motion.span initial={false} animate={{ scaleX: active ? 1 : 0 }} transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }} className="absolute bottom-0 left-3.5 right-3.5 h-px bg-[#C9A84C] origin-left" aria-hidden="true" />
       {!active && <span className="absolute bottom-0 left-3.5 right-3.5 h-px bg-[#F5F2EC]/20 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]" aria-hidden="true" />}
-    </Link>
+    </>
+  );
+
+  return external ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{content}</a>
+  ) : (
+    <Link href={href} className={className}>{content}</Link>
   );
 }
 
