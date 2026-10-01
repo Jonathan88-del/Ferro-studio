@@ -132,42 +132,67 @@ export default function Services() {
 }
 
 function DemoSection() {
+  const demos = [
+    {
+      title: "Landing Page",
+      url: "https://plantilla-para-contadores-landing-p.vercel.app/",
+      previewTitle: "Demo de landing page para contadores",
+    },
+    {
+      title: "Sitio Institucional",
+      url: "https://pagina-web-muestra.vercel.app/",
+      previewTitle: "Demo de sitio institucional",
+    },
+  ];
+
   return (
-    <section className="relative border-t border-[#F5F2EC]/[0.08] bg-[#0E0E0E] py-14 md:py-20" aria-labelledby="demos-heading">
+    <section id="demos" className="relative border-t border-[#F5F2EC]/[0.08] bg-[#0E0E0E] py-14 md:py-20" aria-labelledby="demos-heading">
       <div className="container-ferro">
-        <div className="mb-8 flex flex-col gap-4 md:mb-10 md:flex-row md:items-end md:justify-between">
-          <div>
-            <div className="mb-4 flex items-center gap-3">
-              <span className="h-px w-5 bg-[#C9A84C]/70" />
-              <span className="font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Muestra de proyecto</span>
-            </div>
-            <h2 id="demos-heading" className="font-serif text-[42px] font-light leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] md:text-[50px]">
-              Demos
-            </h2>
+        <div className="mb-8 md:mb-10">
+          <div className="mb-4 flex items-center gap-3">
+            <span className="h-px w-5 bg-[#C9A84C]/70" />
+            <span className="font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Muestras de proyectos</span>
           </div>
-          <a
-            href="https://plantilla-para-contadores-landing-p.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="self-start border border-[#C9A84C]/60 px-5 py-3 font-sans text-[13px] font-medium text-[#C9A84C] transition-colors duration-300 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 md:self-auto"
-          >
-            Ver muestra ↗
-          </a>
+          <h2 id="demos-heading" className="font-serif text-[42px] font-light leading-[1.05] tracking-[-0.015em] text-[#F5F2EC] md:text-[50px]">
+            Demos
+          </h2>
         </div>
-        <div className="overflow-hidden border border-[#F5F2EC]/10 bg-[#111111]">
-          <div className="flex items-center gap-1.5 border-b border-[#F5F2EC]/10 px-4 py-3" aria-hidden="true">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#C9A84C]/70" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/25" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/25" />
-          </div>
-          <iframe
-            src="https://plantilla-para-contadores-landing-p.vercel.app/"
-            title="Demo de landing page para contadores"
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-            sandbox="allow-scripts allow-forms allow-same-origin"
-            className="h-[420px] w-full bg-[#F5F2EC] md:h-[560px]"
-          />
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {demos.map((demo) => (
+            <article key={demo.title} className="overflow-hidden border border-[#F5F2EC]/10 bg-[#111111]">
+              <div className="flex items-center justify-between gap-4 border-b border-[#F5F2EC]/10 px-4 py-3">
+                <div className="flex items-center gap-1.5" aria-hidden="true">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#C9A84C]/70" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/25" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/25" />
+                </div>
+                <a
+                  href={demo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-serif text-[18px] font-light text-[#F5F2EC] transition-colors hover:text-[#C9A84C]"
+                >
+                  {demo.title}
+                </a>
+                <a
+                  href={demo.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="shrink-0 font-sans text-[12px] text-[#C9A84C] transition-colors hover:text-[#F5F2EC]"
+                >
+                  Ver demo ↗
+                </a>
+              </div>
+              <iframe
+                src={demo.url}
+                title={demo.previewTitle}
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                sandbox="allow-scripts allow-forms allow-same-origin"
+                className="h-[420px] w-full bg-[#F5F2EC] md:h-[560px]"
+              />
+            </article>
+          ))}
         </div>
       </div>
     </section>

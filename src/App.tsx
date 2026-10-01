@@ -27,6 +27,11 @@ const queryClient = new QueryClient({
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
+    if (window.location.hash) {
+      requestAnimationFrame(() => document.querySelector(window.location.hash)?.scrollIntoView());
+      return;
+    }
+
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [location]);
   return null;
