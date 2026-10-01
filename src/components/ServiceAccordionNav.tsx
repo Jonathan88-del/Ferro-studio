@@ -5,11 +5,11 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const SERVICES_FEATURES = [
-  { label: "Hasta 6 secciones", href: "/seccion-secciones" },
-  { label: "SEO básico", href: "/seccion-seo" },
-  { label: "Hasta 10 páginas independientes", href: "/seccion-paginas" },
-  { label: "Google Analytics", href: "/seccion-analytics" },
-  { label: "Search Console", href: "/seccion-search-console" },
+  { label: "Hasta 6 secciones", emoji: "🧩", href: "/seccion-secciones" },
+  { label: "SEO básico", emoji: "🔎", href: "/seccion-seo" },
+  { label: "Hasta 10 páginas independientes", emoji: "📄", href: "/seccion-paginas" },
+  { label: "Google Analytics", emoji: "📊", href: "/seccion-analytics" },
+  { label: "Search Console", emoji: "🔍", href: "/seccion-search-console" },
 ];
 
 interface ServiceAccordionNavProps {
@@ -175,7 +175,7 @@ export function ServiceAccordionNav({ isActive, isMobile = false }: ServiceAccor
                     href={feature.href}
                     className="px-4 py-2.5 text-[0.85rem] text-[#F5F2EC]/70 hover:text-[#F5F2EC] hover:bg-[#F5F2EC]/[0.05] transition-colors duration-200 block no-underline"
                   >
-                    {feature.label}
+                    {feature.emoji} {feature.label}
                   </Link>
                 </motion.li>
               ))}
