@@ -57,7 +57,7 @@ const VALUES = [
 export default function WhyFerroSection() {
   return (
     <section
-      className="relative bg-[#F5F2EC] py-28 md:py-36 lg:py-44 overflow-hidden"
+      className="relative bg-[#F5F2EC] py-12 md:py-16 lg:py-20 overflow-hidden"
       aria-labelledby="why-ferro-heading"
     >
       <div
@@ -70,9 +70,9 @@ export default function WhyFerroSection() {
       />
       <div className="container-ferro relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-10 lg:gap-24 mb-20 md:mb-28 text-[20px]">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 lg:gap-12 mb-10 md:mb-14 text-[20px]">
           <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-4">
               <span className="w-5 h-px bg-[#C9A84C]" />
               <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C] text-[20px]">Por qué Ferro Studio</span>
             </div>
@@ -88,7 +88,7 @@ export default function WhyFerroSection() {
             <p className="text-[#0E0E0E]/48 font-sans font-light text-[24px]">
               Un estudio jurídico, una clínica, una inmobiliaria o un contador tienen el mismo derecho a verse profesionales, transmitir confianza y conseguir clientes a través de internet.
             </p>
-            <p className="text-[#0E0E0E]/35 font-sans font-light mt-4 italic text-[18px]">
+            <p className="text-[#0E0E0E]/35 font-sans font-light mt-2 italic text-[18px]">
               "Nos ocupamos completamente de su presencia online para que usted pueda enfocarse en hacer crecer su negocio."
             </p>
           </motion.div>
@@ -106,17 +106,17 @@ export default function WhyFerroSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="mt-px bg-[#0E0E0E] px-12 py-14 md:px-16 md:py-16 flex flex-col md:flex-row md:items-center gap-10 md:gap-16"
+          className="mt-px bg-[#0E0E0E] px-6 py-8 md:px-10 md:py-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8"
         >
           <div className="shrink-0 w-16 h-16 flex items-center justify-center border border-[#C9A84C]/30">
             <FolderOpen size={28} strokeWidth={1.25} className="text-[#C9A84C]" />
           </div>
 
           <div className="flex-1">
-            <p className="text-[10px] tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 mb-3">
+            <p className="text-[10px] tracking-[0.26em] uppercase font-sans text-[#C9A84C]/80 mb-2">
               Su código, siempre
             </p>
-            <h3 className="font-serif text-[26px] md:text-[30px] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em] mb-4">
+            <h3 className="font-serif text-[26px] md:text-[30px] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em] mb-2">
               Si algún día decide trabajar con otra persona, le entregamos el código completo de su sitio.
             </h3>
             <p className="text-[15px] text-[#F5F2EC]/40 font-sans font-light leading-[1.8]">
@@ -149,8 +149,8 @@ function ValueBlock({
       whileHover="hover"
       className={cn(
         "group relative bg-[#F5F2EC]",
-        "flex flex-col gap-10",
-        "px-12 py-14 md:px-14 md:py-20",
+        "flex flex-col gap-5",
+        "px-6 py-8 md:px-8 md:py-10",
         "transition-colors duration-500",
         "hover:bg-white"
       )}
@@ -186,7 +186,7 @@ function ValueBlock({
         </div>
       </div>
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-3">
         <h3 className="font-serif text-[38px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
           {value.title}
         </h3>
