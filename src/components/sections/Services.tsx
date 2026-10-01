@@ -13,6 +13,7 @@ const SERVICES = [
   {
     icon: MousePointerClick,
     title: "Landing Page",
+    demoUrl: "https://plantilla-para-contadores-landing-p.vercel.app/",
     price: "$150.000 ARS",
     delivery: "7–10 días hábiles",
     description:
@@ -30,6 +31,7 @@ const SERVICES = [
   {
     icon: Building2,
     title: "Sitio Institucional",
+    demoUrl: "https://pagina-web-muestra.vercel.app/",
     price: "$250.000 ARS",
     delivery: "12–18 días hábiles",
     description:
@@ -45,6 +47,7 @@ const SERVICES = [
   {
     icon: LayoutGrid,
     title: "Sitio con Catálogo / CMS",
+    demoUrl: null,
     price: "$420.000 ARS",
     delivery: "18–25 días hábiles",
     description:
@@ -62,6 +65,7 @@ const SERVICES = [
   {
     icon: Pencil,
     title: "Rediseño Web",
+    demoUrl: null,
     price: "$150.000 ARS",
     delivery: "10–15 días hábiles",
     description:
@@ -325,6 +329,16 @@ function ServiceCard({
         ))}
       </ul>
 
+      {service.demoUrl && (
+        <a
+          href={service.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="self-start border border-[#C9A84C]/60 px-4 py-2.5 font-sans text-[12px] font-medium text-[#C9A84C] transition-colors duration-300 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10"
+        >
+          Ver una demostración ↗
+        </a>
+      )}
     </motion.article>
   );
 }
