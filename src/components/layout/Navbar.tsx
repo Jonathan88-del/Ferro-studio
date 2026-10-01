@@ -65,7 +65,7 @@ export default function Navbar() {
               Proceso
             </DesktopLink>
             <PlansAccordionNav isActive={location === "/planes"} />
-            <DesktopLink href="/servicios#demos" active={false} native>
+            <DesktopLink href="/demos" active={location === "/demos"}>
               Demos
             </DesktopLink>
             <DesktopLink href="/contacto" active={location === "/contacto"}>
@@ -151,9 +151,9 @@ export default function Navbar() {
                   <PlansAccordionNav isActive={location === "/planes"} isMobile />
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 4 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
-                  <a href="/servicios#demos" className="block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200 text-[#F5F2EC]/50 hover:text-[#F5F2EC]">
+                  <Link href="/demos" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/demos" ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
                     Demos
-                  </a>
+                  </Link>
                 </motion.div>
                 <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: 0.06 + 5 * 0.065, ease: [0.22, 1, 0.36, 1] }}>
                   <Link href="/contacto" className={cn("block font-serif text-[2.2rem] font-light py-2 no-underline transition-colors duration-200", location === "/contacto" ? "text-[#C9A84C]" : "text-[#F5F2EC]/50 hover:text-[#F5F2EC]")}>
@@ -178,7 +178,7 @@ export default function Navbar() {
   );
 }
 
-function DesktopLink({ href, active, children, native = false }: { href: string; active: boolean; children: React.ReactNode; native?: boolean }) {
+function DesktopLink({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
   const className = cn("ferro-focus relative inline-flex flex-col items-center no-underline px-3.5 py-1.5 text-[0.67rem] tracking-[0.16em] uppercase font-sans font-normal transition-colors duration-300 group", active ? "text-[#F5F2EC]" : "text-[#F5F2EC]/45 hover:text-[#C9A84C]");
   const content = (
     <>
@@ -188,11 +188,7 @@ function DesktopLink({ href, active, children, native = false }: { href: string;
     </>
   );
 
-  return native ? (
-    <a href={href} className={className}>{content}</a>
-  ) : (
-    <Link href={href} className={className}>{content}</Link>
-  );
+  return <Link href={href} className={className}>{content}</Link>;
 }
 
 function LogoMark() {

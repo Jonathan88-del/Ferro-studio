@@ -11,6 +11,7 @@ import PlanesSSL from "@/pages/planes-ssl";
 import PlanesWhatsapp from "@/pages/planes-whatsapp";
 import PlanesCambios from "@/pages/planes-cambios";
 import Contacto from "@/pages/contacto";
+import Demos from "@/pages/demos";
 import SeccionSecciones from "@/pages/seccion-secciones";
 import SeccionSEO from "@/pages/seccion-seo";
 import SeccionPaginas from "@/pages/seccion-paginas";
@@ -27,11 +28,6 @@ const queryClient = new QueryClient({
 function ScrollToTop() {
   const [location] = useLocation();
   useEffect(() => {
-    if (window.location.hash) {
-      requestAnimationFrame(() => document.querySelector(window.location.hash)?.scrollIntoView());
-      return;
-    }
-
     window.scrollTo({ top: 0, behavior: "instant" });
   }, [location]);
   return null;
@@ -51,6 +47,7 @@ function Router() {
         <Route path="/planes-whatsapp" component={PlanesWhatsapp} />
         <Route path="/planes-cambios" component={PlanesCambios} />
         <Route path="/contacto" component={Contacto} />
+        <Route path="/demos" component={Demos} />
         <Route path="/seccion-secciones" component={SeccionSecciones} />
         <Route path="/seccion-seo" component={SeccionSEO} />
         <Route path="/seccion-paginas" component={SeccionPaginas} />
