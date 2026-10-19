@@ -148,14 +148,13 @@ function GoogleBusinessCard() {
       />
 
 
-      <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[35%] overflow-hidden lg:block" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-y-0 left-0 hidden w-[35%] items-center justify-center p-8 lg:flex" aria-hidden="true">
         <img
-          src="/images/google-maps-phone.jpg"
+          src="https://cdn.builder.io/api/v1/image/assets%2F3b4a41e626e24dae8e3aa82c13ef83ba%2F9be79255a4fd4f8886daf0fc8df0350f?format=webp&width=800&height=1200"
           alt=""
-          className="h-full w-full object-cover opacity-90"
+          className="max-h-full w-full rounded-2xl object-contain shadow-[0_28px_50px_rgba(0,0,0,0.55)]"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0E0E0E]" />
       </div>
 
       <div className="flex flex-col gap-5 p-8 md:p-10 lg:ml-[35%]">
