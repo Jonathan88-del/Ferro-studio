@@ -4,6 +4,64 @@ import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+const journeySteps = [
+  {
+    icon: Home,
+    question: "¿Esto es para mí?",
+    title: "Inicio",
+    purpose: "Tu portada. El primer encuentro. Tienes 3 segundos para que NO se vaya.",
+    example: "Un beneficio claro, un título convincente y una llamada a acción",
+    highlight: false,
+    badge: "",
+  },
+  {
+    icon: Users,
+    question: "¿Puedo confiar en ti?",
+    title: "Sobre ti / Tu historia",
+    purpose: "Aquí construyes confianza. El cliente quiere saber quién eres y por qué debería creerte.",
+    example: "Tu experiencia, años en el negocio, por qué empezaste, qué te diferencia",
+    highlight: false,
+    badge: "",
+  },
+  {
+    icon: Briefcase,
+    question: "¿Qué me vendes y cuánto cuesta?",
+    title: "Servicios / Productos",
+    purpose: "Aquí VENDES. Explica qué ofreces, precios, paquetes y qué esperar.",
+    example: "La sección más importante. Aquí pasan las conversiones",
+    highlight: true,
+    badge: "Clave",
+  },
+  {
+    icon: MessageSquare,
+    question: "¿Qué dicen otros de ti?",
+    title: "Testimonios / Casos de éxito",
+    purpose: "Otros clientes hablan por ti. Esto MULTIPLICA la confianza.",
+    example: "\"Yo traté con ellos y fue excelente\". Más poderoso que cualquier cosa que digas tú",
+    highlight: false,
+    badge: "",
+  },
+  {
+    icon: Images,
+    question: "¿Lo has hecho antes?",
+    title: "Galería / Portafolio / Proyectos",
+    purpose: "Muestra tu trabajo. Una imagen vale 1.000 palabras.",
+    example: "Fotos de trabajos anteriores, proyectos completados, resultados tangibles",
+    highlight: false,
+    badge: "",
+  },
+  {
+    icon: Mail,
+    question: "¿Cómo te contacto ahora?",
+    title: "Contacto",
+    purpose: "El final. Aquí el cliente se contacta contigo. Hazlo fácil.",
+    example: "Formulario, teléfono, email, ubicación, horarios. Visible y clara",
+    highlight: true,
+    badge: "Acción final",
+  },
+];
+
+
 export default function SeccionesSecciones() {
   return (
     <>
@@ -38,7 +96,7 @@ export default function SeccionesSecciones() {
         </div>
       </section>
 
-      {/* Section 1: Qué es cada sección */}
+      {/* Section 1: Cómo se recorre la página */}
       <section className="relative bg-[#0E0E0E] pt-[10px] pb-[10px]">
         <div className="container-ferro">
           <motion.div
@@ -48,159 +106,61 @@ export default function SeccionesSecciones() {
             transition={{ duration: 0.8, ease: EASE }}
           >
             <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-4">
-              ¿Cuál es el trabajo de cada sección?
+              Así recorre tu visitante la página
             </h2>
-            <div className="space-y-4">
-              <motion.div
-                initial={false}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Home size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Sección 1: Inicio
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/60 font-light mb-3">
-                      Tu portada. El primer encuentro. Tienes 3 segundos para que NO se vaya.
-                    </p>
-                    <p className="text-[16px] text-[#C9A84C] font-light">
-                      → Muestra un beneficio claro, un título convincente y una llamada a acción
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              La gente lee tu sitio de arriba hacia abajo, como una conversación. Cada sección responde
+              una pregunta que el visitante se hace en ese orden. Si una pregunta queda sin respuesta, se va.
+            </p>
 
-              <motion.div
-                initial={false}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Users size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Sección 2: Sobre ti / Tu historia
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/60 font-light mb-3">
-                      Aquí construyes confianza. El cliente quiere saber quién eres y por qué debería creerte.
-                    </p>
-                    <p className="text-[16px] text-[#C9A84C] font-light">
-                      → Tu experiencia, años en el negocio, por qué empezaste, qué te diferencia
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+            <ol className="relative ml-4 border-l border-[#C9A84C]/25 space-y-6 md:ml-6">
+              {journeySteps.map((step, index) => (
+                <motion.li
+                  key={step.title}
+                  initial={false}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                  className="relative pl-8 md:pl-12"
+                >
+                  <span
+                    aria-hidden="true"
+                    className={`absolute -left-[17px] top-6 flex h-8 w-8 items-center justify-center rounded-full border font-serif text-[15px] ${
+                      step.highlight
+                        ? "border-[#C9A84C] bg-[#C9A84C] text-[#0E0E0E]"
+                        : "border-[#C9A84C]/40 bg-[#0E0E0E] text-[#C9A84C]"
+                    }`}
+                  >
+                    {index + 1}
+                  </span>
 
-              <motion.div
-                initial={false}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Briefcase size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  <div
+                    className={`rounded-lg border bg-[#1A1A1A] p-6 md:p-8 ${
+                      step.highlight ? "border-[#C9A84C]/50" : "border-[#F5F2EC]/[0.08]"
+                    }`}
+                  >
+                    <div className="mb-4 flex flex-wrap items-center gap-3">
+                      <span className="text-[14px] tracking-wide text-[#C9A84C]/80">{step.question}</span>
+                      {step.badge && (
+                        <span className="rounded-full bg-[#C9A84C]/15 px-3 py-0.5 text-[12px] tracking-wide text-[#C9A84C]">
+                          {step.badge}
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-[#C9A84C]/10">
+                        <step.icon size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="mb-2 font-serif text-[22px] font-light text-[#F5F2EC]">{step.title}</h3>
+                        <p className="mb-3 text-[18px] font-light text-[#F5F2EC]/60">{step.purpose}</p>
+                        <p className="text-[16px] font-light text-[#C9A84C]">→ {step.example}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Sección 3: Servicios / Productos
-                    </h3>
-                    <p className="text-[20px] text-[#F5F2EC]/60 font-light mb-3">
-                      Aquí VENDES. Explica qué ofreces, precios, paquetes y qué esperar.
-                    </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light">
-                      → La sección más importante. Aquí pasan las conversiones
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={false}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <MessageSquare size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[24px] font-light text-[#F5F2EC] mb-2">
-                      Sección 4: Testimonios / Casos de éxito
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/60 font-light mb-3">
-                      Otros clientes hablan por ti. Esto MULTIPLICA la confianza.
-                    </p>
-                    <p className="text-[16px] text-[#C9A84C] font-light">
-                      → "Yo traté con ellos y fue excelente". Más poderoso que cualquier cosa que digas tú
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={false}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.25 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Images size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Sección 5: Galería / Portafolio / Proyectos
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/60 font-light mb-3">
-                      Muestra tu trabajo. Una imagen vale 1.000 palabras.
-                    </p>
-                    <p className="text-[16px] text-[#C9A84C] font-light">
-                      → Fotos de trabajos anteriores, proyectos completados, resultados tangibles
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={false}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-6 md:p-8"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Mail size={24} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Sección 6: Contacto
-                    </h3>
-                    <p className="text-[18px] text-[#F5F2EC]/60 font-light mb-3">
-                      El final. Aquí el cliente se contacta contigo. Hazlo fácil.
-                    </p>
-                    <p className="text-[16px] text-[#C9A84C] font-light">
-                      → Formulario, teléfono, email, ubicación, horarios. Visible y clara
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+                </motion.li>
+              ))}
+            </ol>
           </motion.div>
         </div>
       </section>
