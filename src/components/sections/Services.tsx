@@ -12,6 +12,7 @@ const fadeUp = (delay = 0) => ({
 const SERVICES = [
   {
     icon: MousePointerClick,
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format&fit=crop",
     title: "Landing Page",
     price: "$150.000 ARS",
     delivery: "7–10 días hábiles",
@@ -29,6 +30,7 @@ const SERVICES = [
   },
   {
     icon: Building2,
+    image: "https://images.unsplash.com/photo-1553525245-9d0d32b61e75?w=800&q=80&auto=format&fit=crop",
     title: "Sitio Institucional",
     price: "$250.000 ARS",
     delivery: "12–18 días hábiles",
@@ -44,6 +46,7 @@ const SERVICES = [
   },
   {
     icon: LayoutGrid,
+    image: "https://images.unsplash.com/photo-1558367853-fd760bbe56b6?w=800&q=80&auto=format&fit=crop",
     title: "Sitio con Catálogo / CMS",
     price: "$420.000 ARS",
     delivery: "18–25 días hábiles",
@@ -61,6 +64,7 @@ const SERVICES = [
   },
   {
     icon: Pencil,
+    image: "https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?w=800&q=80&auto=format&fit=crop",
     title: "Rediseño Web",
     price: "$150.000 ARS",
     delivery: "10–15 días hábiles",
@@ -264,7 +268,13 @@ function ServiceCard({
       )}
     >
       <div className="relative aspect-[16/10] overflow-hidden border-b border-[#F5F2EC]/10 bg-gradient-to-br from-[#2A2D33] via-[#1A1C21] to-[#0E0E0E]">
-        <ServiceMockup />
+        <img
+          src={service.image}
+          alt=""
+          loading="lazy"
+          className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E]/70 via-transparent to-transparent" aria-hidden="true" />
         {service.soon && (
           <span className="absolute left-3 top-3 rounded-full border border-[#C9A84C]/50 bg-[#0E0E0E]/80 px-3 py-1 font-sans text-[11px] font-medium text-[#C9A84C]">
             Próximamente
@@ -313,23 +323,5 @@ function ServiceCard({
         </div>
       </div>
     </motion.article>
-  );
-}
-
-function ServiceMockup() {
-  return (
-    <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
-      <div className="relative w-[72%]">
-        <div className="relative aspect-[16/10] rounded-t-md border border-[#F5F2EC]/20 bg-[#0B0C0F] p-2.5 shadow-[0_18px_36px_rgba(0,0,0,0.55)]">
-          <div className="h-full w-full rounded-sm bg-gradient-to-br from-[#2B3038] to-[#14161B] p-3">
-            <div className="h-1.5 w-2/3 rounded bg-[#C9A84C]/70" />
-            <div className="mt-2 h-1 w-full rounded bg-[#F5F2EC]/25" />
-            <div className="mt-1.5 h-1 w-5/6 rounded bg-[#F5F2EC]/15" />
-            <div className="mt-4 h-5 w-1/3 rounded-sm bg-[#C9A84C]/60" />
-          </div>
-        </div>
-        <div className="mx-[-6%] h-1.5 rounded-b-md bg-[#2A2D33]" />
-      </div>
-    </div>
   );
 }
