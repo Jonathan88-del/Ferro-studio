@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MousePointerClick, Building2, LayoutGrid, Pencil, MapPin, Phone, Bookmark, Globe2 } from "lucide-react";
+import { MousePointerClick, Building2, LayoutGrid, Pencil, MapPin, Phone, Bookmark, Globe2, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -55,7 +55,7 @@ const SERVICES = [
       "Ideal para inmobiliarias y concesionarias",
       "Categorías y etiquetas incluidas",
       "1 sesión de capacitación",
-      "90 días del Plan Total Griatis",
+      "90 días del Plan Total Gratis",
     ],
     soon: true,
   },
@@ -115,7 +115,7 @@ export default function Services() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#F5F2EC]/[0.06]">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
           {SERVICES.map((service, i) => (
             <ServiceCard key={service.title} service={service} index={i} />
           ))}
@@ -135,7 +135,7 @@ function GoogleBusinessCard() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
-      className="group relative mt-px grid grid-cols-1 overflow-hidden bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111] lg:min-h-[540px]"
+      className="group relative mt-6 grid grid-cols-1 overflow-hidden rounded-2xl border border-[#F5F2EC]/[0.08] bg-[#0E0E0E] transition-colors duration-400 hover:bg-[#111111] lg:min-h-[540px]"
     >
       <motion.span
         variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
@@ -260,72 +260,85 @@ function ServiceCard({
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
-      whileHover="hover"
       className={cn(
-        "group relative bg-[#0E0E0E]",
-        "flex flex-col gap-8",
-        "px-10 py-12 md:px-14 md:py-16",
-        "transition-colors duration-400",
-        "hover:bg-[#111111]",
+        "group relative flex flex-col overflow-hidden rounded-2xl",
+        "border border-[#F5F2EC]/[0.08] bg-[#151515]",
+        "transition-all duration-500",
+        "hover:-translate-y-1 hover:border-[#C9A84C]/35 hover:shadow-[0_24px_60px_rgba(0,0,0,0.45)]",
         service.soon && "opacity-60"
       )}
     >
-      {service.soon && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/40 rounded px-6 py-2">
-            <span className="text-[#C9A84C] font-serif text-[1.1rem] font-light tracking-wide">Proximamente</span>
+      <div className="relative aspect-[16/10] overflow-hidden border-b border-[#F5F2EC]/[0.08] bg-[#0E0E0E]">
+        <ServiceMockup />
+        {service.soon && (
+          <div className="absolute inset-0 flex items-center justify-center bg-[#0E0E0E]/60">
+            <span className="rounded border border-[#C9A84C]/40 bg-[#C9A84C]/10 px-5 py-2 font-serif text-[1.05rem] font-light tracking-wide text-[#C9A84C]">
+              Próximamente
+            </span>
           </div>
-        </div>
-      )}
-      <motion.span
-        variants={{ hover: { scaleX: 1 }, initial: { scaleX: 0 } }}
-        initial="initial"
-        transition={{ duration: 0.35, ease: EASE }}
-        className="absolute inset-x-0 top-0 h-px bg-[#C9A84C]/55 origin-left"
-        aria-hidden="true"
-      />
-
-      {/* Header row */}
-      <div className="flex items-start justify-between gap-4">
-        <div
-          className={cn(
-            "w-14 h-14 flex items-center justify-center shrink-0",
-            "border border-[#F5F2EC]/[0.1]",
-            "transition-all duration-400",
-            "group-hover:border-[#C9A84C]/30"
-          )}
-        >
-          <Icon
-            size={22}
-            strokeWidth={1.2}
-            className="text-[#C9A84C]/70 transition-colors duration-300 group-hover:text-[#C9A84C]"
-          />
-        </div>
-        <div className="text-right shrink-0 pt-0.5">
-          <p className="font-serif text-[23px] font-light text-[#F5F2EC]/85 leading-none">{service.price}</p>
-        </div>
+        )}
       </div>
 
-      <div className={cn("flex flex-col gap-4 flex-1", service.title === "Sitio Institucional" && "pt-[20px] px-[20px]")}>
-        <div className="flex items-baseline gap-3">
-          <h3 className="font-serif text-[1.75rem] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em]">
+      <div className="flex flex-1 flex-col gap-5 p-7">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#C9A84C]/25 bg-[#C9A84C]/[0.08]">
+            <Icon size={17} strokeWidth={1.5} className="text-[#C9A84C]" />
+          </div>
+          <h3 className="font-serif text-[1.5rem] font-light leading-tight tracking-[-0.01em] text-[#F5F2EC]">
             {service.title}
           </h3>
         </div>
-        <p className="text-[1rem] text-[#F5F2EC]/38 font-sans font-light leading-[1.82]">
+
+        <p className="font-sans text-[15px] font-light leading-[1.7] text-[#F5F2EC]/50">
           {service.description}
         </p>
-      </div>
 
-      {/* Includes list */}
-      <ul className="flex flex-col gap-3 mt-auto pt-5 border-t border-[#F5F2EC]/[0.06]">
-        {service.includes.map((item) => (
-          <li key={item} className="flex items-start gap-3">
-            <span className="text-[#C9A84C]/60 text-[0.75rem] font-sans mt-[3px] shrink-0">✓</span>
-            <span className="text-[15px] text-[#F5F2EC]/35 font-sans font-light leading-[1.6]">{item}</span>
-          </li>
-        ))}
-      </ul>
+        <ul className="flex flex-col gap-2.5">
+          {service.includes.map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <span className="mt-[3px] shrink-0 font-sans text-[0.75rem] text-[#C9A84C]">✓</span>
+              <span className="font-sans text-[14px] font-light leading-[1.6] text-[#F5F2EC]/60">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-auto flex items-end justify-between gap-4 border-t border-[#F5F2EC]/[0.08] pt-5">
+          <div>
+            <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-[#F5F2EC]/40">Desde</p>
+            <p className="font-serif text-[1.35rem] font-light leading-tight text-[#F5F2EC]">{service.price}</p>
+          </div>
+          <a
+            href="/contacto"
+            className="inline-flex items-center gap-2 font-sans text-[13px] font-medium text-[#C9A84C] transition-colors duration-300 hover:text-[#D9BC72]"
+          >
+            Solicitar
+            <ArrowRight size={14} strokeWidth={2} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
+        </div>
+      </div>
     </motion.article>
+  );
+}
+
+function ServiceMockup() {
+  return (
+    <div
+      aria-hidden="true"
+      className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1E1E1E] to-[#0E0E0E]"
+    >
+      <div className="relative h-[68%] w-[78%] rounded-t-md border border-[#F5F2EC]/15 bg-[#0E0E0E] shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
+        <div className="flex h-4 items-center gap-1.5 border-b border-[#F5F2EC]/10 px-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#C9A84C]/70" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#F5F2EC]/20" />
+          <span className="h-1.5 w-1.5 rounded-full bg-[#F5F2EC]/20" />
+        </div>
+        <div className="space-y-2 p-3">
+          <div className="h-2 w-2/3 rounded bg-[#C9A84C]/50" />
+          <div className="h-1.5 w-full rounded bg-[#F5F2EC]/15" />
+          <div className="h-1.5 w-5/6 rounded bg-[#F5F2EC]/10" />
+          <div className="mt-3 h-6 w-1/3 rounded bg-[#F5F2EC]/20" />
+        </div>
+      </div>
+    </div>
   );
 }
