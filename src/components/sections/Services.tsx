@@ -89,7 +89,7 @@ export default function Services() {
       aria-labelledby="services-heading"
     >
       <div className="container-ferro">
-        <div className="mb-12 flex flex-col gap-6 md:mb-14 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
+        <div className="mb-12 flex flex-col gap-6 md:mb-14 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
           <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
             <p className="mb-4 font-sans text-[12px] font-medium uppercase tracking-[0.2em] text-[#C9A84C]">
               Nuestros servicios
@@ -107,7 +107,7 @@ export default function Services() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-60px" }}
-            className="max-w-[380px] font-sans text-[15px] font-light leading-[1.7] text-[#F5F2EC]/55"
+            className="max-w-[420px] font-sans text-[15px] font-light leading-[1.7] text-[#F5F2EC]/55 lg:mt-2"
           >
             Cada proyecto es único y tratado con atención al detalle.
           </motion.p>
@@ -267,7 +267,7 @@ function ServiceCard({
         "hover:-translate-y-1 hover:border-[#C9A84C]/40 hover:shadow-[0_24px_60px_rgba(0,0,0,0.45)]"
       )}
     >
-      <div className="relative aspect-[16/10] overflow-hidden border-b border-[#F5F2EC]/10 bg-gradient-to-br from-[#2A2D33] via-[#1A1C21] to-[#0E0E0E]">
+      <div className="relative aspect-[2/1] overflow-hidden border-b border-[#F5F2EC]/10 bg-gradient-to-br from-[#2A2D33] via-[#1A1C21] to-[#0E0E0E]">
         <img
           src={service.image}
           alt=""
@@ -308,14 +308,13 @@ function ServiceCard({
           <p className="mt-2 pl-5 font-sans text-[12.5px] text-[#F5F2EC]/35">+{hiddenCount} más incluidos</p>
         )}
 
-        <div className="mt-auto flex items-end justify-between gap-4 border-t border-[#F5F2EC]/10 pt-5">
-          <div>
-            <p className="font-sans text-[11px] text-[#F5F2EC]/45">Desde</p>
-            <p className="font-sans text-[18px] font-semibold text-[#F5F2EC]">{service.price}</p>
-          </div>
+        <div className="mt-auto flex flex-col gap-3 border-t border-[#F5F2EC]/10 pt-5">
+          <p className="font-sans text-[13px] text-[#F5F2EC]/50">
+            Desde <span className="font-semibold text-[#F5F2EC]">{service.price}</span>
+          </p>
           <a
             href="/contacto"
-            className="inline-flex items-center gap-1.5 font-sans text-[13px] font-medium text-[#C9A84C] transition-colors duration-300 hover:text-[#D9BC72]"
+            className="inline-flex items-center gap-1.5 self-start font-sans text-[13px] font-medium text-[#C9A84C] transition-colors duration-300 hover:text-[#D9BC72]"
           >
             Solicitar
             <ArrowRight size={14} strokeWidth={2} className="transition-transform duration-300 group-hover:translate-x-1" />
