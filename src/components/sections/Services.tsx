@@ -101,7 +101,7 @@ export default function Services() {
               id="services-heading"
               className="font-serif font-light text-[50px] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC]"
             >
-              Soluciones para cada etapa de su negocio.
+              Soluciones para cada etapa de su negocio
             </h2>
           </motion.div>
 
