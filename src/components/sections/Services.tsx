@@ -81,41 +81,35 @@ const SERVICES = [
 export default function Services() {
   return (
     <section
-      className="relative bg-[#0E0E0E] pt-4 pb-12 md:pt-6 md:pb-[5px] lg:pt-8 lg:pb-20"
+      className="relative bg-[#0E0E0E] pt-10 pb-16 lg:pt-16 lg:pb-24"
       aria-labelledby="services-heading"
     >
       <div className="container-ferro">
-
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-10 lg:gap-20 mb-8 md:mb-10">
+        <div className="mb-12 flex flex-col gap-6 md:mb-14 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
           <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
-            <div className="flex items-center gap-3 mb-8">
-              <span className="w-5 h-px bg-[#C9A84C]/70" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C]/75 text-[20px]">
-                Proyectos web
-              </span>
-            </div>
+            <p className="mb-4 font-sans text-[12px] font-medium uppercase tracking-[0.2em] text-[#C9A84C]">
+              Nuestros servicios
+            </p>
             <h2
               id="services-heading"
-              className="font-serif font-light text-[50px] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC]"
+              className="max-w-[560px] font-sans text-[36px] font-semibold leading-[1.1] tracking-[-0.02em] text-[#F5F2EC] md:text-[44px]"
             >
               Soluciones para cada etapa de su negocio.
             </h2>
           </motion.div>
 
-          <motion.div
+          <motion.p
             variants={fadeUp(0.12)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-60px" }}
-            className="lg:self-end"
+            className="max-w-[380px] font-sans text-[15px] font-light leading-[1.7] text-[#F5F2EC]/55"
           >
-            <p className="text-[#F5F2EC]/42 font-sans font-light text-[20px]">
-              Cada proyecto es único y tratado con atención al detalle.
-            </p>
-          </motion.div>
+            Cada proyecto es único y tratado con atención al detalle.
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
           {SERVICES.map((service, i) => (
             <ServiceCard key={service.title} service={service} index={i} />
           ))}
@@ -253,6 +247,8 @@ function ServiceCard({
 }) {
   const Icon = service.icon;
   const delay = 0.08 + index * 0.09;
+  const visibleIncludes = service.includes.slice(0, 4);
+  const hiddenCount = service.includes.length - visibleIncludes.length;
 
   return (
     <motion.article
@@ -261,55 +257,55 @@ function ServiceCard({
       whileInView="show"
       viewport={{ once: true, margin: "-40px" }}
       className={cn(
-        "group relative flex flex-col overflow-hidden rounded-2xl",
-        "border border-[#F5F2EC]/[0.08] bg-[#151515]",
+        "group relative flex flex-col overflow-hidden rounded-xl",
+        "border border-[#F5F2EC]/10 bg-[#16171B]",
         "transition-all duration-500",
-        "hover:-translate-y-1 hover:border-[#C9A84C]/35 hover:shadow-[0_24px_60px_rgba(0,0,0,0.45)]",
-        service.soon && "opacity-60"
+        "hover:-translate-y-1 hover:border-[#C9A84C]/40 hover:shadow-[0_24px_60px_rgba(0,0,0,0.45)]"
       )}
     >
-      <div className="relative aspect-[16/10] overflow-hidden border-b border-[#F5F2EC]/[0.08] bg-[#0E0E0E]">
+      <div className="relative aspect-[16/10] overflow-hidden border-b border-[#F5F2EC]/10 bg-gradient-to-br from-[#2A2D33] via-[#1A1C21] to-[#0E0E0E]">
         <ServiceMockup />
         {service.soon && (
-          <div className="absolute inset-0 flex items-center justify-center bg-[#0E0E0E]/60">
-            <span className="rounded border border-[#C9A84C]/40 bg-[#C9A84C]/10 px-5 py-2 font-serif text-[1.05rem] font-light tracking-wide text-[#C9A84C]">
-              Próximamente
-            </span>
-          </div>
+          <span className="absolute left-3 top-3 rounded-full border border-[#C9A84C]/50 bg-[#0E0E0E]/80 px-3 py-1 font-sans text-[11px] font-medium text-[#C9A84C]">
+            Próximamente
+          </span>
         )}
       </div>
 
-      <div className="flex flex-1 flex-col gap-5 p-7">
+      <div className="flex flex-1 flex-col p-5">
         <div className="flex items-center gap-3">
-          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#C9A84C]/25 bg-[#C9A84C]/[0.08]">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-[#C9A84C]/30 bg-[#C9A84C]/[0.06]">
             <Icon size={17} strokeWidth={1.5} className="text-[#C9A84C]" />
           </div>
-          <h3 className="font-serif text-[1.5rem] font-light leading-tight tracking-[-0.01em] text-[#F5F2EC]">
+          <h3 className="font-sans text-[17px] font-semibold tracking-[-0.01em] text-[#F5F2EC]">
             {service.title}
           </h3>
         </div>
 
-        <p className="font-sans text-[15px] font-light leading-[1.7] text-[#F5F2EC]/50">
+        <p className="mt-4 font-sans text-[14px] leading-[1.65] text-[#F5F2EC]/55">
           {service.description}
         </p>
 
-        <ul className="flex flex-col gap-2.5">
-          {service.includes.map((item) => (
-            <li key={item} className="flex items-start gap-3">
-              <span className="mt-[3px] shrink-0 font-sans text-[0.75rem] text-[#C9A84C]">✓</span>
-              <span className="font-sans text-[14px] font-light leading-[1.6] text-[#F5F2EC]/60">{item}</span>
+        <ul className="mt-5 flex flex-col gap-2.5">
+          {visibleIncludes.map((item) => (
+            <li key={item} className="flex items-start gap-2.5">
+              <span className="mt-[2px] shrink-0 font-sans text-[12px] text-[#C9A84C]">✓</span>
+              <span className="font-sans text-[13.5px] leading-[1.5] text-[#F5F2EC]/70">{item}</span>
             </li>
           ))}
         </ul>
+        {hiddenCount > 0 && (
+          <p className="mt-2 pl-5 font-sans text-[12.5px] text-[#F5F2EC]/35">+{hiddenCount} más incluidos</p>
+        )}
 
-        <div className="mt-auto flex items-end justify-between gap-4 border-t border-[#F5F2EC]/[0.08] pt-5">
+        <div className="mt-auto flex items-end justify-between gap-4 border-t border-[#F5F2EC]/10 pt-5">
           <div>
-            <p className="font-sans text-[11px] uppercase tracking-[0.16em] text-[#F5F2EC]/40">Desde</p>
-            <p className="font-serif text-[1.35rem] font-light leading-tight text-[#F5F2EC]">{service.price}</p>
+            <p className="font-sans text-[11px] text-[#F5F2EC]/45">Desde</p>
+            <p className="font-sans text-[18px] font-semibold text-[#F5F2EC]">{service.price}</p>
           </div>
           <a
             href="/contacto"
-            className="inline-flex items-center gap-2 font-sans text-[13px] font-medium text-[#C9A84C] transition-colors duration-300 hover:text-[#D9BC72]"
+            className="inline-flex items-center gap-1.5 font-sans text-[13px] font-medium text-[#C9A84C] transition-colors duration-300 hover:text-[#D9BC72]"
           >
             Solicitar
             <ArrowRight size={14} strokeWidth={2} className="transition-transform duration-300 group-hover:translate-x-1" />
@@ -322,22 +318,17 @@ function ServiceCard({
 
 function ServiceMockup() {
   return (
-    <div
-      aria-hidden="true"
-      className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#1E1E1E] to-[#0E0E0E]"
-    >
-      <div className="relative h-[68%] w-[78%] rounded-t-md border border-[#F5F2EC]/15 bg-[#0E0E0E] shadow-[0_20px_40px_rgba(0,0,0,0.5)]">
-        <div className="flex h-4 items-center gap-1.5 border-b border-[#F5F2EC]/10 px-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#C9A84C]/70" />
-          <span className="h-1.5 w-1.5 rounded-full bg-[#F5F2EC]/20" />
-          <span className="h-1.5 w-1.5 rounded-full bg-[#F5F2EC]/20" />
+    <div aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
+      <div className="relative w-[72%]">
+        <div className="relative aspect-[16/10] rounded-t-md border border-[#F5F2EC]/20 bg-[#0B0C0F] p-2.5 shadow-[0_18px_36px_rgba(0,0,0,0.55)]">
+          <div className="h-full w-full rounded-sm bg-gradient-to-br from-[#2B3038] to-[#14161B] p-3">
+            <div className="h-1.5 w-2/3 rounded bg-[#C9A84C]/70" />
+            <div className="mt-2 h-1 w-full rounded bg-[#F5F2EC]/25" />
+            <div className="mt-1.5 h-1 w-5/6 rounded bg-[#F5F2EC]/15" />
+            <div className="mt-4 h-5 w-1/3 rounded-sm bg-[#C9A84C]/60" />
+          </div>
         </div>
-        <div className="space-y-2 p-3">
-          <div className="h-2 w-2/3 rounded bg-[#C9A84C]/50" />
-          <div className="h-1.5 w-full rounded bg-[#F5F2EC]/15" />
-          <div className="h-1.5 w-5/6 rounded bg-[#F5F2EC]/10" />
-          <div className="mt-3 h-6 w-1/3 rounded bg-[#F5F2EC]/20" />
-        </div>
+        <div className="mx-[-6%] h-1.5 rounded-b-md bg-[#2A2D33]" />
       </div>
     </div>
   );
