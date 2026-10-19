@@ -45,12 +45,12 @@ const fadeUp = (delay = 0) => ({
 
 export default function Services() {
   return (
-    <section id="servicios" className="bg-[#0b1013] py-20 md:py-24" aria-labelledby="services-heading">
+    <section id="servicios" className="relative overflow-hidden bg-[#0b1013] py-16 md:py-20" aria-labelledby="services-heading">
       <div className="container-ferro">
-        <div className="mb-10 grid gap-8 lg:grid-cols-[1fr_430px] lg:items-end">
+        <div className="mb-8 grid gap-8 lg:grid-cols-[1fr_430px] lg:items-end">
           <motion.div variants={fadeUp()} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
             <p className="mb-4 font-sans text-[11px] font-semibold uppercase tracking-[0.28em] text-[#d9b55b]">Nuestros servicios</p>
-            <h2 id="services-heading" className="max-w-xl font-sans text-4xl font-semibold leading-[1.05] tracking-[-0.04em] text-[#f5f2ec] md:text-5xl">
+            <h2 id="services-heading" className="max-w-xl font-sans text-[2rem] font-semibold leading-[1.05] tracking-[-0.04em] text-[#f5f2ec] md:text-[2.45rem]">
               Soluciones digitales para cada etapa de tu negocio.
             </h2>
           </motion.div>
@@ -59,7 +59,7 @@ export default function Services() {
           </motion.p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {SERVICES.map((service, index) => <ServiceCard key={service.title} service={service} index={index} />)}
         </div>
       </div>
@@ -70,12 +70,12 @@ export default function Services() {
 function ServiceCard({ service, index }: { service: (typeof SERVICES)[number]; index: number }) {
   const Icon = service.icon;
   return (
-    <motion.article variants={fadeUp(index * 0.08)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-40px" }} className="group overflow-hidden rounded-md border border-[#f5f2ec]/10 bg-[#11181c] transition duration-300 hover:-translate-y-1 hover:border-[#d9b55b]/45">
-      <div className="relative h-40 overflow-hidden bg-[#1c2528]">
+    <motion.article variants={fadeUp(index * 0.08)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-40px" }} className="group overflow-hidden rounded-[5px] border border-[#f5f2ec]/10 bg-[#11181c] shadow-[0_14px_30px_rgba(0,0,0,0.16)] transition duration-300 hover:-translate-y-1 hover:border-[#d9b55b]/45">
+      <div className="relative h-[132px] overflow-hidden bg-[#1c2528]">
         <img src={service.image} alt={`Ejemplo de ${service.title}`} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#11181c] via-transparent to-black/10" />
       </div>
-      <div className="flex min-h-[325px] flex-col p-5">
+      <div className="flex min-h-[310px] flex-col p-5 md:p-[18px]">
         <div className="mb-4 flex items-center gap-3">
           <span className="flex size-9 items-center justify-center rounded-md border border-[#d9b55b]/40 bg-[#0b1013] text-[#d9b55b]"><Icon size={17} strokeWidth={1.5} /></span>
           <h3 className="font-sans text-lg font-semibold text-[#f5f2ec]">{service.title}</h3>
