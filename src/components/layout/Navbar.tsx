@@ -53,14 +53,8 @@ export default function Navbar() {
               <span className="flex h-8 w-8 items-center justify-center border border-[#C9A84C]/50 font-serif text-[15px] font-light text-[#C9A84C]">
                 F
               </span>
-              <span className="flex flex-col gap-[5px] leading-none">
-                <span className="font-serif text-[15px] font-normal tracking-[0.34em] text-[#F5F2EC] uppercase">
-                  Ferro
-                </span>
-                <span className="h-px w-full bg-[#C9A84C]/35" />
-                <span className="text-[7.5px] tracking-[0.38em] text-[#F5F2EC]/45 uppercase font-sans">
-                  Studio
-                </span>
+              <span className="font-serif text-[15px] font-normal tracking-[0.34em] text-[#F5F2EC] uppercase leading-none">
+                Ferro Std.
               </span>
             </span>
           </Link>

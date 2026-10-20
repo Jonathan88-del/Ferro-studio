@@ -57,7 +57,7 @@ export default function Footer() {
             <Link href="/" className="inline-flex items-center gap-3 no-underline mb-9">
               <LogoMark />
               <span className="font-serif text-[22px] font-light tracking-[0.22em] text-[#F5F2EC] uppercase">
-                Ferro<span className="text-[#C9A84C]">.</span>
+                Ferro Std<span className="text-[#C9A84C]">.</span>
               </span>
             </Link>
             <p className="text-[18px] text-[#F5F2EC]/35 font-sans font-light leading-[1.85] max-w-[300px] mb-7">

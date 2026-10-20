@@ -50,7 +50,7 @@ export default function CTASection() {
         >
           <span className="w-5 h-px bg-[#C9A84C]/70" aria-hidden="true" />
           <span className="tracking-[0.28em] uppercase font-sans text-[#C9A84C]/80 text-[20px]">
-            Ferro Studio
+            Ferro Std.
           </span>
           <span className="w-5 h-px bg-[#C9A84C]/70" aria-hidden="true" />
         </motion.div>

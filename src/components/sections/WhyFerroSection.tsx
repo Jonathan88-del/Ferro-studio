@@ -74,7 +74,7 @@ export default function WhyFerroSection() {
           <motion.div variants={fadeUp(0)} initial="hidden" whileInView="show" viewport={{ once: true, margin: "-60px" }}>
             <div className="flex items-center gap-3 mb-4">
               <span className="w-5 h-px bg-[#C9A84C]" />
-              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C] text-[20px]">Por qué Ferro Studio</span>
+              <span className="tracking-[0.26em] uppercase font-sans text-[#C9A84C] text-[20px]">Por qué Ferro Std.</span>
             </div>
             <h2
               id="why-ferro-heading"

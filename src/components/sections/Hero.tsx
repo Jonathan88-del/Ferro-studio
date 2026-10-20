@@ -106,7 +106,7 @@ export default function Hero() {
           className="flex items-center gap-4 mb-12 md:mb-16"
         >
           <span className="w-6 h-px bg-[#C9A84C]/65 hidden sm:block" />
-          <span className="tracking-[0.3em] uppercase text-[#C9A84C]/80 font-sans text-[10px] md:text-[11px]">Ferro Studio — Estudio Digital</span>
+          <span className="tracking-[0.3em] uppercase text-[#C9A84C]/80 font-sans text-[10px] md:text-[11px]">Ferro Std. — Estudio Digital</span>
           <span className="w-6 h-px bg-[#C9A84C]/65 hidden sm:block" />
         </motion.div>
 
