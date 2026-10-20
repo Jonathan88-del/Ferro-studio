@@ -41,6 +41,7 @@ const SERVICES = [
       "Hasta 10 páginas independientes",
       "Google Analytics",
       "Search Console",
+      "Blog",
       "60 días del Plan Total Gratis",
     ],
   },
