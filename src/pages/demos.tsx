@@ -5,7 +5,7 @@ const DEMOS = [
   {
     title: "Landing Page",
     description: "Una página enfocada en un solo objetivo: que el visitante pida presupuesto.",
-    url: "https://plantilla-para-contadores-landing-p.vercel.app/",
+    url: "https://landing-page-rho-nine-83.vercel.app/",
     previewTitle: "Demo de landing page para contadores",
   },
   {

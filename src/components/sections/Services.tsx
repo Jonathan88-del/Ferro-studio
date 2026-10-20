@@ -13,7 +13,7 @@ const SERVICES = [
   {
     icon: MousePointerClick,
     title: "Landing Page",
-    demoUrl: "https://plantilla-para-contadores-landing-p.vercel.app/",
+    demoUrl: "https://landing-page-rho-nine-83.vercel.app/",
     price: "$150.000 ARS",
     delivery: "7–10 días hábiles",
     description:
