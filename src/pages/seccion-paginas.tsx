@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowLeft,
   Calculator,
+  Check,
   FileText,
   Globe,
   Phone,
@@ -76,6 +77,92 @@ const reasons = [
     text: "Quien llega con un problema claro ya sabe qué necesita. Es mucho más fácil que pida presupuesto.",
   },
 ];
+
+function LandingMock({ index }: { index: number }) {
+  switch (index) {
+    case 0:
+      return (
+        <div className="flex h-full flex-col items-center justify-center px-6 text-center">
+          <p className="font-serif text-[24px] leading-tight text-[#F5F2EC]">Contador en CABA para tu negocio</p>
+          <p className="mt-2 max-w-md text-[13px] text-[#F5F2EC]/50">
+            Monotributistas y pymes con cuentas claras y sin sorpresas.
+          </p>
+          <span className="mt-4 rounded-md bg-[#C9A84C] px-5 py-2 text-[12px] text-[#0E0E0E]">Pide tu presupuesto</span>
+        </div>
+      );
+    case 1:
+      return (
+        <div className="flex h-full flex-col justify-center gap-4 px-6 md:px-10">
+          <p className="font-serif text-[22px] text-[#F5F2EC]">Recategorización de monotributo</p>
+          {["Revisamos tus ingresos del último año", "Calculamos tu nueva categoría", "Presentamos la recategorización por ti"].map(
+            (step, i) => (
+              <div key={step} className="flex items-center gap-3">
+                <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-[#C9A84C]/15 text-[12px] text-[#C9A84C]">
+                  {i + 1}
+                </span>
+                <span className="text-[13px] text-[#F5F2EC]/70">{step}</span>
+              </div>
+            ),
+          )}
+        </div>
+      );
+    case 2:
+      return (
+        <div className="flex h-full flex-col justify-center gap-3 px-6 md:px-10">
+          <p className="font-serif text-[22px] text-[#F5F2EC]">Vencimientos del mes</p>
+          {[
+            { name: "IVA", date: "Día 18" },
+            { name: "Ganancias", date: "Día 23" },
+            { name: "Monotributo", date: "Día 20" },
+          ].map((row) => (
+            <div key={row.name} className="flex items-center justify-between rounded-md border border-[#F5F2EC]/10 bg-[#1A1A1A] px-4 py-2.5">
+              <span className="text-[13px] text-[#F5F2EC]/80">{row.name}</span>
+              <span className="text-[12px] text-[#F5F2EC]/50">{row.date}</span>
+              <span className="flex items-center gap-1 text-[12px] text-[#51CF66]">
+                <Check size={14} /> Al día
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    case 3:
+      return (
+        <div className="flex h-full flex-col justify-center gap-4 px-6 md:px-10">
+          <p className="font-serif text-[22px] text-[#F5F2EC]">Reporte mensual</p>
+          <div className="flex h-28 items-end gap-3">
+            {[40, 65, 50, 80, 72, 95].map((h, i) => (
+              <div key={i} className="flex-1 rounded-t bg-[#C9A84C]/60" style={{ height: `${h}%` }} />
+            ))}
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            {["Ingresos", "Gastos", "Resultado"].map((label) => (
+              <div key={label} className="rounded-md border border-[#C9A84C]/25 px-2 py-2 text-center text-[12px] text-[#C9A84C]">
+                {label}
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    case 4:
+      return (
+        <div className="flex h-full flex-col justify-center gap-4 px-6 md:flex-row md:px-10">
+          <div className="flex-1 space-y-2">
+            <p className="font-serif text-[22px] text-[#F5F2EC]">Hablemos hoy</p>
+            <p className="text-[13px] text-[#F5F2EC]/60">Teléfono: +00 000 000 000</p>
+            <p className="text-[13px] text-[#F5F2EC]/60">Respondemos en menos de 48 horas</p>
+          </div>
+          <div className="flex-1 space-y-2 rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A] p-4">
+            <div className="h-7 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
+            <div className="h-7 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
+            <div className="h-12 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
+            <span className="inline-block rounded-md bg-[#C9A84C] px-4 py-1.5 text-[12px] text-[#0E0E0E]">Enviar</span>
+          </div>
+        </div>
+      );
+    default:
+      return null;
+  }
+}
 
 export default function SeccionPaginas() {
   const [active, setActive] = useState(0);
@@ -166,6 +253,20 @@ export default function SeccionPaginas() {
                       <p className="text-[18px] text-[#C9A84C]">{item.title}</p>
                       <p className="mt-1 text-[14px] text-[#51CF66]/80">tusitio.com{item.path}</p>
                       <p className="mt-2 text-[15px] font-light text-[#F5F2EC]/50">{item.snippet}</p>
+                    </div>
+
+                    <div className="overflow-hidden rounded-lg border border-[#F5F2EC]/10 bg-[#0E0E0E]">
+                      <div className="flex items-center gap-2 border-b border-[#F5F2EC]/10 bg-[#1A1A1A] px-4 py-2.5">
+                        <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                        <div className="ml-4 flex-1 truncate rounded-md bg-[#0E0E0E] px-3 py-1 text-[11px] text-[#F5F2EC]/40">
+                          tusitio.com{item.path}
+                        </div>
+                      </div>
+                      <div className="h-[260px] md:h-[240px]">
+                        <LandingMock index={active} />
+                      </div>
                     </div>
 
                     <div className="flex items-start gap-4 rounded-lg border border-[#C9A84C]/25 bg-[#1A1A1A] p-5 md:p-6">
