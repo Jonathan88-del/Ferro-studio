@@ -103,10 +103,10 @@ export default function Hero() {
           variants={fadeIn(0.22)}
           initial="hidden"
           animate="show"
-          className="flex items-center gap-4 mb-12 md:mb-16 text-[21px]"
+          className="flex items-center gap-4 mb-12 md:mb-16"
         >
           <span className="w-6 h-px bg-[#C9A84C]/65 hidden sm:block" />
-          <span className="tracking-[0.28em] uppercase text-[#C9A84C]/80 font-sans text-[24px]">Ferro Studio — Estudio Digital</span>
+          <span className="tracking-[0.3em] uppercase text-[#C9A84C]/80 font-sans text-[10px] md:text-[11px]">Ferro Studio — Estudio Digital</span>
           <span className="w-6 h-px bg-[#C9A84C]/65 hidden sm:block" />
         </motion.div>
 
@@ -146,9 +146,9 @@ export default function Hero() {
           variants={fadeUp(0.78)}
           initial="hidden"
           animate="show"
-          className="text-[15px] text-[#F5F2EC]/42 font-sans font-light leading-[1.8] max-w-[400px] mb-10 md:mb-12"
+          className="text-[15px] text-[#F5F2EC]/55 font-sans font-light leading-[1.8] max-w-[440px] mb-10 md:mb-12"
         >
-          Vendemos páginas web profesionales, seguras y confiables para tus clients
+          Diseñamos y desarrollamos páginas web profesionales, seguras y confiables para tus clientes.
         </motion.p>
 
         {/* CTAs */}
