@@ -49,7 +49,6 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="ferro-focus flex items-center gap-[10px] no-underline shrink-0">
-            <LogoMark />
             <span className="flex items-center gap-3 select-none">
               <span className="flex h-8 w-8 items-center justify-center border border-[#C9A84C]/50 font-serif text-[15px] font-light text-[#C9A84C]">
                 F
