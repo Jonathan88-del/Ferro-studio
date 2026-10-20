@@ -77,12 +77,6 @@ const reasons = [
   },
 ];
 
-const journey = [
-  { step: "1", title: "Busca su problema", text: "Escribe en Google lo que le preocupa, con sus palabras." },
-  { step: "2", title: "Ve su respuesta exacta", text: "Google le muestra una URL que habla directamente de ese problema." },
-  { step: "3", title: "Pide presupuesto", text: "Encuentra la solución en segundos y te contacta." },
-];
-
 export default function SeccionPaginas() {
   const [active, setActive] = useState(0);
   const item = searches[active];
@@ -231,26 +225,7 @@ export default function SeccionPaginas() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.8, ease: EASE }}
           >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-12">Así llega un cliente</h2>
-
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              {journey.map((j, i) => (
-                <motion.div
-                  key={j.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1 + i * 0.05 }}
-                  className="rounded-lg border border-[#F5F2EC]/[0.08] bg-[#1A1A1A] p-8"
-                >
-                  <span className="mb-4 block font-serif text-[44px] font-light text-[#C9A84C]">{j.step}</span>
-                  <h3 className="mb-2 font-serif text-[20px] font-light text-[#F5F2EC]">{j.title}</h3>
-                  <p className="text-[16px] font-light text-[#F5F2EC]/50">{j.text}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="mt-12 flex flex-col items-start justify-between gap-6 rounded-lg border border-[#C9A84C]/30 bg-[#1A1A1A] p-8 md:flex-row md:items-center md:p-10">
+            <div className="flex flex-col items-start justify-between gap-6 rounded-lg border border-[#C9A84C]/30 bg-[#1A1A1A] p-8 md:flex-row md:items-center md:p-10">
               <div className="flex items-start gap-4">
                 <Globe size={24} className="mt-1 flex-shrink-0 text-[#C9A84C]" strokeWidth={1.5} />
                 <div>
