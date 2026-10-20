@@ -46,7 +46,7 @@ const PLANS: Plan[] = [
       "Todo lo incluido en Plan Presencia",
       "Hasta 3 cambios mensuales al sitio",
       "Prioridad de respuesta (24 hs hábiles)",
-      "1 publicación mensual de artículo/novedad",
+      "1 publicación mensual de blog",
     ],
     cta: "Solicitar presupuesto",
     featured: true,
