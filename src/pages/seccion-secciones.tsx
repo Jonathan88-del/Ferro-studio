@@ -10,6 +10,7 @@ import {
   ArrowLeft,
   ChevronLeft,
   ChevronRight,
+  Check,
   TrendingUp,
   Target,
   Zap,
@@ -22,6 +23,7 @@ const journeySteps = [
   {
     icon: Home,
     anchor: "inicio",
+    nav: "Inicio",
     question: "¿Esto es para mí?",
     title: "Inicio",
     purpose: "Tu portada. El primer encuentro. Tienes 3 segundos para que NO se vaya.",
@@ -32,6 +34,7 @@ const journeySteps = [
   {
     icon: Users,
     anchor: "sobre-ti",
+    nav: "Sobre ti",
     question: "¿Puedo confiar en ti?",
     title: "Sobre ti / Tu historia",
     purpose: "Aquí construyes confianza. El cliente quiere saber quién eres y por qué debería creerte.",
@@ -42,6 +45,7 @@ const journeySteps = [
   {
     icon: Briefcase,
     anchor: "servicios",
+    nav: "Servicios",
     question: "¿Qué me vendes y cuánto cuesta?",
     title: "Servicios / Productos",
     purpose: "Aquí VENDES. Explica qué ofreces, precios, paquetes y qué esperar.",
@@ -52,6 +56,7 @@ const journeySteps = [
   {
     icon: MessageSquare,
     anchor: "testimonios",
+    nav: "Testimonios",
     question: "¿Qué dicen otros de ti?",
     title: "Testimonios / Casos de éxito",
     purpose: "Otros clientes hablan por ti. Esto MULTIPLICA la confianza.",
@@ -62,6 +67,7 @@ const journeySteps = [
   {
     icon: Images,
     anchor: "galeria",
+    nav: "Galería",
     question: "¿Lo has hecho antes?",
     title: "Galería / Portafolio / Proyectos",
     purpose: "Muestra tu trabajo. Una imagen vale 1.000 palabras.",
@@ -72,6 +78,7 @@ const journeySteps = [
   {
     icon: Mail,
     anchor: "contacto",
+    nav: "Contacto",
     question: "¿Cómo te contacto ahora?",
     title: "Contacto",
     purpose: "El final. Aquí el cliente se contacta contigo. Hazlo fácil.",
@@ -87,29 +94,53 @@ function SectionMock({ index }: { index: number }) {
   switch (index) {
     case 0:
       return (
-        <div className="flex h-full flex-col items-center justify-center px-8 text-center">
-          <div className="mb-5 h-2.5 w-28 rounded-full bg-[#C9A84C]/70" />
-          <p className="font-serif text-[30px] leading-tight text-[#F5F2EC]">
-            Tu título principal que convence
-          </p>
-          <p className="mt-3 text-[15px] text-[#F5F2EC]/50">Un beneficio claro en una frase</p>
-          <span className="mt-7 rounded-md bg-[#C9A84C] px-6 py-2.5 text-[14px] text-[#0E0E0E]">
-            Llamada a acción
-          </span>
+        <div className="flex h-full flex-col items-center justify-center gap-6 px-6 md:flex-row md:px-10">
+          <div className="flex-1 text-center md:text-left">
+            <span className="mb-3 inline-block rounded-full border border-[#C9A84C]/40 px-3 py-0.5 text-[11px] text-[#C9A84C]">
+              Desde 2010
+            </span>
+            <p className="font-serif text-[26px] leading-tight text-[#F5F2EC]">
+              Tu título principal que convence
+            </p>
+            <p className="mt-3 text-[14px] text-[#F5F2EC]/50">
+              Un beneficio claro en una frase, con el lenguaje de tu cliente.
+            </p>
+            <div className="mt-5 flex flex-wrap justify-center gap-3 md:justify-start">
+              <span className="rounded-md bg-[#C9A84C] px-5 py-2 text-[13px] text-[#0E0E0E]">
+                Llamada a acción
+              </span>
+              <span className="rounded-md border border-[#F5F2EC]/20 px-5 py-2 text-[13px] text-[#F5F2EC]/70">
+                Ver servicios
+              </span>
+            </div>
+            <p className="mt-4 text-[12px] text-[#C9A84C]/80">★★★★★ 4.9 · +250 clientes satisfechos</p>
+          </div>
+          <div className="h-40 w-full max-w-[260px] flex-shrink-0 rounded-lg border border-[#C9A84C]/20 bg-gradient-to-br from-[#C9A84C]/20 to-[#1A1A1A] md:h-48" />
         </div>
       );
     case 1:
       return (
-        <div className="flex h-full flex-col items-center justify-center gap-8 px-8 md:flex-row">
-          <div className="h-32 w-32 flex-shrink-0 rounded-full bg-[#C9A84C]/20" />
+        <div className="flex h-full flex-col items-center justify-center gap-6 px-6 md:flex-row md:px-10">
+          <div className="flex flex-shrink-0 flex-col items-center gap-2">
+            <div className="h-24 w-24 rounded-full bg-[#C9A84C]/20" />
+            <p className="text-[13px] text-[#F5F2EC]">Tu nombre</p>
+            <p className="text-[11px] text-[#F5F2EC]/40">Fundador/a</p>
+          </div>
           <div className="w-full flex-1 space-y-3">
-            <p className="font-serif text-[24px] text-[#F5F2EC]">Quién soy y por qué lo hago</p>
+            <p className="font-serif text-[22px] text-[#F5F2EC]">Quién soy y por qué lo hago</p>
             <div className={`h-2 w-full ${bar}`} />
             <div className={`h-2 w-11/12 ${bar}`} />
-            <div className={`h-2 w-4/5 ${bar}`} />
-            <div className="grid grid-cols-3 gap-3 pt-4">
+            <ul className="space-y-1.5 pt-1">
+              {["Años de experiencia en el sector", "Proyectos realizados con éxito", "Lo que me diferencia de otros"].map((item) => (
+                <li key={item} className="flex items-center gap-2 text-[13px] text-[#F5F2EC]/70">
+                  <Check size={14} className="text-[#C9A84C]" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="grid grid-cols-3 gap-3 pt-3">
               {["+10 años", "+250 proyectos", "98% clientes"].map((stat) => (
-                <div key={stat} className="rounded-md border border-[#C9A84C]/25 px-2 py-3 text-center text-[13px] text-[#C9A84C]">
+                <div key={stat} className="rounded-md border border-[#C9A84C]/25 px-2 py-2 text-center text-[12px] text-[#C9A84C]">
                   {stat}
                 </div>
               ))}
@@ -119,25 +150,35 @@ function SectionMock({ index }: { index: number }) {
       );
     case 2:
       return (
-        <div className="flex h-full flex-col justify-center px-8">
-          <p className="mb-6 text-center font-serif text-[24px] text-[#F5F2EC]">Lo que ofrecemos</p>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            {["$990", "$1,890", "$2,990"].map((price, i) => (
+        <div className="flex h-full flex-col justify-center px-6 md:px-10">
+          <p className="mb-4 text-center font-serif text-[22px] text-[#F5F2EC]">Lo que ofrecemos</p>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+            {[
+              { price: "$990", name: "Básico", items: ["Asesoría inicial", "Entrega en 7 días"] },
+              { price: "$1,890", name: "Pro", items: ["Todo lo básico", "Soporte 30 días", "Revisiones ilimitadas"] },
+              { price: "$2,990", name: "Premium", items: ["Todo lo anterior", "Atención prioritaria"] },
+            ].map((plan, i) => (
               <div
-                key={price}
-                className={`relative rounded-lg border p-5 ${
+                key={plan.name}
+                className={`relative rounded-lg border p-4 ${
                   i === 1 ? "border-[#C9A84C] bg-[#C9A84C]/10" : "border-[#F5F2EC]/10 bg-[#1A1A1A]"
                 }`}
               >
                 {i === 1 && (
-                  <span className="absolute -top-2.5 left-4 rounded-full bg-[#C9A84C] px-2 py-0.5 text-[11px] text-[#0E0E0E]">
+                  <span className="absolute -top-2.5 left-4 rounded-full bg-[#C9A84C] px-2 py-0.5 text-[10px] text-[#0E0E0E]">
                     Más elegido
                   </span>
                 )}
-                <div className={`mb-3 h-2.5 w-2/3 ${bar}`} />
-                <p className="mb-4 font-serif text-[22px] text-[#C9A84C]">{price}</p>
-                <div className={`mb-2 h-2 w-full ${bar}`} />
-                <div className={`h-2 w-4/5 ${bar}`} />
+                <p className="text-[12px] text-[#F5F2EC]/60">{plan.name}</p>
+                <p className="mb-3 font-serif text-[20px] text-[#C9A84C]">{plan.price}</p>
+                <ul className="space-y-1.5">
+                  {plan.items.map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-[12px] text-[#F5F2EC]/70">
+                      <Check size={12} className="text-[#C9A84C]" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -145,17 +186,21 @@ function SectionMock({ index }: { index: number }) {
       );
     case 3:
       return (
-        <div className="flex h-full flex-col justify-center px-8">
-          <p className="mb-6 text-center font-serif text-[24px] text-[#F5F2EC]">Lo que dicen nuestros clientes</p>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            {[0, 1].map((i) => (
-              <div key={i} className="rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A] p-6">
-                <p className="mb-4 text-[15px] italic text-[#F5F2EC]/70">
+        <div className="flex h-full flex-col justify-center px-6 md:px-10">
+          <p className="mb-4 text-center font-serif text-[22px] text-[#F5F2EC]">Lo que dicen nuestros clientes</p>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="flex flex-col rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A] p-4">
+                <p className="mb-2 text-[12px] text-[#C9A84C]">★★★★★</p>
+                <p className="mb-4 flex-1 text-[13px] italic text-[#F5F2EC]/70">
                   “Trabajar con ellos fue excelente de principio a fin.”
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="h-9 w-9 rounded-full bg-[#C9A84C]/25" />
-                  <div className={`h-2 w-24 ${bar}`} />
+                  <div className="h-8 w-8 rounded-full bg-[#C9A84C]/25" />
+                  <div>
+                    <p className="text-[12px] text-[#F5F2EC]">Nombre del cliente</p>
+                    <p className="text-[11px] text-[#F5F2EC]/40">Empresa o ciudad</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -164,35 +209,43 @@ function SectionMock({ index }: { index: number }) {
       );
     case 4:
       return (
-        <div className="flex h-full flex-col justify-center px-8">
-          <p className="mb-6 text-center font-serif text-[24px] text-[#F5F2EC]">Nuestro trabajo</p>
+        <div className="flex h-full flex-col justify-center px-6 md:px-10">
+          <p className="mb-4 text-center font-serif text-[22px] text-[#F5F2EC]">Nuestro trabajo</p>
           <div className="grid grid-cols-3 gap-3">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="aspect-[4/3] rounded-md border border-[#F5F2EC]/10"
+                className="relative aspect-[16/9] overflow-hidden rounded-md border border-[#F5F2EC]/10"
                 style={{
-                  background: `linear-gradient(135deg, rgba(201,168,76,${0.08 + i * 0.03}), rgba(26,26,26,1))`,
+                  background: `linear-gradient(135deg, rgba(201,168,76,${0.1 + i * 0.03}), rgba(26,26,26,1))`,
                 }}
-              />
+              >
+                <span className="absolute bottom-2 left-2 text-[11px] text-[#F5F2EC]/70">
+                  Proyecto {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
             ))}
           </div>
         </div>
       );
     case 5:
       return (
-        <div className="flex h-full flex-col justify-center gap-8 px-8 md:flex-row">
-          <div className="flex-1 space-y-4">
-            <p className="font-serif text-[24px] text-[#F5F2EC]">Hablemos</p>
-            <p className="text-[14px] text-[#F5F2EC]/60">Teléfono: +00 000 000 000</p>
-            <p className="text-[14px] text-[#F5F2EC]/60">Email: hola@tuempresa.com</p>
-            <p className="text-[14px] text-[#F5F2EC]/60">Horario: Lun a Vie, 9:00 a 18:00</p>
+        <div className="flex h-full flex-col justify-center gap-6 px-6 md:flex-row md:px-10">
+          <div className="flex-1 space-y-3">
+            <p className="font-serif text-[22px] text-[#F5F2EC]">Hablemos</p>
+            <p className="text-[13px] text-[#F5F2EC]/60">Teléfono: +00 000 000 000</p>
+            <p className="text-[13px] text-[#F5F2EC]/60">Email: hola@tuempresa.com</p>
+            <p className="text-[13px] text-[#F5F2EC]/60">Dirección: Calle Principal 123, Ciudad</p>
+            <p className="text-[13px] text-[#F5F2EC]/60">Horario: Lun a Vie, 9:00 a 18:00</p>
           </div>
-          <div className="flex-1 space-y-3 rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A] p-5">
-            <div className="h-9 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
-            <div className="h-9 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
-            <div className="h-20 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
-            <span className="inline-block rounded-md bg-[#C9A84C] px-5 py-2 text-[13px] text-[#0E0E0E]">
+          <div className="flex-1 space-y-2.5 rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A] p-4">
+            <div className="grid grid-cols-2 gap-2.5">
+              <div className="h-8 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
+              <div className="h-8 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
+            </div>
+            <div className="h-8 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
+            <div className="h-16 rounded-md border border-[#F5F2EC]/10 bg-[#0E0E0E]" />
+            <span className="inline-block rounded-md bg-[#C9A84C] px-5 py-2 text-[12px] text-[#0E0E0E]">
               Enviar mensaje
             </span>
           </div>
@@ -203,13 +256,23 @@ function SectionMock({ index }: { index: number }) {
   }
 }
 
+const slideVariants = {
+  enter: (direction: number) => ({ y: direction > 0 ? "100%" : "-100%", opacity: 0 }),
+  center: { y: 0, opacity: 1 },
+  exit: (direction: number) => ({ y: direction > 0 ? "-100%" : "100%", opacity: 0 }),
+};
+
 export default function SeccionesSecciones() {
   const [active, setActive] = useState(0);
+  const [direction, setDirection] = useState(1);
   const step = journeySteps[active];
   const total = journeySteps.length;
 
-  const goPrev = () => setActive((i) => Math.max(0, i - 1));
-  const goNext = () => setActive((i) => Math.min(total - 1, i + 1));
+  const goTo = (to: number) => {
+    if (to === active || to < 0 || to >= total) return;
+    setDirection(to > active ? 1 : -1);
+    setActive(to);
+  };
 
   return (
     <>
@@ -261,24 +324,37 @@ export default function SeccionesSecciones() {
               flechas para recorrerlo.
             </p>
 
-            <div className="overflow-hidden rounded-xl border border-[#F5F2EC]/10 bg-[#141414] shadow-[0_28px_60px_rgba(0,0,0,0.5)]">
-              <div className="flex items-center gap-2 border-b border-[#F5F2EC]/10 bg-[#1A1A1A] px-4 py-3">
-                <span className="h-3 w-3 rounded-full bg-[#F5F2EC]/20" />
-                <span className="h-3 w-3 rounded-full bg-[#F5F2EC]/20" />
-                <span className="h-3 w-3 rounded-full bg-[#F5F2EC]/20" />
-                <div className="ml-4 flex-1 truncate rounded-md bg-[#0E0E0E] px-3 py-1 text-[12px] text-[#F5F2EC]/40">
+            <div className="mx-auto max-w-[780px] overflow-hidden rounded-xl border border-[#F5F2EC]/10 bg-[#141414] shadow-[0_28px_60px_rgba(0,0,0,0.5)]">
+              <div className="flex items-center gap-2 border-b border-[#F5F2EC]/10 bg-[#1A1A1A] px-4 py-2.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                <div className="ml-4 flex-1 truncate rounded-md bg-[#0E0E0E] px-3 py-1 text-[11px] text-[#F5F2EC]/40">
                   tusitio.com/#{step.anchor}
                 </div>
               </div>
 
-              <div className="relative h-[420px] bg-[#0E0E0E] md:h-[380px]">
-                <AnimatePresence mode="wait">
+              <div className="flex items-center justify-between border-b border-[#F5F2EC]/10 px-5 py-2.5">
+                <span className="font-serif text-[14px] text-[#C9A84C]">Tu Marca</span>
+                <div className="hidden gap-4 text-[11px] md:flex">
+                  {journeySteps.map((s, i) => (
+                    <span key={s.anchor} className={i === active ? "text-[#C9A84C]" : "text-[#F5F2EC]/35"}>
+                      {s.nav}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative h-[300px] overflow-hidden bg-[#0E0E0E] md:h-[280px]">
+                <AnimatePresence custom={direction} initial={false}>
                   <motion.div
                     key={active}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -12 }}
-                    transition={{ duration: 0.35, ease: EASE }}
+                    custom={direction}
+                    variants={slideVariants}
+                    initial="enter"
+                    animate="center"
+                    exit="exit"
+                    transition={{ duration: 0.5, ease: EASE }}
                     className="absolute inset-0"
                   >
                     <SectionMock index={active} />
@@ -287,10 +363,10 @@ export default function SeccionesSecciones() {
               </div>
             </div>
 
-            <div className="mt-6 flex items-center justify-between gap-4">
+            <div className="mx-auto mt-5 flex max-w-[780px] items-center justify-between gap-4">
               <button
                 type="button"
-                onClick={goPrev}
+                onClick={() => goTo(active - 1)}
                 disabled={active === 0}
                 aria-label="Sección anterior"
                 className="inline-flex items-center gap-2 rounded-lg border border-[#C9A84C]/40 px-4 py-2 text-[14px] text-[#C9A84C] transition-colors enabled:hover:bg-[#C9A84C]/10 disabled:cursor-not-allowed disabled:opacity-30 ferro-focus"
@@ -304,7 +380,7 @@ export default function SeccionesSecciones() {
                   <button
                     key={s.title}
                     type="button"
-                    onClick={() => setActive(i)}
+                    onClick={() => goTo(i)}
                     aria-label={`Ir a ${s.title}`}
                     aria-current={i === active}
                     className={`h-2.5 rounded-full transition-all ${
@@ -316,7 +392,7 @@ export default function SeccionesSecciones() {
 
               <button
                 type="button"
-                onClick={goNext}
+                onClick={() => goTo(active + 1)}
                 disabled={active === total - 1}
                 aria-label="Sección siguiente"
                 className="inline-flex items-center gap-2 rounded-lg border border-[#C9A84C]/40 px-4 py-2 text-[14px] text-[#C9A84C] transition-colors enabled:hover:bg-[#C9A84C]/10 disabled:cursor-not-allowed disabled:opacity-30 ferro-focus"
