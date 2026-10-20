@@ -29,7 +29,7 @@ const CONTACT_ITEMS = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    href: "https://wa.me/5491100000000?text=Hola%2C%20me%20interesa%20conocer%20los%20servicios%20de%20Ferro%20Studio.",
+    href: "https://wa.me/541167863196?text=Hola%2C%20me%20interesa%20conocer%20los%20servicios%20de%20Ferro%20Studio.",
   },
   {
     icon: MapPin,
