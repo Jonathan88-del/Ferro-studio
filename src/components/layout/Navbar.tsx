@@ -50,12 +50,18 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="ferro-focus flex items-center gap-[10px] no-underline shrink-0">
             <LogoMark />
-            <span className="flex flex-col leading-none select-none">
-              <span className="font-serif text-[22px] italic font-normal text-[#F5F2EC]">
-                Ferro<span className="text-[#C9A84C] not-italic">.</span>
+            <span className="flex items-center gap-3 select-none">
+              <span className="flex h-8 w-8 items-center justify-center border border-[#C9A84C]/50 font-serif text-[15px] font-light text-[#C9A84C]">
+                F
               </span>
-              <span className="mt-1 text-[8px] tracking-[0.42em] text-[#C9A84C]/80 uppercase font-sans">
-                Studio
+              <span className="flex flex-col gap-[5px] leading-none">
+                <span className="font-serif text-[15px] font-normal tracking-[0.34em] text-[#F5F2EC] uppercase">
+                  Ferro
+                </span>
+                <span className="h-px w-full bg-[#C9A84C]/35" />
+                <span className="text-[7.5px] tracking-[0.38em] text-[#F5F2EC]/45 uppercase font-sans">
+                  Studio
+                </span>
               </span>
             </span>
           </Link>
@@ -194,13 +200,4 @@ function DesktopLink({ href, active, children }: { href: string; active: boolean
   );
 
   return <Link href={href} className={className}>{content}</Link>;
-}
-
-function LogoMark() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="shrink-0">
-      <path d="M2 2h7v2H4v4h4v2H4v8H2V2z" fill="#C9A84C" fillOpacity="0.95" />
-      <path d="M11 2h7v2h-5v4h4v2h-4v4h5v2h-7V2z" fill="#F5F2EC" fillOpacity="0.65" />
-    </svg>
-  );
 }
