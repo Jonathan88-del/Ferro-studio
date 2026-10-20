@@ -50,8 +50,13 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="ferro-focus flex items-center gap-[10px] no-underline shrink-0">
             <LogoMark />
-            <span className="font-serif text-[15px] font-light tracking-[0.22em] text-[#F5F2EC] uppercase select-none">
-              Ferro<span className="text-[#C9A84C]">.</span>
+            <span className="flex flex-col leading-none select-none">
+              <span className="font-serif text-[22px] italic font-normal text-[#F5F2EC]">
+                Ferro<span className="text-[#C9A84C] not-italic">.</span>
+              </span>
+              <span className="mt-1 text-[8px] tracking-[0.42em] text-[#C9A84C]/80 uppercase font-sans">
+                Studio
+              </span>
             </span>
           </Link>
 
