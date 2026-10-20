@@ -4,11 +4,13 @@ import { motion } from "framer-motion";
 const DEMOS = [
   {
     title: "Landing Page",
+    description: "Una página enfocada en un solo objetivo: que el visitante pida presupuesto.",
     url: "https://plantilla-para-contadores-landing-p.vercel.app/",
     previewTitle: "Demo de landing page para contadores",
   },
   {
     title: "Sitio Institucional",
+    description: "Varias páginas que presentan la empresa, sus servicios y su trayectoria.",
     url: "https://pagina-web-muestra.vercel.app/",
     previewTitle: "Demo de sitio institucional",
   },
@@ -66,32 +68,43 @@ export default function Demos() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.1 + index * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="overflow-hidden border border-[#F5F2EC]/10 bg-[#111111]"
+              className="group flex flex-col overflow-hidden rounded-xl border border-[#F5F2EC]/10 bg-[#111111] transition-colors duration-300 hover:border-[#C9A84C]/40"
             >
-              <div className="flex items-center justify-between gap-4 border-b border-[#F5F2EC]/10 px-4 py-3">
+              <div className="flex items-center gap-3 border-b border-[#F5F2EC]/10 bg-[#1A1A1A] px-4 py-3">
                 <div className="flex items-center gap-1.5" aria-hidden="true">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#C9A84C]/70" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/25" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/25" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#F5F2EC]/20" />
                 </div>
-                <h2 className="font-serif text-[18px] font-light text-[#F5F2EC]">{demo.title}</h2>
+                <div className="min-w-0 flex-1 truncate rounded-md bg-[#0E0E0E] px-3 py-1 font-sans text-[11px] text-[#F5F2EC]/40">
+                  {new URL(demo.url).host}
+                </div>
+              </div>
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#F5F2EC]">
+                <iframe
+                  src={demo.url}
+                  title={demo.previewTitle}
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  sandbox="allow-scripts allow-forms allow-same-origin"
+                  className="h-full w-full"
+                />
+              </div>
+              <div className="flex flex-1 items-center justify-between gap-6 p-6 md:p-7">
+                <div>
+                  <p className="mb-1 font-sans text-[11px] uppercase tracking-[0.2em] text-[#C9A84C]/75">Demo {index + 1}</p>
+                  <h2 className="font-serif text-[24px] font-light text-[#F5F2EC]">{demo.title}</h2>
+                  <p className="mt-2 font-sans text-[14px] font-light leading-relaxed text-[#F5F2EC]/50">{demo.description}</p>
+                </div>
                 <a
                   href={demo.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="shrink-0 font-sans text-[12px] text-[#C9A84C] transition-colors hover:text-[#F5F2EC]"
+                  className="shrink-0 rounded-lg border border-[#C9A84C]/40 px-4 py-2.5 font-sans text-[13px] text-[#C9A84C] no-underline transition-colors hover:bg-[#C9A84C]/10"
                 >
                   Ver demo ↗
                 </a>
               </div>
-              <iframe
-                src={demo.url}
-                title={demo.previewTitle}
-                loading="lazy"
-                referrerPolicy="strict-origin-when-cross-origin"
-                sandbox="allow-scripts allow-forms allow-same-origin"
-                className="aspect-square w-full bg-[#F5F2EC]"
-              />
             </motion.article>
           ))}
         </div>
