@@ -6,12 +6,14 @@ const DEMOS = [
     title: "Landing Page",
     description: "Una página enfocada en un solo objetivo: que el visitante pida presupuesto.",
     url: "https://landing-page-rho-nine-83.vercel.app/",
+    image: "/demos/landing-desktop.png",
     previewTitle: "Demo de landing page para contadores",
   },
   {
     title: "Sitio Institucional",
     description: "Varias páginas que presentan la empresa, sus servicios y su trayectoria.",
     url: "https://pagina-web-muestra.vercel.app/",
+    image: "/demos/institucional-desktop.png",
     previewTitle: "Demo de sitio institucional",
   },
 ];
@@ -81,13 +83,11 @@ export default function Demos() {
                 </div>
               </div>
               <div className="relative aspect-[16/10] overflow-hidden bg-[#F5F2EC]">
-                <iframe
-                  src={demo.url}
-                  title={demo.previewTitle}
+                <img
+                  src={demo.image}
+                  alt={demo.previewTitle}
                   loading="lazy"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  sandbox="allow-scripts allow-forms allow-same-origin"
-                  className="h-full w-full"
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
               <div className="flex flex-1 items-center justify-between gap-6 p-6 md:p-7">
