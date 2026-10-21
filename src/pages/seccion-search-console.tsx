@@ -130,7 +130,7 @@ export default function SeccionSearchConsole() {
               <img
                 src="/logos/search-console.png"
                 alt="Logo de Google Search Console"
-                className="h-[110px] w-auto flex-shrink-0 self-start md:self-center"
+                className="h-[160px] w-auto flex-shrink-0 self-start md:self-center"
               />
             </div>
             <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
