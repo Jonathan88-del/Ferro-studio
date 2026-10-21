@@ -15,7 +15,6 @@ import {
   X,
 } from "lucide-react";
 import { Link } from "wouter";
-import { SiClaude, SiGooglegemini, SiPerplexity } from "react-icons/si";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -97,22 +96,22 @@ const AI_STEPS = [
 const AI_ASSISTANTS = [
   {
     name: "ChatGPT",
-    Logo: null,
+    logo: "/logos/chatgpt.svg",
     desc: "Muchas personas le piden recomendaciones de profesionales y servicios, y también puede consultar la web.",
   },
   {
     name: "Claude",
-    Logo: SiClaude,
+    logo: "/logos/claude.svg",
     desc: "El asistente de Anthropic. Puede buscar información actualizada en la web cuando la necesita.",
   },
   {
     name: "Google Gemini",
-    Logo: SiGooglegemini,
+    logo: "/logos/gemini.svg",
     desc: "Integrado con la búsqueda de Google, responde a partir de información publicada en la web.",
   },
   {
     name: "Perplexity",
-    Logo: SiPerplexity,
+    logo: "/logos/perplexity.svg",
     desc: "Responde con resúmenes y muestra las fuentes que consultó para hacerlo.",
   },
 ];
@@ -343,18 +342,37 @@ export default function SeccionSEO() {
             </div>
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Las herramientas más usadas</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {AI_ASSISTANTS.map((assistant) => {
-                const Logo = assistant.Logo;
-                return (
-                  <div key={assistant.name} className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                    <div className="h-[28px] mb-6">
-                      {Logo && <Logo size={28} className="text-[#F5F2EC]" aria-hidden="true" />}
-                    </div>
+              {AI_ASSISTANTS.map((assistant) => (
+                <div key={assistant.name} className="flex flex-col overflow-hidden rounded-lg border border-[#F5F2EC]/[0.08] bg-[#1A1A1A]">
+                  <div className="flex h-[120px] items-center justify-center bg-[#F5F2EC]">
+                    <img src={assistant.logo} alt={`Logo de ${assistant.name}`} loading="lazy" className="h-[36px] w-auto" />
+                  </div>
+                  <div className="p-7">
                     <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">{assistant.name}</h3>
                     <p className="text-[16px] text-[#F5F2EC]/55 font-light leading-relaxed">{assistant.desc}</p>
                   </div>
-                );
-              })}
+                </div>
+              ))}
+            </div>
+            <div className="mt-16 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 items-center">
+              <div>
+                <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Ejemplo ilustrativo</p>
+                <h3 className="font-serif text-[28px] font-light leading-tight text-[#F5F2EC] mb-4">
+                  Lo que pregunta el cliente y lo que responde la IA
+                </h3>
+                <p className="text-[16px] text-[#F5F2EC]/55 font-light leading-relaxed">
+                  Cuanto más clara y específica es la información de tu sitio, más fácil le resulta a la IA entender qué ofrecés y para quién.
+                </p>
+              </div>
+              <div className="space-y-5 rounded-lg border border-[#F5F2EC]/[0.08] bg-[#1A1A1A] p-6 md:p-8">
+                <div className="ml-auto flex max-w-[85%] items-center gap-3 rounded-lg bg-[#F5F2EC] px-5 py-3">
+                  <Search size={16} className="flex-shrink-0 text-[#0E0E0E]/50" strokeWidth={1.5} />
+                  <span className="text-[15px] font-light text-[#0E0E0E]">¿Qué contador conviene para un monotributista en Córdoba?</span>
+                </div>
+                <div className="max-w-[92%] rounded-lg border border-[#C9A84C]/30 bg-[#0E0E0E] px-5 py-4 text-[15px] font-light leading-relaxed text-[#F5F2EC]/75">
+                  Conviene buscar estudios que expliquen sus servicios con claridad, indiquen la zona en la que trabajan y ofrezcan un primer contacto sin cargo. Revisá sus sitios para comparar.
+                </div>
+              </div>
             </div>
             <p className="mt-8 text-[14px] text-[#F5F2EC]/40 font-light leading-relaxed max-w-3xl">
               Ninguna herramienta garantiza que mencione a un negocio en particular. Lo que sí podemos hacer es que la información de tu sitio sea clara, precisa y fácil de leer.
