@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
-  Bot,
   Check,
   Eye,
   FileText,
@@ -16,6 +15,7 @@ import {
   X,
 } from "lucide-react";
 import { Link } from "wouter";
+import { SiClaude, SiGooglegemini, SiPerplexity } from "react-icons/si";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -76,17 +76,43 @@ const INCLUDED = [
   { icon: Target, title: "Palabras clave", desc: "Usamos los términos que realmente escriben tus clientes." },
 ];
 
+const AI_STEPS = [
+  {
+    number: "01",
+    title: "Alguien le hace una pregunta a la IA",
+    desc: "Por ejemplo: “¿qué contador conviene para un monotributista en Córdoba?”.",
+  },
+  {
+    number: "02",
+    title: "La IA busca información en la web",
+    desc: "Revisa sitios publicados y toma los que mejor responden a la consulta.",
+  },
+  {
+    number: "03",
+    title: "Tu sitio puede aparecer en la respuesta",
+    desc: "Si tu información es clara y está bien organizada, es más fácil que la IA la use y te mencione.",
+  },
+];
+
 const AI_ASSISTANTS = [
   {
     name: "ChatGPT",
-    desc: "Muchas personas le piden recomendaciones de profesionales y servicios por zona.",
+    Logo: null,
+    desc: "Muchas personas le piden recomendaciones de profesionales y servicios, y también puede consultar la web.",
+  },
+  {
+    name: "Claude",
+    Logo: SiClaude,
+    desc: "El asistente de Anthropic. Puede buscar información actualizada en la web cuando la necesita.",
   },
   {
     name: "Google Gemini",
+    Logo: SiGooglegemini,
     desc: "Integrado con la búsqueda de Google, responde a partir de información publicada en la web.",
   },
   {
     name: "Perplexity",
+    Logo: SiPerplexity,
     desc: "Responde con resúmenes y muestra las fuentes que consultó para hacerlo.",
   },
 ];
@@ -297,16 +323,38 @@ export default function SeccionSEO() {
               También te pueden encontrar en las inteligencias artificiales
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Cada vez más personas preguntan directamente a un asistente de IA en lugar de buscar en Google. Un sitio claro y bien estructurado facilita que esas herramientas lo lean y lo mencionen.
+              Cada vez más personas preguntan directamente a un asistente de IA en lugar de buscar en Google. Así funciona ese camino, paso a paso.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {AI_ASSISTANTS.map((assistant) => (
-                <div key={assistant.name} className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
-                  <Bot size={26} className="text-[#C9A84C] mb-6" strokeWidth={1.25} />
-                  <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">{assistant.name}</h3>
-                  <p className="text-[16px] text-[#F5F2EC]/55 font-light leading-relaxed">{assistant.desc}</p>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+              {AI_STEPS.map((step, index) => (
+                <motion.div
+                  key={step.number}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.6, ease: EASE }}
+                  className="border-t border-[#C9A84C]/40 pt-6"
+                >
+                  <p className="font-serif text-[15px] text-[#C9A84C] mb-3">{step.number}</p>
+                  <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-3">{step.title}</h3>
+                  <p className="text-[16px] text-[#F5F2EC]/55 font-light leading-relaxed">{step.desc}</p>
+                </motion.div>
               ))}
+            </div>
+            <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Las herramientas más usadas</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {AI_ASSISTANTS.map((assistant) => {
+                const Logo = assistant.Logo;
+                return (
+                  <div key={assistant.name} className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                    <div className="h-[28px] mb-6">
+                      {Logo && <Logo size={28} className="text-[#F5F2EC]" aria-hidden="true" />}
+                    </div>
+                    <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">{assistant.name}</h3>
+                    <p className="text-[16px] text-[#F5F2EC]/55 font-light leading-relaxed">{assistant.desc}</p>
+                  </div>
+                );
+              })}
             </div>
             <p className="mt-8 text-[14px] text-[#F5F2EC]/40 font-light leading-relaxed max-w-3xl">
               Ninguna herramienta garantiza que mencione a un negocio en particular. Lo que sí podemos hacer es que la información de tu sitio sea clara, precisa y fácil de leer.
