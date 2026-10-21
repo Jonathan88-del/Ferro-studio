@@ -105,7 +105,7 @@ export default function SeccionAnalytics() {
               <img src="/logos/google-analytics.png" alt="Logo de Google Analytics" className="h-[110px] w-auto flex-shrink-0 self-start md:self-center" />
             </div>
             <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
-              Google Analytics es una herramienta gratuita de Google que registra cada visita a tu sitio web. Te muestra cuántas personas llegan, de dónde vienen y qué hacen mientras navegan.
+              Google Analytics es una herramienta de Google que registra cada visita a tu sitio web. Te muestra cuántas personas llegan, de dónde vienen y qué hacen mientras navegan.
             </p>
           </motion.div>
         </div>
