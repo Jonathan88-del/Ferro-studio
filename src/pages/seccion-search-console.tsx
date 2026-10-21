@@ -1,351 +1,299 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Search, TrendingUp, AlertTriangle, CheckCircle2, Lightbulb, Eye, Target } from "lucide-react";
+import {
+  ArrowLeft,
+  Search,
+  TrendingUp,
+  AlertTriangle,
+  CheckCircle2,
+  Lightbulb,
+  Eye,
+  Target,
+  MousePointerClick,
+  Smartphone,
+} from "lucide-react";
 import { Link } from "wouter";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" },
+  transition: { duration: 0.8, ease: EASE },
+};
+
+const DIFFERENCES = [
+  {
+    icon: Eye,
+    title: "Analytics: visitantes",
+    desc: "Muestra qué hace la gente dentro de tu sitio: qué páginas recorre, cuánto tiempo permanece y si realiza una consulta.",
+    highlighted: false,
+  },
+  {
+    icon: Search,
+    title: "Search Console: Google",
+    desc: "Muestra qué buscan las personas para encontrarte, en qué posición apareces y si Google detecta errores en tu sitio.",
+    highlighted: true,
+  },
+];
+
+const SUPERPOWERS = [
+  {
+    icon: Search,
+    title: "Ves qué buscan",
+    example: "Alguien busca “contador en Buenos Aires” y tu sitio aparece en los resultados. Search Console registra esa búsqueda exacta.",
+    takeaway: "Sabés exactamente qué pide la gente.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Ves tu posición",
+    example: "Tu sitio aparece en el puesto 7. El objetivo es llegar al 1-3, y el panel te muestra cómo evoluciona ese puesto.",
+    takeaway: "Sabés dónde estás y hacia dónde avanzar.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Detectás problemas a tiempo",
+    example: "Google avisa que una página no se ve bien en celulares. Lo corregís antes de que afecte tus visitas.",
+    takeaway: "Prevenís pérdidas antes de que ocurran.",
+  },
+];
+
+const PANEL_INFO = [
+  {
+    icon: Search,
+    title: "Búsquedas que te encuentran",
+    desc: "La lista de consultas que usaron las personas para llegar a tu sitio. Si aparece “consultor”, podés crear contenido sobre ese tema.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Posición en los resultados",
+    desc: "Para cada búsqueda, el puesto en el que aparecés. Del 1 al 3 es una posición destacada; a partir del 10 hay margen de mejora.",
+  },
+  {
+    icon: MousePointerClick,
+    title: "Clics recibidos",
+    desc: "Cuántas personas hicieron clic en tu resultado. Muchas apariciones con pocos clics suelen indicar un título poco atractivo.",
+  },
+  {
+    icon: Smartphone,
+    title: "Problemas técnicos",
+    desc: "Errores que impiden una buena experiencia, como páginas que no cargan bien en el celular, enlaces rotos o imágenes que no se muestran.",
+  },
+];
+
+const BENEFITS = [
+  {
+    icon: Target,
+    title: "Una meta clara",
+    desc: "Si querés aparecer primero para “consultor legal” y hoy estás en el puesto 7, sabés exactamente qué mejorar.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Resultados verificables",
+    desc: "Después de un cambio, los datos muestran en algunas semanas si la mejora dio resultado.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Oportunidades ocultas",
+    desc: "Descubrís búsquedas relacionadas con tu negocio que no imaginabas y que pueden traerte nuevos clientes.",
+  },
+];
+
 export default function SeccionSearchConsole() {
   return (
     <>
-      {/* Header */}
-      <section className="relative bg-[#0E0E0E] pt-20 pb-[1px] md:pt-24 md:pb-[1px] overflow-hidden">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-[#0E0E0E] pt-28 pb-[60px] md:pt-32 md:pb-[80px]">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
           style={{
-            backgroundImage:
-              "radial-gradient(circle, rgba(245,242,236,0.03) 1px, transparent 1px)",
+            backgroundImage: "radial-gradient(circle, rgba(245,242,236,0.03) 1px, transparent 1px)",
             backgroundSize: "36px 36px",
           }}
         />
         <div className="container-ferro relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <Link href="/servicios" className="inline-flex items-center gap-2 mb-2 no-underline ferro-focus group">
-              <ArrowLeft size={16} className="text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors" />
-              <span className="text-[0.85rem] text-[#C9A84C]/70 group-hover:text-[#C9A84C] transition-colors tracking-wide">
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: EASE }}>
+            <Link href="/servicios" className="group mb-8 inline-flex items-center gap-2 no-underline ferro-focus">
+              <ArrowLeft size={16} className="text-[#C9A84C]/70 transition-colors group-hover:text-[#C9A84C]" />
+              <span className="text-[14px] tracking-wide text-[#C9A84C]/70 transition-colors group-hover:text-[#C9A84C]">
                 Volver a Servicios
               </span>
             </Link>
 
-            <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-2">
-              Search Console: Ve cómo Google ve tu sitio
+            <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Seguimiento en Google</p>
+            <h1 className="mb-6 max-w-4xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
+              Search Console: ve cómo Google ve tu sitio
             </h1>
+            <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
+              Es la herramienta gratuita de Google que te muestra qué buscan las personas, en qué lugar apareces y si hay problemas que corregir.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Section 1: ¿Qué es en realidad? */}
-      <section className="relative bg-[#0E0E0E] pt-[1px] pb-[10px]">
+      {/* Diferencia con Analytics */}
+      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
         <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[34px] font-light text-[#F5F2EC] mb-2">
+          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
+            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Para entenderlo</p>
+            <h2 className="mb-4 font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
               ¿Qué es Search Console?
             </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-3">
-              Mientras Analytics te muestra qué hacen los visitantes, Search Console te muestra cómo Google ve tu sitio.
+            <p className="text-[18px] font-light leading-relaxed text-[#F5F2EC]/55">
+              Mientras Analytics muestra qué hacen los visitantes una vez que llegan, Search Console muestra cómo te encuentra Google antes de que lleguen.
             </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3"
-              >
-                <div className="flex items-start gap-1 mb-1">
-                  <Eye size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
-                  <div>
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Analytics (visitantes)
-                    </h3>
-                    <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Te muestra qué hace la gente en tu sitio: dónde hace clic, cuánto tiempo pasa, si compra.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-3"
-              >
-                <div className="flex items-start gap-1 mb-1">
-                  <Search size={24} className="text-[#C9A84C] flex-shrink-0" strokeWidth={1.5} />
-                  <div>
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Search Console (Google)
-                    </h3>
-                    <p className="text-[20px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                      Te muestra qué buscan las personas para encontrarte, en qué posición apareces, si hay errores.
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Section 2: Los 3 superpoderes */}
-      <section className="relative bg-[#0E0E0E] pt-[8px] pb-[3px]">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-2">
-              Los 3 superpoderes de Search Console
-            </h2>
-            <div className="space-y-1">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.05 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3 md:p-4"
-              >
-                <div className="flex items-start gap-1">
-                  <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <Search size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Superpoder 1: Ve qué buscan
-                    </h3>
-                    <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-2">
-                      Alguien busca en Google "Contador en Buenos Aires" y apareces. Ves exactamente esa búsqueda.
-                    </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light">
-                      → Sabes exactamente qué pide la gente
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3 md:p-4"
-              >
-                <div className="flex items-start gap-1">
-                  <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <TrendingUp size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Superpoder 2: Ve tu posición
-                    </h3>
-                    <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-2">
-                      Apareces en posición 7 en Google. ¿Tu meta? Llegar a posición 1-3. Ves el camino claramente.
-                    </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light">
-                      → Sabes exactamente dónde estás
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-[#1A1A1A] border border-[#C9A84C]/30 rounded-lg p-3 md:p-4"
-              >
-                <div className="flex items-start gap-1">
-                  <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#C9A84C]/10 flex items-center justify-center">
-                    <AlertTriangle size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-serif text-[22px] font-light text-[#F5F2EC] mb-2">
-                      Superpoder 3: Ve problemas antes de que exploten
-                    </h3>
-                    <p className="text-[20px] text-[#F5F2EC]/50 font-light mb-2">
-                      Google encuentra un error en tu sitio y te lo dice: "Tu página no carga bien en móvil". Lo corregimos y listo.
-                    </p>
-                    <p className="text-[18px] text-[#C9A84C] font-light">
-                      → Prevención de daño automática
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Section 3: Qué ves específicamente */}
-      <section className="relative bg-[#0E0E0E] pt-[8px] pb-[3px]">
-        <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-3">
-              Qué información ves en el panel
-            </h2>
-            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-3">
-              Todo organizado de forma simple para tomar decisiones rápidas:
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {[
-                {
-                  emoji: "🔍",
-                  title: "Qué búsquedas te traen",
-                  desc: "Lista exacta de búsquedas que usó la gente para encontrarte. Si ves 'consultor', creas contenido sobre eso."
-                },
-                {
-                  emoji: "📊",
-                  title: "En qué posición estás",
-                  desc: "Para cada búsqueda, ves en qué posición apareces. Posición 1-3 = excelente. Posición 10+ = trabaja en mejorar."
-                },
-                {
-                  emoji: "📈",
-                  title: "Cuántos clics recibes",
-                  desc: "No solo vistas, sino clics reales. Si ves 1000 apariciones pero solo 50 clics, tu título no es atractivo."
-                },
-                {
-                  emoji: "⚠️",
-                  title: "Problemas técnicos",
-                  desc: "Google detecta si tu sitio no carga bien en móvil, si hay enlaces rotos, si las imágenes no se ven. Te lo dice al instante."
-                },
-              ].map((item, index) => (
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            {DIFFERENCES.map((item, index) => {
+              const Icon = item.icon;
+              return (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-3"
+                  key={item.title}
+                  {...fadeUp}
+                  transition={{ duration: 0.8, ease: EASE, delay: index * 0.1 }}
+                  className={`rounded-lg bg-[#1A1A1A] p-7 md:p-8 ${
+                    item.highlighted ? "border border-[#C9A84C]/30" : "border border-[#F5F2EC]/[0.08]"
+                  }`}
                 >
-                  <div className="flex items-start gap-1">
-                    <div className="flex-shrink-0 text-[1.8rem]">{item.emoji}</div>
-                    <div className="flex-1">
-                      <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-1">
-                        {item.title}
-                      </h3>
-                      <p className="text-[18px] text-[#F5F2EC]/50 font-light">
-                        {item.desc}
-                      </p>
-                    </div>
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg border border-[#C9A84C]/30 bg-[#C9A84C]/10">
+                    <Icon size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="mb-3 font-serif text-[22px] font-light text-[#F5F2EC]">{item.title}</h3>
+                  <p className="text-[17px] font-light leading-relaxed text-[#F5F2EC]/55">{item.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Tres funciones */}
+      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+        <div className="container-ferro">
+          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
+            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Qué te permite</p>
+            <h2 className="font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
+              Tres funciones clave para tu negocio
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {SUPERPOWERS.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  {...fadeUp}
+                  transition={{ duration: 0.8, ease: EASE, delay: index * 0.08 }}
+                  className="flex flex-col rounded-lg border border-[#F5F2EC]/[0.08] bg-[#1A1A1A] p-7"
+                >
+                  <div className="mb-2 font-serif text-[40px] font-light leading-none text-[#C9A84C]">
+                    {String(index + 1).padStart(2, "0")}
+                  </div>
+                  <div className="mb-5 mt-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[#C9A84C]/10">
+                    <Icon size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="mb-3 font-serif text-[22px] font-light text-[#F5F2EC]">{item.title}</h3>
+                  <p className="mb-5 text-[16px] font-light leading-relaxed text-[#F5F2EC]/55">{item.example}</p>
+                  <p className="mt-auto border-t border-[#F5F2EC]/[0.08] pt-4 text-[16px] font-light text-[#C9A84C]">
+                    {item.takeaway}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Qué ves en el panel */}
+      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+        <div className="container-ferro">
+          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
+            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">El panel</p>
+            <h2 className="mb-4 font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
+              Qué información ves
+            </h2>
+            <p className="text-[18px] font-light leading-relaxed text-[#F5F2EC]/55">
+              Toda la información está organizada de forma simple para que tomes decisiones con rapidez.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+            {PANEL_INFO.map((item) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  {...fadeUp}
+                  className="flex gap-5 rounded-lg border border-[#F5F2EC]/[0.08] bg-[#1A1A1A] p-7"
+                >
+                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg border border-[#C9A84C]/30 bg-[#C9A84C]/10">
+                    <Icon size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="mb-2 font-serif text-[21px] font-light text-[#F5F2EC]">{item.title}</h3>
+                    <p className="text-[16px] font-light leading-relaxed text-[#F5F2EC]/55">{item.desc}</p>
                   </div>
                 </motion.div>
-              ))}
-            </div>
-          </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* Section: Por qué importa */}
-      <section className="relative bg-[#0E0E0E] pt-[8px] pb-[5px]">
+      {/* Por qué importa */}
+      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
         <div className="container-ferro">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <h2 className="font-serif text-[36px] font-light text-[#F5F2EC] mb-2">
-              Por qué Search Console es tu brújula SEO
+          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
+            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Por qué importa</p>
+            <h2 className="font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
+              Search Console es tu brújula de SEO
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-4"
-              >
-                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#C9A84C]/10 mb-2">
-                  <Target size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-1">
-                  Meta clara
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Quieres estar en posición 1 para "consultor legal". Ves que ahora estás 7. Sabes exactamente qué perseguir.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.15 }}
-                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-4"
-              >
-                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#C9A84C]/10 mb-2">
-                  <CheckCircle2 size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-1">
-                  Validación inmediata
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Cambias algo y ves si funcionó en 2-4 semanas. Sabes si fue buena idea o no.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/20 rounded-lg p-4"
-              >
-                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#C9A84C]/10 mb-2">
-                  <Lightbulb size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-1">
-                  Oportunidades escondidas
-                </h3>
-                <p className="text-[18px] text-[#F5F2EC]/50 font-light leading-relaxed">
-                  Descubres búsquedas que no sabías que existían. Oportunidades de dinero que otros no ven.
-                </p>
-              </motion.div>
-            </div>
           </motion.div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {BENEFITS.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  {...fadeUp}
+                  transition={{ duration: 0.8, ease: EASE, delay: index * 0.08 }}
+                  className="rounded-lg border border-[#C9A84C]/20 bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] p-7"
+                >
+                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg bg-[#C9A84C]/10">
+                    <Icon size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="mb-3 font-serif text-[21px] font-light text-[#F5F2EC]">{item.title}</h3>
+                  <p className="text-[16px] font-light leading-relaxed text-[#F5F2EC]/55">{item.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="relative bg-[#0E0E0E] pt-[10px] pb-[10px]">
+      {/* CTA */}
+      <section className="relative bg-[#0E0E0E] pb-[80px] pt-[20px] md:pb-[100px]">
         <div className="container-ferro">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.8, ease: EASE }}
-            className="bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] border border-[#C9A84C]/30 rounded-lg p-5 md:p-6 text-center"
+            {...fadeUp}
+            className="rounded-lg border border-[#C9A84C]/30 bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] p-10 text-center md:p-14"
           >
-            <h2 className="font-serif text-[2rem] font-light text-[#F5F2EC] mb-2 max-w-2xl mx-auto">
-              Ya viene configurado y listo para usar
+            <h2 className="mx-auto mb-4 max-w-2xl font-serif text-[2rem] font-light text-[#F5F2EC]">
+              Search Console viene configurado desde el primer día
             </h2>
-            <p className="text-[1rem] text-[#F5F2EC]/60 font-light max-w-2xl mx-auto mb-3">
-              No necesitas hacer nada técnico. Nosotros integramos Search Console desde el primer día para que veas cómo Google ve tu sitio desde el primer momento.
+            <p className="mx-auto mb-8 max-w-2xl text-[1rem] font-light leading-relaxed text-[#F5F2EC]/60">
+              No necesitás hacer nada técnico. Nosotros lo integramos para que veas cómo Google ve tu sitio desde el primer momento.
             </p>
-            <Link href="/servicios" className="inline-flex items-center gap-2 px-8 py-3 bg-[#C9A84C] text-[#0E0E0E] rounded-lg no-underline ferro-focus group font-light">
+            <Link
+              href="/servicios"
+              className="ferro-focus group inline-flex items-center gap-2 rounded-lg bg-[#C9A84C] px-8 py-3 font-light text-[#0E0E0E] no-underline"
+            >
               Ver todos nuestros servicios
-              <ArrowLeft size={16} className="rotate-180 group-hover:translate-x-1 transition-transform" />
+              <ArrowLeft size={16} className="rotate-180 transition-transform group-hover:translate-x-1" />
             </Link>
           </motion.div>
         </div>
