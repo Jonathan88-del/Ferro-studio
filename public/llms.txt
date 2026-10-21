@@ -1,0 +1,17 @@
+# Ferro Studio
+
+> Ferro Studio diseña y desarrolla páginas web profesionales, rápidas y optimizadas para Google, pensadas para atraer clientes y generar confianza. Teléfono de contacto: +54 11 6786-3196. Sitio: https://ferrostudioweb.com
+
+## Servicios
+
+- [Servicios](https://ferrostudioweb.com/servicios): diseño y desarrollo de páginas web, SEO básico, Google Analytics y Search Console.
+- [Proceso de trabajo](https://ferrostudioweb.com/proceso): cómo trabajamos desde la idea hasta la publicación.
+- [Planes](https://ferrostudioweb.com/planes): planes de páginas web, hosting, certificado SSL, WhatsApp y cambios.
+- [SEO básico](https://ferrostudioweb.com/seccion-seo): cómo aparece tu negocio en Google y en herramientas de inteligencia artificial.
+- [Páginas independientes](https://ferrostudioweb.com/seccion-paginas): una URL propia para cada servicio que busca tu cliente.
+- [Google Analytics](https://ferrostudioweb.com/seccion-analytics): medición de visitas, orígenes del tráfico y comportamiento de los visitantes.
+- [Search Console](https://ferrostudioweb.com/seccion-search-console): seguimiento de cómo Google muestra tu sitio.
+
+## Contacto
+
+- [Contacto](https://ferrostudioweb.com/contacto): formulario y datos de contacto.
