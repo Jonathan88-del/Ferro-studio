@@ -5,12 +5,9 @@ import {
   Search,
   TrendingUp,
   AlertTriangle,
-  CheckCircle2,
-  Lightbulb,
   Eye,
   Target,
   MousePointerClick,
-  Smartphone,
   Globe,
   ArrowRight,
 } from "lucide-react";
@@ -58,47 +55,6 @@ const SUPERPOWERS = [
     title: "Detectás problemas a tiempo",
     example: "Google avisa que una página no se ve bien en celulares. Lo corregís antes de que afecte tus visitas.",
     takeaway: "Prevenís pérdidas antes de que ocurran.",
-  },
-];
-
-const PANEL_INFO = [
-  {
-    icon: Search,
-    title: "Búsquedas que te encuentran",
-    desc: "La lista de consultas que usaron las personas para llegar a tu sitio. Si aparece “consultor”, podés crear contenido sobre ese tema.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Posición en los resultados",
-    desc: "Para cada búsqueda, el puesto en el que aparecés. Del 1 al 3 es una posición destacada; a partir del 10 hay margen de mejora.",
-  },
-  {
-    icon: MousePointerClick,
-    title: "Clics recibidos",
-    desc: "Cuántas personas hicieron clic en tu resultado. Muchas apariciones con pocos clics suelen indicar un título poco atractivo.",
-  },
-  {
-    icon: Smartphone,
-    title: "Problemas técnicos",
-    desc: "Errores que impiden una buena experiencia, como páginas que no cargan bien en el celular, enlaces rotos o imágenes que no se muestran.",
-  },
-];
-
-const BENEFITS = [
-  {
-    icon: Target,
-    title: "Una meta clara",
-    desc: "Si querés aparecer primero para “consultor legal” y hoy estás en el puesto 7, sabés exactamente qué mejorar.",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Resultados verificables",
-    desc: "Después de un cambio, los datos muestran en algunas semanas si la mejora dio resultado.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Oportunidades ocultas",
-    desc: "Descubrís búsquedas relacionadas con tu negocio que no imaginabas y que pueden traerte nuevos clientes.",
   },
 ];
 
@@ -171,7 +127,7 @@ export default function SeccionSearchConsole() {
               Search Console: ve cómo Google ve tu sitio
             </h1>
             <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
-              Es la herramienta gratuita de Google que te muestra qué buscan las personas, en qué lugar apareces y si hay problemas que corregir.
+              Es la herramienta de Google que te muestra qué buscan las personas, en qué lugar apareces y si hay problemas que corregir.
             </p>
           </motion.div>
         </div>
@@ -296,42 +252,6 @@ export default function SeccionSearchConsole() {
         </div>
       </section>
 
-      {/* Qué ves en el panel */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
-        <div className="container-ferro">
-          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
-            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">El panel</p>
-            <h2 className="mb-4 font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
-              Qué información ves
-            </h2>
-            <p className="text-[18px] font-light leading-relaxed text-[#F5F2EC]/55">
-              Toda la información está organizada de forma simple para que tomes decisiones con rapidez.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-            {PANEL_INFO.map((item) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={item.title}
-                  {...fadeUp}
-                  className="flex gap-5 rounded-lg border border-[#F5F2EC]/[0.08] bg-[#1A1A1A] p-7"
-                >
-                  <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg border border-[#C9A84C]/30 bg-[#C9A84C]/10">
-                    <Icon size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <h3 className="mb-2 font-serif text-[21px] font-light text-[#F5F2EC]">{item.title}</h3>
-                    <p className="text-[16px] font-light leading-relaxed text-[#F5F2EC]/55">{item.desc}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Glosario */}
       <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
         <div className="container-ferro">
@@ -349,38 +269,6 @@ export default function SeccionSearchConsole() {
                 <p className="text-[16px] font-light leading-relaxed text-[#F5F2EC]/55">{term.desc}</p>
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Por qué importa */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
-        <div className="container-ferro">
-          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
-            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Por qué importa</p>
-            <h2 className="font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
-              Search Console es tu brújula de SEO
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {BENEFITS.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={item.title}
-                  {...fadeUp}
-                  transition={{ duration: 0.8, ease: EASE, delay: index * 0.08 }}
-                  className="rounded-lg border border-[#C9A84C]/20 bg-gradient-to-br from-[#1A1A1A] to-[#0E0E0E] p-7"
-                >
-                  <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg bg-[#C9A84C]/10">
-                    <Icon size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="mb-3 font-serif text-[21px] font-light text-[#F5F2EC]">{item.title}</h3>
-                  <p className="text-[16px] font-light leading-relaxed text-[#F5F2EC]/55">{item.desc}</p>
-                </motion.div>
-              );
-            })}
           </div>
         </div>
       </section>
