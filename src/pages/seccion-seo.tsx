@@ -356,7 +356,7 @@ export default function SeccionSEO() {
             </div>
             <div className="mt-16 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 items-center">
               <div>
-                <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Ejemplo ilustrativo</p>
+                <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Ejemplo ilustrativo (nombres ficticios)</p>
                 <h3 className="font-serif text-[28px] font-light leading-tight text-[#F5F2EC] mb-4">
                   Lo que pregunta el cliente y lo que responde la IA
                 </h3>
@@ -369,8 +369,19 @@ export default function SeccionSEO() {
                   <Search size={16} className="flex-shrink-0 text-[#0E0E0E]/50" strokeWidth={1.5} />
                   <span className="text-[15px] font-light text-[#0E0E0E]">¿Qué contador conviene para un monotributista en Córdoba?</span>
                 </div>
-                <div className="max-w-[92%] rounded-lg border border-[#C9A84C]/30 bg-[#0E0E0E] px-5 py-4 text-[15px] font-light leading-relaxed text-[#F5F2EC]/75">
-                  Conviene buscar estudios que expliquen sus servicios con claridad, indiquen la zona en la que trabajan y ofrezcan un primer contacto sin cargo. Revisá sus sitios para comparar.
+                <div className="max-w-[92%] space-y-4 rounded-lg border border-[#C9A84C]/30 bg-[#0E0E0E] px-5 py-4 text-[15px] font-light leading-relaxed text-[#F5F2EC]/75">
+                  <p>Para un monotributista en Córdoba, los mejores contadores que encontré son:</p>
+                  <ul className="space-y-3">
+                    <li>
+                      <span className="text-[#C9A84C]">1. Estudio Robles &amp; Asociados</span>, especialistas en monotributo y primer contacto sin cargo.
+                    </li>
+                    <li>
+                      <span className="text-[#C9A84C]">2. Contadora Lucía Ferreyra</span>, atiende de forma online y presencial en toda la provincia.
+                    </li>
+                    <li>
+                      <span className="text-[#C9A84C]">3. Gómez Contadores Asociados</span>, con más de 15 años acompañando emprendedores de Córdoba.
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
