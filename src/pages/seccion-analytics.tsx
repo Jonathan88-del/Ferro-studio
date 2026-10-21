@@ -98,6 +98,9 @@ export default function SeccionAnalytics() {
             </Link>
 
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Medición de tu sitio</p>
+            <div className="mb-8 inline-flex items-center rounded-lg bg-[#F5F2EC] px-6 py-4">
+              <img src="/logos/google-analytics.svg" alt="Logo de Google Analytics" className="h-[44px] w-auto" />
+            </div>
             <h1 className="mb-6 max-w-4xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
               Google Analytics: conocé quién visita tu sitio y qué hace en él
             </h1>
