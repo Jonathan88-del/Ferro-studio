@@ -98,12 +98,12 @@ export default function SeccionAnalytics() {
             </Link>
 
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Medición de tu sitio</p>
-            <div className="mb-8 inline-flex items-center rounded-lg bg-[#F5F2EC] px-6 py-4">
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F3b4a41e626e24dae8e3aa82c13ef83ba%2F64a504bed3c149aa98cb869a0d648ed9?format=webp&width=800&height=1200" alt="Logo de Google Analytics" className="h-[90px] w-auto mix-blend-multiply" />
+            <div className="mb-6 flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
+              <h1 className="max-w-3xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
+                Google Analytics: conocé quién visita tu sitio y qué hace en él
+              </h1>
+              <img src="/logos/google-analytics.png" alt="Logo de Google Analytics" className="h-[110px] w-auto flex-shrink-0 self-start md:self-center" />
             </div>
-            <h1 className="mb-6 max-w-4xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
-              Google Analytics: conocé quién visita tu sitio y qué hace en él
-            </h1>
             <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
               Google Analytics es una herramienta gratuita de Google que registra cada visita a tu sitio web. Te muestra cuántas personas llegan, de dónde vienen y qué hacen mientras navegan.
             </p>
