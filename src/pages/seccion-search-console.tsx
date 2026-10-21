@@ -123,9 +123,16 @@ export default function SeccionSearchConsole() {
             </Link>
 
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Seguimiento en Google</p>
-            <h1 className="mb-6 max-w-4xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
-              Search Console: ve cómo Google ve tu sitio
-            </h1>
+            <div className="mb-6 flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
+              <h1 className="max-w-3xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
+                Search Console: ve cómo Google ve tu sitio
+              </h1>
+              <img
+                src="/logos/search-console.png"
+                alt="Logo de Google Search Console"
+                className="h-[110px] w-auto flex-shrink-0 self-start md:self-center"
+              />
+            </div>
             <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
               Es la herramienta de Google que te muestra qué buscan las personas, en qué lugar apareces y si hay problemas que corregir.
             </p>
