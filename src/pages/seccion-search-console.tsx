@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -10,6 +11,8 @@ import {
   Target,
   MousePointerClick,
   Smartphone,
+  Globe,
+  ArrowRight,
 } from "lucide-react";
 import { Link } from "wouter";
 
@@ -99,6 +102,48 @@ const BENEFITS = [
   },
 ];
 
+const JOURNEY = [
+  {
+    icon: Search,
+    title: "Alguien busca",
+    desc: "Escribe en Google lo que necesita, por ejemplo “contador para monotributistas”.",
+  },
+  {
+    icon: Globe,
+    title: "Aparecés en el listado",
+    desc: "Google muestra tu página entre los resultados. Cada aparición se registra como una impresión.",
+  },
+  {
+    icon: MousePointerClick,
+    title: "Hacen clic",
+    desc: "Si tu título les resulta claro y útil, eligen entrar a tu sitio. Eso es un clic.",
+  },
+  {
+    icon: Target,
+    title: "Llegan a tu sitio",
+    desc: "Al entrar, ya están interesados en lo que ofrecés. Analytics registra lo que hacen después.",
+  },
+];
+
+const TERMS = [
+  {
+    title: "Consulta",
+    desc: "Las palabras que escribió la persona en Google.",
+  },
+  {
+    title: "Impresión",
+    desc: "Cada vez que tu resultado aparece en pantalla, aunque nadie haga clic.",
+  },
+  {
+    title: "Posición",
+    desc: "El lugar promedio en el que aparece tu resultado. El 1 es el primero.",
+  },
+  {
+    title: "CTR (tasa de clics)",
+    desc: "El porcentaje de impresiones que terminan en un clic. Indica qué tan atractivo es tu resultado.",
+  },
+];
+
 export default function SeccionSearchConsole() {
   return (
     <>
@@ -163,6 +208,50 @@ export default function SeccionSearchConsole() {
                   <h3 className="mb-3 font-serif text-[22px] font-light text-[#F5F2EC]">{item.title}</h3>
                   <p className="text-[17px] font-light leading-relaxed text-[#F5F2EC]/55">{item.desc}</p>
                 </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Recorrido */}
+      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+        <div className="container-ferro">
+          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
+            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Paso a paso</p>
+            <h2 className="mb-4 font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
+              Cómo llega un cliente desde Google
+            </h2>
+            <p className="text-[18px] font-light leading-relaxed text-[#F5F2EC]/55">
+              Search Console sigue cada uno de estos pasos y te dice en qué punto se pierde o se gana un cliente.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr] md:items-stretch">
+            {JOURNEY.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <Fragment key={step.title}>
+                  <motion.div
+                    {...fadeUp}
+                    transition={{ duration: 0.8, ease: EASE, delay: index * 0.08 }}
+                    className="flex flex-col rounded-lg border border-[#F5F2EC]/[0.08] bg-[#1A1A1A] p-6"
+                  >
+                    <div className="mb-4 flex items-center gap-3">
+                      <span className="font-serif text-[28px] font-light leading-none text-[#C9A84C]">
+                        {index + 1}
+                      </span>
+                      <Icon size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
+                    </div>
+                    <h3 className="mb-2 font-serif text-[20px] font-light text-[#F5F2EC]">{step.title}</h3>
+                    <p className="text-[15px] font-light leading-relaxed text-[#F5F2EC]/55">{step.desc}</p>
+                  </motion.div>
+                  {index < JOURNEY.length - 1 && (
+                    <div className="hidden items-center justify-center md:flex">
+                      <ArrowRight size={20} className="text-[#C9A84C]/50" strokeWidth={1.5} />
+                    </div>
+                  )}
+                </Fragment>
               );
             })}
           </div>
@@ -239,6 +328,27 @@ export default function SeccionSearchConsole() {
                 </motion.div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Glosario */}
+      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+        <div className="container-ferro">
+          <motion.div {...fadeUp} className="mb-12 max-w-3xl">
+            <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Vocabulario</p>
+            <h2 className="font-serif text-[36px] font-light leading-tight text-[#F5F2EC]">
+              Los términos que vas a ver en el panel
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2">
+            {TERMS.map((term) => (
+              <motion.div key={term.title} {...fadeUp} className="border-l border-[#C9A84C]/40 pl-6">
+                <h3 className="mb-2 font-serif text-[21px] font-light text-[#F5F2EC]">{term.title}</h3>
+                <p className="text-[16px] font-light leading-relaxed text-[#F5F2EC]/55">{term.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
