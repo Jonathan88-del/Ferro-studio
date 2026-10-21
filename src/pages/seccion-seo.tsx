@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
+  Bot,
   Check,
   Eye,
   FileText,
@@ -75,11 +76,19 @@ const INCLUDED = [
   { icon: Target, title: "Palabras clave", desc: "Usamos los términos que realmente escriben tus clientes." },
 ];
 
-const GLOSSARY = [
-  { term: "SEO", def: "Conjunto de mejoras para que tu sitio aparezca en los resultados de Google." },
-  { term: "Palabra clave", def: "Lo que escribe una persona en el buscador para encontrar un servicio." },
-  { term: "Título", def: "El texto azul y destacado que aparece en cada resultado de búsqueda." },
-  { term: "Descripción", def: "El breve resumen que aparece debajo del título, en el resultado." },
+const AI_ASSISTANTS = [
+  {
+    name: "ChatGPT",
+    desc: "Muchas personas le piden recomendaciones de profesionales y servicios por zona.",
+  },
+  {
+    name: "Google Gemini",
+    desc: "Integrado con la búsqueda de Google, responde a partir de información publicada en la web.",
+  },
+  {
+    name: "Perplexity",
+    desc: "Responde con resúmenes y muestra las fuentes que consultó para hacerlo.",
+  },
 ];
 
 const fadeUp = {
@@ -280,24 +289,28 @@ export default function SeccionSEO() {
         </div>
       </section>
 
-      {/* 6. Glosario */}
+      {/* 6. Asistentes de IA */}
       <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
         <div className="container-ferro">
-          <motion.div {...fadeUp} className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16">
-            <div>
-              <h2 className="font-serif text-[36px] md:text-[42px] font-light text-[#F5F2EC] mb-4">Palabras que vas a escuchar</h2>
-              <p className="text-[17px] text-[#F5F2EC]/55 font-light leading-relaxed">
-                No hace falta saber de tecnología. Estas son las únicas ideas que conviene tener claras.
-              </p>
-            </div>
-            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
-              {GLOSSARY.map((item) => (
-                <div key={item.term} className="border-t border-[#C9A84C]/25 pt-5">
-                  <dt className="font-serif text-[20px] font-light text-[#F5F2EC] mb-2">{item.term}</dt>
-                  <dd className="text-[16px] text-[#F5F2EC]/55 font-light leading-relaxed">{item.def}</dd>
+          <motion.div {...fadeUp}>
+            <h2 className="font-serif text-[36px] md:text-[42px] font-light text-[#F5F2EC] mb-4">
+              También te pueden encontrar en las inteligencias artificiales
+            </h2>
+            <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
+              Cada vez más personas preguntan directamente a un asistente de IA en lugar de buscar en Google. Un sitio claro y bien estructurado facilita que esas herramientas lo lean y lo mencionen.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {AI_ASSISTANTS.map((assistant) => (
+                <div key={assistant.name} className="bg-[#1A1A1A] border border-[#F5F2EC]/[0.08] rounded-lg p-8">
+                  <Bot size={26} className="text-[#C9A84C] mb-6" strokeWidth={1.25} />
+                  <h3 className="font-serif text-[20px] font-light text-[#F5F2EC] mb-3">{assistant.name}</h3>
+                  <p className="text-[16px] text-[#F5F2EC]/55 font-light leading-relaxed">{assistant.desc}</p>
                 </div>
               ))}
-            </dl>
+            </div>
+            <p className="mt-8 text-[14px] text-[#F5F2EC]/40 font-light leading-relaxed max-w-3xl">
+              Ninguna herramienta garantiza que mencione a un negocio en particular. Lo que sí podemos hacer es que la información de tu sitio sea clara, precisa y fácil de leer.
+            </p>
           </motion.div>
         </div>
       </section>
