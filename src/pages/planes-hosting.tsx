@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowLeft,
   ArrowRight,
@@ -12,9 +11,7 @@ import {
   Server,
   Clock,
   Lock,
-  MousePointer2,
   Shield,
-  Unlock,
   Zap,
 } from "lucide-react";
 import { Link } from "wouter";
@@ -27,134 +24,6 @@ const fadeUp = {
   viewport: { once: true, margin: "-80px" },
   transition: { duration: 0.8, ease: EASE },
 };
-
-const UNSAFE_DETAILS = [
-  "Virus en archivos del sitio",
-  "Malware que puede robar datos de tus visitantes",
-  "Redirecciones a sitios falsos",
-];
-
-const SECURE_DETAILS = [
-  "Sin virus ni malware",
-  "Conexión HTTPS cifrada",
-  "Firewall y protección activa",
-];
-
-const CLICK_AT_MS = 1400;
-const CYCLE_MS = 5000;
-
-function SecureLockDemo() {
-  const [secure, setSecure] = useState(false);
-  const [auto, setAuto] = useState(true);
-
-  useEffect(() => {
-    if (!auto) return;
-    const timers: number[] = [];
-    const cycle = () => {
-      setSecure(false);
-      timers.push(window.setTimeout(() => setSecure(true), CLICK_AT_MS));
-    };
-    cycle();
-    const id = window.setInterval(cycle, CYCLE_MS);
-    return () => {
-      window.clearInterval(id);
-      timers.forEach(window.clearTimeout);
-    };
-  }, [auto]);
-
-  return (
-    <div className="relative w-full max-w-[340px] shrink-0 overflow-hidden rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A]">
-      <div className="flex items-center border-b border-[#F5F2EC]/10 px-3 py-2.5">
-        <div aria-hidden="true" className="flex gap-2">
-          <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
-          <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
-          <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
-        </div>
-        <div className="ml-3 flex flex-1 items-center gap-2 rounded-md bg-[#0E0E0E] px-3 py-1.5">
-          <motion.button
-            type="button"
-            onClick={() => {
-              setAuto(false);
-              setSecure((v) => !v);
-            }}
-            aria-label={secure ? "Sitio seguro" : "Sitio no seguro, hacé clic para verificar"}
-            aria-pressed={secure}
-            animate={secure ? { scale: [0.6, 1.3, 1], rotate: [-20, 0] } : { scale: [1, 1.2, 1], rotate: 0 }}
-            transition={secure ? { duration: 0.5, ease: EASE } : { duration: 1.6, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
-            whileTap={{ scale: 0.85 }}
-            className={`ferro-focus flex transition-colors duration-300 ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}
-          >
-            {secure ? <Lock size={13} strokeWidth={1.8} /> : <Unlock size={13} strokeWidth={1.8} />}
-          </motion.button>
-          <span className="min-w-0 flex-1 truncate text-[12px] text-[#F5F2EC]/50">
-            {secure ? "https://" : "http://"}tusitio.com/inicio
-          </span>
-          <span
-            className={`shrink-0 rounded-sm px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
-              secure ? "bg-[#51CF66]/15 text-[#51CF66]" : "bg-[#FF6B6B]/15 text-[#FF6B6B]"
-            }`}
-          >
-            {secure ? "Seguro" : "No seguro"}
-          </span>
-        </div>
-      </div>
-
-      {auto && (
-        <motion.div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-[82px] top-[19px] z-10 -ml-[2px] -mt-[2px] text-[#F5F2EC]"
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: [0, 1, 1, 1, 1, 0, 0],
-            x: [150, 0, 0, 0, 0, 0, 150],
-            y: [110, 0, 0, 0, 0, 0, 110],
-            scale: [1, 1, 0.8, 1, 1, 1, 1],
-          }}
-          transition={{
-            duration: CYCLE_MS / 1000,
-            times: [0, 0.24, 0.28, 0.33, 0.48, 0.56, 1],
-            ease: "linear",
-            repeat: Infinity,
-          }}
-        >
-          <MousePointer2 size={20} strokeWidth={1.5} fill="#0E0E0E" />
-        </motion.div>
-      )}
-
-      <div className="relative h-[260px]">
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={secure ? "secure" : "unsafe"}
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.25, ease: EASE }}
-            className={`absolute inset-0 flex flex-col justify-center px-6 py-5 ${
-              secure ? "bg-[#0F1F14]" : "bg-[#241414]"
-            }`}
-          >
-            <p className={`font-serif text-[20px] font-light ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}>
-              {secure ? "Sitio seguro" : "Sitio no seguro"}
-            </p>
-            <p className="mt-1 text-[12px] font-light text-[#F5F2EC]/60">
-              {secure
-                ? "Conexión cifrada y sin amenazas detectadas."
-                : "Se detectaron virus y malware. Hacé clic en el candado para verificar."}
-            </p>
-            <ul className="mt-4 space-y-2 text-[12px] font-light text-[#F5F2EC]/80">
-              {(secure ? SECURE_DETAILS : UNSAFE_DETAILS).map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className={secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}>•</span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-    </div>
-  );
-}
 
 const WITHOUT = [
   "Tu sitio puede caer sin que te enteres",
@@ -260,12 +129,9 @@ export default function PlanesHosting() {
             </Link>
 
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Mantenimiento técnico</p>
-            <div className="mb-6 flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-14">
-              <h1 className="max-w-3xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
-                Hosting administrado: tu sitio online, sin que tengas que vigilarlo
-              </h1>
-              <SecureLockDemo />
-            </div>
+            <h1 className="mb-6 max-w-3xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
+              Hosting administrado: tu sitio online, sin que tengas que vigilarlo
+            </h1>
             <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
               Es el servicio que mantiene tu página disponible, protegida y funcionando bien, con alguien pendiente de ella todo el tiempo.
             </p>
