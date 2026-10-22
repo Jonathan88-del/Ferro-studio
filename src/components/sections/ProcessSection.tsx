@@ -85,9 +85,11 @@ export default function ProcessSection() {
               className="font-serif font-light text-[clamp(2.2rem,5.5vw,4.2rem)] leading-[1.05] tracking-[-0.015em] text-[#F5F2EC]"
               style={{ fontSize: "50px !important" }}
             >
-              Un proceso claro.<br />
-              Sin sorpresas.
+              Creación de Diseño Web sin Anticipo
             </h2>
+            <p className="mt-6 max-w-xl text-[#F5F2EC]/60 font-sans font-light text-[18px] leading-relaxed">
+              Conocé nuestro proceso de diseño web: creamos tu página sin anticipo, con etapas claras, revisiones y tu aprobación antes de la entrega. Sin sorpresas, con Ferro Studio.
+            </p>
           </motion.div>
 
           <motion.div
