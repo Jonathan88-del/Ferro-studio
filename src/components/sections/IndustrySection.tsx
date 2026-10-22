@@ -174,10 +174,10 @@ function IndustryCard({
       </div>
 
       <div className="flex flex-col gap-3 flex-1">
-        <h3 className="font-serif text-[26px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
+        <h3 className="font-serif text-[28px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
           {industry.title}
         </h3>
-        <p className="text-[1rem] text-[#0E0E0E]/45 font-sans font-light leading-[1.8]">
+        <p className="text-[18px] text-[#0E0E0E]/45 font-sans font-light leading-[1.8]">
           {industry.description}
         </p>
       </div>
