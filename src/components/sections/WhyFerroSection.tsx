@@ -149,8 +149,8 @@ function ValueBlock({
       whileHover="hover"
       className={cn(
         "group relative bg-[#F5F2EC]",
-        "flex flex-col gap-5",
-        "px-6 py-8 md:px-8 md:py-10",
+        "flex flex-col gap-2.5",
+        "px-3 py-4 md:px-4 md:py-5",
         "transition-colors duration-500",
         "hover:bg-white"
       )}
@@ -165,32 +165,32 @@ function ValueBlock({
 
       <div className="flex items-center justify-between">
         <span
-          className="font-serif text-[7rem] font-light leading-none text-[#0E0E0E]/[0.22] select-none transition-colors duration-400 group-hover:text-[#C9A84C]/40"
+          className="font-serif text-[3.5rem] font-light leading-none text-[#0E0E0E]/[0.22] select-none transition-colors duration-400 group-hover:text-[#C9A84C]/40"
           aria-hidden="true"
         >
           {value.number}
         </span>
         <div
           className={cn(
-            "w-20 h-20 flex items-center justify-center",
+            "w-10 h-10 flex items-center justify-center",
             "border border-[#0E0E0E]/[0.12]",
             "transition-all duration-400",
             "group-hover:border-[#C9A84C]/40 group-hover:bg-[#C9A84C]/[0.04]"
           )}
         >
           <Icon
-            size={36}
+            size={18}
             strokeWidth={1.25}
             className="text-[#0E0E0E]/35 transition-colors duration-300 group-hover:text-[#C9A84C]"
           />
         </div>
       </div>
 
-      <div className="flex flex-col gap-3">
-        <h3 className="font-serif text-[38px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
+      <div className="flex flex-col gap-1.5">
+        <h3 className="font-serif text-[24px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
           {value.title}
         </h3>
-        <p className="text-[18px] text-[#0E0E0E]/45 font-sans font-light leading-[1.82]">
+        <p className="text-[14px] text-[#0E0E0E]/45 font-sans font-light leading-[1.7]">
           {value.description}
         </p>
       </div>
