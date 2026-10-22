@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowLeft,
   ArrowRight,
@@ -43,8 +43,8 @@ function SecureLockDemo() {
             onClick={() => setSecure((v) => !v)}
             aria-label={secure ? "Sitio seguro" : "Sitio no seguro, hacé clic para verificar"}
             aria-pressed={secure}
-            animate={secure ? { scale: 1 } : { scale: [1, 1.2, 1] }}
-            transition={secure ? { duration: 0.2 } : { duration: 1.6, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
+            animate={secure ? { scale: [0.6, 1.3, 1], rotate: [-20, 0] } : { scale: [1, 1.2, 1], rotate: 0 }}
+            transition={secure ? { duration: 0.5, ease: EASE } : { duration: 1.6, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
             whileTap={{ scale: 0.85 }}
             className={`ferro-focus flex transition-colors duration-300 ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}
           >
@@ -66,12 +66,22 @@ function SecureLockDemo() {
             secure ? "border-[#51CF66]/40 bg-[#51CF66]/10" : "border-[#FF6B6B]/40 bg-[#FF6B6B]/10"
           }`}
         >
-          <p className={`text-[13px] font-medium ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}>
-            {secure ? "Sitio seguro" : "Sitio no seguro"}
-          </p>
-          <p className="mt-0.5 text-[12px] font-light text-[#F5F2EC]/60">
-            {secure ? "Conexión cifrada y sin amenazas." : "Se detectaron virus. Hacé clic en el candado."}
-          </p>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={secure ? "secure" : "unsafe"}
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.25, ease: EASE }}
+            >
+              <p className={`text-[13px] font-medium ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}>
+                {secure ? "Sitio seguro" : "Sitio no seguro"}
+              </p>
+              <p className="mt-0.5 text-[12px] font-light text-[#F5F2EC]/60">
+                {secure ? "Conexión cifrada y sin amenazas." : "Se detectaron virus. Hacé clic en el candado."}
+              </p>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
     </div>
