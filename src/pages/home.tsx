@@ -9,10 +9,10 @@ const DEFAULT_DESCRIPTION =
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Creacion y diseño de paginas web";
+    document.title = "Creación y diseño de páginas web";
     document.querySelector('meta[name="description"]')?.setAttribute(
       "content",
-      "los mejores en todo Buenos Aires"
+      "Los mejores en todo Buenos Aires."
     );
     return () => {
       document.title = DEFAULT_TITLE;
