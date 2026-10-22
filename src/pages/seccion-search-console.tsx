@@ -104,7 +104,7 @@ export default function SeccionSearchConsole() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0E0E0E] pt-28 pb-[60px] md:pt-32 md:pb-[80px]">
+      <section className="relative overflow-hidden bg-[#0E0E0E] pt-28 md:pt-32 pb-[10px]">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -141,7 +141,7 @@ export default function SeccionSearchConsole() {
       </section>
 
       {/* Diferencia con Analytics */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp} className="mb-12 max-w-3xl">
             <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Para entenderlo</p>
@@ -178,7 +178,7 @@ export default function SeccionSearchConsole() {
       </section>
 
       {/* Recorrido */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp} className="mb-12 max-w-3xl">
             <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Paso a paso</p>
@@ -222,7 +222,7 @@ export default function SeccionSearchConsole() {
       </section>
 
       {/* Tres funciones */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp} className="mb-12 max-w-3xl">
             <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Qué te permite</p>
