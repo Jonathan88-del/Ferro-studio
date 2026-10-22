@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const PLANS_FEATURES = [
   { label: "🖥️ Hosting administrado", href: "/planes-hosting" },
   { label: "🔒 Gestión y renovación automática del SSL", href: "/planes-ssl" },
-  { label: "💬 Soporte por WhatsApp (24–48 hs hábiles)", href: "/planes-whatsapp" },
+  { label: "💬 Soporte por WhatsApp", href: "/planes-whatsapp" },
   { label: "✏️ Cambios mensuales al sitio", href: "/planes-cambios" },
 ];
 
