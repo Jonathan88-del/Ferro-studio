@@ -14,11 +14,11 @@ const fadeUp = (delay = 0) => ({
 
 export default function Contacto() {
   useEffect(() => {
-    const description = "¿Querés una página web profesional? Contactanos para recibir asesoramiento y un presupuesto personalizado. Estamos listos para ayudarte a impulsar tu presencia online.";
+    const description = "¿Necesitás una página web para tu negocio? Contactá a Ferro Studio, contanos tu proyecto y recibí asesoramiento personalizado. Creamos tu web sin anticipo.";
     const descriptionElement = document.querySelector('meta[name="description"]');
     const previousDescription = descriptionElement?.getAttribute("content");
 
-    document.title = "Contacto | Solicitá tu Presupuesto Web | Ferro Studio";
+    document.title = "Contactanos para tu Página Web | Ferro Studio";
     descriptionElement?.setAttribute("content", description);
 
     return () => {
