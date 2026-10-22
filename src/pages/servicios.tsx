@@ -8,10 +8,10 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 export default function Servicios() {
   useEffect(() => {
-    document.title = "Landing Pages y Sitios Institucionales | Ferro Studio";
+    document.title = "Las mejores páginas web desde $150.000";
     document.querySelector('meta[name="description"]')?.setAttribute(
       "content",
-      "Landing pages, sitios institucionales y rediseño web con diseño a medida para profesionales y PyMEs en Buenos Aires"
+      "Landing pages, sitios institucionales y rediseño web con diseño a medida para profesionales y PyMEs en Buenos Aires."
     );
 
     return () => {
