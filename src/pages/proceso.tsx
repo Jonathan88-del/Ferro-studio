@@ -4,11 +4,11 @@ import CTASection from "@/components/sections/CTASection";
 
 export default function Proceso() {
   useEffect(() => {
-    const description = "Kick-off, diseño, staging y entrega. Así trabajamos en Ferro Studio: sin anticipo, sin sorpresas, con su aprobación en cada paso.";
+    const description = "Conocé nuestro proceso de diseño web: creamos tu página sin anticipo, con etapas claras, revisiones y tu aprobación antes de la entrega. Sin sorpresas, con Ferro Studio.";
     const descriptionElement = document.querySelector('meta[name="description"]');
     const previousDescription = descriptionElement?.getAttribute("content");
 
-    document.title = "Cómo Trabajamos: Nuestro Proceso | Ferro Studio";
+    document.title = "Creación de Diseño Web sin Anticipo";
     descriptionElement?.setAttribute("content", description);
 
     return () => {
