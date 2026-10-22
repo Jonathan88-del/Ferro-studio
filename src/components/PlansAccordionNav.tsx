@@ -111,7 +111,7 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
                     >
                       {feature.logo ? (
                         <span className="flex items-center gap-2">
-                          <img src={feature.logo} alt="" className="h-4 w-4 object-contain" />
+                          <img src={feature.logo} alt="" className="h-5 w-5 object-contain" />
                           {feature.label}
                         </span>
                       ) : (
@@ -186,7 +186,7 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
                   >
                     {feature.logo ? (
                       <span className="flex items-center gap-2">
-                        <img src={feature.logo} alt="" className="h-4 w-4 object-contain" />
+                        <img src={feature.logo} alt="" className="h-5 w-5 object-contain" />
                         {feature.label}
                       </span>
                     ) : (
