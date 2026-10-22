@@ -86,7 +86,16 @@ function SecureLockDemo() {
           >
             {secure ? <Lock size={13} strokeWidth={1.8} /> : <Unlock size={13} strokeWidth={1.8} />}
           </motion.button>
-          <span className="text-[12px] text-[#F5F2EC]/50">tusitio.com</span>
+          <span className="min-w-0 flex-1 truncate text-[12px] text-[#F5F2EC]/50">
+            {secure ? "https://" : "http://"}tusitio.com/inicio
+          </span>
+          <span
+            className={`shrink-0 rounded-sm px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-[0.12em] transition-colors duration-300 ${
+              secure ? "bg-[#51CF66]/15 text-[#51CF66]" : "bg-[#FF6B6B]/15 text-[#FF6B6B]"
+            }`}
+          >
+            {secure ? "Seguro" : "No seguro"}
+          </span>
         </div>
       </div>
 
