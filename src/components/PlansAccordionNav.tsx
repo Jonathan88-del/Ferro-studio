@@ -4,10 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const WHATSAPP_LOGO_URL =
+  "https://cdn.builder.io/api/v1/image/assets%2F3b4a41e626e24dae8e3aa82c13ef83ba%2Ff151b1a5e252471fbb2c9d06ffdb955e?format=webp&width=800&height=1200";
+
 const PLANS_FEATURES = [
   { label: "🖥️ Hosting administrado", href: "/planes-hosting" },
   { label: "🔒 Gestión y renovación automática del SSL", href: "/planes-ssl" },
-  { label: "💬 Soporte por WhatsApp", href: "/planes-whatsapp" },
+  { label: "Soporte por WhatsApp", href: "/planes-whatsapp", logo: WHATSAPP_LOGO_URL },
   { label: "✏️ Cambios mensuales al sitio", href: "/planes-cambios" },
 ];
 
@@ -106,7 +109,14 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
                       href={feature.href}
                       className="text-[1.1rem] text-[#F5F2EC]/60 font-light hover:text-[#C9A84C] transition-colors no-underline"
                     >
-                      {feature.label}
+                      {feature.logo ? (
+                        <span className="flex items-center gap-2">
+                          <img src={feature.logo} alt="" className="h-4 w-4 object-contain" />
+                          {feature.label}
+                        </span>
+                      ) : (
+                        feature.label
+                      )}
                     </Link>
                   </motion.li>
                 ))}
@@ -174,7 +184,14 @@ export function PlansAccordionNav({ isActive, isMobile = false }: PlansAccordion
                     href={feature.href}
                     className="px-4 py-2.5 text-[0.85rem] text-[#F5F2EC]/70 hover:text-[#F5F2EC] hover:bg-[#F5F2EC]/[0.05] transition-colors duration-200 block no-underline"
                   >
-                    {feature.label}
+                    {feature.logo ? (
+                      <span className="flex items-center gap-2">
+                        <img src={feature.logo} alt="" className="h-4 w-4 object-contain" />
+                        {feature.label}
+                      </span>
+                    ) : (
+                      feature.label
+                    )}
                   </Link>
                 </motion.li>
               ))}
