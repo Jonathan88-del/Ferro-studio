@@ -147,7 +147,7 @@ export default function Hero() {
           animate="show"
           className="text-[15px] text-[#F5F2EC]/55 font-sans font-light leading-[1.8] max-w-[440px] mb-10 md:mb-12"
         >
-          Diseñamos y desarrollamos páginas web profesionales, seguras y confiables para tus clientes.
+          Creamos páginas web que ayudan a tu negocio a destacar, atraer clientes y crecer en el mundo digital.
         </motion.p>
 
         {/* CTAs */}
