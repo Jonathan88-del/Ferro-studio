@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -12,6 +12,7 @@ import {
   Server,
   Clock,
   Lock,
+  MousePointer2,
   Shield,
   Zap,
 } from "lucide-react";
@@ -26,8 +27,27 @@ const fadeUp = {
   transition: { duration: 0.8, ease: EASE },
 };
 
+const CLICK_AT_MS = 1400;
+const CYCLE_MS = 5000;
+
 function SecureLockDemo() {
   const [secure, setSecure] = useState(false);
+  const [auto, setAuto] = useState(true);
+
+  useEffect(() => {
+    if (!auto) return;
+    const timers: number[] = [];
+    const cycle = () => {
+      setSecure(false);
+      timers.push(window.setTimeout(() => setSecure(true), CLICK_AT_MS));
+    };
+    cycle();
+    const id = window.setInterval(cycle, CYCLE_MS);
+    return () => {
+      window.clearInterval(id);
+      timers.forEach(window.clearTimeout);
+    };
+  }, [auto]);
 
   return (
     <div className="relative w-full max-w-[340px] shrink-0 overflow-hidden rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A]">
@@ -40,7 +60,10 @@ function SecureLockDemo() {
         <div className="ml-3 flex flex-1 items-center gap-2 rounded-md bg-[#0E0E0E] px-3 py-1.5">
           <motion.button
             type="button"
-            onClick={() => setSecure((v) => !v)}
+            onClick={() => {
+              setAuto(false);
+              setSecure((v) => !v);
+            }}
             aria-label={secure ? "Sitio seguro" : "Sitio no seguro, hacé clic para verificar"}
             aria-pressed={secure}
             animate={secure ? { scale: [0.6, 1.3, 1], rotate: [-20, 0] } : { scale: [1, 1.2, 1], rotate: 0 }}
@@ -53,6 +76,28 @@ function SecureLockDemo() {
           <span className="text-[12px] text-[#F5F2EC]/50">tusitio.com</span>
         </div>
       </div>
+
+      {auto && (
+        <motion.div
+          aria-hidden="true"
+          className="pointer-events-none absolute left-[82px] top-[19px] z-10 -ml-[2px] -mt-[2px] text-[#F5F2EC]"
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: [0, 1, 1, 1, 1, 0, 0],
+            x: [150, 0, 0, 0, 0, 0, 150],
+            y: [110, 0, 0, 0, 0, 0, 110],
+            scale: [1, 1, 0.8, 1, 1, 1, 1],
+          }}
+          transition={{
+            duration: CYCLE_MS / 1000,
+            times: [0, 0.24, 0.28, 0.33, 0.48, 0.56, 1],
+            ease: "linear",
+            repeat: Infinity,
+          }}
+        >
+          <MousePointer2 size={20} strokeWidth={1.5} fill="#0E0E0E" />
+        </motion.div>
+      )}
 
       <div className="relative h-[150px] p-5">
         <div aria-hidden="true" className="space-y-3">
