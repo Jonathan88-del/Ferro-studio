@@ -27,6 +27,18 @@ const fadeUp = {
   transition: { duration: 0.8, ease: EASE },
 };
 
+const UNSAFE_DETAILS = [
+  "Virus en archivos del sitio",
+  "Malware que puede robar datos de tus visitantes",
+  "Redirecciones a sitios falsos",
+];
+
+const SECURE_DETAILS = [
+  "Sin virus ni malware",
+  "Conexión HTTPS cifrada",
+  "Firewall y protección activa",
+];
+
 const CLICK_AT_MS = 1400;
 const CYCLE_MS = 5000;
 
@@ -99,35 +111,36 @@ function SecureLockDemo() {
         </motion.div>
       )}
 
-      <div className="relative h-[150px] p-5">
-        <div aria-hidden="true" className="space-y-3">
-          <div className="h-2.5 w-3/4 rounded bg-[#F5F2EC]/10" />
-          <div className="h-2.5 w-full rounded bg-[#F5F2EC]/10" />
-          <div className="h-2.5 w-2/3 rounded bg-[#F5F2EC]/10" />
-        </div>
-
-        <div
-          className={`absolute inset-x-5 bottom-4 rounded-md border px-3 py-2.5 transition-colors duration-300 ${
-            secure ? "border-[#51CF66]/40 bg-[#51CF66]/10" : "border-[#FF6B6B]/40 bg-[#FF6B6B]/10"
-          }`}
-        >
-          <AnimatePresence mode="wait" initial={false}>
-            <motion.div
-              key={secure ? "secure" : "unsafe"}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25, ease: EASE }}
-            >
-              <p className={`text-[13px] font-medium ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}>
-                {secure ? "Sitio seguro" : "Sitio no seguro"}
-              </p>
-              <p className="mt-0.5 text-[12px] font-light text-[#F5F2EC]/60">
-                {secure ? "Conexión cifrada y sin amenazas." : "Se detectaron virus. Hacé clic en el candado."}
-              </p>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+      <div className="relative h-[260px]">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={secure ? "secure" : "unsafe"}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.25, ease: EASE }}
+            className={`absolute inset-0 flex flex-col justify-center px-6 py-5 ${
+              secure ? "bg-[#0F1F14]" : "bg-[#241414]"
+            }`}
+          >
+            <p className={`font-serif text-[20px] font-light ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}>
+              {secure ? "Sitio seguro" : "Sitio no seguro"}
+            </p>
+            <p className="mt-1 text-[12px] font-light text-[#F5F2EC]/60">
+              {secure
+                ? "Conexión cifrada y sin amenazas detectadas."
+                : "Se detectaron virus y malware. Hacé clic en el candado para verificar."}
+            </p>
+            <ul className="mt-4 space-y-2 text-[12px] font-light text-[#F5F2EC]/80">
+              {(secure ? SECURE_DETAILS : UNSAFE_DETAILS).map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className={secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}>•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
