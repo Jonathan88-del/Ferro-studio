@@ -14,6 +14,7 @@ import {
   Lock,
   MousePointer2,
   Shield,
+  Unlock,
   Zap,
 } from "lucide-react";
 import { Link } from "wouter";
@@ -83,7 +84,7 @@ function SecureLockDemo() {
             whileTap={{ scale: 0.85 }}
             className={`ferro-focus flex transition-colors duration-300 ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}
           >
-            <Lock size={13} strokeWidth={1.8} />
+            {secure ? <Lock size={13} strokeWidth={1.8} /> : <Unlock size={13} strokeWidth={1.8} />}
           </motion.button>
           <span className="text-[12px] text-[#F5F2EC]/50">tusitio.com</span>
         </div>
