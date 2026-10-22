@@ -195,7 +195,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* 2. Cómo funciona */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] py-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp}>
             <h2 className="font-serif text-[36px] md:text-[42px] font-light text-[#F5F2EC] mb-4">¿Cómo funciona?</h2>
@@ -223,7 +223,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* 3. Sin SEO vs Con SEO */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp}>
             <h2 className="font-serif text-[36px] md:text-[42px] font-light text-[#F5F2EC] mb-12">
@@ -258,7 +258,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* 4. Pilares */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp}>
             <h2 className="font-serif text-[36px] md:text-[42px] font-light text-[#F5F2EC] mb-4">Tres pilares del SEO básico</h2>
@@ -289,7 +289,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* 5. Qué incluye */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp}>
             <h2 className="font-serif text-[36px] md:text-[42px] font-light text-[#F5F2EC] mb-4">Qué incluye nuestro SEO básico</h2>
@@ -315,7 +315,7 @@ export default function SeccionSEO() {
       </section>
 
       {/* 6. Asistentes de IA */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp}>
             <h2 className="font-serif text-[36px] md:text-[42px] font-light text-[#F5F2EC] mb-4">
