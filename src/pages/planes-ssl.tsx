@@ -239,14 +239,16 @@ export default function PlanesSSL() {
 
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Seguridad del sitio</p>
             <div className="mb-6 flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-14">
-              <h1 className="max-w-3xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
-                Gestión y renovación automática del SSL
-              </h1>
+              <div className="flex flex-col gap-6">
+                <h1 className="max-w-3xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
+                  Gestión y renovación automática del SSL
+                </h1>
+                <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
+                  El certificado SSL es lo que hace que tu sitio sea seguro. Nosotros nos encargamos de que siga funcionando sin interrupciones.
+                </p>
+              </div>
               <SecureLockDemo />
             </div>
-            <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
-              El certificado SSL es lo que hace que tu sitio sea seguro. Nosotros nos encargamos de que siga funcionando sin interrupciones.
-            </p>
           </motion.div>
         </div>
       </section>
