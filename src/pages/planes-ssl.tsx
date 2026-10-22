@@ -288,10 +288,10 @@ export default function PlanesSSL() {
             <motion.div
               {...fadeUp}
               transition={{ duration: 0.8, ease: EASE, delay: 0.1 }}
-              className="rounded-lg border border-[#C9A84C]/30 bg-[#1A1A1A] p-7 md:p-8"
+              className="rounded-lg border border-[#51CF66]/30 bg-[#1A1A1A] p-7 md:p-8"
             >
-              <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg border border-[#C9A84C]/30 bg-[#C9A84C]/10">
-                <Lock size={20} className="text-[#C9A84C]" strokeWidth={1.5} />
+              <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-lg border border-[#51CF66]/30 bg-[#51CF66]/10">
+                <Lock size={20} className="text-[#51CF66]" strokeWidth={1.5} />
               </div>
               <h3 className="mb-3 font-serif text-[22px] font-light text-[#F5F2EC]">Con SSL</h3>
               <p className="mb-5 text-[17px] font-light leading-relaxed text-[#F5F2EC]/55">
@@ -300,7 +300,7 @@ export default function PlanesSSL() {
               <ul className="space-y-3">
                 {WITH_SSL.map((text) => (
                   <li key={text} className="flex gap-3 text-[16px] font-light text-[#F5F2EC]/70">
-                    <span className="mt-[2px] text-[#C9A84C]">•</span>
+                    <span className="mt-[2px] text-[#51CF66]">•</span>
                     <span>{text}</span>
                   </li>
                 ))}
