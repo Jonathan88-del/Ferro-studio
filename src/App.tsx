@@ -59,10 +59,13 @@ function Router() {
   );
 }
 
-function App() {
+export function App({ path }: { path?: string }) {
+  const staticProps = path
+    ? { hook: () => [path, () => {}] as [string, () => void], searchHook: () => "" }
+    : {};
   return (
     <QueryClientProvider client={queryClient}>
-      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <WouterRouter {...staticProps} base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
         <Router />
       </WouterRouter>
     </QueryClientProvider>
