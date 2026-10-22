@@ -32,7 +32,7 @@ export default function PlanesWhatsapp() {
             </Link>
 
             <h1 className="font-serif font-light text-[clamp(2.8rem,6vw,5.5rem)] leading-[1.04] tracking-[-0.018em] text-[#F5F2EC] max-w-4xl mb-8">
-              Soporte por WhatsApp (24–48 hs hábiles)
+              Soporte por WhatsApp
             </h1>
             <p className="text-[1.25rem] text-[#F5F2EC]/60 font-light max-w-2xl leading-relaxed">
               Respuestas rápidas cuando las necesitás. Tu contacto directo con nuestro equipo en el canal que prefieres.
