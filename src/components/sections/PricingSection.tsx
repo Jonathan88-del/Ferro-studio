@@ -146,7 +146,7 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
         />
       )}
 
-      <div className={cn("mb-5", !plan.featured && "mt-[42px]")}>
+      <div className={cn("mb-5", !plan.featured && "mt-[50px]")}>
         <h3 className={cn("font-serif text-[2rem] md:text-[2.125rem] font-light leading-tight tracking-[-0.01em]", plan.featured ? "text-[#0E0E0E]" : "text-[#F5F2EC]")}>
           {plan.name}
         </h3>
