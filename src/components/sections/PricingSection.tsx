@@ -128,9 +128,9 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       whileHover="hover"
       className={cn(
         "group relative flex flex-col",
-        "px-9 py-16 md:px-10 md:py-20",
-        "transition-colors duration-500",
-        plan.featured ? "bg-[#F5F2EC]" : "bg-[#0E0E0E] hover:bg-[#0f0f0f]"
+        "px-9 pb-16 md:px-10 md:pb-20",
+        plan.featured ? "pt-[60px] bg-[#F5F2EC]" : "pt-[10px] bg-[#0E0E0E] hover:bg-[#0f0f0f]",
+        "transition-colors duration-500"
       )}
     >
       {plan.featured && (
@@ -144,13 +144,6 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
           className="absolute inset-x-0 top-0 h-px bg-[#C9A84C]/45 origin-left"
           aria-hidden="true"
         />
-      )}
-
-      {plan.featured && (
-        <div className="flex items-center gap-3 mb-10">
-          <span className="w-2 h-2 rounded-full bg-[#C9A84C]" aria-hidden="true" />
-          <span className="text-[1rem] tracking-[0.24em] uppercase font-sans text-[#C9A84C]">Más contratado</span>
-        </div>
       )}
 
       <div className={cn("mb-5", !plan.featured && "mt-[42px]")}>
