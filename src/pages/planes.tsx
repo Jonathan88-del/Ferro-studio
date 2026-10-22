@@ -3,11 +3,11 @@ import PricingSection from "@/components/sections/PricingSection";
 
 export default function Planes() {
   useEffect(() => {
-    const description = "hosting, SSL, backups y soporte 24/7. Sumá cambios mensuales y atención prioritaria. Elegí tu plan y olvidate del resto.";
+    const description = "Tu web necesita más que diseño: necesita mantenimiento. Conocé los planes de Ferro Studio con hosting, SSL, copias de seguridad y soporte para seguir creciendo.";
     const descriptionElement = document.querySelector('meta[name="description"]');
     const previousDescription = descriptionElement?.getAttribute("content");
 
-    document.title = "Mantenimiento Web cuatrimestral | Planes de Suscripción - Ferro Studio";
+    document.title = "Mantenimiento Web para tu Negocio | Ferro Studio";
     descriptionElement?.setAttribute("content", description);
 
     return () => {
