@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowLeft,
@@ -26,51 +27,52 @@ const fadeUp = {
 };
 
 function SecureLockDemo() {
+  const [secure, setSecure] = useState(false);
+
   return (
-    <div aria-hidden="true" className="relative w-full max-w-[340px] shrink-0 overflow-hidden rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A]">
+    <div className="relative w-full max-w-[340px] shrink-0 overflow-hidden rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A]">
       <div className="flex items-center border-b border-[#F5F2EC]/10 px-3 py-2.5">
-        <div className="flex gap-2">
+        <div aria-hidden="true" className="flex gap-2">
           <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
           <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
           <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
         </div>
         <div className="ml-3 flex flex-1 items-center gap-2 rounded-md bg-[#0E0E0E] px-3 py-1.5">
-          <motion.span
-            animate={{ scale: [1, 1, 0.8, 1, 1] }}
-            transition={{ duration: 4, times: [0, 0.4, 0.46, 0.52, 1], repeat: Infinity, ease: "easeInOut" }}
-            className="flex text-[#51CF66]"
+          <motion.button
+            type="button"
+            onClick={() => setSecure((v) => !v)}
+            aria-label={secure ? "Sitio seguro" : "Sitio no seguro, hacé clic para verificar"}
+            aria-pressed={secure}
+            animate={secure ? { scale: 1 } : { scale: [1, 1.2, 1] }}
+            transition={secure ? { duration: 0.2 } : { duration: 1.6, repeat: Infinity, repeatDelay: 1.2, ease: "easeInOut" }}
+            whileTap={{ scale: 0.85 }}
+            className={`ferro-focus flex transition-colors duration-300 ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}
           >
             <Lock size={13} strokeWidth={1.8} />
-          </motion.span>
+          </motion.button>
           <span className="text-[12px] text-[#F5F2EC]/50">tusitio.com</span>
         </div>
       </div>
 
       <div className="relative h-[150px] p-5">
-        <div className="space-y-3">
+        <div aria-hidden="true" className="space-y-3">
           <div className="h-2.5 w-3/4 rounded bg-[#F5F2EC]/10" />
           <div className="h-2.5 w-full rounded bg-[#F5F2EC]/10" />
           <div className="h-2.5 w-2/3 rounded bg-[#F5F2EC]/10" />
         </div>
 
-        <motion.div
-          animate={{ opacity: [0, 0, 1, 1, 0] }}
-          transition={{ duration: 4, times: [0, 0.5, 0.56, 0.9, 1], repeat: Infinity, ease: "easeInOut" }}
-          className="absolute left-[52px] top-[10px] rounded border border-[#51CF66]/30 bg-[#0E0E0E] px-2 py-1 text-[11px] text-[#51CF66]"
+        <div
+          className={`absolute inset-x-5 bottom-4 rounded-md border px-3 py-2.5 transition-colors duration-300 ${
+            secure ? "border-[#51CF66]/40 bg-[#51CF66]/10" : "border-[#FF6B6B]/40 bg-[#FF6B6B]/10"
+          }`}
         >
-          Conexión segura
-        </motion.div>
-
-        <motion.svg
-          width="20"
-          height="22"
-          viewBox="0 0 20 22"
-          className="absolute left-0 top-0"
-          animate={{ x: [210, 67, 67, 210, 210], y: [120, 19, 19, 120, 120] }}
-          transition={{ duration: 4, times: [0, 0.4, 0.6, 0.95, 1], repeat: Infinity, ease: "easeInOut" }}
-        >
-          <path d="M2 1L2 17L6.5 13L9.5 20L12 19L9 12.5L15 12.5Z" fill="#F5F2EC" stroke="#0E0E0E" strokeWidth="1" strokeLinejoin="round" />
-        </motion.svg>
+          <p className={`text-[13px] font-medium ${secure ? "text-[#51CF66]" : "text-[#FF6B6B]"}`}>
+            {secure ? "Sitio seguro" : "Sitio no seguro"}
+          </p>
+          <p className="mt-0.5 text-[12px] font-light text-[#F5F2EC]/60">
+            {secure ? "Conexión cifrada y sin amenazas." : "Se detectaron virus. Hacé clic en el candado."}
+          </p>
+        </div>
       </div>
     </div>
   );
