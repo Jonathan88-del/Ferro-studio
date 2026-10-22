@@ -25,6 +25,57 @@ const fadeUp = {
   transition: { duration: 0.8, ease: EASE },
 };
 
+function SecureLockDemo() {
+  return (
+    <div aria-hidden="true" className="relative w-full max-w-[340px] shrink-0 overflow-hidden rounded-lg border border-[#F5F2EC]/10 bg-[#1A1A1A]">
+      <div className="flex items-center border-b border-[#F5F2EC]/10 px-3 py-2.5">
+        <div className="flex gap-2">
+          <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
+          <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
+          <span className="h-2 w-2 rounded-full bg-[#F5F2EC]/20" />
+        </div>
+        <div className="ml-3 flex flex-1 items-center gap-2 rounded-md bg-[#0E0E0E] px-3 py-1.5">
+          <motion.span
+            animate={{ scale: [1, 1, 0.8, 1, 1] }}
+            transition={{ duration: 4, times: [0, 0.4, 0.46, 0.52, 1], repeat: Infinity, ease: "easeInOut" }}
+            className="flex text-[#51CF66]"
+          >
+            <Lock size={13} strokeWidth={1.8} />
+          </motion.span>
+          <span className="text-[12px] text-[#F5F2EC]/50">tusitio.com</span>
+        </div>
+      </div>
+
+      <div className="relative h-[150px] p-5">
+        <div className="space-y-3">
+          <div className="h-2.5 w-3/4 rounded bg-[#F5F2EC]/10" />
+          <div className="h-2.5 w-full rounded bg-[#F5F2EC]/10" />
+          <div className="h-2.5 w-2/3 rounded bg-[#F5F2EC]/10" />
+        </div>
+
+        <motion.div
+          animate={{ opacity: [0, 0, 1, 1, 0] }}
+          transition={{ duration: 4, times: [0, 0.5, 0.56, 0.9, 1], repeat: Infinity, ease: "easeInOut" }}
+          className="absolute left-[52px] top-[10px] rounded border border-[#51CF66]/30 bg-[#0E0E0E] px-2 py-1 text-[11px] text-[#51CF66]"
+        >
+          Conexión segura
+        </motion.div>
+
+        <motion.svg
+          width="20"
+          height="22"
+          viewBox="0 0 20 22"
+          className="absolute left-0 top-0"
+          animate={{ x: [210, 67, 67, 210, 210], y: [120, 19, 19, 120, 120] }}
+          transition={{ duration: 4, times: [0, 0.4, 0.6, 0.95, 1], repeat: Infinity, ease: "easeInOut" }}
+        >
+          <path d="M2 1L2 17L6.5 13L9.5 20L12 19L9 12.5L15 12.5Z" fill="#F5F2EC" stroke="#0E0E0E" strokeWidth="1" strokeLinejoin="round" />
+        </motion.svg>
+      </div>
+    </div>
+  );
+}
+
 const WITHOUT = [
   "Tu sitio puede caer sin que te enteres",
   "Podés perder clientes mientras dormís",
@@ -129,9 +180,12 @@ export default function PlanesHosting() {
             </Link>
 
             <p className="mb-6 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Mantenimiento técnico</p>
-            <h1 className="mb-6 max-w-4xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
-              Hosting administrado: tu sitio online, sin que tengas que vigilarlo
-            </h1>
+            <div className="mb-6 flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-14">
+              <h1 className="max-w-3xl font-serif text-[44px] font-light leading-[1.08] tracking-[-0.018em] text-[#F5F2EC] md:text-[54px]">
+                Hosting administrado: tu sitio online, sin que tengas que vigilarlo
+              </h1>
+              <SecureLockDemo />
+            </div>
             <p className="max-w-2xl text-[19px] font-light leading-relaxed text-[#F5F2EC]/60">
               Es el servicio que mantiene tu página disponible, protegida y funcionando bien, con alguien pendiente de ella todo el tiempo.
             </p>
