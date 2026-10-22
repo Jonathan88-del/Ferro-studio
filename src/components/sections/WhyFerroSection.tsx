@@ -119,7 +119,7 @@ export default function WhyFerroSection() {
             <h3 className="font-serif text-[26px] md:text-[30px] font-light text-[#F5F2EC] leading-tight tracking-[-0.01em] mb-2">
               Si algún día decide trabajar con otra persona, le entregamos el código completo de su sitio.
             </h3>
-            <p className="text-[15px] text-[#F5F2EC]/40 font-sans font-light leading-[1.8]">
+            <p className="text-[18px] text-[#F5F2EC]/40 font-sans font-light leading-[1.8]">
               El sitio es suyo. No lo retenemos como forma de fidelización. Si en algún momento quiere cambiar de proveedor, recibirá el código fuente completo para continuar con quien desee, sin restricciones ni condiciones.
             </p>
           </div>
@@ -187,10 +187,10 @@ function ValueBlock({
       </div>
 
       <div className="flex flex-col gap-1.5">
-        <h3 className="font-serif text-[24px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
+        <h3 className="font-serif text-[28px] font-light text-[#0E0E0E] leading-tight tracking-[-0.01em]">
           {value.title}
         </h3>
-        <p className="text-[14px] text-[#0E0E0E]/45 font-sans font-light leading-[1.7]">
+        <p className="text-[18px] text-[#0E0E0E]/45 font-sans font-light leading-[1.7]">
           {value.description}
         </p>
       </div>
