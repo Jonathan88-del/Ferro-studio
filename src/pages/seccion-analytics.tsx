@@ -79,7 +79,7 @@ export default function SeccionAnalytics() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-[#0E0E0E] pt-28 pb-[60px] md:pt-32 md:pb-[80px]">
+      <section className="relative overflow-hidden bg-[#0E0E0E] pt-28 pb-[60px] md:pt-32 md:pb-[20px]">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0"
@@ -112,7 +112,7 @@ export default function SeccionAnalytics() {
       </section>
 
       {/* Con y sin medición */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp} className="mb-12 max-w-3xl">
             <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">El punto de partida</p>
@@ -157,7 +157,7 @@ export default function SeccionAnalytics() {
       </section>
 
       {/* Información que muestra */}
-      <section className="relative bg-[#0E0E0E] py-[60px] md:py-[80px]">
+      <section className="relative bg-[#0E0E0E] pt-[60px] md:pt-[80px] pb-[10px]">
         <div className="container-ferro">
           <motion.div {...fadeUp} className="mb-12 max-w-3xl">
             <p className="mb-4 font-sans text-[13px] uppercase tracking-[0.26em] text-[#C9A84C]/75">Qué podés ver</p>
