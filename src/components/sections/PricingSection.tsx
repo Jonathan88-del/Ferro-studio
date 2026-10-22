@@ -134,7 +134,12 @@ function PlanCard({ plan, index }: { plan: Plan; index: number }) {
       )}
     >
       {plan.featured && (
-        <span className="absolute inset-x-0 top-0 h-[1.5px] bg-[#C9A84C]" aria-hidden="true" />
+        <>
+          <span className="absolute inset-x-0 top-0 h-[1.5px] bg-[#C9A84C]" aria-hidden="true" />
+          <span className="absolute left-1/2 -top-4 -translate-x-1/2 whitespace-nowrap bg-[#C9A84C] px-5 py-2 text-[0.8rem] md:text-[0.85rem] tracking-[0.22em] uppercase font-sans font-medium text-[#0E0E0E] shadow-[0_0_24px_rgba(201,168,76,0.55)]">
+            El más elegido
+          </span>
+        </>
       )}
       {!plan.featured && (
         <motion.span
