@@ -182,9 +182,9 @@ export default function Footer() {
 
 function LogoMark() {
   return (
-    <svg width="16" height="16" viewBox="0 0 20 20" fill="none" aria-hidden="true" className="shrink-0">
-      <path d="M2 2h7v2H4v4h4v2H4v8H2V2z" fill="#C9A84C" fillOpacity="0.9" />
-      <path d="M11 2h7v2h-5v4h4v2h-4v4h5v2h-7V2z" fill="#F5F2EC" fillOpacity="0.65" />
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true" className="shrink-0">
+      <rect x="0.5" y="0.5" width="39" height="39" stroke="#C9A84C" strokeOpacity="0.45" />
+      <path d="M13 11H27V13.5H16V18.5H25V21H16V29H13V11Z" fill="#C9A84C" />
     </svg>
   );
 }
