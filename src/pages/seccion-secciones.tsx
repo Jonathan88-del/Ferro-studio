@@ -320,8 +320,7 @@ export default function SeccionesSecciones() {
               Así recorre tu visitante la página
             </h2>
             <p className="text-[18px] text-[#F5F2EC]/60 font-light max-w-3xl mb-12">
-              Así se ve tu sitio, sección por sección, en el orden en que el visitante la lee. Usa las
-              flechas para recorrerlo.
+              Así se ve tu sitio, sección por sección, en el orden en que el visitante la lee.
             </p>
 
             <div className="mx-auto max-w-[780px] overflow-hidden rounded-xl border border-[#F5F2EC]/10 bg-[#141414] shadow-[0_28px_60px_rgba(0,0,0,0.5)]">
